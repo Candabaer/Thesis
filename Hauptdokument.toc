@@ -1,15 +1,24 @@
 \select@language {ngerman}
-\contentsline {chapter}{Abbildungsverzeichnis}{iv}{chapter*.3}
-\contentsline {chapter}{Tabellenverzeichnis}{v}{chapter*.4}
+\contentsline {chapter}{Abbildungsverzeichnis}{4}{chapter*.3}
+\contentsline {chapter}{Tabellenverzeichnis}{5}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Einf"uhrung}{1}{chapter.1}
-\contentsline {chapter}{\numberline {2}Grundlagen}{2}{chapter.2}
-\contentsline {chapter}{\numberline {3}Fazit}{3}{chapter.3}
-\contentsline {section}{\numberline {3.1}Unterpunkt}{3}{section.3.1}
-\contentsline {chapter}{\numberline {4}Beispiele}{4}{chapter.4}
-\contentsline {section}{\numberline {4.1}Schriftarten}{4}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Symbole}{4}{subsection.4.1.1}
-\contentsline {section}{\numberline {4.2}Abbildungen}{4}{section.4.2}
-\contentsline {section}{\numberline {4.3}Tabellen}{5}{section.4.3}
-\contentsline {section}{\numberline {4.4}Verweise}{5}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Pageref und Ref}{5}{subsection.4.4.1}
-\contentsline {section}{\numberline {4.5}Listing}{5}{section.4.5}
+\contentsline {chapter}{\numberline {2}Idee}{2}{chapter.2}
+\contentsline {chapter}{\numberline {3}Das Framework}{3}{chapter.3}
+\contentsline {section}{\numberline {3.1}Verwendete Tools}{3}{section.3.1}
+\contentsline {section}{\numberline {3.2}Aufbau der Software}{3}{section.3.2}
+\contentsline {section}{\numberline {3.3}Einsatz im Netzwerk}{3}{section.3.3}
+\contentsline {chapter}{\numberline {4}Testaufbau}{4}{chapter.4}
+\contentsline {section}{\numberline {4.1}Pis Real}{4}{section.4.1}
+\contentsline {section}{\numberline {4.2}Pis Virtuell}{4}{section.4.2}
+\contentsline {chapter}{\numberline {5}Versuche}{5}{chapter.5}
+\contentsline {section}{\numberline {5.1}Versuchsbeschreibung}{5}{section.5.1}
+\contentsline {section}{\numberline {5.2}Raspberry Pi Versuche}{5}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Gemachte Tests}{5}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Ergebnisse}{5}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Virtual Machine Versuche}{5}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Gemachte Tests}{5}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Ergebnisse}{5}{subsection.5.3.2}
+\contentsline {chapter}{\numberline {6}Vergleich VM/HW}{6}{chapter.6}
+\contentsline {section}{\numberline {6.1}Versuchsergebnisse}{6}{section.6.1}
+\contentsline {section}{\numberline {6.2}Kosten nutzen Faktor}{6}{section.6.2}
+\contentsline {chapter}{\numberline {7}Fazit}{7}{chapter.7}
