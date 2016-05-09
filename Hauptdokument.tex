@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt,headsepline]{report}
+\documentclass[ngerman,a4paper,12pt,headsepline]{report}
 
 %----------------- PDF CONFIG ----------------- %
 \pdfinfo{    
@@ -28,7 +28,9 @@
 \usepackage{lmodern} % typographische Qualität 
 \frenchspacing % Schaltet den zusätzlichen Zwischenraum ab
 \usepackage{fix-cm}
+\usepackage{varioref}
 \usepackage{hyperref} % verwandelt alle Kapitelüberschriften, Verweise aufs Literaturverzeichnis und andere Querverweise in PDF-Hyperlinks
+\usepackage{cleveref}
 \usepackage{color}
 \usepackage{url}
 
@@ -93,29 +95,16 @@
 %----------------- KAPITEL : EINLEITUNG  ----------------- %
 \include{Kapitel/Einfuehrung}
 
-%----------------- KAPITEL : IDEE  ----------------- %	
-\chapter{Idee} %fällt wahrscheinlich weg
 
 %----------------- KAPITEL : FRAMEWORK  ----------------- %
-\chapter{Das Framework}
-\section{Verwendete Tools}
-\section{Aufbau der Software}
-\section{Einsatz im Netzwerk} 
-
+\include{Kapitel/dasframework}
 %----------------- KAPITEL : TESTAUFBAU  ----------------- %
 \chapter{Testaufbau}
 \section{Pis Real}
 \section{Pis Virtuell}
 
 %----------------- KAPITEL : VERSUCHE  ----------------- %
-\chapter{Versuche}
-\section{Raspberry Pi Versuche}
-\subsection{Gemachte Tests}
-\subsection{Ergebnisse}
-\section{Virtual Machine Versuche}
-\subsection{Gemachte Tests}
-\subsection{Ergebnisse}
-
+\include{Kapitel/versuche}
 %----------------- KAPITEL : VERGLEICH------------ %	
 \chapter{Vergleich VM/HW}
 \section{Versuchsergebnisse}

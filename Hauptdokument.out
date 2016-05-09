@@ -1,23 +1,22 @@
 \BOOKMARK [0][-]{chapter*.3}{Abbildungsverzeichnis}{}% 1
 \BOOKMARK [0][-]{chapter*.4}{Tabellenverzeichnis}{}% 2
 \BOOKMARK [0][-]{chapter.1}{Einf\374hrung}{}% 3
-\BOOKMARK [0][-]{chapter.2}{Idee}{}% 4
-\BOOKMARK [0][-]{chapter.3}{Das Framework}{}% 5
-\BOOKMARK [1][-]{section.3.1}{Verwendete Tools}{chapter.3}% 6
-\BOOKMARK [1][-]{section.3.2}{Aufbau der Software}{chapter.3}% 7
-\BOOKMARK [1][-]{section.3.3}{Einsatz im Netzwerk}{chapter.3}% 8
-\BOOKMARK [0][-]{chapter.4}{Testaufbau}{}% 9
-\BOOKMARK [1][-]{section.4.1}{Pis Real}{chapter.4}% 10
-\BOOKMARK [1][-]{section.4.2}{Pis Virtuell}{chapter.4}% 11
-\BOOKMARK [0][-]{chapter.5}{Versuche}{}% 12
-\BOOKMARK [1][-]{section.5.1}{Versuchsbeschreibung}{chapter.5}% 13
-\BOOKMARK [1][-]{section.5.2}{Raspberry Pi Versuche}{chapter.5}% 14
-\BOOKMARK [2][-]{subsection.5.2.1}{Gemachte Tests}{section.5.2}% 15
-\BOOKMARK [2][-]{subsection.5.2.2}{Ergebnisse}{section.5.2}% 16
-\BOOKMARK [1][-]{section.5.3}{Virtual Machine Versuche}{chapter.5}% 17
-\BOOKMARK [2][-]{subsection.5.3.1}{Gemachte Tests}{section.5.3}% 18
-\BOOKMARK [2][-]{subsection.5.3.2}{Ergebnisse}{section.5.3}% 19
-\BOOKMARK [0][-]{chapter.6}{Vergleich VM/HW}{}% 20
-\BOOKMARK [1][-]{section.6.1}{Versuchsergebnisse}{chapter.6}% 21
-\BOOKMARK [1][-]{section.6.2}{Kosten nutzen Faktor}{chapter.6}% 22
-\BOOKMARK [0][-]{chapter.7}{Fazit}{}% 23
+\BOOKMARK [0][-]{chapter.2}{Das Framework}{}% 4
+\BOOKMARK [1][-]{section.2.1}{Verwendete Hardware}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.2}{Aufbau der Software}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.3}{Einsatz im Netzwerk}{chapter.2}% 7
+\BOOKMARK [0][-]{chapter.3}{Testaufbau}{}% 8
+\BOOKMARK [1][-]{section.3.1}{Pis Real}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.2}{Pis Virtuell}{chapter.3}% 10
+\BOOKMARK [0][-]{chapter.4}{Versuche}{}% 11
+\BOOKMARK [1][-]{section.4.1}{Versuchsbeschreibung}{chapter.4}% 12
+\BOOKMARK [1][-]{section.4.2}{Raspberry Pi Versuche}{chapter.4}% 13
+\BOOKMARK [2][-]{subsection.4.2.1}{Gemachte Tests}{section.4.2}% 14
+\BOOKMARK [2][-]{subsection.4.2.2}{Ergebnisse}{section.4.2}% 15
+\BOOKMARK [1][-]{section.4.3}{Virtual Machine Versuche}{chapter.4}% 16
+\BOOKMARK [2][-]{subsection.4.3.1}{Gemachte Tests}{section.4.3}% 17
+\BOOKMARK [2][-]{subsection.4.3.2}{Ergebnisse}{section.4.3}% 18
+\BOOKMARK [0][-]{chapter.5}{Vergleich VM/HW}{}% 19
+\BOOKMARK [1][-]{section.5.1}{Versuchsergebnisse}{chapter.5}% 20
+\BOOKMARK [1][-]{section.5.2}{Kosten nutzen Faktor}{chapter.5}% 21
+\BOOKMARK [0][-]{chapter.6}{Fazit}{}% 22
