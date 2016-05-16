@@ -15,12 +15,14 @@ Aussagen "uber die Art des Fehlers in einem Netzwerk zu treffen. %
 \section{Versuchsbeschreibung}
 \label{sec:versuchbeschreibung}
 \begin{description}
+\item[Normalbetrieb] Dieser Test erzeugt die Testwerte mit denen die Fehlerbehafteten %
+Tests verglichen werden.
 \item[Ethernetkabel ohne Isolierung] Ethernetkabel werden oft sehr strapaziert %
 dies kann dazu fuhren das sich die Isolation l"ost und somit Strahlung einwirkt. %
 Dies kann die Leistung im Netzwerk beeintr"achtigen. 
-\item[Falsch gedrehtes Twisted Pair Kabel] TP Kabel sind die am meisten in einem Ethnernet %
-Netzwerk vorkommenden Kabel, es entsteht eine hohe St"orungsicherheit bei TP Kabeln %
-sollten jedoch TP Kabel entdrillt worden sein kann eine hohe Strahlenbelastung auftreten. %
+\item[Falsch gedrehtes Twisted Pair Kabel] Twisted Pair Kabel geh"oren zu den g"angigsten %
+Kabeln des Ethernet Standards, welches durch eine Verdrillung der einzelnen Kabel %
+einen erh"ohten Einstrahlungsschutz bilden. \autocite{book:CN2003} %
 \item[Loop] Ein Loop ist wenn ein Switch mit sich selbst verbunden ist, der Switch sendet %
 dann st"andig Datagramme an sich selbst und blockiert so jeden Traffic auf der Leitung. %
 \item[Nicht angeschlossenes Kabel] Wie verh"alt sich das Netzwerk wenn ein Kabel von einem %
@@ -28,7 +30,7 @@ Endger"at im laufenden Betrieb entkoppelt wird.
 \item[Forkbomb] Die Forkbomb ist ein Programm das von sich rekursiv Kopien erstellt %
 so das der Computer alle sein Resourcen verbraucht nur noch diesen Code auszufuhren. %
 \begin{quote} 
-:()\{ :|:\&\};: [https://de.wikipedia.org/wiki/Forkbomb] 
+:()\{ :|:\&\};: \autocite{wiki:forkbomb} 
 \end{quote}
 \item[Festplatte l"auft voll] In einem Netzwerk werden st"andig Daten versand, was also %
 passiert wenn die Festplatte von einem Rechner voll"auft und der PC somit Arbeitsunf"ahig wird. %

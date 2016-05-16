@@ -20,7 +20,7 @@
 \usepackage[ngerman]{babel} % deutsche Silbentrennung
 
 \usepackage{booktabs} %entzerrt die Tabellenzeilen und bietet verschieden dicke Unterteilungslinien
-\usepackage{longtable} % Tabellen können sich nicht über mehrere Seiten 
+\usepackage{longtable}% Tabellen können sich nicht über mehrere Seiten 
 \usepackage{graphicx} % kann LaTeX Grafiken einbinden
 
 \usepackage[applemac]{inputenc} % Umlaute unter Mac werden automatisch gesetzt
@@ -33,6 +33,9 @@
 \usepackage{cleveref}
 \usepackage{color}
 \usepackage{url}
+\usepackage[babel, german=quotes]{csquotes}
+\usepackage[backend=biber,style=alphabetic]{biblatex}
+\bibliography{literatur}
 
 
 \usepackage[nottoc]{tocbibind}
@@ -113,6 +116,8 @@
 %----------------- KAPITEL : FAZIT  ----------------- %	
 \chapter{Fazit}
 
+%----------------- KAPITEL : LITERATUR  ----------------- %	
+\printbibliography
 %----------------- KAPITEL : ANHANG  ----------------- %	
 
 

@@ -1,27 +1,45 @@
-%% This BibTeX bibliography file was created using BibDesk.
-%% http://bibdesk.sourceforge.net/
+% This file was created with JabRef 2.10b2.
+% Encoding: UTF-8
 
 
-%% Created for Willy Wonka at 2012-09-11 11:36:25 +0200 
+@Article{Lin1973,
+  Title                    = {An Effective Heuristic Algorithm for the Travelling-Salesman Problem},
+  Author                   = {Shen Lin and Brian W. Kernighan},
+  Journal                  = {Operations Research},
+  Year                     = {1973},
+  Pages                    = {498--516},
+  Volume                   = {21}
+}
 
+@Book{book:CN2003,
+  Title                    = {Computernetzwerke},
+  Author                   = {Andrew S. Tanenbaum},
+  Publisher                = {PEARSON Studium},
+  Year                     = {2003},
 
-%% Saved with string encoding Unicode (UTF-8) 
+  Owner                    = {cptigu},
+  Timestamp                = {2016.05.10}
+}
 
+@Other{wiki:forkbomb,
+  Title                    = {Forkbomb --- Wikipedia{,} Die freie Enzyklopadie},
+  Author                   = {Wikipedia},
+  Bdsk-url-1               = {https://de.wikipedia.org/wiki/Forkbomb},
+  Date-modified            = {2012-09-11 09:36:25 +0000},
+  Note                     = {[Online; Stand 11. Mai 2015]},
+  Owner                    = {cptigu},
+  Timestamp                = {2016.05.11},
+  Url                      = {https://de.wikipedia.org/wiki/Forkbomb},
+  Year                     = {2015}
+}
 
+@Other{wiki:xxx,
+  Title                    = {Nick Clegg --- Wikipedia{,} Die freie Enzyklopadie},
+  Author                   = {Wikipedia},
+  Bdsk-url-1               = {http://de.wikipedia.org/w/index.php?title=Nick_Clegg&oldid=105731841},
+  Date-modified            = {2012-09-11 09:36:25 +0000},
+  Note                     = {[Online; Stand 11. September 2012]},
+  Url                      = {\url{http://de.wikipedia.org/w/index.php?title=Nick_Clegg&oldid=105731841}},
+  Year                     = {2012}
+}
 
-@article{Lin1973,
-	Author = {Shen Lin and Brian W. Kernighan},
-	Journal = {Operations Research},
-	Pages = {498--516},
-	Title = {An Effective Heuristic Algorithm for the Travelling-Salesman Problem},
-	Volume = {21},
-	Year = {1973}}
-
-@url{wiki:xxx,
-	Author = {Wikipedia},
-	Date-Modified = {2012-09-11 09:36:25 +0000},
-	Note = {[Online; Stand 11. September 2012]},
-	Title = {Nick Clegg --- Wikipedia{,} Die freie Enzyklopadie},
-	Url = {\url{http://de.wikipedia.org/w/index.php?title=Nick_Clegg&oldid=105731841}},
-	Year = {2012},
-	Bdsk-Url-1 = {http://de.wikipedia.org/w/index.php?title=Nick_Clegg&oldid=105731841}}

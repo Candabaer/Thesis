@@ -11,8 +11,31 @@ Die in \cref{sec:versuchbeschreibung} beschriebenen Versuche wurden mit folgende
 Diese Ger"ate wurden in einem eigenst"andigend Netzwerk zusammengeschaltet. So sind an jedem Switch zwei Pis %
 der ersten Generation angeschlossen w"ahrend an einem der Switches der Pi der zweiten Generation angeschlossen %
 ist siehe abbildung hier. Welche Software auf den Pis verwendet wurde, wird in \cref{sec:aufbauSoftware} erkl"art. 
+
 \section{Aufbau der Software} \label{sec:aufbauSoftware}
 
+\begin{description}
+\item[Zabbix]Neben der Eigententwickelten Software wurde in diesem Framework noch das Open Source Netzwerk Monitoring %
+Tool Zabbix benutzt. Zabbix wurde von Alexei Vladishev entwickelt, inzwischen liegt die dritte Version %
+vor welche auch in diesem Framework verwendet wurde. Ein bekannter vertreter der Netzwerk Monitor Systeme %
+ist Nagios, welche unter der GPL vertrieben. Zabbix ist ein Client Server basierendes Monitoring System %
+so werden von den zu "uberwachenden Rechnern, den sogenannten Agents, die Daten an den Zabbix Server geschickt und sind dort "uber %
+eine Weboberfl"ache abrufbar. "Uber das Webinterface ist es auch m"oglich einzustellen welche vordefinierten Informationen %
+von den Agents an den Server verschickt werden sollen. So kann man auch "uber eine Schnittstelle in der %
+in der Zabbix API selbstdefinierte Informationen abrufen und sich in der Weboberfl"ache anzeigen lassen, %
+wie man sp"ater bei der I/O Last der Endger"ate sehen kann. All diesen Daten werden in einer MySQL Datenbank %
+gespeichert und sind "uber die MySQL Standard Schnittstelle abrufbar.
+
+\item[Hintergrundrauschen]Diese Eigentwicklung stellt mit Zabbix die Kernkomponente des Frameworks dar. Wie %
+der Rest der selbstentwickelten Software wurde sie komplett in Bash programmiert da das Framework ausschlie"slich %
+in einer Linux Umgebung entwickelt, getestet und verwendet wurde. Hintergrundrauschen schickt "uber die Linux %
+Standardbefehle Secure Copy, eine Abwandlung der SSH, Pakete von einem Endeger"at zum anderen. So wird eine %
+Last auf dem Netzwerk erzeugt die mithilfe von Zabbix gemessen werden kann. Ausserdem speichert dieses Programm %
+die Dauer bis ein Paket erfolgreich bei seinem, zuf"allig ausgew"ahlten Empf"anger angekommen ist und dessen gr"o"se. %
+
+\item[Update Script]     
+
+\end{description}
 \section{Einsatz im Netzwerk} 
 \label{sec:einsatzImNetzwerk}
 
