@@ -13,19 +13,56 @@ der ersten Generation angeschlossen w"ahrend an einem der Switches der Pi der zw
 ist siehe abbildung hier. Welche Software auf den Pis verwendet wurde, wird in \cref{sec:aufbauSoftware} erkl"art. 
 
 \section{Aufbau der Software} \label{sec:aufbauSoftware}
+Das Testframework besteht im Grunde aus drei verschieden Teilen. %
+\begin{enumerate}
+\item Zabbix %
+\item Eigentwicklung auf dem Server %
+\item Eigentwicklung auf dem Agent %
+\end{enumerate}
+Die Eigentwicklungen sind alle in Bash programmiert, w"ahrend Zabbix eine bereits fertige Open Source L"osung %
+ist. In den folgenden Abschnitten werde ich einen Einblick in diese Teile geben. %
+
+\subsection{Zabbix}
+Zabbix ist ein Open Source Netzwerk Monitoring System. Die erste Version wurde von Alexei Vladishev entwickelt, welches %
+inzwischen von der Firma Zabbix SIA weiterentwickelt wird. % 
+Ein weiterer bekannter Vertreter der Netzwerk Monitor Systeme ist Nagios, welches wie Zabbix unter der GPL Lizenz vertrieben wird. % 
+Beide Systeme basieren auf einer Client-Server Architektur. Im weiteren wird jedoch nur Zabbix betrachtet. %
+Zabbix besteht aus zwei Komponenten. %
+\begin{description}
+\item[Zabbix Server]Der Server hat eine auf PHP basierende Weboberfl"ache "uber die es f"ur den Benutzer m"oglich ist die Agents zu %
+konfigurieren. So k"onnen manuell die Templates erstellt werden die den Zabbix Agents mitteilen welche Informationen, dem %
+Server zu "ubermitteln sind. %
+"Uber die API Schnittstelle ist es m"oglich Programme f"ur den Server zu schreiben und diese auszuf"uhren. %
+Der Zabbix Server selber ist auch ein Agent welcher sich selber "uberwacht. Dieser ist jedoch nicht beteiligt %
+im Allgemeinen Prozess des Frameworks.
+\item[Zabbix Agent]Die Clients die im Netzwerk "uberwacht werden sollen sind sogenannte Agents die an den Server %
+die Informationen weiterleiten, die vom Server gefordert werden. 
+\end{description} 
+
+\subsection{Eigenentwicklung}
+Die Selbstentwickelte Software wird in zwei Kategorien unterteilt so l"auft ein Teil der Software %
+auf den Agents diese haben den Zweck Netzwerk Traffic zu erzeugen und somit Daten die vom Server %
+gesammelt werden kann.
+\begin{enumerate}
+\item Zabbix Server 
+\begin{description}
+\item[Update Script]Dieses Script wird von der Software Entwicklungsmaschine ausgef"uhrt. Es aktualisiert den Code auf den Endger"aten %
+die die Programme Hintergrundrauschen Pinger und Startrauschen ausf"uhren. Dabei wird mittels Secure Copy %
+der Quellcode auf das Endger"at gespielt
+
+\item[Get logs]Die Skripte Pinger und Hintergrundrauschen erstellen, jeweils auf den Endger"aten logfiles. %
+Da es jedoch ein sehr hoher Verwaltungsaufwand w"are auf den Endger"aten die Logfiles weiterzuverwerten %
+werden mit dem Skript GetLogs die dezentralisiert gelagerten Logfiles auf dem Rechner der dieses Skript %
+gestartet gesammelt. Somit hat man die von den Endger"aten gesammelten Daten auf einem Rechner und kann %
+dessen weiterverarbeitung betreiben.      
+
+\item[Calculate Average]Berechnet den Durschnitt der dauer die ein Paket brauch um erfolgreich versandt %
+zu werden.
+ 
+\end{description}
+\item Zabbix Agent
 
 \begin{description}
-\item[Zabbix]Neben der Eigententwickelten Software wurde in diesem Framework noch das Open Source Netzwerk Monitoring %
-Tool Zabbix benutzt. Zabbix wurde von Alexei Vladishev entwickelt, inzwischen liegt die dritte Version %
-vor welche auch in diesem Framework verwendet wurde. Ein bekannter vertreter der Netzwerk Monitor Systeme %
-ist Nagios, welche unter der GPL vertrieben. Zabbix ist ein Client Server basierendes Monitoring System %
-so werden von den zu "uberwachenden Rechnern, den sogenannten Agents, die Daten an den Zabbix Server geschickt und sind dort "uber %
-eine Weboberfl"ache abrufbar. "Uber das Webinterface ist es auch m"oglich einzustellen welche vordefinierten Informationen %
-von den Agents an den Server verschickt werden sollen. So kann man auch "uber eine Schnittstelle in der %
-in der Zabbix API selbstdefinierte Informationen abrufen und sich in der Weboberfl"ache anzeigen lassen, %
-wie man sp"ater bei der I/O Last der Endger"ate sehen kann. All diesen Daten werden in einer MySQL Datenbank %
-gespeichert und sind "uber die MySQL Standard Schnittstelle abrufbar.
-
 \item[Hintergrundrauschen]Diese Eigentwicklung stellt mit Zabbix die Kernkomponente des Frameworks dar. Wie %
 der Rest der selbstentwickelten Software wurde sie komplett in Bash programmiert da das Framework ausschlie"slich %
 in einer Linux Umgebung entwickelt, getestet und verwendet wurde. Hintergrundrauschen schickt "uber die Linux %
@@ -33,9 +70,44 @@ Standardbefehle Secure Copy, eine Abwandlung der SSH, Pakete von einem Endeger"a
 Last auf dem Netzwerk erzeugt die mithilfe von Zabbix gemessen werden kann. Ausserdem speichert dieses Programm %
 die Dauer bis ein Paket erfolgreich bei seinem, zuf"allig ausgew"ahlten Empf"anger angekommen ist und dessen gr"o"se. %
 
-\item[Update Script]     
+\item[Startrauschen]wird automatisch zum Start eines der Endger"ate ausgef"uhrt. Es dient als eine Zeitschaltuhr %
+und erm"oglicht ein Zeitversetztes starten des Scripts Hintergrundrauschen, wodurch man den sequentiellen %
+Anstieg an Last im Ethnernet beobachten kann.
 
+\item[Synchronize] Raspberry Pis besitzen keine eigene Batterie wie es handels"ubliche Rechner haben %
+deshalb ist nach jedem Neustart die Zeit der Pis unzuverl"assig. Dieses Programm aktualisiert %
+die Zeiten der Agents und synchronisiert die Zeit der Raspberry Pis mit der vom Zabbix Server. %
+
+\item[Pinger]wird zusammen mit Hintergrundrauschen ausgef"uhrt und ist um den Linux eigenen Ping Befehl %
+aufgebaut. Mittels Pinger wird die Latenz unter den einzelnen Endger"aten geme"sen. %
 \end{description}
+\end{enumerate}
 \section{Einsatz im Netzwerk} 
+
+Mit der im vorherigen Abschnitt vorgestellten Software ist das Testframework aufgebaut. In der \cref{fig:AufbauVomNetzwerk} %
+wird dargestellt wie die einzelnen Komponenten zusammenspielen. Hier sieht man das an einem Switch zwei Raspberry Pis %
+angeschlossen sind und an einem anderen Switch drei Raspberry Pis sind. Einer von diesen Pis ist der Zabbix Server der %
+die Aktiven Hosts im folgenden Agents/Zabbix Agents im Netzwerk "uberwacht. 
+
 \label{sec:einsatzImNetzwerk}
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth]{Abb/Netzschaltung3}
+
+\caption{Aufbau vom Netzwerk}
+\label{fig:AufbauVomNetzwerk}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
