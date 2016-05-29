@@ -1,0 +1,70 @@
+\chapter{Testaufbau}
+\label{cha:testaufbau}
+Die beste Art ein Netzwerktestframework zu testen, ist in dem man das Framework benutzt. %
+Dazu wurden am Anfang der Arbeiten mehrere Tests definiert. Jeder dieser Tests %
+ist eine in einem Netzwerk m"ogliche Fehlerquelle, die die Leistung des Netzwerkes %
+beeintr"achtigen kann. Um Fehler identifizieren %
+zu k"onnen m"ussen jedoch auch die Normalwerte bestimmt werden. Dazu muss zun"achst ein %
+st"orungsfreies Netzwerk aufgebaut werden und dieses muss beobachtet werden. %
+Die in diesem Netz gesammelten Werte stellen die Basis f"ur die sp"ateren Ergebnisse dar. %
+Im zweiten Schritt wird das Netz mit Fehlern aufgebaut und zu beobachtet. Die somit %
+gewonnen Werte eines fehlerbehafteten Netzwerkes k"onnen nun mit dem %
+fehlerfreien Netzwerk vergleicht werden.  
+
+\section{Testbeschreibung}
+\label{sec:testbeschreibung}
+In diesem Abschnitt sind die Tests beschrieben die im Rahmen der Arbeit durchgef"uhrt worden sind. %
+Alle Tests sind f"ur eine Dauer von f"unf Stunden ausgelegt.  %
+\begin{description}
+\item[Normalbetrieb:]Dieser Test erzeugt die Werte mit denen die Fehlerbehafteten %
+Tests verglichen werden. Dazu wird das Netzwerk wie in \cref{fig:AufbauVomNetzwerk} %
+verwendet. 
+\item[Ethernetkabel ohne Isolierung:]Ethernetkabel werden h"aufig sehr strapaziert;%
+dies kann dazu f"uhren, dass sich die Isolation l"ost und somit Strahlung einwirken kann. %
+Dies kann die "Ubertragungsqualit"at im Netzwerk beeintr"achtigen. 
+\item[Falsch gedrehtes Twisted Pair Kabel:]Twisted Pair Kabel geh"oren zu den g"angigsten %
+Kabeln des Ethernet Standards \autocite{book:CN2003}, welche durch eine Verdrillung der einzelnen Kabel %
+einen erh"ohten Einstrahlungsschutz bilden. %
+\item[Loop:]Ein Loop ist ein mit sich selbst verbundener Switch. Der Switch beginnt %
+dann "uber eine Broadcast Adresse Pakete zu verschicken, was beim Adress Resolution Protocol passiert. %
+So wird "uber Anschluss A an Anschluss B ein Paket verschickt, dies l"ost bei Anschluss B eine Reaktion aus.
+Anschluss B Antwortet auf die Anfrage vom Anschluss A. Dadurch entsteht eine Schleife aus Paketen, die das Netzwerk. %
+blockiert. %
+und so der Switch sich selbst blockiert und das Netzwerk komplett ausf"allt. %
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth]{Abb/Versuche/Loop1Switch}
+\caption{Ein Loop mit sich selber}
+\label{fig:loop1switch}
+\end{figure}
+In dem in \cref{fig:AufbauVomNetzwerk} gezeigten Versuchsaufbau ist jedoch noch eine weitere Form des Loops m"ogliches, %
+es ist m"oglich beide Switches miteinander "uber zwei Ethernetkabel zu verbinden. %
+Dieser Versuch hat den Aufbau wie in \cref{fig:loop2switch}
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth]{Abb/Versuche/Loop2Switch}
+\caption{Ein Loop zwischen beiden Switches}
+\label{fig:loop2switch}
+\end{figure}
+
+\item[Nicht angeschlossenes Kabel:] Wie verh"alt sich das Netzwerk wenn ein Kabel von einem %
+Endger"at im laufenden Betrieb entkoppelt wird.
+\item[Forkbomb:]Unter einer Forkbomb versteht man ein Programm, das von sich selbst rekursiv Kopien erstellt %
+so dass der Computer all seine Resourcen dazu verwendet weitere Kindprozesse von sich selber zu erzeugen. %
+\begin{quote} 
+:()\{ :|:\&\};: \autocite{wiki:forkbomb} 
+\end{quote}
+\item[Festplatte:]In einem Netzwerk werden st"andig Daten versandt, was also %
+passiert wenn die Festplatte von einem Rechner voll"auft und der PC somit Arbeitsunf"ahig wird. %
+\item[IP Adresse doppelt belegt:]In einem Netzwerk besitzen alle Ger"ate eine im Idealfall, einmalige  %
+IP Adresse "uber diese Ger"ate ansrechbar sind. In privaten Haushalten, wird die vergabe von IP Adressen %
+"uber das DHC Protokoll \autocite{ietf:DHCP}
+\item[Kollisionsdom"anen:] Kollisionsdom"anen sind bereiche in einem Netzwerk wo sich mehrere Rechner eine %
+eine Leitung teilen, dies ist geschieht in der Physikalischen Ebene eines Netwerks. Die Frage ist kann
+man eine Kollisionsdom"ane erkennen. 
+\end{description}
+
+\section{Pis Real}
+\section{Pis Virtuell}
+
+

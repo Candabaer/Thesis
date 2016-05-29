@@ -2,6 +2,18 @@
 % Encoding: UTF-8
 
 
+@Other{ietf:DHCP,
+  Title                    = {Dynamic Host Configuration Protocol},
+  Author                   = {R. Droms},
+  Bdsk-url-1               = {https://tools.ietf.org/html/rfc2131},
+  Date-modified            = {1997-03-01 09:36:25 +0000},
+  Note                     = {[Online; Stand 24. Mai 2016]},
+  Owner                    = {cptigu},
+  Timestamp                = {2016.05.24},
+  Url                      = {https://tools.ietf.org/html/rfc2131},
+  Year                     = {1997}
+}
+
 @Article{Lin1973,
   Title                    = {An Effective Heuristic Algorithm for the Travelling-Salesman Problem},
   Author                   = {Shen Lin and Brian W. Kernighan},
@@ -9,6 +21,30 @@
   Year                     = {1973},
   Pages                    = {498--516},
   Volume                   = {21}
+}
+
+@Other{wiki:Nagios,
+  Title                    = {Nagios},
+  Author                   = {Nagios Enterprises LLC},
+  Bdsk-url-1               = {https://de.wikipedia.org/wiki/Nagios},
+  Date-modified            = {2016-09-11 09:36:25 +0000},
+  Note                     = {[Online; Stand 11. Mai 2016]},
+  Owner                    = {cptigu},
+  Timestamp                = {2016.05.11},
+  Url                      = {https://de.wikipedia.org/wiki/Nagios},
+  Year                     = {2016}
+}
+
+@Other{zabbix:Web,
+  Title                    = {Zabbix},
+  Author                   = {Zabbix SIA},
+  Bdsk-url-1               = {http://www.zabbix.com/about.php},
+  Date-modified            = {2016-09-11 09:36:25 +0000},
+  Note                     = {[Online; Stand 11. Mai 2016]},
+  Owner                    = {cptigu},
+  Timestamp                = {2016.05.11},
+  Url                      = {http://www.zabbix.com/},
+  Year                     = {2016}
 }
 
 @Book{book:CN2003,

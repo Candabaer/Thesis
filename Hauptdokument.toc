@@ -22,30 +22,30 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Testaufbau}{6}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Pis Real}{6}{section.3.1}
+\contentsline {section}{\numberline {3.1}Testbeschreibung}{6}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Pis Virtuell}{6}{section.3.2}
+\contentsline {section}{\numberline {3.2}Pis Real}{8}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Versuche}{7}{chapter.4}
+\contentsline {section}{\numberline {3.3}Pis Virtuell}{8}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Versuchsbeschreibung}{7}{section.4.1}
+\contentsline {chapter}{\numberline {4}Versuche}{9}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Raspberry Pi Versuche}{8}{section.4.2}
+\contentsline {section}{\numberline {4.1}Raspberry Pi Versuche}{9}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Gemachte Tests}{8}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.1.1}Durchgef"uhrte Tests}{9}{subsection.4.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Ergebnisse}{8}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.1.2}Ergebnisse}{9}{subsection.4.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Virtual Machine Versuche}{8}{section.4.3}
+\contentsline {section}{\numberline {4.2}Virtual Machine Versuche}{9}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}Gemachte Tests}{8}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.2.1}Gemachte Tests}{9}{subsection.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.2}Ergebnisse}{8}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.2.2}Ergebnisse}{9}{subsection.4.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Vergleich VM/HW}{9}{chapter.5}
+\contentsline {chapter}{\numberline {5}Vergleich VM/HW}{10}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Versuchsergebnisse}{9}{section.5.1}
+\contentsline {section}{\numberline {5.1}Versuchsergebnisse}{10}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Kosten nutzen Faktor}{9}{section.5.2}
+\contentsline {section}{\numberline {5.2}Kosten nutzen Faktor}{10}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Fazit}{10}{chapter.6}
+\contentsline {chapter}{\numberline {6}Fazit}{11}{chapter.6}

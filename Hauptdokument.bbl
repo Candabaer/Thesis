@@ -19,6 +19,63 @@
 
 \refsection{0}
   \sortlist{entry}{anyt}
+    \entry{ietf:DHCP}{other}{}
+      \name{labelname}{1}{}{%
+        {{hash=292969ceca21104fb2772591ebe3294e}{Droms}{D\bibinitperiod}{R.}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=292969ceca21104fb2772591ebe3294e}{Droms}{D\bibinitperiod}{R.}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{292969ceca21104fb2772591ebe3294e}
+      \strng{fullhash}{292969ceca21104fb2772591ebe3294e}
+      \field{labelalpha}{Dro97}
+      \field{sortinit}{D}
+      \field{labeltitle}{Dynamic Host Configuration Protocol}
+      \field{note}{[Online; Stand 24. Mai 2016]}
+      \field{title}{Dynamic Host Configuration Protocol}
+      \field{year}{1997}
+      \verb{url}
+      \verb https://tools.ietf.org/html/rfc2131
+      \endverb
+    \endentry
+    \entry{wiki:Nagios}{other}{}
+      \name{labelname}{1}{}{%
+        {{hash=0a07b589df9b4737bcf4e920161e29a6}{LLC}{L\bibinitperiod}{Nagios\bibnamedelima Enterprises}{N\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=0a07b589df9b4737bcf4e920161e29a6}{LLC}{L\bibinitperiod}{Nagios\bibnamedelima Enterprises}{N\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{0a07b589df9b4737bcf4e920161e29a6}
+      \strng{fullhash}{0a07b589df9b4737bcf4e920161e29a6}
+      \field{labelalpha}{LLC16}
+      \field{sortinit}{L}
+      \field{labeltitle}{Nagios}
+      \field{note}{[Online; Stand 11. Mai 2016]}
+      \field{title}{Nagios}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://de.wikipedia.org/wiki/Nagios
+      \endverb
+    \endentry
+    \entry{zabbix:Web}{other}{}
+      \name{labelname}{1}{}{%
+        {{hash=6dc494a0ed530c28608cd412b3b07091}{SIA}{S\bibinitperiod}{Zabbix}{Z\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=6dc494a0ed530c28608cd412b3b07091}{SIA}{S\bibinitperiod}{Zabbix}{Z\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{6dc494a0ed530c28608cd412b3b07091}
+      \strng{fullhash}{6dc494a0ed530c28608cd412b3b07091}
+      \field{labelalpha}{SIA16}
+      \field{sortinit}{S}
+      \field{labeltitle}{Zabbix}
+      \field{note}{[Online; Stand 11. Mai 2016]}
+      \field{title}{Zabbix}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://www.zabbix.com/
+      \endverb
+    \endentry
     \entry{book:CN2003}{book}{}
       \name{labelname}{1}{}{%
         {{hash=5fec945e2e4e128e1f94258b75085d2d}{Tanenbaum}{T\bibinitperiod}{Andrew\bibnamedelima S.}{A\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%

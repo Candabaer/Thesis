@@ -1967,8 +1967,11 @@
     <bcf:datasource type="file" datatype="bibtex">literatur.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">book:CN2003</bcf:citekey>
-    <bcf:citekey order="2">wiki:forkbomb</bcf:citekey>
+    <bcf:citekey order="1">zabbix:Web</bcf:citekey>
+    <bcf:citekey order="2">wiki:Nagios</bcf:citekey>
+    <bcf:citekey order="3">book:CN2003</bcf:citekey>
+    <bcf:citekey order="4">wiki:forkbomb</bcf:citekey>
+    <bcf:citekey order="5">ietf:DHCP</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" type="entry" label="anyt">
   <bcf:sorting>
