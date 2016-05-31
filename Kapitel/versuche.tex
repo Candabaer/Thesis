@@ -1,17 +1,149 @@
 \chapter{Versuche}
 \label{cha:versuche}
-
-\section{Raspberry Pi Versuche}
-\label{sec:raspberryPiVersuche}
-\subsection{Durchgef"uhrte Tests}
 Aufgrund der Unterschiede zwischen einer Virtuellen und realen Maschine k"onnen nicht auf beiden Systemen  %
 die gleichen Versuche gemacht. Deshalb m"ussen von den oben vorgestellten Versuchen ein paar Versuche entfernt %
 werden da diese in einem realen Netzwerk nicht auftreten.  
-\subsection{Ergebnisse}
-Der erste durchgef"uhrte Test ist der Versuch \emph{Normalbetrieb}. 
-\begin{description}
-\item[Normalbetrieb]Dieser Versuch ist die Basis der sp"ater aufgef"uhrten Vergleiche mit den Fehlern, %
-\end{description}
+
+\section{Raspberry Pi Versuche}
+\label{sec:raspberryPiVersuche}
+
+\subsection{Normalbetrieb}
+\label{subsec:normalbetrieb}
+Der erste durchgef"uhrte Test ist der Versuch Normalbetrieb. In diesem Test ist das Ziel zu sehen wie %
+sich das Netzwerk verh"alt wenn keine St"orungen stattfinden. Dadurch erhalten wir einen Nennwert mit es m"oglich ist %
+Aussagen "uber das Netzwerk zu treffen wenn ein St"orungsfall eintritt. Dieser Test wird "uber einen Zeitraum von f"unf %
+Stunden absolviert. Die Dateien die im Netzwerk verschickt werden sind alle 20 Megabytes gro"s, dadurch wird ein %
+gleichm"a"siger Datenstrom erzeugt. Als erste Kontroll Instanz werden die Daten die vom Zabbix Server erzeugt werden %
+"uberpr"uft, da dieses Tool ein f"ur den Endverbraucher praktisches Frontend besitzt. Wie sich ein Agent verh"alt %
+wenn im Netz Traffic St"orungsfrei l"auft sieht man in den folgenden zwei Graphen.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth]{Abb/ZabbixDazzle/Standard/DazzleStandard}
+
+\caption{Traffic auf Eth0 bei Pi Dazzle}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+Wie man in \cref{fig:Eth0DazzleStandard} sehen kann ist der durchschnittlich eingehende Durchsatz auf dem Pi Dazzle 8,04 Megabit %
+pro Sekunde. Der ausgehende Traffic betr"agt durchschnittlich 8,62 Megabit pro Sekunde. Rechnet man diese Werte in Bytes pro Sekunde um %
+betr"agt der ausgehende Datenstrom 1,0775 Megabyte/s und der durchschnittlich eingehende Datenstrom 1,005 Megabyte/s %
+Daraus k"onnen wir schlie"sen das der Ethernet Port von Dazzle unter einer durschnittlichen I/O-Last von 2,0825 Megabyte/s stand. % 
+Woraus folgt das der Ethernet Port zu 20,825\% belastet war.
+\begin{table}
+\label{tab:standardTraffic}
+\centering
+\begin{tabular}{l%
+ r<{\,MB/s}%
+% S[input-decimal-markers={,},output-decimal-marker={,}]<{\,MB/s}%
+ r<{\,MB/s}%
+% S[input-decimal-markers={,},output-decimal-marker={,}]<{\,MB/s}%
+ r<{\,MB/s}%
+% S[input-decimal-markers={,},output-decimal-marker={,}]<{\,MB/s}%
+ r<{\,\%}%
+% S[input-decimal-markers={,},output-decimal-marker={,}]<{\,MB/s}%
+}
+Agent  	& Eingehende		& Ausgehende		& Gesamt		& Last auf Eth0	\\
+\hline
+DotA	&			&			&			&			\\
+Dazzle 	& 1,005 		& 1,0775		& 2,0825		& 20,825		\\
+Tusk 	& 1,06			& 1,0463		& 2,1063		& 21,0625		\\
+Tinker	& 1,0525		& 1,07			& 2,1225		& 21,225		\\
+Lion	& 1,0525		& 1,0813		& 2,1338		& 21,3375		\\
+\end{tabular}
+\caption{Traffic auf allen Pis}
+\end{table}
+
+In der Tabelle in \cref{tab:standardTraffic} sind die Werte der jeweiligen Agents eingespeichert. Auch der %
+des Servers, da dieser im selben Netzwerk aufgestellt ist wie die anderen Agents. Die Tabelle zeigt uns auch %
+das sich die Agents alle in einem "ahnlichen Umfeld befinden was deren Input sowie Output betrifft. So betr"agt die
+Standardabweichung der Pis nach der Tabelle in \cref{tab:standardTrafficAbweichung}     
+
+\begin{table}
+\label{tab:standardTrafficAbweichung}
+\centering
+\begin{tabular}{l%
+ r<{\,MB/s}%
+ r<{\,MB/s}%
+ r<{\,MB/s}%
+ r<{\,\%}%
+}
+Agent		& Eingehende            & Ausgehende            & Gesamt                & Last auf Eth0 \\
+\hline
+Agents		&                       &                       &                       &                       \\
+Agents \& Server& 0,043875              & 0,027196              & 0.03855               & 0,385                \\
+\end{tabular}
+\caption{Standarbweichung der Werte}
+\end{table}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth]{Abb/ZabbixDazzle/Standard/IoStatDazzleStandard}
+
+\caption{I/O--Last auf der Festplatte von Dazzle}
+\label{fig:IoStatDazzleStandard}
+\end{figure}
+
+In der \cref{fig:IoStatDazzleStandard} sieht man das die Festplatte des Raspberry Pis konstant beschrieben wird. Im durchschnitt werden 1.04 Kilobytes %
+die Sekunde geschrieben. Mit einem einer Maximallast von 1.86 Kilobytes die Sekunde. Was nicht ann"ahrend die Maximale Schreibgeschwindigkeit der verwendeten %
+SanDisk SD Karten ist welche bei 30 Megabyte\autocite{san:sd} pro Sekunde liegen. 
+
+\subsubsection{Schlussfolgerung Test: Normalbetrieb}
+\label{subsubsec:schlussfolgerung:normalbetrieb}
+Nach erfolgreichem durchf"uhren des Tests kann man sehen wie sich die einzelnen Endger"ate im Netzwerk verhalten wenn Pakete von 20 MB gr"o"se dar"uber l"auft. %
+Man kann sehen das der Datenstrom konstant bleibt und es keine hohen Abweichungen im eingehenden und ausgehen Traffic gibt. Woraus man schlie"sen kann das %
+ein Reibungsloser Ablauf im Netzwerk geleistet ist. 
+
+
+
+
+\subsection{Loop}
+\label{subsec:loop}
+Wie in \cref{sec:testbeschreibung} beschrieben ist ein Loop ein Fehler der auftritt wenn in einem Switch zwei Ports miteinander verbunden worden sind. %
+Dasselbe gilt auch wenn zwei Switches miteinander verbunden werden. Loops sind Fehler die auftreten wenn der Endnutzer nicht mit dem Umgang der Hardware vertraut ist, %
+oder die IT--Infrastruktur zu gro"s wird. %
+Der erwartete Ausgang des Tests ist nach Abschnitt 3.8 \autocite{book:schreiner} ein totaler Ausfall des Netzwerkes. Die nun gezeigten Ergebnisse best"atigen diese %
+Annahme.  
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth]{Abb/ZabbixDazzle/Loop/DazzleLoop}
+
+\caption{Traffic auf Eth0 bei einem Loop}
+\label{fig:Eth0DazzleLoop}
+\end{figure}
+
+Wie man in der Graphik sehen kann bricht die Verbindung zum Zabbix Server komplett ab. Es findet nichtmal der wie in \cref{subsec:nix} aufgezeigte Server Poll statt, % 
+der einen geringen Traffic erzeugt. %
+Auch der Graph f"ur die Festplatten Last bricht zum Zeitpunkt des Loops ab. Wieder werden im Graphen auch die Durchschnittswerte des Traffics aufgezeigt. %
+Wenn man nun die Werte mit denen aus dem \cref{subsec:normalbetrieb} vergleicht stellt man fest das die Durchschnittswerte eine geringe Abweichung aufzeigen. %
+Dies liegt dem zugrunde das Zabbix keine neue Daten von den Agents erhalten kann. Da die Berechnung des durchschnittlichen Traffic erst dann erfolgt wenn %
+der Agent eine Naricht "uber seinen Zustand versendet. Da diese jedoch nicht den Server erreichen bleiben die Durchschnnittswerte wie beim Normalbetrieb. %
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth]{Abb/ZabbixDazzle/Loop/IoStatDazzleLoop}
+
+\caption{I/O--Last auf der Festplatte bei einem Loop}
+\label{fig:IoStatDazzleLoop}
+\end{figure}
+
+Hier kann man sehen das der Loop auch die Informationen die der Agent "uber die Festplatte verschickt unerreichbar sind. Dies hat jedoch aus Erfahrungswerten keinen Einflu"s auf die %
+Performanz der Agents. Man kann davon ausgehen das sich die I/O--Last der Agents auf den Wert der in \cref{sec:nix} gezeigten Werte einpendelt. %
+
+
+\subsubsection{Schlussfolgerung Test: Loop}
+\label{subsubsec:schlussfolgerung:loop}
+
+Wie man in \cref{subsec:loop} sehen kann, zeichnet sich ein Loop dadurch aus der komplette Traffic in einem Netzwerk zusammenbricht. In Zabbix selber zeichnet sich das %
+dadurch aus das die Graphen einen direkten Schnitt aufzeigen und auch "uber einen l"angeren Zeitraum sich die Durchschnittswerte die von den Agents verschickt werden nicht %
+ver"andern. Auch die Logfiles geben aufschluss "uber die Transportierten Pakete so kann man aus diesen lesen das nur noch die Pakete die an den Lokalen Host geschickt werden %
+ihr Ziel erreichen.  
+
+
+\subsection{Doppelte IP}
+In diesem Test wurde dem Agent Tinker dieselbe IP vergeben wie sie Dazzle hat. Ohne weiter in den Versuch zu gehen ...
 
 \section{Virtual Machine Versuche}
 \label{sec:VMVersuche}

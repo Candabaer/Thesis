@@ -1,21 +1,16 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
 \select@language {ngerman}
-\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Aufbau des Netzwerks}}{5}{figure.2.1}
-\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Ein Loop mit sich selber}}{7}{figure.3.1}
-\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Ein Loop an einem Switch}}{7}{figure.3.1}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Ein Loop zwischen beiden Switches}}{8}{figure.3.2}
-\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Traffic auf Eth0 bei Pi Dazzle}}{9}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces I/O--Last auf der Festplatte von Dazzle}}{10}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Traffic auf Eth0 bei einem Loop}}{11}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces I/O--Last auf der Festplatte bei einem Loop}}{12}{figure.4.4}
 \addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }

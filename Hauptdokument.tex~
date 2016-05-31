@@ -35,7 +35,6 @@
 \usepackage{url}
 \usepackage[babel, german=quotes]{csquotes}
 \usepackage{array}
-\usepackage{siunitx}
 \usepackage[backend=biber,style=alphabetic]{biblatex}
 \bibliography{literatur}
 

@@ -19,6 +19,25 @@
 
 \refsection{0}
   \sortlist{entry}{anyt}
+    \entry{san:sd}{other}{}
+      \name{labelname}{1}{}{%
+        {{hash=8febb78d43823a071c7b8d96efb15bf9}{Corporation}{C\bibinitperiod}{SanDisk}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=8febb78d43823a071c7b8d96efb15bf9}{Corporation}{C\bibinitperiod}{SanDisk}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{8febb78d43823a071c7b8d96efb15bf9}
+      \strng{fullhash}{8febb78d43823a071c7b8d96efb15bf9}
+      \field{labelalpha}{Cor16}
+      \field{sortinit}{C}
+      \field{labeltitle}{SD/SDHC/SDXC Specifications and Compatibility}
+      \field{note}{[Online; Stand 29. Mai 2016]}
+      \field{title}{SD/SDHC/SDXC Specifications and Compatibility}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://kb.sandisk.com/app/answers/detail/a_id/2520/~/sd/sdhc/sdxc-specifications-and-compatibility
+      \endverb
+    \endentry
     \entry{ietf:DHCP}{other}{}
       \name{labelname}{1}{}{%
         {{hash=292969ceca21104fb2772591ebe3294e}{Droms}{D\bibinitperiod}{R.}{R\bibinitperiod}{}{}{}{}}%
@@ -50,11 +69,37 @@
       \field{labelalpha}{LLC16}
       \field{sortinit}{L}
       \field{labeltitle}{Nagios}
-      \field{note}{[Online; Stand 11. Mai 2016]}
+      \field{note}{[Online; Stand 29. Mai 2016]}
       \field{title}{Nagios}
       \field{year}{2016}
       \verb{url}
-      \verb https://de.wikipedia.org/wiki/Nagios
+      \verb https://www.nagios.org/
+      \endverb
+    \endentry
+    \entry{book:schreiner}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=5072beb6e85358e4083b60cc09b41a4e}{Schreiner}{S\bibinitperiod}{R"udiger}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=5072beb6e85358e4083b60cc09b41a4e}{Schreiner}{S\bibinitperiod}{R"udiger}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {M"unchen}%
+      }
+      \list{publisher}{1}{%
+        {Hanser}%
+      }
+      \strng{namehash}{5072beb6e85358e4083b60cc09b41a4e}
+      \strng{fullhash}{5072beb6e85358e4083b60cc09b41a4e}
+      \field{labelalpha}{Sch14}
+      \field{sortinit}{S}
+      \field{labeltitle}{Computernetzwerke : von den Grundlagen zur Funktion und Anwendung}
+      \field{edition}{5., erw. Aufl.}
+      \field{isbn}{9783446441545}
+      \field{title}{Computernetzwerke : von den Grundlagen zur Funktion und Anwendung}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://www.hanser-elibrary.com/doi/book/10.3139/9783446441545
       \endverb
     \endentry
     \entry{zabbix:Web}{other}{}
@@ -83,16 +128,25 @@
       \name{author}{1}{}{%
         {{hash=5fec945e2e4e128e1f94258b75085d2d}{Tanenbaum}{T\bibinitperiod}{Andrew\bibnamedelima S.}{A\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
       }
+      \list{location}{1}{%
+        {M"unchen [u.a.]}%
+      }
       \list{publisher}{1}{%
-        {PEARSON Studium}%
+        {Pearson Studium}%
       }
       \strng{namehash}{5fec945e2e4e128e1f94258b75085d2d}
       \strng{fullhash}{5fec945e2e4e128e1f94258b75085d2d}
-      \field{labelalpha}{Tan03}
+      \field{labelalpha}{Tan09}
       \field{sortinit}{T}
       \field{labeltitle}{Computernetzwerke}
+      \field{edition}{4. "Uberarb. Aufl., [Nachdr.]}
+      \field{isbn}{9783827370464}
+      \field{series}{i - Informatik}
       \field{title}{Computernetzwerke}
-      \field{year}{2003}
+      \field{year}{2009}
+      \verb{url}
+      \verb http://scans.hebis.de/HEBCGI/show.pl?21727132_toc.pdf
+      \endverb
     \endentry
     \entry{wiki:forkbomb}{other}{}
       \name{labelname}{1}{}{%

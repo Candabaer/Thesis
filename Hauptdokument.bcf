@@ -1970,8 +1970,11 @@
     <bcf:citekey order="1">zabbix:Web</bcf:citekey>
     <bcf:citekey order="2">wiki:Nagios</bcf:citekey>
     <bcf:citekey order="3">book:CN2003</bcf:citekey>
-    <bcf:citekey order="4">wiki:forkbomb</bcf:citekey>
-    <bcf:citekey order="5">ietf:DHCP</bcf:citekey>
+    <bcf:citekey order="4">book:schreiner</bcf:citekey>
+    <bcf:citekey order="5">wiki:forkbomb</bcf:citekey>
+    <bcf:citekey order="6">ietf:DHCP</bcf:citekey>
+    <bcf:citekey order="7">san:sd</bcf:citekey>
+    <bcf:citekey order="8">book:schreiner</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" type="entry" label="anyt">
   <bcf:sorting>

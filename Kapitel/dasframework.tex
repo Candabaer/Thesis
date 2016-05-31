@@ -40,9 +40,9 @@ die Informationen weiterleiten, die vom Server gefordert werden. %
 \end{description} 
 
 \subsection{Eigenentwicklung}
-Die selbstentwickelte Software wird in zwei Kategorien unterteilt; Ein Teil der Software l"auft %
+Die selbstentwickelte Software wird in zwei Kategorien unterteilt; ein Teil der Software l"auft %
 auf den Agents, diese haben den Zweck Netzwerk Traffic zu erzeugen. Dadurch entsteht auf dem Netzwerk und %
-auf den Zabbix Agents eine Nutzlast die vom Zabbix Server gesammelt werden kann. Der zweite Teil ist Software %
+auf den Zabbix Agents eine Nutzlast, die vom Zabbix Server gesammelt werden kann. Der zweite Teil der Software %
 die auf dem Server l"auft, die Software auf dem Server unterst"utzt den Entwicklungsprozess auf den Agents. %
 \begin{enumerate}
 \item Zabbix Server 
@@ -61,6 +61,8 @@ dessen Weiterverarbeitung betreiben.
 zu werden.
  
 \end{description}
+
+\newpage
 \item Zabbix Agent
 
 \begin{description}
@@ -69,7 +71,7 @@ der Rest der selbstentwickelten Software wurde sie komplett in Bash programmiert
 in einer Linux Umgebung entwickelt, getestet und verwendet wird. Hintergrundrauschen schickt "uber Secure Copy, %
 Pakete von einem Agent zum anderen. So wird eine %
 Last auf dem Netzwerk erzeugt, die Mithilfe des Zabbix Servers gemessen werden kann. Ausserdem speichert Hintergrundrauschen %
-die Dauer bis ein Paket erfolgreich bei seinem zuf"allig ausgew"ahlten Empf"anger angekommen ist und dessen Gr"o"se. %
+die Dauer, bis ein Paket erfolgreich bei seinem zuf"allig ausgew"ahlten Empf"anger angekommen ist. %
 
 \item[Startrauschen:]wird automatisch zum Start eines der Endger"ate ausgef"uhrt. Es dient als eine Zeitschaltuhr %
 und erm"oglicht ein zeitversetztes Starten des Scripts Hintergrundrauschen, wodurch man den sequentiellen %
@@ -85,7 +87,7 @@ aufgebaut. Mittels Pinger wird die Latenz unter den einzelnen Endger"aten gemess
 \end{enumerate}
 \section{Einsatz im Netzwerk} 
 
-Mit Einsatz der im vorherigen Abschnitt vorgestellten Software ist das Testframework aufgebaut. In der \cref{fig:AufbauVomNetzwerk} %
+Mit dem Einsatz der im vorherigen Abschnitt vorgestellten Software ist das Testframework aufgebaut. In der \cref{fig:AufbauVomNetzwerk} %
 wird dargestellt, wie die einzelnen Komponenten zusammenspielen. Hier sieht man, dass an einem Switch zwei Raspberry Pis %
 und an einem anderen Switch drei Raspberry Pis angeschlossen sind. Einer von diesen Pis ist der Zabbix Server, der %
 die Aktiven Hosts im Netzwerk "uberwacht. 
