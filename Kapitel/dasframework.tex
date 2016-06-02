@@ -28,15 +28,28 @@ seit 2005 von der Firma Zabbix SIA weiterentwickelt wird \autocite{zabbix:Web}. 
 Ein weiterer bekannter Vertreter der Netzwerk Monitor Systeme ist Nagios, welches wie Zabbix unter der GPL Lizenz vertrieben wird \autocite{wiki:Nagios}. % 
 Beide Systeme basieren auf einer Client-Server Architektur. Im weiteren wird jedoch nur Zabbix betrachtet. %
 Zabbix besteht aus zwei Komponenten. %
+
 \begin{description}
 \item[Zabbix Server]Der Server hat eine auf PHP basierende Weboberfl"ache "uber die es f"ur den Benutzer m"oglich ist die Agents zu %
 konfigurieren. So k"onnen manuell die Templates erstellt werden, die den Zabbix Agents mitteilen, welche Informationen dem %
 Server zu "ubermitteln sind. %
 "Uber die API Schnittstelle ist es m"oglich Programme f"ur den Server zu schreiben und diese auszuf"uhren. %
 Der Zabbix Server ist ein sich selbst "uberwachender Agent. Dieser ist jedoch nicht beteiligt %
-im allgemeinen Prozess des Frameworks.
-\item[Zabbix Agent]Die Clients, die im Netzwerk "uberwacht werden sollen sind sogenannten Agents, die an den Server %
-die Informationen weiterleiten, die vom Server gefordert werden. % 
+im allgemeinen Prozess des Frameworks. %
+Trotzdem wird in den folgenden Kapiteln der Zabbix Server nicht aussen vor gelassen und in die %
+den Tests betrachtet werden, dabei werden haupts"achlich die von Zabbix generierten Werte zur Perfomance und zum %
+Traffic auf dem Ethernet Port genommen. Der Wert Perfomance betrachtet zwei Dinge, einmal die sogenannte Queue, welche %
+angibt wie viele von den Agents "ubermittelten Werten darauf warten vom Zabbix Server verarbeitet zu werden und die %
+die verarbeiteten Werte pro Sekunde. Diese Werte lassen einen Schluss auf die Leistung des Servers schlie"sen. %
+Sollte die Queue einen bestimmten schwellwert erreichen wird auf dem Zabbix Dashboard eine Warnung ausgegeben das der %
+Server mit der Verarbeitung nicht hinterherkommt. Dies kann soweit gehen das die gesammelten Daten auf dem Server nicht %
+aktuell oder sogar fehlerhaft sind. Jedoch ist dieses Szenario in diesem Framework unwahrscheinlich, da die gr"o"se des %
+Frameworks "uberschaubbar ist. Der Traffic auf dem Ethernet Port Eth0 wird betrachtet, da alle von den Agents gesammelten Informationen %
+"uber diesen an den Server gelangen. Dabei wird der eingehende sowie auch der ausgehende Traffic betrachtet. 
+
+\item[Zabbix Agent]Die Clients, die im Netzwerk "uberwacht werden sollen sind die sogenannten Agents, die an den Server %
+die Informationen weiterleiten, die vom Server gefordert werden. In den sp"ateren Kapiteln wird der Hauptfokus auf der %
+I/O--Last der Festplatte und wie beim Server dem ein/- und ausgehenden Traffic auf dem Ethernet Port Eth0 liegen. %
 \end{description} 
 
 \subsection{Eigenentwicklung}
@@ -62,7 +75,6 @@ zu werden.
  
 \end{description}
 
-\newpage
 \item Zabbix Agent
 
 \begin{description}

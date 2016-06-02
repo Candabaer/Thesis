@@ -2,10 +2,69 @@
 \label{cha:versuche}
 Aufgrund der Unterschiede zwischen einer Virtuellen und realen Maschine k"onnen nicht auf beiden Systemen  %
 die gleichen Versuche gemacht. Deshalb m"ussen von den oben vorgestellten Versuchen ein paar Versuche entfernt %
-werden da diese in einem realen Netzwerk nicht auftreten.  
+werden da diese in einem realen Netzwerk nicht auftreten. Bei allen Versuchen werden die Daten die vom Zabbix Server %
+zur verf"ugung gestellt werden mit mitteln der Stochastik analysiert, vorallem wird ein Fokus auf die Standardabweichung des Traffics %
+im Netzwerk gelegt. Als auch auf die Werte die man von der Festplatte sammeln kann. %
+So ist es m"oglich die Werte untereinander zu vergleichen. Mit den Ergebnissen %
+aus diesem Kapitel werden in \cref{cha:vergleich} die Ergebnisse aus \cref{sec:raspberryPiVersuche} und \cref{sec:VMVersuche} verglichen. % 
 
 \section{Raspberry Pi Versuche}
 \label{sec:raspberryPiVersuche}
+
+\subsection{Kein Traffic}
+\label{subsec:nix}
+In diesem Versuch wird der Normale Netzaufbau benutzt. Jedoch wird als Besonderheit das Skript Hintergrundrauschen %
+nicht ausgef"uhrt. So erh"alt man ein Gef"uhl daf"ur wie sich das Netzwerk verh"alt wenn das Netzwerk nicht in Betrieb %
+ist. F"ur diesen Test wird als erstes der Zabbix Server betrachtet. Dies ist vorallem interessant, da auch Zabbix selber %
+Traffic erzeugt und um sich weiter mit dem Netzwerk ausseinander zu setzen ist es wichtig zu wissen was im Netzwerk passiert %
+wenn auf ihm keine Last liegt. %
+ 
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth]{Abb/Zabbix/ZabbixNoTraffic/ZabbixNoTrafficEth0}
+
+\caption{Traffic auf Eth0 beim Zabbix Server bei keinem Datenaustausch}
+\label{fig:Eth0ServerNoTraffic}
+\end{figure}
+
+In der hier gezeigten Tabelle sind alle vorhandenen Agents mit den Durchschnittswerten des Traffics aufgelistet. 
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,Kb/s}%
+ r<{\,Kb/s}%
+ r<{\,Kb/s}%
+ r<{\,\%}%
+}
+Agent  	& Eingehende		& Ausgehende		& Gesamt		& Auslastung von Eth0	\\
+\hline
+DotA	& 7,68			& 12,16			& 19,84			& 0,0248000 		\\
+Dazzle 	& 2,19	 		& 2,72			& 4,91			& 0,0061375 		\\
+Tusk 	& 2,23			& 2,67			& 4,9			& 0,0061250 		\\
+Tinker	& 2,19	 		& 2,72	 		& 4,91	 		& 0,0061375		\\
+Lion	& 2,19	 		& 2,72	 		& 4,91  		& 0,0061375		\\
+\end{tabular}
+\caption{Traffic bei keinem Datenaustausch auf den Pis}
+\label{tab:standardTraffic}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,Kb/s}%
+ r<{\,Kb/s}%
+ r<{\,Kb/s}%
+ r<{\,\%}%
+}
+Agent		& Eingehende            & Ausgehende            & Gesamt                & Last auf Eth0 \\
+\hline
+Agents		& 0,034641              & 0,043301              & 0,0086600             & 0,000019625  \\
+Agents \& Server& 4,903183 		& 8,995337        	& 13,35604            	& 0,089822765        \\
+\end{tabular}
+\caption{Standarbweichung bei keinem Datenaustausch}
+\label{tab:standardTrafficAbweichung}
+\end{table}
+
 
 \subsection{Normalbetrieb}
 \label{subsec:normalbetrieb}
@@ -31,49 +90,45 @@ betr"agt der ausgehende Datenstrom 1,0775 Megabyte/s und der durchschnittlich ei
 Daraus k"onnen wir schlie"sen das der Ethernet Port von Dazzle unter einer durschnittlichen I/O-Last von 2,0825 Megabyte/s stand. % 
 Woraus folgt das der Ethernet Port zu 20,825\% belastet war.
 \begin{table}
-\label{tab:standardTraffic}
 \centering
 \begin{tabular}{l%
- r<{\,MB/s}%
-% S[input-decimal-markers={,},output-decimal-marker={,}]<{\,MB/s}%
- r<{\,MB/s}%
-% S[input-decimal-markers={,},output-decimal-marker={,}]<{\,MB/s}%
- r<{\,MB/s}%
-% S[input-decimal-markers={,},output-decimal-marker={,}]<{\,MB/s}%
+ r<{\,Mb/s}%
+ r<{\,Mb/s}%
+ r<{\,Mb/s}%
  r<{\,\%}%
-% S[input-decimal-markers={,},output-decimal-marker={,}]<{\,MB/s}%
 }
-Agent  	& Eingehende		& Ausgehende		& Gesamt		& Last auf Eth0	\\
+Agent  	& Eingehende		& Ausgehende		& Gesamt		& Auslastung von Eth0	\\
 \hline
-DotA	& 			&			&			&			\\
-Dazzle 	& 1,005 		& 1,0775		& 2,0825		& 20,825		\\
-Tusk 	& 1,06			& 1,0463		& 2,1063		& 21,0625		\\
-Tinker	& 1,0525		& 1,07			& 2,1225		& 21,225		\\
-Lion	& 1,0525		& 1,0813		& 2,1338		& 21,3375		\\
+DotA	& 0,0076		& 0,0122		& 0,01980		&  0,1987 		\\
+Dazzle 	& 1,0050 		& 1,0775		& 2,08250		& 20,8250		\\
+Tusk 	& 1,0600		& 1,0463		& 2,10630		& 21,0625		\\
+Tinker	& 1,0525		& 1,0700		& 2,12250		& 21,2250		\\
+Lion	& 1,0525		& 1,0813		& 2,13380		& 21,3375		\\
 \end{tabular}
-\caption{Traffic auf allen Pis}
+\caption{Normalbetrieb Traffic auf allen Pis}
+\label{tab:standardTraffic}
 \end{table}
 
-In der Tabelle in \cref{tab:standardTraffic} sind die Werte der jeweiligen Agents eingespeichert. Auch der %
+In der \cref{tab:standardTraffic} sind die Durchnittswerte f"ur den Traffic der jeweiligen Agents eingespeichert. Auch der %
 des Servers, da dieser im selben Netzwerk aufgestellt ist wie die anderen Agents. Die Tabelle zeigt uns auch %
 das sich die Agents alle in einem "ahnlichen Umfeld befinden was deren Input sowie Output betrifft. So betr"agt die
-Standardabweichung der Pis nach der Tabelle in \cref{tab:standardTrafficAbweichung}     
+Standardabweichung der Pis nach der \cref{tab:standardTrafficAbweichung}     
 
 \begin{table}
-\label{tab:standardTrafficAbweichung}
 \centering
 \begin{tabular}{l%
- r<{\,MB/s}%
- r<{\,MB/s}%
- r<{\,MB/s}%
+ r<{\,Mb/s}%
+ r<{\,Mb/s}%
+ r<{\,Mb/s}%
  r<{\,\%}%
 }
 Agent		& Eingehende            & Ausgehende            & Gesamt                & Last auf Eth0 \\
 \hline
-Agents		&                       &                       &                       &                       \\
-Agents \& Server& 0,043875              & 0,027196              & 0.03855               & 0,385                \\
+Agents		& 0,043875              & 0,027196              & 0,03855               &  0,385          \\
+Agents \& Server& 0,926675		& 0,938757        	& 1,93351              & 18,709         \\
 \end{tabular}
-\caption{Standarbweichung der Werte}
+\caption{Normalbetrieb Standarbweichung der Werte}
+\label{tab:standardTrafficAbweichung}
 \end{table}
 
 
@@ -99,6 +154,7 @@ ein Reibungsloser Ablauf im Netzwerk geleistet ist.
 
 
 \subsection{Loop}
+
 \label{subsec:loop}
 Wie in \cref{sec:testbeschreibung} beschrieben ist ein Loop ein Fehler der auftritt wenn in einem Switch zwei Ports miteinander verbunden worden sind. %
 Dasselbe gilt auch wenn zwei Switches miteinander verbunden werden. Loops sind Fehler die auftreten wenn der Endnutzer nicht mit dem Umgang der Hardware vertraut ist, %
@@ -130,7 +186,7 @@ der Agent eine Naricht "uber seinen Zustand versendet. Da diese jedoch nicht den
 \end{figure}
 
 Hier kann man sehen das der Loop auch die Informationen die der Agent "uber die Festplatte verschickt unerreichbar sind. Dies hat jedoch aus Erfahrungswerten keinen Einflu"s auf die %
-Performanz der Agents. Man kann davon ausgehen das sich die I/O--Last der Agents auf den Wert der in \cref{sec:nix} gezeigten Werte einpendelt. %
+Performanz der Agents. Man kann davon ausgehen das sich die I/O--Last der Agents auf den Wert der in \cref{subsec:nix} gezeigten Werte einpendelt. %
 
 
 \subsubsection{Schlussfolgerung Test: Loop}
@@ -143,7 +199,49 @@ ihr Ziel erreichen.
 
 
 \subsection{Doppelte IP}
+ASDAHasssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssss
+ASDAHassssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
 In diesem Test wurde dem Agent Tinker dieselbe IP vergeben wie sie Dazzle hat. Ohne weiter in den Versuch zu gehen ...
+
+In diesem Test wird der Raspberry Pi Tinker ignoriert da dieser in dem Test keine Pakete erhalten hat und auch vom %
+Zabbix Server nicht auffindbar ist wie die \cref{fig:fehlermeldungenTinker} nahelegt.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth]{Abb/ZabbixTinker/DoppelteIP/TinkerFaults}
+
+\caption{Fehlermeldung auf dem Zabbix Dashboard bez"uglich Tinker}
+\label{fig:fehlermeldungenTinker}
+\end{figure}
+
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,Mb/s}%
+ r<{\,Mb/s}%
+ r<{\,Mb/s}%
+ r<{\,\%}%
+}
+Agent  	& Eingehende		& Ausgehende		& Gesamt		& Auslastung von Eth0	\\
+\hline
+DotA	& 0,0076		& 0,0122		& 0,01980		&  0,1987 		\\
+Dazzle 	& 1,0050 		& 1,0775		& 2,08250		& 20,8250		\\
+Tusk 	& 1,0600		& 1,0463		& 2,10630		& 21,0625		\\
+Lion	& 1,0525		& 1,0813		& 2,13380		& 21,3375		\\
+\end{tabular}
+\caption{Traffic Durchschnittswerte bei Doppelt belegter IP}
+\label{tab:DoppelteIPTraffic}
+\end{table}
+
 
 \section{Virtual Machine Versuche}
 \label{sec:VMVersuche}
