@@ -27,7 +27,9 @@ wenn auf ihm keine Last liegt. %
 \label{fig:Eth0ServerNoTraffic}
 \end{figure}
 
-In der hier gezeigten Tabelle sind alle vorhandenen Agents mit den Durchschnittswerten des Traffics aufgelistet. 
+Die \cref{tab:noTraffic} zeigt die durchschnittlichen "Ubertragungswerte der einzelnen Pis auf, wie man sieht
+befindet sich der Durchschnitt im geringen Kilobit pro Sekunde Bereich 
+
 \begin{table}
 \centering
 \begin{tabular}{l%
@@ -36,16 +38,18 @@ In der hier gezeigten Tabelle sind alle vorhandenen Agents mit den Durchschnitts
  r<{\,Kb/s}%
  r<{\,\%}%
 }
-Agent  	& Eingehende		& Ausgehende		& Gesamt		& Auslastung von Eth0	\\
+Agent	  			& Eingehende		& Ausgehende		& Gesamt		& Auslastung von Eth0	\\
 \hline
-DotA	& 7,68			& 12,16			& 19,84			& 0,0248000 		\\
-Dazzle 	& 2,19	 		& 2,72			& 4,91			& 0,0061375 		\\
-Tusk 	& 2,23			& 2,67			& 4,9			& 0,0061250 		\\
-Tinker	& 2,19	 		& 2,72	 		& 4,91	 		& 0,0061375		\\
-Lion	& 2,19	 		& 2,72	 		& 4,91  		& 0,0061375		\\
+DotA				& 7,68			& 12,16			& 19,84			& 0,024800000 		\\
+Dazzle 				& 2,19	 		& 2,72			& 4,91			& 0,006137500 		\\
+Tusk 				& 2,23			& 2,67			& 4,9			& 0,006125000		\\
+Tinker				& 2,19	 		& 2,72	 		& 4,91	 		& 0,006137500		\\
+Lion				& 2,19	 		& 2,72	 		& 4,91  		& 0,006137500		\\
+$\diameter $ Agent 		& 2,20			& 2,37			& 4,9075		& 0.006134375		\\   
+$\diameter $ Agent \& Server 	& 3,30  		& 4,33			& 7,894			& 0.009867500		\\
 \end{tabular}
 \caption{Traffic bei keinem Datenaustausch auf den Pis}
-\label{tab:standardTraffic}
+\label{tab:noTraffic}
 \end{table}
 
 \begin{table}
@@ -97,13 +101,16 @@ Woraus folgt das der Ethernet Port zu 20,825\% belastet war.
  r<{\,Mb/s}%
  r<{\,\%}%
 }
-Agent  	& Eingehende		& Ausgehende		& Gesamt		& Auslastung von Eth0	\\
+Agent  				& Eingehende		& Ausgehende		& Gesamt		& Auslastung von Eth0	\\
 \hline
-DotA	& 0,0076		& 0,0122		& 0,01980		&  0,1987 		\\
-Dazzle 	& 1,0050 		& 1,0775		& 2,08250		& 20,8250		\\
-Tusk 	& 1,0600		& 1,0463		& 2,10630		& 21,0625		\\
-Tinker	& 1,0525		& 1,0700		& 2,12250		& 21,2250		\\
-Lion	& 1,0525		& 1,0813		& 2,13380		& 21,3375		\\
+DotA				& 0,0076		& 0,0122		& 0,01980		&  0,1987 		\\
+Dazzle 				& 1,0050 		& 1,0775		& 2,08250		& 20,8250		\\
+Tusk 				& 1,0600		& 1,0463		& 2,10630		& 21,0625		\\
+Tinker				& 1,0525		& 1,0700		& 2,12250		& 21,2250		\\
+Lion				& 1,0525		& 1,0813		& 2,13380		& 21,3375		\\ 
+$\diameter $ Agent 		& 1,0425		& 0,85746 		& 2.11128		& 21.1125 		\\   
+$\diameter $ Agent \& Server 	& 0,83552  		& 1,071825		& 1.69298		& 16.92974		\\
+
 \end{tabular}
 \caption{Normalbetrieb Traffic auf allen Pis}
 \label{tab:standardTraffic}
@@ -199,17 +206,7 @@ ihr Ziel erreichen.
 
 
 \subsection{Doppelte IP}
-ASDAHasssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-ssssss
-ASDAHassssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+
 In diesem Test wurde dem Agent Tinker dieselbe IP vergeben wie sie Dazzle hat. Ohne weiter in den Versuch zu gehen ...
 
 In diesem Test wird der Raspberry Pi Tinker ignoriert da dieser in dem Test keine Pakete erhalten hat und auch vom %
@@ -231,12 +228,15 @@ Zabbix Server nicht auffindbar ist wie die \cref{fig:fehlermeldungenTinker} nahe
  r<{\,Mb/s}%
  r<{\,\%}%
 }
-Agent  	& Eingehende		& Ausgehende		& Gesamt		& Auslastung von Eth0	\\
+Agent  				& Eingehende		& Ausgehende		& Gesamt		& Auslastung von Eth0	\\
 \hline
-DotA	& 0,0076		& 0,0122		& 0,01980		&  0,1987 		\\
-Dazzle 	& 1,0050 		& 1,0775		& 2,08250		& 20,8250		\\
-Tusk 	& 1,0600		& 1,0463		& 2,10630		& 21,0625		\\
-Lion	& 1,0525		& 1,0813		& 2,13380		& 21,3375		\\
+DotA				& 0,00760		& 0,0122		& 0,01980		&  0,1987 		\\
+Dazzle 				& 1,00500		& 1,0775		& 2,08250		& 20,8250		\\
+Tusk 				& 1,06000		& 1,0463		& 2,10630		& 21,0625		\\
+Lion				& 1,05250		& 1,0813		& 2,13380		& 21,3375		\\
+$\diameter $ Agent 		& 1,03917 		& 1,0684 		& 2,10753		& 15,8562 		\\   
+$\diameter $ Agent \& Server 	& 0,78128 		& 0,8043		& 1,58560		& 21,0753		\\
+
 \end{tabular}
 \caption{Traffic Durchschnittswerte bei Doppelt belegter IP}
 \label{tab:DoppelteIPTraffic}
