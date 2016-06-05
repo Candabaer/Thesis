@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.2)  3 JUN 2016 15:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.1)  4 JUN 2016 21:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1113,6 +1113,12 @@ LaTeX Warning: Unused global option(s):
 (./Kapitel/Einfuehrung.aux) (./Kapitel/dasframework.aux) (./Kapitel/test.aux)
 (./Kapitel/versuche.aux
 
+LaTeX Warning: Label `fig:Eth0ServerNoTraffic' multiply defined.
+
+
+LaTeX Warning: Label `fig:Eth0ServerNoTraffic@cref' multiply defined.
+
+
 LaTeX Warning: Label `tab:standardTrafficAbweichung' multiply defined.
 
 
@@ -1488,7 +1494,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 106.
  [4]
-<Abb/Netzschaltung3.png, id=224, 1277.77374pt x 596.2275pt>
+<Abb/Netzschaltung3.png, id=226, 1277.77374pt x 596.2275pt>
 File: Abb/Netzschaltung3.png Graphic file (type png)
 
 <use Abb/Netzschaltung3.png>
@@ -1517,14 +1523,14 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 14.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 14.
-<Abb/Versuche/Loop1Switch.png, id=234, 1277.77374pt x 722.7pt>
+<Abb/Versuche/Loop1Switch.png, id=236, 1277.77374pt x 722.7pt>
 File: Abb/Versuche/Loop1Switch.png Graphic file (type png)
 
 <use Abb/Versuche/Loop1Switch.png>
 Package pdftex.def Info: Abb/Versuche/Loop1Switch.png used on input line 33.
 (pdftex.def)             Requested size: 435.32422pt x 246.21098pt.
 
-<Abb/Versuche/Loop2Switch.png, id=238, 1277.77374pt x 696.6025pt>
+<Abb/Versuche/Loop2Switch.png, id=240, 1277.77374pt x 696.6025pt>
 File: Abb/Versuche/Loop2Switch.png Graphic file (type png)
 
 <use Abb/Versuche/Loop2Switch.png>
@@ -1588,7 +1594,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 14.
 
-<Abb/Zabbix/ZabbixNoTraffic/ZabbixNoTrafficEth0.png, id=264, 1581.91pt x 379.41
+<Abb/Zabbix/ZabbixNoTraffic/ZabbixNoTrafficEth0.png, id=266, 1581.91pt x 379.41
 75pt>
 File: Abb/Zabbix/ZabbixNoTraffic/ZabbixNoTrafficEth0.png Graphic file (type png
 )
@@ -1596,125 +1602,133 @@ File: Abb/Zabbix/ZabbixNoTraffic/ZabbixNoTrafficEth0.png Graphic file (type png
 Package pdftex.def Info: Abb/Zabbix/ZabbixNoTraffic/ZabbixNoTrafficEth0.png use
 d on input line 24.
 (pdftex.def)             Requested size: 435.32422pt x 104.41249pt.
-
-Overfull \hbox (31.79608pt too wide) in paragraph at lines 35--51
- [][] 
- []
-
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 34.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 34.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 34.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 53.
-[9
+(babel)             in language  on input line 34.
+ [9
 
 
 
  <./Abb/Zabbix/ZabbixNoTraffic/ZabbixNoTrafficEth0.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 73.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 73.
+<Abb/ZabbixDazzle/NoTraffic/DazzleNoTrafficIoStat.png, id=274, 1577.895pt x 465
+.74pt>
+File: Abb/ZabbixDazzle/NoTraffic/DazzleNoTrafficIoStat.png Graphic file (type p
+ng)
+ <use Abb/ZabbixDazzle/NoTraffic/DazzleNoTrafficIoStat.png>
+Package pdftex.def Info: Abb/ZabbixDazzle/NoTraffic/DazzleNoTrafficIoStat.png u
+sed on input line 37.
+(pdftex.def)             Requested size: 435.32422pt x 128.48752pt.
 
-<Abb/ZabbixDazzle/Standard/DazzleStandard.png, id=272, 1579.9025pt x 375.4025pt
->
-File: Abb/ZabbixDazzle/Standard/DazzleStandard.png Graphic file (type png)
- <use Abb/ZabbixDazzle/Standard/DazzleStandard.png>
-Package pdftex.def Info: Abb/ZabbixDazzle/Standard/DazzleStandard.png used on i
-nput line 85.
-(pdftex.def)             Requested size: 435.32422pt x 103.43935pt.
-
-Overfull \hbox (36.6921pt too wide) in paragraph at lines 98--115
+Overfull \hbox (31.79608pt too wide) in paragraph at lines 46--62
  [][] 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 84.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 84.
+
+<Abb/ZabbixDazzle/Standard/DazzleStandard.png, id=276, 1579.9025pt x 375.4025pt
+>
+File: Abb/ZabbixDazzle/Standard/DazzleStandard.png Graphic file (type png)
+ <use Abb/ZabbixDazzle/Standard/DazzleStandard.png>
+Package pdftex.def Info: Abb/ZabbixDazzle/Standard/DazzleStandard.png used on i
+nput line 96.
+(pdftex.def)             Requested size: 435.32422pt x 103.43935pt.
+
+Overfull \hbox (36.6921pt too wide) in paragraph at lines 109--126
+ [][] 
+ []
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 118.
+(babel)             in language  on input line 129.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 118.
-[10 <./Abb/ZabbixDazzle/Standard/DazzleStandard.png>]
-<Abb/ZabbixDazzle/Standard/IoStatDazzleStandard.png, id=283, 1577.895pt x 460.7
+(babel)             in language  on input line 129.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 129.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 129.
+[10 <./Abb/ZabbixDazzle/NoTraffic/DazzleNoTrafficIoStat.png>]
+<Abb/ZabbixDazzle/Standard/IoStatDazzleStandard.png, id=287, 1577.895pt x 460.7
 2125pt>
 File: Abb/ZabbixDazzle/Standard/IoStatDazzleStandard.png Graphic file (type png
 )
  <use Abb/ZabbixDazzle/Standard/IoStatDazzleStandard.png>
 Package pdftex.def Info: Abb/ZabbixDazzle/Standard/IoStatDazzleStandard.png use
-d on input line 144.
+d on input line 155.
 (pdftex.def)             Requested size: 435.32422pt x 127.10295pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 170.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 170.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 170.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 159.
- [11 <./Abb/ZabbixDazzle/Standard/IoStatDazzleStandard.png>]
+(babel)             in language  on input line 170.
+ [11 <./Abb/ZabbixDazzle/Standard/DazzleStandard.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 163.
+(babel)             in language  on input line 174.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 163.
+(babel)             in language  on input line 174.
 
-<Abb/ZabbixDazzle/Loop/DazzleLoop.png, id=296, 1583.9175pt x 377.41pt>
+<Abb/ZabbixDazzle/Loop/DazzleLoop.png, id=300, 1583.9175pt x 377.41pt>
 File: Abb/ZabbixDazzle/Loop/DazzleLoop.png Graphic file (type png)
 
 <use Abb/ZabbixDazzle/Loop/DazzleLoop.png>
 Package pdftex.def Info: Abb/ZabbixDazzle/Loop/DazzleLoop.png used on input lin
-e 174.
+e 185.
 (pdftex.def)             Requested size: 435.32422pt x 103.7276pt.
-
-<Abb/ZabbixDazzle/Loop/IoStatDazzleLoop.png, id=300, 1571.8725pt x 459.7175pt>
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 197.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 197.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 197.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 197.
+ [12 <./Abb/ZabbixDazzle/Standard/IoStatDazzleStandard.png> <./Abb/ZabbixDazzle
+/Loop/DazzleLoop.png>]
+<Abb/ZabbixDazzle/Loop/IoStatDazzleLoop.png, id=311, 1571.8725pt x 459.7175pt>
 File: Abb/ZabbixDazzle/Loop/IoStatDazzleLoop.png Graphic file (type png)
 
 <use Abb/ZabbixDazzle/Loop/IoStatDazzleLoop.png>
 Package pdftex.def Info: Abb/ZabbixDazzle/Loop/IoStatDazzleLoop.png used on inp
-ut line 189.
+ut line 200.
 (pdftex.def)             Requested size: 435.32422pt x 127.31708pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 206.
+(babel)             in language  on input line 219.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 206.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 206.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 206.
- [12 <./Abb/ZabbixDazzle/Loop/DazzleLoop.png>]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 208.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 208.
+(babel)             in language  on input line 219.
 
-<Abb/ZabbixTinker/DoppelteIP/TinkerFaults.png, id=311, 758.835pt x 198.7425pt>
+<Abb/ZabbixTinker/DoppelteIP/TinkerFaults.png, id=316, 758.835pt x 198.7425pt>
 File: Abb/ZabbixTinker/DoppelteIP/TinkerFaults.png Graphic file (type png)
 
 <use Abb/ZabbixTinker/DoppelteIP/TinkerFaults.png>
 Package pdftex.def Info: Abb/ZabbixTinker/DoppelteIP/TinkerFaults.png used on i
-nput line 217.
+nput line 228.
 (pdftex.def)             Requested size: 435.32422pt x 114.01524pt.
 
-Overfull \hbox (36.6921pt too wide) in paragraph at lines 225--241
+Overfull \hbox (36.6921pt too wide) in paragraph at lines 236--252
  [][] 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 246.
+(babel)             in language  on input line 257.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 246.
+(babel)             in language  on input line 257.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 248.
+(babel)             in language  on input line 259.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 248.
+(babel)             in language  on input line 259.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 249.
+(babel)             in language  on input line 260.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 249.
+(babel)             in language  on input line 260.
 )
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 110.
@@ -1724,8 +1738,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 110.
- [13 <./Abb/ZabbixDazzle/Loop/IoStatDazzleLoop.png> <./Abb/ZabbixTinker/Doppelt
-eIP/TinkerFaults.png>]
+ [13 <./Abb/ZabbixDazzle/Loop/IoStatDazzleLoop.png>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1734,7 +1747,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 110.
- [14]
+ [14 <./Abb/ZabbixTinker/DoppelteIP/TinkerFaults.png>]
 Kapitel 5.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 112.
@@ -1833,10 +1846,10 @@ Package logreq Info: Writing requests to 'Hauptdokument.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 125.
  ) 
 Here is how much of TeX's memory you used:
- 24443 strings out of 494976
- 461373 string characters out of 6179138
- 866329 words of memory out of 5000000
- 27183 multiletter control sequences out of 15000+600000
+ 24450 strings out of 494976
+ 461662 string characters out of 6179138
+ 866313 words of memory out of 5000000
+ 27187 multiletter control sequences out of 15000+600000
  59371 words of font info for 52 fonts, out of 8000000 for 9000
  18 hyphenation exceptions out of 8191
  39i,10n,48p,10458b,1691s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1847,10 +1860,10 @@ ic/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/t
 exmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/l
 msy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/mathabx-type1/matha12.pfb>
-Output written on Hauptdokument.pdf (23 pages, 805089 bytes).
+Output written on Hauptdokument.pdf (23 pages, 843538 bytes).
 PDF statistics:
- 402 PDF objects out of 1000 (max. 8388607)
- 346 compressed objects within 4 object streams
- 79 named destinations out of 1000 (max. 500000)
- 313 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 407 PDF objects out of 1000 (max. 8388607)
+ 349 compressed objects within 4 object streams
+ 80 named destinations out of 1000 (max. 500000)
+ 324 words of extra memory for PDF output out of 10000 (max. 10000000)
 

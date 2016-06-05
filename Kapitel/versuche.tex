@@ -27,8 +27,42 @@ wenn auf ihm keine Last liegt. %
 \label{fig:Eth0ServerNoTraffic}
 \end{figure}
 
-Die \cref{tab:noTraffic} zeigt die durchschnittlichen "Ubertragungswerte der einzelnen Pis auf, wie man sieht
-befindet sich der Durchschnitt im geringen Kilobit pro Sekunde Bereich 
+Die \cref{tab:noTraffic} zeigt die durchschnittlichen "Ubertragungswerte der einzelnen Pis auf, wie man sieht %
+befindet sich der Durchschnitt im geringen Kilobit pro Sekunde Bereich. Es ist davon auszugehen das der gesamte %
+sichtbare Traffic durch den Zabbix Server zustande kommt. Auch die I-O Last auf den Pis zeigt das komm schreib operationen %
+zum geschehen.  
+
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,B/s}%
+ r<{\,IO Ops/s}%
+ r<{\,B/s}%
+ r<{\,IO Ops/s}%
+}
+Agent	  			& Schreiben		& Lesen 		& Schreib		& Lesen			\\
+\hline
+DotA				& 7,68			& 12,16			& 19,84			& 0,024800000 		\\
+Dazzle 				& 2,19	 		& 2,72			& 4,91			& 0,006137500 		\\
+Tusk 				& 2,23			& 2,67			& 4,9			& 0,006125000		\\
+Tinker				& 2,19	 		& 2,72	 		& 4,91	 		& 0,006137500		\\
+Lion				& 2,19	 		& 2,72	 		& 4,91  		& 0,006137500		\\
+$\diameter $ Agent 		& 2,20			& 2,37			& 4,9075		& 0.006134375		\\   
+$\diameter $ Agent \& Server 	& 3,30  		& 4,33			& 7,894			& 0.009867500		\\
+\end{tabular}
+\caption{Traffic bei keinem Datenaustausch auf den Pis}
+\label{tab:noTraffic}
+\end{table}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth]{Abb/ZabbixDazzle/NoTraffic/DazzleNoTrafficIoStat}
+
+\caption{I/O-Last bei Dazzle ohne Datenaustausch}
+\label{fig:Eth0ServerNoTraffic}
+\end{figure}
+
 
 \begin{table}
 \centering
@@ -143,7 +177,7 @@ Agents \& Server& 0,926675		& 0,938757        	& 1,93351              & 18,709  
 \centering
 \includegraphics*[width=0.9\linewidth]{Abb/ZabbixDazzle/Standard/IoStatDazzleStandard}
 
-\caption{I/O--Last auf der Festplatte von Dazzle}
+\caption{I/O-Last auf der Festplatte von Dazzle}
 \label{fig:IoStatDazzleStandard}
 \end{figure}
 
@@ -165,7 +199,7 @@ ein Reibungsloser Ablauf im Netzwerk geleistet ist.
 \label{subsec:loop}
 Wie in \cref{sec:testbeschreibung} beschrieben ist ein Loop ein Fehler der auftritt wenn in einem Switch zwei Ports miteinander verbunden worden sind. %
 Dasselbe gilt auch wenn zwei Switches miteinander verbunden werden. Loops sind Fehler die auftreten wenn der Endnutzer nicht mit dem Umgang der Hardware vertraut ist, %
-oder die IT--Infrastruktur zu gro"s wird. %
+oder die IT-Infrastruktur zu gro"s wird. %
 Der erwartete Ausgang des Tests ist nach Abschnitt 3.8 \autocite{book:schreiner} ein totaler Ausfall des Netzwerkes. Die nun gezeigten Ergebnisse best"atigen diese %
 Annahme.  
 
@@ -188,12 +222,12 @@ der Agent eine Naricht "uber seinen Zustand versendet. Da diese jedoch nicht den
 \centering
 \includegraphics*[width=0.9\linewidth]{Abb/ZabbixDazzle/Loop/IoStatDazzleLoop}
 
-\caption{I/O--Last auf der Festplatte bei einem Loop}
+\caption{I/O-Last auf der Festplatte bei einem Loop}
 \label{fig:IoStatDazzleLoop}
 \end{figure}
 
 Hier kann man sehen das der Loop auch die Informationen die der Agent "uber die Festplatte verschickt unerreichbar sind. Dies hat jedoch aus Erfahrungswerten keinen Einflu"s auf die %
-Performanz der Agents. Man kann davon ausgehen das sich die I/O--Last der Agents auf den Wert der in \cref{subsec:nix} gezeigten Werte einpendelt. %
+Performanz der Agents. Man kann davon ausgehen das sich die I/O-Last der Agents auf den Wert der in \cref{subsec:nix} gezeigten Werte einpendelt. %
 
 
 \subsubsection{Schlussfolgerung Test: Loop}
