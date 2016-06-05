@@ -1,0 +1,38 @@
+\subsection{Doppelte IP}
+
+In diesem Test wurde dem Agent Tinker dieselbe IP vergeben wie sie Dazzle hat. Ohne weiter in den Versuch zu gehen ...
+
+In diesem Test wird der Raspberry Pi Tinker ignoriert da dieser in dem Test keine Pakete erhalten hat und auch vom %
+Zabbix Server nicht auffindbar ist wie die \cref{fig:fehlermeldungenTinker} nahelegt.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth]{Abb/ZabbixTinker/DoppelteIP/TinkerFaults}
+
+\caption{Fehlermeldung auf dem Zabbix Dashboard bez"uglich Tinker}
+\label{fig:fehlermeldungenTinker}
+\end{figure}
+
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,Mb/s}%
+ r<{\,Mb/s}%
+ r<{\,Mb/s}%
+ r<{\,\%}%
+}
+Agent  				& Eingehende		& Ausgehende		& Gesamt		& Auslastung von Eth0	\\
+\hline
+DotA				& 0,00760		& 0,0122		& 0,01980		&  0,1987 		\\
+Dazzle 				& 1,00500		& 1,0775		& 2,08250		& 20,8250		\\
+Tusk 				& 1,06000		& 1,0463		& 2,10630		& 21,0625		\\
+Lion				& 1,05250		& 1,0813		& 2,13380		& 21,3375		\\
+$\diameter $ Agent 		& 1,03917 		& 1,0684 		& 2,10753		& 15,8562 		\\   
+$\diameter $ Agent \& Server 	& 0,78128 		& 0,8043		& 1,58560		& 21,0753		\\
+
+\end{tabular}
+\caption{Traffic Durchschnittswerte bei Doppelt belegter IP}
+\label{tab:DoppelteIPTraffic}
+\end{table}
+
+

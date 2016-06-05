@@ -1,0 +1,91 @@
+\subsection{Kein Traffic}
+\label{subsec:nix}
+In diesem Versuch wird der Normale Netzaufbau benutzt. Jedoch wird als Besonderheit das Skript Hintergrundrauschen %
+nicht ausgef"uhrt. So erh"alt man ein Gef"uhl daf"ur wie sich das Netzwerk verh"alt wenn das Netzwerk nicht in Betrieb %
+ist. F"ur diesen Test wird als erstes der Zabbix Server betrachtet. Dies ist vorallem interessant, da auch Zabbix selber %
+Traffic erzeugt und um sich weiter mit dem Netzwerk ausseinander zu setzen ist es wichtig zu wissen was im Netzwerk passiert %
+wenn auf ihm keine Last liegt. %
+ 
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth]{Abb/Zabbix/ZabbixNoTraffic/ZabbixNoTrafficEth0}
+
+\caption{Traffic auf Eth0 beim Zabbix Server bei keinem Datenaustausch}
+\label{fig:Eth0ServerNoTraffic}
+\end{figure}
+
+Die \cref{tab:noTraffic} zeigt die durchschnittlichen "Ubertragungswerte der einzelnen Pis auf, wie man sieht %
+befindet sich der Durchschnitt im geringen Kilobit pro Sekunde Bereich. Es ist davon auszugehen das der gesamte %
+sichtbare Traffic durch den Zabbix Server zustande kommt. Auch die I-O Last auf den Pis zeigt das kaum schreib operationen %
+geschehen, Lese Operationen geschehen bei den Pis gar nicht. In der Zabbix queue stapeln sich keine Daten, im Durschnitt %
+verarbeitet der Zabbix 4,05 Werte pro Sekunde. 
+
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,B/s}%
+ r<{\,B/s}%
+}
+Agent	  			& Schreiben	 	& Lesen	\\	
+\hline
+Dazzle 				& 0,710000		& 0	        \\
+Tusk 				& 0,183600		& 0		\\
+Tinker				& 0,693300 		& 0	 	\\
+Lion				& 0,745000		& 0	 	\\
+$\diameter $ Agent 		& 0,582975		& 0		\\   
+Standardabweichung 		& 0,231333  		& 0		\\
+\end{tabular}
+\caption{I/O Zeiten bei keinem Datenaustausch auf den Pis}
+\label{tab:noTrafficIoStat}
+\end{table}
+
+
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics*[width=0.9\linewidth]{Abb/ZabbixDazzle/NoTraffic/DazzleNoTrafficIoStat}
+
+%\caption{I/O-Last bei Dazzle ohne Datenaustausch}
+%\label{fig:Eth0ServerNoTraffic}
+%\end{figure}
+
+
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,Kb/s}%
+ r<{\,Kb/s}%
+ r<{\,Kb/s}%
+ r<{\,\%}%
+}
+Agent	  			& Eingehende		& Ausgehende		& Gesamt		& Auslastung von Eth0	\\
+\hline
+DotA				& 7,68			& 12,16			& 19,84			& 0,01984 		\\
+Dazzle 				& 2,19	 		& 2,72			& 4,91			& 0,00490 		\\
+Tusk 				& 2,23			& 2,67			& 4,9			& 0,00491		\\
+Tinker				& 2,19	 		& 2,72	 		& 4,91	 		& 0,00491		\\
+Lion				& 2,19	 		& 2,72	 		& 4,91  		& 0,00491		\\
+$\diameter $ Agent 		& 2,20			& 2,37			& 4,9075		& 0.0049075		\\   
+$\diameter $ Agent \& Server 	& 3,30  		& 4,33			& 7,894			& 0.007894		\\
+\end{tabular}
+\caption{Traffic bei keinem Datenaustausch auf den Pis}
+\label{tab:noTraffic}
+%\end{table}
+%Die kommentare hier entfernen um die Tabellen zu splitten
+%\begin{table}
+%\centering
+\begin{tabular}{l%
+ r<{\,Kb/s}%
+ r<{\,Kb/s}%
+ r<{\,Kb/s}%
+ r<{\,\%}%
+}
+Agent		& Eingehende            & Ausgehende            & Gesamt                & Last auf Eth0 \\
+\hline
+Agents		& 0,034641              & 0,043301              & 0,0086600             & 0,000019625  \\
+Agents \& Server& 4,903183 		& 8,995337        	& 13,35604            	& 0,089822765        \\
+\end{tabular}
+\caption{Standarbweichung bei keinem Datenaustausch}
+\label{tab:NoTrafficAbweichung}
+\end{table}
+
+
