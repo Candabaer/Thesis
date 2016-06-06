@@ -1,6 +1,7 @@
 \subsection{Doppelte IP}
 
-In diesem Test wurde dem Agent Tinker dieselbe IP vergeben wie sie Dazzle hat. Ohne weiter in den Versuch zu gehen ...
+In diesem Test wurde dem Agent Tinker dieselbe IP vergeben wie sie Dazzle hat. Dadurch entsteht ein Netzwerkadressenkonflikt. %
+Das erste was passiert ist das die Pakete die f"ur den Pi Tinker bestimmt sind ihr Ziel nichtmehr erreichen k"onnen. % 
 
 In diesem Test wird der Raspberry Pi Tinker ignoriert da dieser in dem Test keine Pakete erhalten hat und auch vom %
 Zabbix Server nicht auffindbar ist wie die \cref{fig:fehlermeldungenTinker} nahelegt.
@@ -23,16 +24,38 @@ Zabbix Server nicht auffindbar ist wie die \cref{fig:fehlermeldungenTinker} nahe
 }
 Agent  				& Eingehende		& Ausgehende		& Gesamt		& Auslastung von Eth0	\\
 \hline
-DotA				& 0,00760		& 0,0122		& 0,01980		&  0,1987 		\\
-Dazzle 				& 1,00500		& 1,0775		& 2,08250		& 20,8250		\\
-Tusk 				& 1,06000		& 1,0463		& 2,10630		& 21,0625		\\
-Lion				& 1,05250		& 1,0813		& 2,13380		& 21,3375		\\
-$\diameter $ Agent 		& 1,03917 		& 1,0684 		& 2,10753		& 15,8562 		\\   
-$\diameter $ Agent \& Server 	& 0,78128 		& 0,8043		& 1,58560		& 21,0753		\\
+DotA				& 0,00785		& 0,0924		& 0,1709		&  0,01709 		\\
+Dazzle 				& 20,15			& 10,32			& 30,47			& 1,809		\\
+Tusk 				& 7,7			& 10,32			& 18,09			& 1,809		\\
+Lion				& 6,72			& 6,19			& 12,91			& 1,291		\\
+$\diameter $ Agent 		& 11,55 		& 8,9433 		& 20,49			& 2,049 		\\   
+$\diameter $ Agent \& Server 	& 8,679625 		& 6,7306		& 15,410225		& 1,5410255		\\
 
 \end{tabular}
 \caption{Traffic Durchschnittswerte bei Doppelt belegter IP}
 \label{tab:DoppelteIPTraffic}
+\end{table}
+
+Wie man der \cref{tab:DoppelteIPTraffic} sehen kann wird Dazzle mehr belastet als sonst. Vergleicht man die Standarbweichung %
+von \cref{tab:DoppelteIPTrafficAbweichung} mit der \cref{tab:standardTrafficAbweichung} sieht man das %
+die Abweichung sechsfach gr"o"ser ist. Der Eingehende Datenstrom ist doppelt so hoch wie beim Normalbetrieb. Auch der %
+Ausgehende Traffic ist bei Dazzle gestiegen, jedoch blieb der Durchschnitt ungef"ahr der gleiche. % 
+
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,Mb/s}%
+ r<{\,Mb/s}%
+ r<{\,Mb/s}%
+ r<{\,\%}%
+}
+Agent		& Eingehende            & Ausgehende            & Gesamt                & Last auf Eth0 \\
+\hline
+Agents		& 6,908559              & 1,946900              & 7,36697               &  0,73670        \\
+Agents \& Server& 7,249420		& 4,187049        	& 10,8681             	&  1,08681         \\
+\end{tabular}
+\caption{Doppelte IP Standarbweichung der Werte}
+\label{tab:DoppelteIPTrafficAbweichung}
 \end{table}
 
 
