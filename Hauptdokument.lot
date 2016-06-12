@@ -3,6 +3,7 @@
 \select@language {ngerman}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Spezifikation der Raspberry Pis}}{2}{table.2.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {4.1}{\ignorespaces I/O Zeiten bei keinem Datenaustausch auf den Pis}}{10}{table.4.1}

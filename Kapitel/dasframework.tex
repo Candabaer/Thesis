@@ -1,7 +1,9 @@
 \chapter{Das Framework}
 \label{cha:framework}
+
+
 \section{Verwendete Hardware} \label{sec:verwendeteHardware}
-Die in \cref{sec:testbeschreibung} beschriebenen Versuche wurden mit folgender Hardware durchgef"uhrt. %
+Die in diesem Framework verwendete Hardware sind folgende Ger"ate. %
 \begin{itemize}
 \item Zwei Switches
 \item Vier Raspberry Pis der ersten Generation
@@ -11,6 +13,29 @@ Die in \cref{sec:testbeschreibung} beschriebenen Versuche wurden mit folgender H
 Diese Ger"ate wurden in einem eigenst"andigend Netzwerk zusammengeschaltet. So sind an jedem Switch zwei Pis %
 der ersten Generation angeschlossen w"ahrend an einem der Switches der Pi der zweiten Generation angeschlossen %
 ist (siehe \cref{fig:AufbauVomNetzwerk}). Welche Software auf den Pis verwendet wurde, wird in \cref{sec:aufbauSoftware} erkl"art. 
+
+Als erstes soll  ein Einblick in die Hardware Spezifikation der Raspberry Pis gegeben werden eingegeben werden. 
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,MHz}%
+ r<{\,MB}%
+ r<{\,GB}%
+ r<{\,MB/s}%
+ r<{\,Mbit/s}%
+}
+Ger"at 		& CPU	& Arbeitspeicher	& Speicher	& Netzwerk Port	\\
+\hline
+Raspberry Pi 1	& 700	& 512			& 8		& 100		\\
+Raspberry Pi 2 	& 700 	& 1024			& 32		& 100		\\
+
+\end{tabular}
+\caption{Spezifikation der Raspberry Pis}
+\label{tab:hardwarespezifiktion}
+\end{table}
+
+Die beiden verwendeten Switches k"onnen in einem 100 oder 1000 Mbit Netz Arbeiten, jedoch sind die Raspberry Pis der Flaschenhals in diesem %
+Aufbau und somit wird einem reinem 100 Mbit Netzwerk gearbeitet. 
 
 \section{Aufbau der Software} \label{sec:aufbauSoftware}
 Das Testframework besteht aus drei verschiedenen Teilen. %
@@ -32,24 +57,11 @@ Zabbix besteht aus zwei Komponenten. %
 \begin{description}
 \item[Zabbix Server]Der Server hat eine auf PHP basierende Weboberfl"ache "uber die es f"ur den Benutzer m"oglich ist die Agents zu %
 konfigurieren. So k"onnen manuell die Templates erstellt werden, die den Zabbix Agents mitteilen, welche Informationen dem %
-Server zu "ubermitteln sind. %
-"Uber die API Schnittstelle ist es m"oglich Programme f"ur den Server zu schreiben und diese auszuf"uhren. %
-Der Zabbix Server ist ein sich selbst "uberwachender Agent. Dieser ist jedoch nicht beteiligt %
-im allgemeinen Prozess des Frameworks. %
-Trotzdem wird in den folgenden Kapiteln der Zabbix Server nicht aussen vor gelassen und in die %
-den Tests betrachtet werden, dabei werden haupts"achlich die von Zabbix generierten Werte zur Perfomance und zum %
-Traffic auf dem Ethernet Port genommen. Der Wert Perfomance betrachtet zwei Dinge, einmal die sogenannte Queue, welche %
-angibt wie viele von den Agents "ubermittelten Werten darauf warten vom Zabbix Server verarbeitet zu werden und die %
-die verarbeiteten Werte pro Sekunde. Diese Werte lassen einen Schluss auf die Leistung des Servers schlie"sen. %
-Sollte die Queue einen bestimmten schwellwert erreichen wird auf dem Zabbix Dashboard eine Warnung ausgegeben das der %
-Server mit der Verarbeitung nicht hinterherkommt. Dies kann soweit gehen das die gesammelten Daten auf dem Server nicht %
-aktuell oder sogar fehlerhaft sind. Jedoch ist dieses Szenario in diesem Framework unwahrscheinlich, da die gr"o"se des %
-Frameworks "uberschaubbar ist. Der Traffic auf dem Ethernet Port Eth0 wird betrachtet, da alle von den Agents gesammelten Informationen %
-"uber diesen an den Server gelangen. Dabei wird der eingehende sowie auch der ausgehende Traffic betrachtet. 
-
+Server zu "ubermitteln sind. Eine genaueren Einblick in den Zabbix Server gibt es im \cref{cha:zabbix}. %
 \item[Zabbix Agent]Die Clients, die im Netzwerk "uberwacht werden sollen sind die sogenannten Agents, die an den Server %
 die Informationen weiterleiten, die vom Server gefordert werden. In den sp"ateren Kapiteln wird der Hauptfokus auf der %
 I/O--Last der Festplatte und wie beim Server dem ein/- und ausgehenden Traffic auf dem Ethernet Port Eth0 liegen. %
+Eine genaueren Einblick in den Zabbix Server gibt es im \cref{cha:zabbix}. % 
 \end{description} 
 
 \subsection{Eigenentwicklung}
@@ -84,6 +96,8 @@ in einer Linux Umgebung entwickelt, getestet und verwendet wird. Hintergrundraus
 Pakete von einem Agent zum anderen. So wird eine %
 Last auf dem Netzwerk erzeugt, die Mithilfe des Zabbix Servers gemessen werden kann. Ausserdem speichert Hintergrundrauschen %
 die Dauer, bis ein Paket erfolgreich bei seinem zuf"allig ausgew"ahlten Empf"anger angekommen ist. %
+Es werden drei verschieden gro"se Pakete verschickt 20 Megabyte, 200 Megabyte und 2 Gigabyte. %
+Die Ergebnisse werden in \cref{cha:versuche} er"ortert.
 
 \item[Startrauschen:]wird automatisch zum Start eines der Endger"ate ausgef"uhrt. Es dient als eine Zeitschaltuhr %
 und erm"oglicht ein zeitversetztes Starten des Scripts Hintergrundrauschen, wodurch man den sequentiellen %

@@ -1,0 +1,103 @@
+\chapter{Zabbix}
+\label{cha:zabbix}
+In \cref{cha:framework} wurde schon die verwendete Netzwerk Monitoring Software angeschnitten. In diesem Abschnitt wird nun %
+ein tieferer Einblick in den Aufbau und die Verwendung von Zabbix gew"ahrt. Zabbix erm"oglicht es %
+auch das Monitoring als ein Verteiltes Monitoring aufzuziehen mit mehreren Servern, diese sogenannten Proxies %
+sind jedoch kein Bestandteil dieser Thesis und werden deshalb nicht weiter betrachtet.
+
+\section{Zabbix Server}
+Der Zabbix Server ist die Zentrale Komponente des Zabbix Framework. Dem Server werden von den Agents und Proxies %
+Informationen zugeschickt. Die Aufgabe des Server ist es die Daten zu speichern und zu verarbeiten. %
+Der Server speichert auch die Konfiguration der einzelnen Agents die sich im Netzwerk befinden. %
+Um die Konfiguration der Agents einstellen zu k"onnen m"ussen jedoch erst einmal die Agents im Zabbix %
+Server erstellt werden. Die dazu ben"otigten Daten ist die Agent IP und ein eindeutiger Name. %
+Wenn nun der Agent erstellt worden ist kann man "uber die Konfiguration den Agents verschiedene Templates auflegen. %
+Das in dem in \cref{cha:framework} gezeigte Framework verwendet prim"ar das Template: \emph{Template OS %
+Linux}. Dieses Templates ist eines von vielen vordefinierten Templates. Es ist auch m"oglich selber Templates %
+zu erstellen, Templates sind in einem XML Format abgespeichert und k"onnen dadurch einfach unter Nutzern von Zabbix % 
+ausgetauscht werden. Die Firma die den vertrieb von Zabbix regelt hat extra daf"ur die Zabbix Share eingef"uhrt %
+auf dem Zabbix Templates und vieles mehr ausgetauscht werden kann \autocite{zabbix:share}. \ \\ %
+Templates enthalten sogenannte Items die "uber Active Checks oder Passive Checks Informationen von %
+einem vorher im Zabbix Server eingestellten Agent anfordern. Ein Passive Check geschieht "uber einen %
+Request diese sind in JSON verfasst der Prozess beeinhaltet f"unf Schritte: %
+\begin{enumerate}
+\item Der Server "offnet eine TCP Verbindung %
+\item Der Server sendet einen request als Beispiel agent.version %
+\item Der Agent empf"angt den request und antwortet mit der Versionsnummer %
+\item Der Server verarbeitet die Antwort und erh"alt als Ergebniss Zabbix3.0.0rc %
+\item Die TCP Verbindung wird geschlossen %
+\end{enumerate}
+\autocite{zabbix:activepassive}. Passive Checks und Active Checks unterscheiden sich darin, wer den request %
+ausl"ost. Bei einem passiv Check sind die Hosts selber inaktiv bis vom Server ein request eintrifft, bei Active %
+Checks wird der Agent selber Aktiv. Der Agent selber sendet dann an den Server einen Request in dem die zu %
+sammelnden Daten enthalten sind\autocite{zabbix:activepassive2}. Dies ist der Fall wenn vom Agent Daten abgefragt werden sollen die nicht vom %
+Betriebssystem des Agents gesammelt werden. Das bedeutet das der Agent selber nun die Daten die der Server erwartet %
+sammeln muss, dies geschieht meistens "uber externe Programme, sollte ein Agent zu viele Active Checks haben kann es %
+sich auf die Performanz des Hosts auswirken. \ \\ % 
+
+"Uber die API ist es m"oglich Programme f"ur den Server zu schreiben mit der man zum Beispiel %
+eine eigene Benutzeroberfl"ache erstellen kann um die Konfigurationen auf dem Server zu verwalten. %
+"Uber die Api ist es auch m"oglich einen eigenen Zugriff auf die dem Server zugrunde liegende %
+Datenbank herzustellen. %
+Der Zabbix Server basiert auf einem Apache Web Server. Um das Zabbix Frontend nutzen zu k"onnen wird %
+PHP 5.4.0 ben"otigt, jedoch funktioniert PHP 7 noch nicht. Die Daten und Statistiken die Zabbix sammelt %
+werden in einer Datenbank gespeichert. Es werden f"unf verschiedene Datenbanken unterst"utzt. %
+\begin{itemize}
+\item MySql Version 5.0.3 aufw"arts
+\item Oracle Version 10g aufw"arts
+\item PostgreSQL Version 8.1 aufw"arts
+\item SQLite Version 3.3.5 aufw"arts
+\item IBM DB2 Version 9.7 aufw"arts (Noch nicht fehlerfrei)
+\end{itemize}
+\autocite{zabbix:req}
+Der Zabbix Server selber ist auch als ein Agent konfiguriert, der sich selber "uberwacht. Jedoch ist der Server %
+nicht im allgemeinen Prozess des in \cref{cha:dasframework} vorgestellten Frameworks t"atig. %
+Trotzdem wird in den folgenden Kapiteln der Zabbix Server nicht aussen vor gelassen und in die %
+den Tests betrachtet werden, dabei werden haupts"achlich die von Zabbix Statistiken zur Perfomance und zum %
+Traffic auf dem Ethernet Port des Servers genommen. Der Wert Perfomance betrachtet zwei Dinge, einmal die sogenannte Queue, welche %
+angibt wie viele von den Agents "ubermittelten Werten darauf warten vom Zabbix Server verarbeitet zu werden und die %
+die verarbeiteten Werte pro Sekunde. Diese Werte lassen einen Schluss auf die Leistung des Servers schlie"sen. %
+Sollte die Queue einen bestimmten schwellwert erreichen wird auf dem Zabbix Frontend eine Warnung ausgegeben das der %
+Server mit der Verarbeitung nicht hinterherkommt. Dies kann soweit gehen das die gesammelten Daten auf dem Server nicht %
+aktuell oder sogar fehlerhaft sind. Jedoch ist dieses Szenario in diesem Framework unwahrscheinlich, da die gr"o"se des %
+Frameworks "uberschaubar ist. Der Traffic auf dem Ethernet Port Eth0 wird betrachtet, da alle von den Agents gesammelten Informationen %
+"uber diesen an den Server gelangen. Dabei wird der eingehende sowie auch der ausgehende Traffic betrachtet.
+
+\section{Zabbix Agent}
+
+Der Zabbix Agent wird auf dem zu "uberwachenden System installiert. Der Agent sammelt die Daten "uber im Betriebssystem %
+integrierte Monitoring Funktionen und sendet diese je nach Art des Checks diese Informationen an den Agent. %
+Da der Agent schon im Betriebssystem integrierte Funktionen benutzt ist dieser sehr effizient und verbraucht kaum sp"urbar %
+die Ressourcen des Host Systems. Anders als der Server besitzt der Agent kein eigenes Frontend und speichert die Werte nicht %
+in einer Datenbank. Der Agent ist so konstruiert das dieser ohne Administrator Rechte funktioniert, dadurch wird das Sicherheits%
+risiko f"ur den Host erheblich reduziert. F"ur gew"ohnlich wird f"ur den Agent ein eigener User angelegt. Die Anwendung des Agents %
+l"auft unter Unix Systemen als ein Daemon und unter Windows als ein Systemdienst. Zabbix unterst"utzt jedoch noch mehr %
+Betriebssysteme eine Auswahl davon w"aren: 
+\begin{itemize}
+\item Linux
+\item Windows: alle Desktop und Server Versionen seit 2000
+\item OpenBSD
+\item Mac OS X
+\item Solaris 9,10,11
+\end{itemize}
+\autocite{zabbix:agent}.
+Im Aufbau des Frameworks das in dieser Arbeit weiter betrachtet wird laufen die Zabbix Agents unter dem g"angigen Raspberry Pi %
+Betriebssystem Raspbian, welches eine Abwandlung von Debian Jessie ist. Um den Host jedoch verwenden zu k"onnen muss man in %
+den Konfigurations Dateien die Ports die der Server f"ur das versenden von Requests benutzt eingestellt werden und auch die IP des Servers %
+muss eingetragen werden. Da der Agent sonst eingehende Requests verwirft. In den Konfigdateien der Agents ist es auch m"oglich %
+die Active Checks zu notieren, was in diesem Versuchsaufbau auch gemacht wurde. Da das Template OS Linux keine Items hatte die das %
+"uberwachen von der Festplatten Last hatte kann man dies "uber die Konfigurationsdateien einstellen. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

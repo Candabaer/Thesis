@@ -38,23 +38,23 @@
       \verb http://kb.sandisk.com/app/answers/detail/a_id/2520/~/sd/sdhc/sdxc-specifications-and-compatibility
       \endverb
     \endentry
-    \entry{ietf:DHCP}{other}{}
+    \entry{zabbix:activepassive2}{other}{}
       \name{labelname}{1}{}{%
-        {{hash=292969ceca21104fb2772591ebe3294e}{Droms}{D\bibinitperiod}{R.}{R\bibinitperiod}{}{}{}{}}%
+        {{hash=db589a5a83bb83cbac8266fe7050780e}{Kramm}{K\bibinitperiod}{Thorsten}{T\bibinitperiod}{}{}{}{}}%
       }
       \name{author}{1}{}{%
-        {{hash=292969ceca21104fb2772591ebe3294e}{Droms}{D\bibinitperiod}{R.}{R\bibinitperiod}{}{}{}{}}%
+        {{hash=db589a5a83bb83cbac8266fe7050780e}{Kramm}{K\bibinitperiod}{Thorsten}{T\bibinitperiod}{}{}{}{}}%
       }
-      \strng{namehash}{292969ceca21104fb2772591ebe3294e}
-      \strng{fullhash}{292969ceca21104fb2772591ebe3294e}
-      \field{labelalpha}{Dro97}
-      \field{sortinit}{D}
-      \field{labeltitle}{Dynamic Host Configuration Protocol}
-      \field{note}{[Online; Stand 24. Mai 2016]}
-      \field{title}{Dynamic Host Configuration Protocol}
-      \field{year}{1997}
+      \strng{namehash}{db589a5a83bb83cbac8266fe7050780e}
+      \strng{fullhash}{db589a5a83bb83cbac8266fe7050780e}
+      \field{labelalpha}{Kra16}
+      \field{sortinit}{K}
+      \field{labeltitle}{lab4.org}
+      \field{note}{[Online; Stand 11. Juni 2016]}
+      \field{title}{lab4.org}
+      \field{year}{2016}
       \verb{url}
-      \verb https://tools.ietf.org/html/rfc2131
+      \verb http://lab4.org/wiki/Zabbix_Items_Daten_per_Agent_sammeln#Welche_Daten_kann_der_Agent_liefern.3F
       \endverb
     \endentry
     \entry{wiki:Nagios}{other}{}
@@ -102,6 +102,24 @@
       \verb http://www.hanser-elibrary.com/doi/book/10.3139/9783446441545
       \endverb
     \endentry
+    \entry{zabbix:agent}{other}{}
+      \name{labelname}{1}{}{%
+        {{hash=6dc494a0ed530c28608cd412b3b07091}{SIA}{S\bibinitperiod}{Zabbix}{Z\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=6dc494a0ed530c28608cd412b3b07091}{SIA}{S\bibinitperiod}{Zabbix}{Z\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{6dc494a0ed530c28608cd412b3b07091}
+      \strng{fullhash}{6dc494a0ed530c28608cd412b3b07091}
+      \field{labelalpha}{SIA}
+      \field{sortinit}{S}
+      \field{labeltitle}{Zabbix}
+      \field{note}{[Online; Stand 11. Mai 2016]}
+      \field{title}{Zabbix}
+      \verb{url}
+      \verb #https://www.zabbix.com/documentation/3.0/manual/concepts/agent#
+      \endverb
+    \endentry
     \entry{zabbix:Web}{other}{}
       \name{labelname}{1}{}{%
         {{hash=6dc494a0ed530c28608cd412b3b07091}{SIA}{S\bibinitperiod}{Zabbix}{Z\bibinitperiod}{}{}{}{}}%
@@ -114,6 +132,7 @@
       \field{labelalpha}{SIA16}
       \field{sortinit}{S}
       \field{labeltitle}{Zabbix}
+      \field{extraalpha}{1}
       \field{note}{[Online; Stand 11. Mai 2016]}
       \field{title}{Zabbix}
       \field{year}{2016}
@@ -121,50 +140,64 @@
       \verb http://www.zabbix.com/
       \endverb
     \endentry
-    \entry{book:CN2003}{book}{}
+    \entry{zabbix:activepassive}{other}{}
       \name{labelname}{1}{}{%
-        {{hash=5fec945e2e4e128e1f94258b75085d2d}{Tanenbaum}{T\bibinitperiod}{Andrew\bibnamedelima S.}{A\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{hash=6dc494a0ed530c28608cd412b3b07091}{SIA}{S\bibinitperiod}{Zabbix}{Z\bibinitperiod}{}{}{}{}}%
       }
       \name{author}{1}{}{%
-        {{hash=5fec945e2e4e128e1f94258b75085d2d}{Tanenbaum}{T\bibinitperiod}{Andrew\bibnamedelima S.}{A\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{hash=6dc494a0ed530c28608cd412b3b07091}{SIA}{S\bibinitperiod}{Zabbix}{Z\bibinitperiod}{}{}{}{}}%
       }
-      \list{location}{1}{%
-        {M"unchen [u.a.]}%
-      }
-      \list{publisher}{1}{%
-        {Pearson Studium}%
-      }
-      \strng{namehash}{5fec945e2e4e128e1f94258b75085d2d}
-      \strng{fullhash}{5fec945e2e4e128e1f94258b75085d2d}
-      \field{labelalpha}{Tan09}
-      \field{sortinit}{T}
-      \field{labeltitle}{Computernetzwerke}
-      \field{edition}{4. "Uberarb. Aufl., [Nachdr.]}
-      \field{isbn}{9783827370464}
-      \field{series}{i - Informatik}
-      \field{title}{Computernetzwerke}
-      \field{year}{2009}
+      \strng{namehash}{6dc494a0ed530c28608cd412b3b07091}
+      \strng{fullhash}{6dc494a0ed530c28608cd412b3b07091}
+      \field{labelalpha}{SIA16}
+      \field{sortinit}{S}
+      \field{labeltitle}{Zabbix Dokumentation}
+      \field{extraalpha}{2}
+      \field{note}{[Online; Stand . Juni 2016]}
+      \field{title}{Zabbix Dokumentation}
+      \field{year}{2016}
       \verb{url}
-      \verb http://scans.hebis.de/HEBCGI/show.pl?21727132_toc.pdf
+      \verb https://www.zabbix.com/documentation/3.0/manual/appendix/items/activepassive
       \endverb
     \endentry
-    \entry{wiki:forkbomb}{other}{}
+    \entry{zabbix:req}{other}{}
       \name{labelname}{1}{}{%
-        {{hash=9c677286866aad38f8e9b660f5411814}{Wikipedia}{W\bibinitperiod}{}{}{}{}{}{}}%
+        {{hash=6dc494a0ed530c28608cd412b3b07091}{SIA}{S\bibinitperiod}{Zabbix}{Z\bibinitperiod}{}{}{}{}}%
       }
       \name{author}{1}{}{%
-        {{hash=9c677286866aad38f8e9b660f5411814}{Wikipedia}{W\bibinitperiod}{}{}{}{}{}{}}%
+        {{hash=6dc494a0ed530c28608cd412b3b07091}{SIA}{S\bibinitperiod}{Zabbix}{Z\bibinitperiod}{}{}{}{}}%
       }
-      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
-      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
-      \field{labelalpha}{Wik15}
-      \field{sortinit}{W}
-      \field{labeltitle}{Forkbomb --- Wikipedia{,} Die freie Enzyklopadie}
-      \field{note}{[Online; Stand 11. Mai 2015]}
-      \field{title}{Forkbomb --- Wikipedia{,} Die freie Enzyklopadie}
-      \field{year}{2015}
+      \strng{namehash}{6dc494a0ed530c28608cd412b3b07091}
+      \strng{fullhash}{6dc494a0ed530c28608cd412b3b07091}
+      \field{labelalpha}{SIA16}
+      \field{sortinit}{S}
+      \field{labeltitle}{Zabbix Dokumentation}
+      \field{extraalpha}{3}
+      \field{note}{[Online; Stand . Juni 2016]}
+      \field{title}{Zabbix Dokumentation}
+      \field{year}{2016}
       \verb{url}
-      \verb https://de.wikipedia.org/wiki/Forkbomb
+      \verb https://www.zabbix.com/documentation/3.0/manual/appendix/items/activepassive
+      \endverb
+    \endentry
+    \entry{zabbix:share}{other}{}
+      \name{labelname}{1}{}{%
+        {{hash=6dc494a0ed530c28608cd412b3b07091}{SIA}{S\bibinitperiod}{Zabbix}{Z\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=6dc494a0ed530c28608cd412b3b07091}{SIA}{S\bibinitperiod}{Zabbix}{Z\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{6dc494a0ed530c28608cd412b3b07091}
+      \strng{fullhash}{6dc494a0ed530c28608cd412b3b07091}
+      \field{labelalpha}{SIA16}
+      \field{sortinit}{S}
+      \field{labeltitle}{Zabbix Share}
+      \field{extraalpha}{4}
+      \field{note}{[Online; Stand . Juni 2016]}
+      \field{title}{Zabbix Share}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://share.zabbix.com/
       \endverb
     \endentry
   \endsortlist

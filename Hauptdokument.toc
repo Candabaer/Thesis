@@ -10,10 +10,9 @@
 \contentsline {subsection}{\numberline {2.2.1}Zabbix}{3}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Eigenentwicklung}{3}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}Einsatz im Netzwerk}{4}{section.2.3}
-\contentsline {chapter}{\numberline {3}Testaufbau}{6}{chapter.3}
-\contentsline {section}{\numberline {3.1}Testbeschreibung}{6}{section.3.1}
-\contentsline {section}{\numberline {3.2}Pis Real}{8}{section.3.2}
-\contentsline {section}{\numberline {3.3}Pis Virtuell}{8}{section.3.3}
+\contentsline {chapter}{\numberline {3}Zabbix}{6}{chapter.3}
+\contentsline {section}{\numberline {3.1}Zabbix Server}{6}{section.3.1}
+\contentsline {section}{\numberline {3.2}Zabbix Agent}{8}{section.3.2}
 \contentsline {chapter}{\numberline {4}Versuche}{9}{chapter.4}
 \contentsline {section}{\numberline {4.1}Raspberry Pi Versuche}{9}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Kein Traffic}{9}{subsection.4.1.1}
