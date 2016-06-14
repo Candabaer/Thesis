@@ -1,13 +1,13 @@
 [0] Config.pm:318> INFO - This is Biber 1.8
 [0] Config.pm:321> INFO - Logfile is 'Hauptdokument.blg'
-[98] biber:275> INFO - === So Jun 12, 2016, 18:20:46
-[99] Biber.pm:333> INFO - Reading 'Hauptdokument.bcf'
-[191] Biber.pm:630> INFO - Found 9 citekeys in bib section 0
-[213] Biber.pm:3053> INFO - Processing section 0
-[235] Biber.pm:3190> INFO - Looking for bibtex format file 'literatur.bib' for section 0
-[237] bibtex.pm:808> INFO - Found BibTeX data source 'literatur.bib'
-[316] Biber.pm:2939> INFO - Overriding locale 'de_DE.UTF-8' default tailoring 'variable = shifted' with 'variable = non-ignorable'
-[316] Biber.pm:2945> INFO - Sorting 'entry' list 'anyt' keys
-[316] Biber.pm:2949> INFO - No sort tailoring available for locale 'de_DE.UTF-8'
-[349] bbl.pm:482> INFO - Writing 'Hauptdokument.bbl' with encoding 'applemac'
-[350] bbl.pm:555> INFO - Output to Hauptdokument.bbl
+[92] biber:275> INFO - === Di Jun 14, 2016, 17:01:36
+[93] Biber.pm:333> INFO - Reading 'Hauptdokument.bcf'
+[177] Biber.pm:630> INFO - Found 7 citekeys in bib section 0
+[198] Biber.pm:3053> INFO - Processing section 0
+[217] Biber.pm:3190> INFO - Looking for bibtex format file 'literatur.bib' for section 0
+[219] bibtex.pm:808> INFO - Found BibTeX data source 'literatur.bib'
+[292] Biber.pm:2939> INFO - Overriding locale 'de_DE.UTF-8' default tailoring 'variable = shifted' with 'variable = non-ignorable'
+[293] Biber.pm:2945> INFO - Sorting 'entry' list 'anyt' keys
+[293] Biber.pm:2949> INFO - No sort tailoring available for locale 'de_DE.UTF-8'
+[316] bbl.pm:482> INFO - Writing 'Hauptdokument.bbl' with encoding 'applemac'
+[317] bbl.pm:555> INFO - Output to Hauptdokument.bbl

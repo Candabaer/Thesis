@@ -1,5 +1,5 @@
 [0] Config.pm:318> INFO - This is Biber 1.8
-[0] Config.pm:321> INFO - Logfile is 'Hauptdokument.tex.blg'
-[50] biber:275> INFO - === Di Mai 24, 2016, 16:26:20
-[75] Utils.pm:185> ERROR - Cannot find control file 'Hauptdokument.tex.bcf'! - did you pass the "backend=biber" option to BibLaTeX?
-[75] Biber.pm:109> INFO - ERRORS: 1
+[1] Config.pm:321> INFO - Logfile is 'Hauptdokument.tex.blg'
+[176] biber:275> INFO - === Mo Jun 13, 2016, 19:39:29
+[240] Utils.pm:185> ERROR - Cannot find control file 'Hauptdokument.tex.bcf'! - did you pass the "backend=biber" option to BibLaTeX?
+[240] Biber.pm:109> INFO - ERRORS: 1

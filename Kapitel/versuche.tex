@@ -1,23 +1,24 @@
 \chapter{Versuche}
 \label{cha:versuche}
-Aufgrund der Unterschiede zwischen einer Virtuellen und realen Maschine k"onnen nicht auf beiden Systemen  %
-die gleichen Versuche gemacht. Deshalb m"ussen von den oben vorgestellten Versuchen ein paar Versuche entfernt %
-werden da diese in einem realen Netzwerk nicht auftreten. Bei allen Versuchen werden die Daten die vom Zabbix Server %
-zur verf"ugung gestellt werden mit mitteln der Stochastik analysiert, vorallem wird ein Fokus auf die Standardabweichung des Traffics %
-im Netzwerk gelegt. Als auch auf die Werte die man von der Festplatte sammeln kann. %
-So ist es m"oglich die Werte untereinander zu vergleichen. Mit den Ergebnissen %
-aus diesem Kapitel werden in \cref{cha:vergleich} die Ergebnisse aus \cref{sec:raspberryPiVersuche} und \cref{sec:VMVersuche} verglichen. % 
+Aufgrund der Unterschiede zwischen den verschiedenen Paketgr"o"sen unterscheidet sich die Last auf den Hostsystemen, %
+mit diesen drei Versuchen wird versucht die optimale gr"o"se zwischen den drei verschieden gro"sen Paketen zu finden. %
+Dazu werden die vom Zabbix Server und der selbstentwickelten Software Daten zur verf"ugung gestellten %
+Daten mit mitteln der Stochastik analysiert, dabei wird der Durchschnitt $\diameter $ und die Standardabweichung $\sigma $
+Betrachtet. Dabei werden folgende Werte betrachtet:  %
+\begin{itemize}
+\item Last auf dem Ethernet Port
+\item Festplattenlast
+\item CPU Last 
+\item Anzahl der erfolgreich verschickten Pakete
+\item Menge der verschickten Byte
+\end{itemize}
+
+Die Ergebnisse aus \cref{subsec:20MBTest}, \cref{subsec:200MBTest} und \cref{subsec:2GBTest} werden %
+in \cref{cha:vergleich} miteinander verglichen. % 
 
 \section{Raspberry Pi Versuche}
 \label{sec:raspberryPiVersuche}
-\input{Kapitel/notraffic}
-\input{Kapitel/normalbetrieb}
-\input{Kapitel/loop}
-\input{Kapitel/doppelteIp}
-
-\section{Virtual Machine Versuche}
-\label{sec:VMVersuche}
-\subsection{Gemachte Tests}
-\subsection{Ergebnisse}
-
+\input{Kapitel/20MBTest}
+\input{Kapitel/200MBTest}
+\input{Kapitel/2GBTest}
 

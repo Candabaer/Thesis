@@ -10,8 +10,8 @@ Die in diesem Framework verwendete Hardware sind folgende Ger"ate. %
 \item Ein Raspberry Pi der zweiten Generation
 \item Mehrere Ethernet Kabel
 \end{itemize}
-Diese Ger"ate wurden in einem eigenst"andigend Netzwerk zusammengeschaltet. So sind an jedem Switch zwei Pis %
-der ersten Generation angeschlossen w"ahrend an einem der Switches der Pi der zweiten Generation angeschlossen %
+Diese Ger"ate wurden in einem eigenst"andigen Netzwerk zusammengeschaltet. So sind an jedem Switch zwei Pis %
+der ersten Generation angeschlossen w"ahrend an einem der Switches der Pi der zweiten Generation angeschlossen, %
 ist (siehe \cref{fig:AufbauVomNetzwerk}). Welche Software auf den Pis verwendet wurde, wird in \cref{sec:aufbauSoftware} erkl"art. 
 
 Als erstes soll  ein Einblick in die Hardware Spezifikation der Raspberry Pis gegeben werden eingegeben werden. 
@@ -41,31 +41,30 @@ Aufbau und somit wird einem reinem 100 Mbit Netzwerk gearbeitet.
 Das Testframework besteht aus drei verschiedenen Teilen. %
 \begin{itemize}
 \item Zabbix %
-\item Eigentwicklung auf dem Server %
-\item Eigentwicklung auf dem Agent %
+\item Eigenentwicklung auf dem Server %
+\item Eigenentwicklung auf dem Agent %
 \end{itemize}
 Die Eigentwicklungen sind alle in Bash programmiert, w"ahrend Zabbix eine bereits fertige Open Source L"osung %
 ist. In den folgenden Abschnitten werde ich einen Einblick in diese Teile geben. %
 
 \subsection{Zabbix}
-Zabbix ist ein Open Source Netzwerk Monitoring System. Die erste Version wurde von Alexei Vladishev entwickelt, welches %
-seit 2005 von der Firma Zabbix SIA weiterentwickelt wird \autocite{zabbix:Web}. % 
+Zabbix ist ein Open Source Netzwerk Monitoring System. Die erste Version wurde von \mbox{Alexei} Vladishev entwickelt \autocite{zabbix:Web}. % 
 Ein weiterer bekannter Vertreter der Netzwerk Monitor Systeme ist Nagios, welches wie Zabbix unter der GPL Lizenz vertrieben wird \autocite{wiki:Nagios}. % 
 Beide Systeme basieren auf einer Client-Server Architektur. Im weiteren wird jedoch nur Zabbix betrachtet. %
 Zabbix besteht aus zwei Komponenten. %
 
 \begin{description}
-\item[Zabbix Server]Der Server hat eine auf PHP basierende Weboberfl"ache "uber die es f"ur den Benutzer m"oglich ist die Agents zu %
+\item[Zabbix Server]Der Server hat eine auf PHP basierende Weboberfl"ache, "uber die es f"ur den Benutzer m"oglich ist, die Agents zu %
 konfigurieren. So k"onnen manuell die Templates erstellt werden, die den Zabbix Agents mitteilen, welche Informationen dem %
 Server zu "ubermitteln sind. Eine genaueren Einblick in den Zabbix Server gibt es im \cref{cha:zabbix}. %
-\item[Zabbix Agent]Die Clients, die im Netzwerk "uberwacht werden sollen sind die sogenannten Agents, die an den Server %
+\item[Zabbix Agent]Die Clients, die im Netzwerk "uberwacht werden sollen, sind die sogenannten Agents, die an den Server %
 die Informationen weiterleiten, die vom Server gefordert werden. In den sp"ateren Kapiteln wird der Hauptfokus auf der %
 I/O--Last der Festplatte und wie beim Server dem ein/- und ausgehenden Traffic auf dem Ethernet Port Eth0 liegen. %
 Eine genaueren Einblick in den Zabbix Server gibt es im \cref{cha:zabbix}. % 
 \end{description} 
 
 \subsection{Eigenentwicklung}
-Die selbstentwickelte Software wird in zwei Kategorien unterteilt; ein Teil der Software l"auft %
+Die selbstentwickelte Software wird in zwei Kategorien unterteilt, ein Teil der Software l"auft %
 auf den Agents, diese haben den Zweck Netzwerk Traffic zu erzeugen. Dadurch entsteht auf dem Netzwerk und %
 auf den Zabbix Agents eine Nutzlast, die vom Zabbix Server gesammelt werden kann. Der zweite Teil der Software %
 die auf dem Server l"auft, die Software auf dem Server unterst"utzt den Entwicklungsprozess auf den Agents. %
@@ -76,15 +75,12 @@ die auf dem Server l"auft, die Software auf dem Server unterst"utzt den Entwickl
 die die Programme Hintergrundrauschen, Pinger, Synchronize und Startrauschen aktualisieren. Dabei wird mittels Secure Copy %
 der Quellcode auf das Endger"at gespielt.
 
-\item[Get logs:]Die Skripte Pinger und Hintergrundrauschen erstellen jeweils auf den Endger"aten logfiles. %
-Da es jedoch ein sehr hoher Verwaltungsaufwand w"are auf den Endger"aten die Logfiles weiterzuverwerten, %
-werden mit dem Skript Get Logs die auf den Agents gelagerten Logfiles auf dem Rechner der dieses Skript %
-startet gesammelt. Somit hat man die von den Endger"aten gesammelten Daten auf einem Rechner und kann %
-dessen Weiterverarbeitung betreiben.      
+\item[Get logs:]Die Skripte Pinger und Hintergrundrauschen erstellen jeweils auf den Endger"aten Logfiles. %
+Da es jedoch ein sehr hoher Verwaltungsaufwand, w"are auf den Endger"aten die Logfiles weiterzuverwerten, %
+werden mit dem Skript Get Logs die auf den Agents gelagerten Logfiles auf dem Rechner, der dieses Skript %
+startet, gesammelt. Somit hat man die von den Endger"aten gesammelten Daten auf einem Rechner und kann %
+mit der Weiterverarbeitung der Daten beginnen.      
 
-\item[Calculate Average:]Berechnet den Durschnitt der Dauer, die ein Paket braucht, um erfolgreich versendet %
-zu werden.
- 
 \end{description}
 
 \item Zabbix Agent
@@ -94,29 +90,28 @@ zu werden.
 der Rest der selbstentwickelten Software wurde sie komplett in Bash programmiert, da das Framework ausschlie"slich %
 in einer Linux Umgebung entwickelt, getestet und verwendet wird. Hintergrundrauschen schickt "uber Secure Copy, %
 Pakete von einem Agent zum anderen. So wird eine %
-Last auf dem Netzwerk erzeugt, die Mithilfe des Zabbix Servers gemessen werden kann. Ausserdem speichert Hintergrundrauschen %
+Last auf dem Netzwerk erzeugt, die mit Hilfe des Zabbix Servers gemessen werden kann. Au"serdem speichert Hintergrundrauschen %
 die Dauer, bis ein Paket erfolgreich bei seinem zuf"allig ausgew"ahlten Empf"anger angekommen ist. %
 Es werden drei verschieden gro"se Pakete verschickt 20 Megabyte, 200 Megabyte und 2 Gigabyte. %
 Die Ergebnisse werden in \cref{cha:versuche} er"ortert.
 
-\item[Startrauschen:]wird automatisch zum Start eines der Endger"ate ausgef"uhrt. Es dient als eine Zeitschaltuhr %
-und erm"oglicht ein zeitversetztes Starten des Scripts Hintergrundrauschen, wodurch man den sequentiellen %
-Anstieg an Last im Netzwerk beobachten kann.
+\item[Startrauschen:]wird automatisch auf den Agents auf den Endger"aten ausgef"uhrt. Es dient als eine Zeitschaltuhr %
+und erm"oglicht ein zeitversetztes Starten des Scripts Hintergrundrauschen.
 
 \item[Synchronize:]Raspberry Pis besitzen keine eigene Batterie wie es handels"ubliche Rechner haben, %
 deshalb ist nach jedem Neustart die Uhrzeit der Pis unzuverl"assig. Dieses Programm synchronisiert %
 die Uhrzeiten der Agents mit der Zeit des Servers. %
 
 \item[Pinger:]wird zusammen mit dem Hintergrundrauschen ausgef"uhrt und ist um den Linux eigenen Ping Befehl %
-aufgebaut. Mittels Pinger wird die Latenz unter den einzelnen Endger"aten gemessen. %
+herum aufgebaut. Mittels Pinger wird die Latenz unter den einzelnen Endger"aten gemessen. %
 \end{description}
 \end{enumerate}
 \section{Einsatz im Netzwerk} 
 
-Mit dem Einsatz der im vorherigen Abschnitt vorgestellten Software ist das Testframework aufgebaut. In der \cref{fig:AufbauVomNetzwerk} %
+Mit dem Einsatz der im vorherigen Abschnitt vorgestellten Software ist das Testframework aufgebaut. In \cref{fig:AufbauVomNetzwerk} %
 wird dargestellt, wie die einzelnen Komponenten zusammenspielen. Hier sieht man, dass an einem Switch zwei Raspberry Pis %
 und an einem anderen Switch drei Raspberry Pis angeschlossen sind. Einer von diesen Pis ist der Zabbix Server, der %
-die Aktiven Hosts im Netzwerk "uberwacht. 
+die aktiven Hosts im Netzwerk "uberwacht. 
 
 \label{sec:einsatzImNetzwerk}
 \begin{figure}[htbp]

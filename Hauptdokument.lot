@@ -6,13 +6,15 @@
 \contentsline {table}{\numberline {2.1}{\ignorespaces Spezifikation der Raspberry Pis}}{2}{table.2.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces I/O Zeiten bei keinem Datenaustausch auf den Pis}}{10}{table.4.1}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Traffic bei keinem Datenaustausch auf den Pis}}{10}{table.4.2}
-\contentsline {table}{\numberline {4.3}{\ignorespaces Standarbweichung bei keinem Datenaustausch}}{10}{table.4.3}
-\contentsline {table}{\numberline {4.4}{\ignorespaces Normalbetrieb Traffic auf allen Pis}}{11}{table.4.4}
-\contentsline {table}{\numberline {4.5}{\ignorespaces Normalbetrieb Standarbweichung der Werte}}{11}{table.4.5}
-\contentsline {table}{\numberline {4.6}{\ignorespaces I/O Zeiten bei Normalbetrieb auf den Pis}}{12}{table.4.6}
-\contentsline {table}{\numberline {4.7}{\ignorespaces Traffic Durchschnittswerte bei Doppelt belegter IP}}{14}{table.4.7}
-\contentsline {table}{\numberline {4.8}{\ignorespaces Doppelte IP Standarbweichung der Werte}}{14}{table.4.8}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Auslastung des Ethernet Ports bei 20 MB Paketen auf allen Pis}}{11}{table.4.1}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Standardabweichung des der Last auf dem Ethernet Port bei 20 MB gro"sen Paketen }}{11}{table.4.2}
+\contentsline {table}{\numberline {4.3}{\ignorespaces I/O Zeiten bei Normalbetrieb auf den Pis}}{11}{table.4.3}
+\contentsline {table}{\numberline {4.4}{\ignorespaces CPU Last Verteilung}}{12}{table.4.4}
+\contentsline {table}{\numberline {4.5}{\ignorespaces I/O Zeiten bei keinem Datenaustausch auf den Pis}}{13}{table.4.5}
+\contentsline {table}{\numberline {4.6}{\ignorespaces Traffic bei keinem Datenaustausch auf den Pis}}{13}{table.4.6}
+\contentsline {table}{\numberline {4.7}{\ignorespaces Standarbweichung bei keinem Datenaustausch}}{13}{table.4.7}
+\contentsline {table}{\numberline {4.8}{\ignorespaces Traffic Durchschnittswerte bei Doppelt belegter IP}}{13}{table.4.8}
+\contentsline {table}{\numberline {4.9}{\ignorespaces Doppelte IP Standarbweichung der Werte}}{14}{table.4.9}
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -1,0 +1,23 @@
+\chapter{Versuche}
+\label{cha:versuche}
+Aufgrund der Unterschiede zwischen den verschiedenen Paketgr"o"sen unterscheidet sich die Last auf den Hostsystemen, %
+mit diesen drei Versuchen wird versucht die optimale gr"o"se zwischen den drei verschieden gro"sen Paketen zu finden. %
+Dazu werden die vom Zabbix Server zur verf"ugung gestellten Daten mit mitteln der Stochastik analysiert. %
+Dabei werden folgende Werte betrachtet:  %
+\begin{itemize}
+\item Last auf dem Ethernet Port
+\item Festplattenlast
+\item CPU Last 
+\item Anzahl der erfolgreich verschickten Pakete
+\item Menge der verschickten Byte
+\begin{itemize}
+
+Mit den Ergebnissen aus diesem Kapitel werden in \cref{cha:vergleich} die Ergebnisse aus \cref{subsec:20MBTest} %
+, \cref{subsec:200MBTest} und \cref{subsec:2GBTest} verglichen. % 
+
+\section{Raspberry Pi Versuche}
+\label{sec:raspberryPiVersuche}
+\input{Kapitel/20MBTest}
+\input{Kapitel/200MBTest}
+\input{Kapitel/2GBTest}
+

@@ -19,25 +19,6 @@
 
 \refsection{0}
   \sortlist{entry}{anyt}
-    \entry{san:sd}{other}{}
-      \name{labelname}{1}{}{%
-        {{hash=8febb78d43823a071c7b8d96efb15bf9}{Corporation}{C\bibinitperiod}{SanDisk}{S\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{1}{}{%
-        {{hash=8febb78d43823a071c7b8d96efb15bf9}{Corporation}{C\bibinitperiod}{SanDisk}{S\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{8febb78d43823a071c7b8d96efb15bf9}
-      \strng{fullhash}{8febb78d43823a071c7b8d96efb15bf9}
-      \field{labelalpha}{Cor16}
-      \field{sortinit}{C}
-      \field{labeltitle}{SD/SDHC/SDXC Specifications and Compatibility}
-      \field{note}{[Online; Stand 29. Mai 2016]}
-      \field{title}{SD/SDHC/SDXC Specifications and Compatibility}
-      \field{year}{2016}
-      \verb{url}
-      \verb http://kb.sandisk.com/app/answers/detail/a_id/2520/~/sd/sdhc/sdxc-specifications-and-compatibility
-      \endverb
-    \endentry
     \entry{zabbix:activepassive2}{other}{}
       \name{labelname}{1}{}{%
         {{hash=db589a5a83bb83cbac8266fe7050780e}{Kramm}{K\bibinitperiod}{Thorsten}{T\bibinitperiod}{}{}{}{}}%
@@ -74,32 +55,6 @@
       \field{year}{2016}
       \verb{url}
       \verb https://www.nagios.org/
-      \endverb
-    \endentry
-    \entry{book:schreiner}{book}{}
-      \name{labelname}{1}{}{%
-        {{hash=5072beb6e85358e4083b60cc09b41a4e}{Schreiner}{S\bibinitperiod}{R"udiger}{R\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{1}{}{%
-        {{hash=5072beb6e85358e4083b60cc09b41a4e}{Schreiner}{S\bibinitperiod}{R"udiger}{R\bibinitperiod}{}{}{}{}}%
-      }
-      \list{location}{1}{%
-        {M"unchen}%
-      }
-      \list{publisher}{1}{%
-        {Hanser}%
-      }
-      \strng{namehash}{5072beb6e85358e4083b60cc09b41a4e}
-      \strng{fullhash}{5072beb6e85358e4083b60cc09b41a4e}
-      \field{labelalpha}{Sch14}
-      \field{sortinit}{S}
-      \field{labeltitle}{Computernetzwerke : von den Grundlagen zur Funktion und Anwendung}
-      \field{edition}{5., erw. Aufl.}
-      \field{isbn}{9783446441545}
-      \field{title}{Computernetzwerke : von den Grundlagen zur Funktion und Anwendung}
-      \field{year}{2014}
-      \verb{url}
-      \verb http://www.hanser-elibrary.com/doi/book/10.3139/9783446441545
       \endverb
     \endentry
     \entry{zabbix:agent}{other}{}
@@ -140,7 +95,7 @@
       \verb http://www.zabbix.com/
       \endverb
     \endentry
-    \entry{zabbix:activepassive}{other}{}
+    \entry{zabbix:req}{other}{}
       \name{labelname}{1}{}{%
         {{hash=6dc494a0ed530c28608cd412b3b07091}{SIA}{S\bibinitperiod}{Zabbix}{Z\bibinitperiod}{}{}{}{}}%
       }
@@ -151,16 +106,16 @@
       \strng{fullhash}{6dc494a0ed530c28608cd412b3b07091}
       \field{labelalpha}{SIA16}
       \field{sortinit}{S}
-      \field{labeltitle}{Zabbix Dokumentation}
+      \field{labeltitle}{Zabbix Anforderungen}
       \field{extraalpha}{2}
       \field{note}{[Online; Stand . Juni 2016]}
-      \field{title}{Zabbix Dokumentation}
+      \field{title}{Zabbix Anforderungen}
       \field{year}{2016}
       \verb{url}
-      \verb https://www.zabbix.com/documentation/3.0/manual/appendix/items/activepassive
+      \verb https://www.zabbix.com/documentation/3.0/manual/installation/requirements
       \endverb
     \endentry
-    \entry{zabbix:req}{other}{}
+    \entry{zabbix:activepassive}{other}{}
       \name{labelname}{1}{}{%
         {{hash=6dc494a0ed530c28608cd412b3b07091}{SIA}{S\bibinitperiod}{Zabbix}{Z\bibinitperiod}{}{}{}{}}%
       }

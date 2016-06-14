@@ -1,0 +1,46 @@
+\subsection{Loop}
+
+\label{subsec:loop}
+Wie in \cref{sec:testbeschreibung} beschrieben ist ein Loop ein Fehler der auftritt wenn in einem Switch zwei Ports miteinander verbunden worden sind. %
+Dasselbe gilt auch wenn zwei Switches miteinander verbunden werden. Loops sind Fehler die auftreten wenn der Endnutzer nicht mit dem Umgang der Hardware vertraut ist, %
+oder die IT-Infrastruktur zu gro"s wird. %
+Der erwartete Ausgang des Tests ist nach Abschnitt 3.8 \autocite{book:schreiner} ein totaler Ausfall des Netzwerkes. Die nun gezeigten Ergebnisse best"atigen diese %
+Annahme.  
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth]{Abb/ZabbixDazzle/Loop/DazzleLoop}
+
+\caption{Traffic auf Eth0 bei einem Loop}
+\label{fig:Eth0DazzleLoop}
+\end{figure}
+
+Wie man in der Graphik sehen kann bricht die Verbindung zum Zabbix Server komplett ab. Es findet nichtmal der wie in \cref{subsec:nix} aufgezeigte Server Poll statt, % 
+der einen geringen Traffic erzeugt. %
+Auch der Graph f"ur die Festplatten Last bricht zum Zeitpunkt des Loops ab. Wieder werden im Graphen auch die Durchschnittswerte des Traffics aufgezeigt. %
+Wenn man nun die Werte mit denen aus dem \cref{subsec:normalbetrieb} vergleicht stellt man fest das die Durchschnittswerte eine geringe Abweichung aufzeigen. %
+Dies liegt dem zugrunde das Zabbix keine neue Daten von den Agents erhalten kann. Da die Berechnung des durchschnittlichen Traffic erst dann erfolgt wenn %
+der Agent eine Naricht "uber seinen Zustand versendet. Da diese jedoch nicht den Server erreichen bleiben die Durchschnnittswerte wie beim Normalbetrieb. %
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth]{Abb/ZabbixDazzle/Loop/IoStatDazzleLoop}
+
+\caption{I/O-Last auf der Festplatte bei einem Loop}
+\label{fig:IoStatDazzleLoop}
+\end{figure}
+
+Hier kann man sehen das der Loop auch die Informationen die der Agent "uber die Festplatte verschickt unerreichbar sind. Dies hat jedoch aus Erfahrungswerten keinen Einflu"s auf die %
+Performanz der Agents. Man kann davon ausgehen das sich die I/O-Last der Agents auf den Wert der in \cref{subsec:nix} gezeigten Werte einpendelt. %
+
+
+\subsubsection{Schlussfolgerung Test: Loop}
+\label{subsubsec:schlussfolgerung:loop}
+
+Wie man in \cref{subsec:loop} sehen kann, zeichnet sich ein Loop dadurch aus der komplette Traffic in einem Netzwerk zusammenbricht. In Zabbix selber zeichnet sich das %
+dadurch aus das die Graphen einen direkten Schnitt aufzeigen und auch "uber einen l"angeren Zeitraum sich die Durchschnittswerte die von den Agents verschickt werden nicht %
+ver"andern. Auch die Logfiles geben aufschluss "uber die Transportierten Pakete so kann man aus diesen lesen das nur noch die Pakete die an den Lokalen Host geschickt werden %
+ihr Ziel erreichen.  
+
+
+
