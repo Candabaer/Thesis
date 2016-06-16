@@ -6,15 +6,24 @@
 \contentsline {table}{\numberline {2.1}{\ignorespaces Spezifikation der Raspberry Pis}}{2}{table.2.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Auslastung des Ethernet Ports bei 20 MB Paketen auf allen Pis}}{11}{table.4.1}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Standardabweichung des der Last auf dem Ethernet Port bei 20 MB gro"sen Paketen }}{11}{table.4.2}
-\contentsline {table}{\numberline {4.3}{\ignorespaces I/O Zeiten bei Normalbetrieb auf den Pis}}{11}{table.4.3}
-\contentsline {table}{\numberline {4.4}{\ignorespaces CPU Last Verteilung}}{12}{table.4.4}
-\contentsline {table}{\numberline {4.5}{\ignorespaces I/O Zeiten bei keinem Datenaustausch auf den Pis}}{13}{table.4.5}
-\contentsline {table}{\numberline {4.6}{\ignorespaces Traffic bei keinem Datenaustausch auf den Pis}}{13}{table.4.6}
-\contentsline {table}{\numberline {4.7}{\ignorespaces Standarbweichung bei keinem Datenaustausch}}{13}{table.4.7}
-\contentsline {table}{\numberline {4.8}{\ignorespaces Traffic Durchschnittswerte bei Doppelt belegter IP}}{13}{table.4.8}
-\contentsline {table}{\numberline {4.9}{\ignorespaces Doppelte IP Standarbweichung der Werte}}{14}{table.4.9}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Eingehender Traffic auf den Ethernet Ports bei 20 MB Paketen auf allen Pis}}{11}{table.4.1}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Ausgehender Traffic auf den Ethernet Ports bei 20 MB Paketen auf allen Pis}}{11}{table.4.2}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Standardabweichung der Eingehende der Last auf dem Ethernet Port bei 20 MB gro"sen Paketen }}{11}{table.4.3}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Standardabweichung der Ausgehenden der Last auf dem Ethernet Port bei 20 MB gro"sen Paketen }}{12}{table.4.4}
+\contentsline {table}{\numberline {4.5}{\ignorespaces I/O Zeiten bei Normalbetrieb auf den Pis}}{12}{table.4.5}
+\contentsline {table}{\numberline {4.6}{\ignorespaces CPU Last Verteilung}}{12}{table.4.6}
+\contentsline {table}{\numberline {4.7}{\ignorespaces Eingehender Traffic auf den Ethernet Ports bei 20 MB Paketen auf allen Pis}}{13}{table.4.7}
+\contentsline {table}{\numberline {4.8}{\ignorespaces Ausgehender Traffic auf den Ethernet Ports bei 20 MB Paketen auf allen Pis}}{13}{table.4.8}
+\contentsline {table}{\numberline {4.9}{\ignorespaces Standardabweichung der Eingehende der Last auf dem Ethernet Port bei 20 MB gro"sen Paketen }}{14}{table.4.9}
+\contentsline {table}{\numberline {4.10}{\ignorespaces Standardabweichung der Ausgehenden der Last auf dem Ethernet Port bei 20 MB gro"sen Paketen }}{14}{table.4.10}
+\contentsline {table}{\numberline {4.11}{\ignorespaces I/O Zeiten bei Normalbetrieb auf den Pis}}{14}{table.4.11}
+\contentsline {table}{\numberline {4.12}{\ignorespaces CPU Last Verteilung}}{15}{table.4.12}
+\contentsline {table}{\numberline {4.13}{\ignorespaces Eingehender Traffic auf den Ethernet Ports bei 20 MB Paketen auf allen Pis}}{15}{table.4.13}
+\contentsline {table}{\numberline {4.14}{\ignorespaces Ausgehender Traffic auf den Ethernet Ports bei 20 MB Paketen auf allen Pis}}{16}{table.4.14}
+\contentsline {table}{\numberline {4.15}{\ignorespaces Standardabweichung der Eingehende der Last auf dem Ethernet Port bei 20 MB gro"sen Paketen }}{16}{table.4.15}
+\contentsline {table}{\numberline {4.16}{\ignorespaces Standardabweichung der Ausgehenden der Last auf dem Ethernet Port bei 20 MB gro"sen Paketen }}{16}{table.4.16}
+\contentsline {table}{\numberline {4.17}{\ignorespaces I/O Zeiten bei Normalbetrieb auf den Pis}}{16}{table.4.17}
+\contentsline {table}{\numberline {4.18}{\ignorespaces CPU Last Verteilung}}{17}{table.4.18}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -1,91 +1,142 @@
 \subsection{200 Megabyte Testlauf}
 \label{subsec:200MBTest}
-In diesem Versuch wird der Normale Netzaufbau benutzt. Jedoch wird als Besonderheit das Skript Hintergrundrauschen %
-nicht ausgef"uhrt. So erh"alt man ein Gef"uhl daf"ur wie sich das Netzwerk verh"alt wenn das Netzwerk nicht in Betrieb %
-ist. F"ur diesen Test wird als erstes der Zabbix Server betrachtet. Dies ist vorallem interessant, da auch Zabbix selber %
-Traffic erzeugt und um sich weiter mit dem Netzwerk ausseinander zu setzen ist es wichtig zu wissen was im Netzwerk passiert %
-wenn auf ihm keine Last liegt. %
- 
-\begin{figure}[htbp]
+Der erste durchgef"uhrte Test basiert auf 20 Megabyte Paketen, dazu wurde das Hintergrundrauschen %
+so eingestellt das die gr"o"se der verschickten Pakete 20 Megabyte betr"agt. 
+
+Wie man in \cref{fig:Eth0DazzleStandard} sehen kann ist der durchschnittlich eingehende Durchsatz auf dem Pi Dazzle 8,04 Megabit %
+pro Sekunde. Der ausgehende Traffic betr"agt durchschnittlich 8,62 Megabit pro Sekunde. Rechnet man diese Werte in Bytes pro Sekunde um %
+betr"agt der ausgehende Datenstrom 1,0775 Megabyte/s und der durchschnittlich eingehende Datenstrom 1,005 Megabyte/s %
+Daraus k"onnen wir schlie"sen das der Ethernet Port von Dazzle unter einer durschnittlichen I/O-Last von 2,0825 Megabyte/s stand. % 
+Woraus folgt das der Ethernet Port zu 0,20825\% belastet ist.
+\begin{table}
 \centering
-\includegraphics*[width=0.9\linewidth]{Abb/Zabbix/ZabbixNoTraffic/ZabbixNoTrafficEth0}
+\begin{tabular}{l%
+ r<{\,Kb/s}%
+ r<{\,Mb/s}%
+ r<{\,Mb/s}%
+}
+Agent  				& Minimal		& Durchschnitt		& Maximal	\\
+\hline
+DotA				& 7,08			& 0,00766		& 0,0087	\\		
+Dazzle 				& 6,2			& 8,49 			& 24,28		\\
+Tusk 				& 5,82			& 8,31			& 25,23		\\
+Tinker				& 6,12			& 8,14			& 23,47		\\
+Lion				& 7,08			& 8,73			& 26,33		\\ 
+Agent $\diameter $	 	& 6,055			& 8,4175		& 24,8275	\\   
+Agent \& Server $\diameter$   	& 6,26			& 6,735532		& 19,86374	\\ 
 
-\caption{Traffic auf Eth0 beim Zabbix Server bei keinem Datenaustausch}
-\label{fig:Eth0ServerNoTraffic}
-\end{figure}
-
-Die \cref{tab:noTraffic} zeigt die durchschnittlichen "Ubertragungswerte der einzelnen Pis auf, wie man sieht %
-befindet sich der Durchschnitt im geringen Kilobit pro Sekunde Bereich. Es ist davon auszugehen das der gesamte %
-sichtbare Traffic durch den Zabbix Server zustande kommt. Auch die I-O Last auf den Pis zeigt das kaum schreib operationen %
-geschehen, Lese Operationen geschehen bei den Pis gar nicht. In der Zabbix queue stapeln sich keine Daten, im Durschnitt %
-verarbeitet der Zabbix 4,05 Werte pro Sekunde. 
+\end{tabular}
+\caption{Eingehender Traffic auf den Ethernet Ports bei 20 MB Paketen auf allen Pis}
+\label{tab:EingehenderTraffic200MB}
+\end{table}
 
 \begin{table}
 \centering
 \begin{tabular}{l%
- r<{\,B/s}%
- r<{\,B/s}%
+ r<{\,Kb/s}%
+ r<{\,Mb/s}%
+ r<{\,Mb/s}%
 }
-Agent	  			& Schreiben	 	& Lesen	\\	
+Agent  				& Minimal		& Durchschnitt		& Maximal	\\	
 \hline
-Dazzle 				& 0,710000		& 0	        \\
-Tusk 				& 0,183600		& 0		\\
-Tinker				& 0,693300 		& 0	 	\\
-Lion				& 0,745000		& 0	 	\\
-$\diameter $ Agent 		& 0,582975		& 0		\\   
-Standardabweichung 		& 0,231333  		& 0		\\
+DotA				& 11,22			& 0,01205		& 0,01328	\\
+Dazzle 				& 7,62			& 8,46	 		& 21,11		\\
+Tusk 				& 7,66			& 9,22			& 20,98		\\
+Tinker				& 7,34			& 8,67			& 20,73		\\
+Lion				& 7,63			& 8,32			& 23,05		\\ 
+Agent $\diameter $	 	& 7,5625		& 8,6675		& 21,4675	\\   
+Agent \& Server $\diameter$   	& 8,294			& 6,93641		& 17,176656	\\ 
+
 \end{tabular}
-\caption{I/O Zeiten bei keinem Datenaustausch auf den Pis}
-\label{tab:noTrafficIoStat}
+\caption{Ausgehender Traffic auf den Ethernet Ports bei 20 MB Paketen auf allen Pis}
+\label{tab:AusgehenderTraffic200MB}
 \end{table}
 
 
-%\begin{figure}[htbp]
-%\centering
-%\includegraphics*[width=0.9\linewidth]{Abb/ZabbixDazzle/NoTraffic/DazzleNoTrafficIoStat}
+In der \cref{tab:standardTraffic} sind die Durchnittswerte f"ur den Traffic der jeweiligen Agents eingespeichert. Auch der %
+des Servers, da dieser im selben Netzwerk aufgestellt ist wie die anderen Agents. Die Tabelle zeigt uns auch %
+das sich die Agents alle in einem "ahnlichen Umfeld was deren Last angeht. Die Standardabweichung $\sigma$ der Agents %
+best"atigt diese Annahme diese liegt nach \cref{tab:standardTrafficAbweichung} bei 0,15411 Megabit.     
 
-%\caption{I/O-Last bei Dazzle ohne Datenaustausch}
-%\label{fig:Eth0ServerNoTraffic}
-%\end{figure}
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,Kb/s}%
+ r<{\,Mb/s}%
+ r<{\,Mb/s}%
+}
+Agent				& Minimal		& Durchschnitt          & Max		\\
+\hline
+Agents $\sigma $		& 0,1423903087		& 0,2187892822		& 1,0679507245	\\
+Agents \& Server $\sigma $	& 0,4293250517		& 3,3696231855        	& 9,9733678542 	\\
+\end{tabular}
+\caption{Standardabweichung der Eingehende der Last auf dem Ethernet Port bei 20 MB gro"sen Paketen }
+\label{tab:standardTrafficAbweichungEingehend200MB}
+\end{table}
 
 
 \begin{table}
 \centering
 \begin{tabular}{l%
  r<{\,Kb/s}%
- r<{\,Kb/s}%
- r<{\,Kb/s}%
- r<{\,\%}%
+ r<{\,Mb/s}%
+ r<{\,Mb/s}%
 }
-Agent	  			& Eingehende		& Ausgehende		& Gesamt		& Auslastung von Eth0	\\
+Agent				& Minimal		& Durchschnitt          & Max		\\
 \hline
-DotA				& 7,68			& 12,16			& 19,84			& 0,01984 		\\
-Dazzle 				& 2,19	 		& 2,72			& 4,91			& 0,00490 		\\
-Tusk 				& 2,23			& 2,67			& 4,9			& 0,00491		\\
-Tinker				& 2,19	 		& 2,72	 		& 4,91	 		& 0,00491		\\
-Lion				& 2,19	 		& 2,72	 		& 4,91  		& 0,00491		\\
-$\diameter $ Agent 		& 2,20			& 2,37			& 4,9075		& 0.0049075		\\   
-$\diameter $ Agent \& Server 	& 3,30  		& 4,33			& 7,894			& 0.007894		\\
+Agents $\sigma $		& 0,1293010054	 	& 0,3424452511		& 0,9238066627	\\
+Agents \& Server $\sigma $	& 1,4675639679		& 3,475702138       	& 8,6213748283 	\\
 \end{tabular}
-\caption{Traffic bei keinem Datenaustausch auf den Pis}
-\label{tab:noTraffic}
-%\end{table}
-%Die kommentare hier entfernen um die Tabellen zu splitten
-%\begin{table}
-%\centering
+\caption{Standardabweichung der Ausgehenden der Last auf dem Ethernet Port bei 20 MB gro"sen Paketen }
+\label{tab:standardTrafficAbweichungAusgehend200Mb}
+\end{table}
+
+
+\begin{table}
+\centering
 \begin{tabular}{l%
- r<{\,Kb/s}%
- r<{\,Kb/s}%
- r<{\,Kb/s}%
+ r<{\,KB/s}%
+ r<{\,Ops/s}%
+}
+Agent	  			& Schreiben	 	& Input/Output 	\\	
+\hline
+Dazzle 				& 1,04			& 154,09	        \\
+Tusk 				& 1,11			& 42,4			\\
+Tinker				& 1,07 			& 142,5		 	\\
+Lion				& 1,04			& 144,31	 	\\
+Agent $\diameter $  		& 1,065			& 120,825		\\   
+Agent $\sigma $ 		& 0,028722813  		& 45,4928		\\
+\end{tabular}
+\caption{I/O Zeiten bei Normalbetrieb auf den Pis}
+\label{tab:NormalbetriebIoStat200MB}
+\end{table}
+
+
+In der \cref{fig:IoStatDazzleStandard} sieht man das die Festplatte des Raspberry Pis konstant beschrieben wird, lese Operationen finden "uberhaupt nicht statt. %
+Im durchschnitt werden 1.04 Kilobytes die Sekunde geschrieben. Mit einem einer Maximallast von 1.86 Kilobytes die Sekunde. %
+Was nicht ann"ahrend die Maximale Schreibgeschwindigkeit der verwendeten %
+SanDisk SD Karten ist welche bei 30 Megabyte pro Sekunde \autocite{san:sd}  liegen. 
+
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,\%}%
+ r<{\,\%}%
+ r<{\,\%}%
+ r<{\,\%}%
  r<{\,\%}%
 }
-Agent		& Eingehende            & Ausgehende            & Gesamt                & Last auf Eth0 \\
+Agent  				& Idle			& User Time		& System Time		& I/O wait Time	& Software IRQ	\\
 \hline
-Agents		& 0,034641              & 0,043301              & 0,0086600             & 0,000019625  \\
-Agents \& Server& 4,903183 		& 8,995337        	& 13,35604            	& 0,089822765        \\
+Dazzle 				& 25,45			& 37,71			& 22,32 		& 1,42		& 16,10	\\
+Tusk 				& 23,26			& 37,41			& 23,57			& 0,22		& 15,54	\\
+Tinker				& 23,78			& 35,99			& 22,80			& 1,65		& 15,77	\\
+Lion				& 22,82			& 35,99			& 23,15			& 1,73		& 15,84	\\ 
+Agent $\diameter $  		& 23,83			& 36,14			& 22,96			& 1,73	 	& 15,81	\\   
+Agent $\sigma $			&  0,10			&  0,97			&  0,46			& 0,61		& 0,20      \\
 \end{tabular}
-\caption{Standarbweichung bei keinem Datenaustausch}
-\label{tab:NoTrafficAbweichung}
+\caption{CPU Last Verteilung}
+\label{tab:CPUlastverteilung200MB}
 \end{table}
 
 

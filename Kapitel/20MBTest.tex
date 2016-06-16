@@ -11,25 +11,47 @@ Woraus folgt das der Ethernet Port zu 0,20825\% belastet ist.
 \begin{table}
 \centering
 \begin{tabular}{l%
+ r<{\,Kb/s}%
  r<{\,Mb/s}%
  r<{\,Mb/s}%
- r<{\,Mb/s}%
- r<{\,\%}%
 }
-Agent  				& Eingehende		& Ausgehende		& Gesamt		& Auslastung von Eth0	\\
+Agent  				& Minimal		& Durchschnitt		& Maximal	\\
 \hline
-DotA				& 0,0769		& 0,1222		& 0,19900		& 0,0199 		\\
-Dazzle 				& 8,04 			& 8,62			& 16,66 		& 1,666			\\
-Tusk 				& 8,48			& 8,37			& 16,85			& 1,685			\\
-Tinker				& 8,42			& 8,56			& 16,98			& 1,698			\\
-Lion				& 8,42			& 8,65			& 16,89			& 1,707			\\ 
-Agent $\diameter $	 	& 8,34			& 8,55 			& 16,89			& 1,689 		\\   
-Agent \& Server $\diameter$   	& 6,68736		& 6,86444		& 13,5518		& 1,35518		\\ 
+DotA				& 7,3			& 0,01218		& 0,0133	\\		
+Dazzle 				& 31,64			& 8,13 			& 18,54		\\
+Tusk 				& 29,11			& 8,51			& 19,15		\\
+Tinker				& 34,3			& 8,33			& 20,28		\\
+Lion				& 18,76			& 8,4			& 18,85		\\ 
+Agent $\diameter $	 	& 28,4525		& 8,3425		& 19,205	\\   
+Agent \& Server $\diameter$   	& 24,22			& 6,68736		& 15,366	\\ 
 
 \end{tabular}
-\caption{Auslastung des Ethernet Ports bei 20 MB Paketen auf allen Pis}
-\label{tab:standardTraffic}
+\caption{Eingehender Traffic auf den Ethernet Ports bei 20 MB Paketen auf allen Pis}
+\label{tab:EingehenderTraffic20Mb}
 \end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,Kb/s}%
+ r<{\,Mb/s}%
+ r<{\,Mb/s}%
+}
+Agent  				& Minimal		& Durchschnitt		& Maximal	\\	
+\hline
+DotA				& 11,49			& 0,01218		& 0,0133	\\
+Dazzle 				& 628,48		& 8,85	 		& 15,02		\\
+Tusk 				& 61,18			& 8,47			& 15,35		\\
+Tinker				& 421,76		& 8,52			& 13,95		\\
+Lion				& 3030			& 8,38			& 13,94		\\ 
+Agent $\diameter $	 	& 1035,35		& 8,5555		& 14,565	\\   
+Agent \& Server $\diameter$   	& 830,582		& 6,8646436		& 11,65466	\\ 
+
+\end{tabular}
+\caption{Ausgehender Traffic auf den Ethernet Ports bei 20 MB Paketen auf allen Pis}
+\label{tab:AusgehenderTraffic20Mb}
+\end{table}
+
 
 In der \cref{tab:standardTraffic} sind die Durchnittswerte f"ur den Traffic der jeweiligen Agents eingespeichert. Auch der %
 des Servers, da dieser im selben Netzwerk aufgestellt ist wie die anderen Agents. Die Tabelle zeigt uns auch %
@@ -39,19 +61,36 @@ best"atigt diese Annahme diese liegt nach \cref{tab:standardTrafficAbweichung} b
 \begin{table}
 \centering
 \begin{tabular}{l%
+ r<{\,Kb/s}%
  r<{\,Mb/s}%
  r<{\,Mb/s}%
- r<{\,Mb/s}%
- r<{\,\%}%
 }
-Agent		& Eingehende            & Ausgehende            & Gesamt                & Last auf Eth0	 \\
+Agent				& Minimal		& Durchschnitt          & Max		\\
 \hline
-Agents		& 0,174929              & 0,108857              & 0,15411               &  0,01541    	 \\
-Agents \& Server& 3,308981		& 3,372526        	& 6,67782             	&  0,66782   	 \\
+Agents $\sigma $		& 5,88919084		& 0,138451255		& 0,6570578361	\\
+Agents \& Server $\sigma $	& 9,9666732664		& 3,3344282881        	& 7,6991425381 	\\
 \end{tabular}
-\caption{Standardabweichung des der Last auf dem Ethernet Port bei 20 MB gro"sen Paketen }
-\label{tab:standardTrafficAbweichung}
+\caption{Standardabweichung der Eingehende der Last auf dem Ethernet Port bei 20 MB gro"sen Paketen }
+\label{tab:standardTrafficAbweichungEingehend20Mb}
 \end{table}
+
+
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,Kb/s}%
+ r<{\,Mb/s}%
+ r<{\,Mb/s}%
+}
+Agent				& Minimal		& Durchschnitt          & Max		\\
+\hline
+Agents $\sigma $		& 1169,3664626947	& 0,177552809		& 0,6308922253	\\
+Agents \& Server $\sigma $	& 1123,2374038359	& 3,420816243        	& 5,8479685073 	\\
+\end{tabular}
+\caption{Standardabweichung der Ausgehenden der Last auf dem Ethernet Port bei 20 MB gro"sen Paketen }
+\label{tab:standardTrafficAbweichungAusgehend20Mb}
+\end{table}
+
 
 \begin{table}
 \centering
@@ -69,7 +108,7 @@ Agent $\diameter $  		& 1,065			& 120,825		\\
 Agent $\sigma $ 		& 0,028722813  		& 45,4928		\\
 \end{tabular}
 \caption{I/O Zeiten bei Normalbetrieb auf den Pis}
-\label{tab:NormalbetriebIoStat}
+\label{tab:NormalbetriebIoStat20Mb}
 \end{table}
 
 
@@ -97,7 +136,7 @@ Agent $\diameter $  		& 23,83			& 36,14			& 22,96			& 1,73	 	& 15,81	\\
 Agent $\sigma $			&  0,10			&  0,97			&  0,46			& 0,61		& 0,20      \\
 \end{tabular}
 \caption{CPU Last Verteilung}
-\label{tab:standardTraffic}
+\label{tab:CPUlastverteilung20Mb}
 \end{table}
 
 

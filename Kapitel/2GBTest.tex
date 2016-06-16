@@ -1,62 +1,142 @@
 \subsection{2 Gigabyte Testlauf}
 \label{subsec:2GBTest}
+Der erste durchgef"uhrte Test basiert auf 20 Megabyte Paketen, dazu wurde das Hintergrundrauschen %
+so eingestellt das die gr"o"se der verschickten Pakete 20 Megabyte betr"agt. 
 
-In diesem Test wurde dem Agent Tinker dieselbe IP vergeben wie sie Dazzle hat. Dadurch entsteht ein Netzwerkadressenkonflikt. %
-Das erste was passiert ist das die Pakete die f"ur den Pi Tinker bestimmt sind ihr Ziel nichtmehr erreichen k"onnen. % 
-
-In diesem Test wird der Raspberry Pi Tinker ignoriert da dieser in dem Test keine Pakete erhalten hat und auch vom %
-Zabbix Server nicht auffindbar ist wie die \cref{fig:fehlermeldungenTinker} nahelegt.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics*[width=0.9\linewidth]{Abb/ZabbixTinker/DoppelteIP/TinkerFaults}
-
-\caption{Fehlermeldung auf dem Zabbix Dashboard bez"uglich Tinker}
-\label{fig:fehlermeldungenTinker}
-\end{figure}
-
+Wie man in \cref{fig:Eth0DazzleStandard} sehen kann ist der durchschnittlich eingehende Durchsatz auf dem Pi Dazzle 8,04 Megabit %
+pro Sekunde. Der ausgehende Traffic betr"agt durchschnittlich 8,62 Megabit pro Sekunde. Rechnet man diese Werte in Bytes pro Sekunde um %
+betr"agt der ausgehende Datenstrom 1,0775 Megabyte/s und der durchschnittlich eingehende Datenstrom 1,005 Megabyte/s %
+Daraus k"onnen wir schlie"sen das der Ethernet Port von Dazzle unter einer durschnittlichen I/O-Last von 2,0825 Megabyte/s stand. % 
+Woraus folgt das der Ethernet Port zu 0,20825\% belastet ist.
 \begin{table}
 \centering
 \begin{tabular}{l%
+ r<{\,Kb/s}%
  r<{\,Mb/s}%
  r<{\,Mb/s}%
- r<{\,Mb/s}%
- r<{\,\%}%
 }
-Agent  				& Eingehende		& Ausgehende		& Gesamt		& Auslastung von Eth0	\\
+Agent  				& Minimal		& Durchschnitt		& Maximal	\\
 \hline
-DotA				& 0,00785		& 0,0924		& 0,1709		&  0,01709 		\\
-Dazzle 				& 20,15			& 10,32			& 30,47			& 1,809		\\
-Tusk 				& 7,7			& 10,32			& 18,09			& 1,809		\\
-Lion				& 6,72			& 6,19			& 12,91			& 1,291		\\
-$\diameter $ Agent 		& 11,55 		& 8,9433 		& 20,49			& 2,049 		\\   
-$\diameter $ Agent \& Server 	& 8,679625 		& 6,7306		& 15,410225		& 1,5410255		\\
+DotA				& 7,46			& 0,00792		& 0,01195	\\		
+Dazzle 				& 6,14			& 6,39			& 23,54		\\
+Tusk 				& 6,17			& 11,86			& 26,03		\\
+Tinker				& 6,13			& 5,02			& 21,24		\\
+Lion				& 7,64			& 8,63			& 24,98		\\ 
+Agent $\diameter $	 	& 6,145			& 7,975			& 23,9475	\\   
+Agent \& Server $\diameter$   	& 6,408			& 6,381584		& 19,708016411	\\ 
 
 \end{tabular}
-\caption{Traffic Durchschnittswerte bei Doppelt belegter IP}
-\label{tab:DoppelteIPTraffic}
+\caption{Eingehender Traffic auf den Ethernet Ports bei 20 MB Paketen auf allen Pis}
+\label{tab:EingehenderTraffic2GB}
 \end{table}
 
-Wie man der \cref{tab:DoppelteIPTraffic} sehen kann wird Dazzle mehr belastet als sonst. Vergleicht man die Standarbweichung %
-von \cref{tab:DoppelteIPTrafficAbweichung} mit der \cref{tab:standardTrafficAbweichung} sieht man das %
-die Abweichung sechsfach gr"o"ser ist. Der Eingehende Datenstrom ist doppelt so hoch wie beim Normalbetrieb. Auch der %
-Ausgehende Traffic ist bei Dazzle gestiegen, jedoch blieb der Durchschnitt ungef"ahr der gleiche. % 
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,Kb/s}%
+ r<{\,Mb/s}%
+ r<{\,Mb/s}%
+}
+Agent  				& Minimal		& Durchschnitt		& Maximal	\\	
+\hline
+DotA				& 11,58			& 0,01514		& 0,08772	\\
+Dazzle 				& 7,71			& 8,48	 		& 22,33		\\
+Tusk 				& 7,66			& 5,41			& 19,84		\\
+Tinker				& 7,65			& 9,57			& 25,22		\\
+Lion				& 7,63			& 9,2			& 24,97		\\ 
+Agent $\diameter $	 	& 1035,35		& 8,165			& 23,09		\\   
+Agent \& Server $\diameter$   	& 830,582		& 6,535028		& 18,489544	\\ 
+
+\end{tabular}
+\caption{Ausgehender Traffic auf den Ethernet Ports bei 20 MB Paketen auf allen Pis}
+\label{tab:AusgehenderTraffic2GB}
+\end{table}
+
+
+In der \cref{tab:standardTraffic} sind die Durchnittswerte f"ur den Traffic der jeweiligen Agents eingespeichert. Auch der %
+des Servers, da dieser im selben Netzwerk aufgestellt ist wie die anderen Agents. Die Tabelle zeigt uns auch %
+das sich die Agents alle in einem "ahnlichen Umfeld was deren Last angeht. Die Standardabweichung $\sigma$ der Agents %
+best"atigt diese Annahme diese liegt nach \cref{tab:standardTrafficAbweichung} bei 0,15411 Megabit.     
 
 \begin{table}
 \centering
 \begin{tabular}{l%
+ r<{\,Kb/s}%
  r<{\,Mb/s}%
  r<{\,Mb/s}%
+}
+Agent				& Minimal		& Durchschnitt          & Max		\\
+\hline
+Agents $\sigma $		& 0,015			& 2,5868175429		& 1,7957919562	\\
+Agents \& Server $\sigma $	& 0,5261710748		& 3,9381719358        	& 9,7080164611 	\\
+\end{tabular}
+\caption{Standardabweichung der Eingehende der Last auf dem Ethernet Port bei 20 MB gro"sen Paketen }
+\label{tab:standardTrafficAbweichungEingehend2GB}
+\end{table}
+
+
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,Kb/s}%
  r<{\,Mb/s}%
+ r<{\,Mb/s}%
+}
+Agent				& Minimal		& Durchschnitt          & Max		\\
+\hline
+Agents $\sigma $		& 0,0294745653		& 1,6381773408		& 2,191540554	\\
+Agents \& Server $\sigma $	& 1,5672217456		& 3,5740921761        	& 9,4073939873 	\\
+\end{tabular}
+\caption{Standardabweichung der Ausgehenden der Last auf dem Ethernet Port bei 20 MB gro"sen Paketen }
+\label{tab:standardTrafficAbweichungAusgehend2GB}
+\end{table}
+
+
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,KB/s}%
+ r<{\,Ops/s}%
+}
+Agent	  			& Schreiben	 	& Input/Output 	\\	
+\hline
+Dazzle 				& 1,04			& 154,09	        \\
+Tusk 				& 1,11			& 42,4			\\
+Tinker				& 1,07 			& 142,5		 	\\
+Lion				& 1,04			& 144,31	 	\\
+Agent $\diameter $  		& 1,065			& 120,825		\\   
+Agent $\sigma $ 		& 0,028722813  		& 45,4928		\\
+\end{tabular}
+\caption{I/O Zeiten bei Normalbetrieb auf den Pis}
+\label{tab:NormalbetriebIoStat2GB}
+\end{table}
+
+
+In der \cref{fig:IoStatDazzleStandard} sieht man das die Festplatte des Raspberry Pis konstant beschrieben wird, lese Operationen finden "uberhaupt nicht statt. %
+Im durchschnitt werden 1.04 Kilobytes die Sekunde geschrieben. Mit einem einer Maximallast von 1.86 Kilobytes die Sekunde. %
+Was nicht ann"ahrend die Maximale Schreibgeschwindigkeit der verwendeten %
+SanDisk SD Karten ist welche bei 30 Megabyte pro Sekunde \autocite{san:sd}  liegen. 
+
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,\%}%
+ r<{\,\%}%
+ r<{\,\%}%
+ r<{\,\%}%
  r<{\,\%}%
 }
-Agent		& Eingehende            & Ausgehende            & Gesamt                & Last auf Eth0 \\
+Agent  				& Idle			& User Time		& System Time		& I/O wait Time	& Software IRQ	\\
 \hline
-Agents		& 6,908559              & 1,946900              & 7,36697               &  0,73670        \\
-Agents \& Server& 7,249420		& 4,187049        	& 10,8681             	&  1,08681         \\
+Dazzle 				& 25,45			& 37,71			& 22,32 		& 1,42		& 16,10	\\
+Tusk 				& 23,26			& 37,41			& 23,57			& 0,22		& 15,54	\\
+Tinker				& 23,78			& 35,99			& 22,80			& 1,65		& 15,77	\\
+Lion				& 22,82			& 35,99			& 23,15			& 1,73		& 15,84	\\ 
+Agent $\diameter $  		& 23,83			& 36,14			& 22,96			& 1,73	 	& 15,81	\\   
+Agent $\sigma $			&  0,10			&  0,97			&  0,46			& 0,61		& 0,20      \\
 \end{tabular}
-\caption{Doppelte IP Standarbweichung der Werte}
-\label{tab:DoppelteIPTrafficAbweichung}
+\caption{CPU Last Verteilung}
+\label{tab:CPUlastverteilung2GB}
 \end{table}
 
 
