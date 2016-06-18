@@ -33,6 +33,10 @@ Raspberry Pi 2 	& 700 	& 1024			& 32		& 100		\\
 \caption{Spezifikation der Raspberry Pis}
 \label{tab:hardwarespezifiktion}
 \end{table}
+Diese Ger"ate wurden in einem eigenst"andigen Netzwerk zusammengeschaltet. So sind an jedem Switch zwei Pis %
+der ersten Generation angeschlossen w"ahrend an einem der Switches der Pi der zweiten Generation angeschlossen, %
+ist (siehe \cref{fig:AufbauVomNetzwerk}). Welche Software auf den Pis verwendet wurde, wird in \cref{sec:aufbauSoftware} erkl"art. 
+
 
 Die beiden verwendeten Switches k"onnen in einem 100 oder 1000 Mbit Netz Arbeiten, jedoch sind die Raspberry Pis der Flaschenhals in diesem %
 Aufbau und somit wird einem reinem 100 Mbit Netzwerk gearbeitet. 
@@ -89,30 +93,52 @@ mit der Weiterverarbeitung der Daten beginnen.
 \item[Hintergrundrauschen:]Diese Eigentwicklung stellt mit Zabbix die Kernkomponente des Frameworks dar. Wie %
 der Rest der selbstentwickelten Software wurde sie komplett in Bash programmiert, da das Framework ausschlie"slich %
 in einer Linux Umgebung entwickelt, getestet und verwendet wird. Hintergrundrauschen schickt "uber Secure Copy, %
-Pakete von einem Agent zum anderen. So wird eine %
-Last auf dem Netzwerk erzeugt, die mit Hilfe des Zabbix Servers gemessen werden kann. Au"serdem speichert Hintergrundrauschen %
-die Dauer, bis ein Paket erfolgreich bei seinem zuf"allig ausgew"ahlten Empf"anger angekommen ist. %
-Es werden drei verschieden gro"se Pakete verschickt 20 Megabyte, 200 Megabyte und 2 Gigabyte. %
-Die Ergebnisse werden in \cref{cha:versuche} er"ortert.
+Pakete von einem Agent zum anderen. Secure Copy baut auf dem SSH Protokoll \autocite{artcl:thorbo}auf %
+und baut auf der Secure Shell auf, so wird eine TCP Verbindung zum angesprochenen Host aufgebaut wird. % 
+So wird eine Last auf dem Netzwerk erzeugt, die mit Hilfe des Zabbix Servers  %
+gemessen werden kann. Au"serdem speichert Hintergrundrauschen die Dauer, bis ein Paket erfolgreich %
+bei seinem zuf"allig ausgew"ahlten Empf"anger angekommen ist. Es werden drei verschieden %
+gro"se Pakete verschickt 20 Megabyte, 200 Megabyte und 2 Gigabyte. Die Ergebnisse der Logfiles %
+werden in \cref{cha:versuche} betrachetet.
 
 \item[Startrauschen:]wird automatisch auf den Agents auf den Endger"aten ausgef"uhrt. Es dient als eine Zeitschaltuhr %
-und erm"oglicht ein zeitversetztes Starten des Scripts Hintergrundrauschen.
+und erm"oglicht ein zeitversetztes Starten des Scripts Hintergrundrauschen. %
+Jedoch wird in den in dieser Ausarbeitung betrachtet Tests immer ein Zeitgleicher Start %
+durchgef"uhrt. Trotzdem dieses Skript weiterhin verwendet, da es eine einfache %
+m"oglichkeit darstellt die Tests zu erweitern. %
 
 \item[Synchronize:]Raspberry Pis besitzen keine eigene Batterie wie es handels"ubliche Rechner haben, %
 deshalb ist nach jedem Neustart die Uhrzeit der Pis unzuverl"assig. Dieses Programm synchronisiert %
-die Uhrzeiten der Agents mit der Zeit des Servers. %
+die Uhrzeiten der Agents mit der Zeit des Zabbix Servers, welcher zwischen den Tests nicht neu gestartet wird. %
+Sychnronize baut eine Verbindung mit dem Pi DotA auf und fragt von diesem die Uhrzeit ab. %
+Dies geschieht "uber eine Secure Shell Verbindung zum Zabbix Server % 
+\begin{verbatim}
+TIMESERVER=192.168.2.116
+DATE=`sshpass -p 'raspberry' ssh 192.168.2.116 "date +%s"`
+sudo date  -s @$DATE 
+\end{verbatim}
 
 \item[Pinger:]wird zusammen mit dem Hintergrundrauschen ausgef"uhrt und ist um den Linux eigenen Ping Befehl %
 herum aufgebaut. Mittels Pinger wird die Latenz unter den einzelnen Endger"aten gemessen. %
+\begin{verbatim}
+Ping 192.168.2.250 | while read pong; 
+do echo "[$(date)] $pong"; 
+done >> ~/logfiles/ping/TinkerPing20MB &
+\end{verbatim}
+Wie man sieht, wird als erstes der Ping befehl ausgef"uhrt "uber die Pipe wird dies jedoch weitergeleitet und in %
+einer Schleife weiterverarbeitet so, das neben die Meldung die vom Befehl Ping Befehl kommt noch ein Datum vorgestellt %
+kriegt. Diese ganze Meldung wird dann in einer Logfile Datei abgespeichert.
 \end{description}
 \end{enumerate}
-\section{Einsatz im Netzwerk} 
+\section{Einsatz des Frameworks} 
 
 Mit dem Einsatz der im vorherigen Abschnitt vorgestellten Software ist das Testframework aufgebaut. In \cref{fig:AufbauVomNetzwerk} %
 wird dargestellt, wie die einzelnen Komponenten zusammenspielen. Hier sieht man, dass an einem Switch zwei Raspberry Pis %
 und an einem anderen Switch drei Raspberry Pis angeschlossen sind. Einer von diesen Pis ist der Zabbix Server, der %
-die aktiven Hosts im Netzwerk "uberwacht. 
-
+die aktiven Hosts im Netzwerk "uberwacht. Um das Framework zu starten, muss man als erstes den Zabbix Server DotA starten. %
+Wenn dieser mit dem Boot Vorgang abgeschlossen hat, kann man die restlichen Raspberry Pis einschalten. %
+In den Agents wird nun als erstes das Programm Synchronize ausgef"uhrt. Da Raspberry Pis, keine eigene Uhr haben, aber die %
+die Logfiles und der Zabbix Agent von der Zeit abh"angig sind um korrekt arbeiten zu k"onnen, m"ussen die Uhren synchronisiert werden. %
 \label{sec:einsatzImNetzwerk}
 \begin{figure}[htbp]
 \centering
@@ -121,17 +147,26 @@ die aktiven Hosts im Netzwerk "uberwacht.
 \caption{Aufbau des Netzwerks}
 \label{fig:AufbauVomNetzwerk}
 \end{figure}
-
-
-
-
-
-
-
-
-
-
-
-
+Das Skript Synchronize wird aus der Autostart Konfigurationsdatei von den Raspberry Pis ausgef"uhrt. Deshalb gibt es auch keine %
+Probleme die Uhrzeit zu setzen, da dieses Programm als Super User ausgef"uhrt wird. %
+Nach dem dieses Programm erfolgreich ausgef"uhrt wurde, startet das Startrauschen Skript %
+In dieses Programm erm"oglicht einen Zeitversetzten von Hintergrundrauschen und Pinger %
+In Hintergrundrauschen m"ussen jedoch immer kleine ver"anderungen vorgenommen werden. %
+So muss je nach durchzuf"uhrendem Test eine Zeile umgeschrieben werden. %
+\begin{verbatim}
+SIZE=500
+\end{verbatim}
+Diese Veriablendeklaration muss immer dem auszuf"uhrenden Test angepasst werden. %
+Da die die Datei die verschickt wird "uber den Linux internen Befehl \emph{duplicate data} geschrieben %
+wird, muss man diesem einen Blockgr"o"se und eine Anzahl an zu schreiben Bl"ocken mitgeben. %
+\begin{verbatim}
+dd if=/dev/urandom of=$MYRANDOMFILE bs=4M count=$FILESIZE 
+\end{verbatim}
+Die Blockgr"o"se betr"agt immer 4 MB, "uber die Variable SIZE kann man die Anzahl der Bl"ocke %
+bestimmen. W"urde man zum Beispiel SIZE=10 setzen, w"urde der \emph{duplicate data} Befehl einen 40 Megabyte gro"sen Block erzeugen. %
+Im Fall der in dieser Ausarbeitung betrachteten Testf"alle wurde die SIZE 5, 50 und 500 gew"ahlt welche %
+dann eine 20 Megabyte, 200 Megabyte und 2000 Megabyte gro"se Datei erzeugen. %
+Ist dieser Prozess abgeschlossen beginnt das Framework zu Arbeiten. Die Daten %
+werden zwischen den Agents verschickt und man dann mit der Auswertung beginnen. % 
 
 

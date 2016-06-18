@@ -1,0 +1,316 @@
+\chapter{Anhang}
+\label{cha:anhang}
+
+\section{20 Megabyte Test}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixDazzle/Standard/Standard20}
+
+\caption{Traffic auf Eth0 bei 20 Megabyte auf Dazzle}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixDazzle/Standard/IoStatStandard20}
+
+\caption{I/O Statistik von Dazzle beim 20 Megabyte Betrieb}
+\label{fig:IoStatDazzleStandard}
+\end{figure} %
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixDazzle/Standard/CPUStandard20}
+
+\caption{Prozentuale Lastverteilung auf der CPU von Dazzle}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTusk/Standard/Standard20}
+
+\caption{Traffic auf Eth0 bei 20 Megabyte auf Tusk}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTusk/Standard/IoStatStandard20}
+
+\caption{I/O Stats von Tusk beim 20 Megabyte Netzwerk betrieb}
+\label{fig:IoStatDazzleStandard}
+\end{figure} %
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTusk/Standard/CPUStandard20}
+
+\caption{Prozentuale Lastverteilung auf der CPU von Tusk}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTinker/Standard/Standard20}
+
+\caption{Traffic auf Eth0 bei 20 Megabyte auf Tinker}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTinker/Standard/IoStatStandard20}
+
+\caption{I/O Stats von Tinker beim 20 Megabyte Netzwerk betrieb}
+\label{fig:IoStatDazzleStandard}
+\end{figure} %
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTinker/Standard/CPUStandard20}
+
+\caption{Prozentuale Lastverteilung auf der CPU von Tinker}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixLion/Standard/Standard20}
+
+\caption{Traffic auf Eth0 bei 20 Megabyte auf Lion}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixLion/Standard/IoStatStandard20}
+
+\caption{I/O Stats von Lion beim 20 Megabyte Netzwerk betrieb}
+\label{fig:IoStatDazzleStandard}
+\end{figure} %
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixLion/Standard/CPUStandard20}
+
+\caption{Prozentuale Lastverteilung auf der CPU von Lion}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+
+\section{200 Mb}
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixDazzle/Standard/Standard200}
+
+\caption{Traffic auf Eth0 bei 200 Megabyte Paketen im Netzwerk auf Dazzle}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixDazzle/Standard/IoStatStandard200}
+
+\caption{I/O Stats von Dazzle beim 200 Megabyte Netzwerk betrieb}
+\label{fig:IoStatDazzleStandard}
+\end{figure} %
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixDazzle/Standard/CPUStandard200}
+
+\caption{Prozentuale Lastverteilung auf der CPU von Dazzle}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTusk/Standard/Standard200}
+
+\caption{Traffic auf Eth0 bei 200 Megabyte Paketen im Netzwerk auf Tusk}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTusk/Standard/IoStatStandard200}
+
+\caption{I/O Stats von Tusk beim 200 Megabyte Netzwerk betrieb}
+\label{fig:IoStatDazzleStandard}
+\end{figure} %
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTusk/Standard/CPUStandard200}
+
+\caption{Prozentuale Lastverteilung auf der CPU von Tusk}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTinker/Standard/Standard200}
+
+\caption{Traffic auf Eth0 bei 200 Megabyte Paketen im Netzwerk auf Tinker}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTinker/Standard/IoStatStandard200}
+
+\caption{I/O Stats von Tinker beim 200 Megabyte Netzwerk betrieb}
+\label{fig:IoStatDazzleStandard}
+\end{figure} %
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTinker/Standard/CPUStandard200}
+
+\caption{Prozentuale Lastverteilung auf der CPU von Tusk}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixLion/Standard/Standard200}
+
+\caption{Traffic auf Eth0 bei 200 Megabyte Paketen im Netzwerk auf Lion}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixLion/Standard/IoStatStandard200}
+
+\caption{I/O Stats von Lion beim 200 Megabyte Netzwerk betrieb}
+\label{fig:IoStatDazzleStandard}
+\end{figure} %
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixLion/Standard/CPUStandard200}
+
+\caption{Prozentuale Lastverteilung auf der CPU von Lion}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+\section{2 Gigabyte}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixDazzle/Standard/Standard2000}
+
+\caption{Traffic auf Eth0 bei Normalbetrieb auf Dazzle}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixDazzle/Standard/IoStatStandard2000}
+
+\caption{I/O Stats von Dazzle beim Normalbetrieb}
+\label{fig:IoStatDazzleStandard}
+\end{figure} %
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixDazzle/Standard/CPUStandard2000}
+
+\caption{Traffic auf Eth0 bei Normalbetrieb auf Dazzle}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTusk/Standard/Standard2000}
+
+\caption{Traffic auf Eth0 bei Normalbetrieb auf Dazzle}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTusk/Standard/IoStatStandard2000}
+
+\caption{I/O Stats von Dazzle beim Normalbetrieb}
+\label{fig:IoStatDazzleStandard}
+\end{figure} %
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTusk/Standard/CPUStandard2000}
+
+\caption{Traffic auf Eth0 bei Normalbetrieb auf Dazzle}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTinker/Standard/Standard2000}
+
+\caption{Traffic auf Eth0 bei Normalbetrieb auf Dazzle}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTinker/Standard/IoStatStandard2000}
+
+\caption{I/O Stats von Dazzle beim Normalbetrieb}
+\label{fig:IoStatDazzleStandard}
+\end{figure} %
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTinker/Standard/CPUStandard2000}
+
+\caption{Traffic auf Eth0 bei Normalbetrieb auf Dazzle}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixLion/Standard/Standard2000}
+
+\caption{Traffic auf Eth0 bei Normalbetrieb auf Dazzle}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixLion/Standard/IoStatStandard2000}
+
+\caption{I/O Stats von Dazzle beim Normalbetrieb}
+\label{fig:IoStatDazzleStandard}
+\end{figure} %
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixLion/Standard/CPUStandard2000}
+
+\caption{Traffic auf Eth0 bei Normalbetrieb auf Dazzle}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+

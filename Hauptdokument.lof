@@ -3,11 +3,8 @@
 \select@language {ngerman}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Aufbau des Netzwerks}}{5}{figure.2.1}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Aufbau des Netzwerks}}{6}{figure.2.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Traffic auf Eth0 bei Normalbetrieb auf Dazzle}}{21}{figure.7.1}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces I/O Stats von Dazzle beim Normalbetrieb}}{22}{figure.7.2}

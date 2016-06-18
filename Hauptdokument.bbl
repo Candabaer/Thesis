@@ -19,6 +19,39 @@
 
 \refsection{0}
   \sortlist{entry}{anyt}
+    \entry{artcl:thorbo}{article}{}
+      \name{labelname}{1}{}{%
+        {{hash=65be095181efc2f3877fbb6e4d9c2719}{Bormer}{B\bibinitperiod}{Thorsten}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=65be095181efc2f3877fbb6e4d9c2719}{Bormer}{B\bibinitperiod}{Thorsten}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{65be095181efc2f3877fbb6e4d9c2719}
+      \strng{fullhash}{65be095181efc2f3877fbb6e4d9c2719}
+      \field{labelalpha}{Bor}
+      \field{sortinit}{B}
+      \field{labeltitle}{Secure Shell (ssh) Seminar: Simulationen mit User Mode Linux WS 2005/06}
+      \field{title}{Secure Shell (ssh) Seminar: Simulationen mit User Mode Linux WS 2005/06}
+    \endentry
+    \entry{uni:boinc}{other}{}
+      \name{labelname}{1}{}{%
+        {{hash=04cf306e7a25604b7c02a0353cc26d8e}{California}{C\bibinitperiod}{Berkeley\bibnamedelima University}{B\bibinitperiod\bibinitdelim U\bibinitperiod}{of}{o\bibinitperiod}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=04cf306e7a25604b7c02a0353cc26d8e}{California}{C\bibinitperiod}{Berkeley\bibnamedelima University}{B\bibinitperiod\bibinitdelim U\bibinitperiod}{of}{o\bibinitperiod}{}{}}%
+      }
+      \strng{namehash}{04cf306e7a25604b7c02a0353cc26d8e}
+      \strng{fullhash}{04cf306e7a25604b7c02a0353cc26d8e}
+      \field{labelalpha}{Cal16}
+      \field{sortinit}{C}
+      \field{labeltitle}{BOINC}
+      \field{note}{[Online; Stand 18. Juni 2016]}
+      \field{title}{BOINC}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://boinc.berkeley.edu/
+      \endverb
+    \endentry
     \entry{san:sd}{other}{}
       \name{labelname}{1}{}{%
         {{hash=8febb78d43823a071c7b8d96efb15bf9}{Corporation}{C\bibinitperiod}{SanDisk}{S\bibinitperiod}{}{}{}{}}%

@@ -2,6 +2,13 @@
 % Encoding: UTF-8
 
 
+@Article{artcl:thorbo,
+  Title                    = {Secure Shell (ssh) Seminar: Simulationen mit User Mode Linux WS 2005/06},
+  Author                   = {Bormer, Thorsten},
+
+  Timestamp                = {2016.06.17}
+}
+
 @Other{san:sd,
   Title                    = {SD/SDHC/SDXC Specifications and Compatibility},
   Author                   = {SanDisk Corporation},
@@ -96,13 +103,13 @@
 }
 
 @Other{zabbix:req,
-  Title                    = {Zabbix Dokumentation},
+  Title                    = {Zabbix Anforderungen},
   Author                   = {Zabbix SIA},
-  Bdsk-url-1               = {https://www.zabbix.com/documentation/3.0/manual/appendix/items/activepassive},
+  Bdsk-url-1               = {https://www.zabbix.com/documentation/3.0/manual/installation/requirements},
   Note                     = {[Online; Stand . Juni 2016]},
   Owner                    = {cptigu},
   Timestamp                = {2016.06.11},
-  Url                      = {https://www.zabbix.com/documentation/3.0/manual/appendix/items/activepassive},
+  Url                      = {https://www.zabbix.com/documentation/3.0/manual/installation/requirements},
   Year                     = {2016}
 }
 

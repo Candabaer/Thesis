@@ -2,16 +2,44 @@
 \chapter{Einf"uhrung}
 \label{cha:einfuehrung}
 
-Hallo sehr gesch"atzter Leser Willkommen bei meiner Bachelor Thesis in % 
- der ich den die Differenz zwischen Virtuellen Maschinen und realen Maschinen % 
- in einem Netzwerk vergleichen m"ochte. Dazu habe ich selber ein Netzwerktestframework %
- entwickelt und 
- von Netzwerktestframeworks demonstrieren, %
- die in Netzwerken die aus realen Maschinen bestehen und aus virtuellen % 
- Maschinen verwendet werden. Wieso hat das eine relevanz? Das werde ich euch %
- erkl"aren wieso. Wir leben in einer immer weiter hochvernetzten Welt sind %
- und die Industrie 4.0 wird immer mehr bestandteil unserer Welt, K"uhlschr"anke %
- werden mit dem Internet verbunden. Um eine hohe netzstabilit"at %
- gew"ahrleisten m"ussen wir.
-
-\newpage
+Netzwerke sind inzwischen fester Bestandteil der Informatik und finden "uberall Verwendung. %
+Wenn fr"uher Netzwerke nur im Milit"ar, Universit"ten und Firmen benutzt wurden, haben auch %
+normale Endverbraucher Zugriff auf Netzwerke, vorallem auf das Internet welches ein Netzwerk ist %
+das "uber den ganzen Globus verteilt ist. Jedoch ist auch das Internet nur ein Netzwerk aus Netzwerken %
+bricht man dies runter kommt man irgendwann in einem sogenannten Local Area Networks an. Inzwischen sind diese in fast jedem %
+Haushalt zu finden, da diese es erm"oglichen mehrere Computer "uber einen Router mit dem Internet %
+zu verbinden. Dies ist jedoch nicht der einzige Zweck f"ur die ein LAN verwendet wird. %
+LANs erm"oglichen einen Datenaustausch zwischen den im Netzwerk verbundenen Computern. %
+Dadurch ist es m"oglich Lokale verteilte Systeme aufzubauen, die gemeinsam eine Aufgabe %
+bearbeiten. Das Berkeley Open Infrastructure for Network Computing stellt eine Anwendung %
+f"ur Verteilte Systeme dar \autocite{uni:boinc}. Mit dieser ist es m"oglich "uber das %
+Internet an verschiedenen Forschungsprojekten teilzunehmen, indem man eigene eigene %
+Rechenzeit zu verf"ugung stellt. Eine weitere Anwendung f"ur Verteilte Systeme stellt %
+das Zabbix Framework dar, welches auch in dieser Bachelor Arbeit weiter betrachtet wird. %
+Zabbix welches von der Zabbix SIA vertrieben wird ist wie Nagios eine Open Source %
+Netzwerkmonitoring Software die es erm"oglicht Ger"ate in einem Netzwerk zu "uberwachen. %
+Mit der Hilfe von Zabbix und einigen selbstprogrammierten Bash Skripten m"ochte ich ein %
+Beweisen das es in einem Netzwerk mit einer definierten Anzahl an homogenen Endger"aten %
+m"oglich ist eine dem Optimale gr"o"se von Dateien die verschickt werden zu bestimmen. %
+Daf"ur wurde ein Local Area Network bestehend aus vier Raspberry Pis aufgebaut. Diese wurden %
+in einer Sterntopologie aufgebaut. Dieser wird standardm"a"ig in %
+Netzwerken verwendet. Da bei dieser Topologie der Ausfall von einem Computer keine Auswirkung %
+auf den Rest des Netzwerks hat, leicht erweiterbar ist und leicht verst"andlich ist \autocite{book:CN2003}. % 
+Daf"ur wurde das auf dem TCP/IP-Protokollstapel basierende Secure Copy Programm verwendet. %
+Es stellt eine Erweiterung der Unix Secure Shell dar und erm"oglicht einen fehlerfreien %
+Austausch von Dateien. Beide Programme, Secure Copy und Secure Shell sind inzwischen fester Bestandteil %
+fast aller Linux Distributionen, so auch dem Debian Port Raspbian welcher auf den %
+Raspberry Pis installiert ist. Mit diesen Tools habe ich mir ein eigenes Testframework aufgebaut, %
+welches es automatisiert Dateien von den Computern verschickt und Informationen "uber die Dateien, %
+Empf"anger und ben"otigten "Ubermittlungszeiten speichert. Diese Logfiles werden %
+mittels Textverarbeitung analysiert und in Tabellen dargestellt. Zabbix kann einige %
+Informationen zu den Computern in Netz ausgeben. So ist es m"oglich mittels Zabbix die %
+Prozessor Last, die Festplatten Last und die Last auf den Ethernet Ports der Raspberry Pis %
+zu beobachten. Mit diesem Framework, welches in \cref{cha:dasframework} nochmal genauer vorgestellt wird. %
+M"ochte ich beweisen das es m"oglich ist die optimale Paketgr"o"se f"ur ein Netzwerk zu bestimmen. %
+Dazu werden mittels Textverarbeitung die Logfiles ausgewertet und die Daten die %
+Werte Zabbix zur verf"ugung stellt in Tabellen aufbereitet. Dazu werden in dieser Arbeit %
+drei verschiedene Testf"alle betrachtet, kleine Dateien: Diese sind 20 Megabyte gro"s, %
+mittlere Dateien: diese sind 200 Megabyte gro"s und gro"se Dateien diese sind 2000 Megabyte %
+gro"s. Am Ende dessen m"ochte ich die so gesammelten Ergebnisse vergleichen und "uberpr"ufen %
+ob die Annahme, das es m"oglich ist eine optimale Paketgr"o"se in einem Netzwerk zu bestimmen. %
