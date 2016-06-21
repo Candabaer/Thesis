@@ -207,6 +207,33 @@
       \verb https://share.zabbix.com/
       \endverb
     \endentry
+    \entry{book:CN2003}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=5fec945e2e4e128e1f94258b75085d2d}{Tanenbaum}{T\bibinitperiod}{Andrew\bibnamedelima S.}{A\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=5fec945e2e4e128e1f94258b75085d2d}{Tanenbaum}{T\bibinitperiod}{Andrew\bibnamedelima S.}{A\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {M"unchen [u.a.]}%
+      }
+      \list{publisher}{1}{%
+        {Pearson Studium}%
+      }
+      \strng{namehash}{5fec945e2e4e128e1f94258b75085d2d}
+      \strng{fullhash}{5fec945e2e4e128e1f94258b75085d2d}
+      \field{labelalpha}{Tan09}
+      \field{sortinit}{T}
+      \field{labeltitle}{Computernetzwerke}
+      \field{edition}{4. "Uberarb. Aufl., [Nachdr.]}
+      \field{isbn}{9783827370464}
+      \field{series}{i - Informatik}
+      \field{title}{Computernetzwerke}
+      \field{year}{2009}
+      \verb{url}
+      \verb http://scans.hebis.de/HEBCGI/show.pl?21727132_toc.pdf
+      \endverb
+    \endentry
   \endsortlist
 \endrefsection
 \endinput

@@ -1,20 +1,20 @@
 \chapter{Das Framework}
 \label{cha:framework}
-
-
 \section{Verwendete Hardware} \label{sec:verwendeteHardware}
-Die in diesem Framework verwendete Hardware sind folgende Ger"ate. %
+
+In diesem Framework wird folgende Hardware verwendet.
+
 \begin{itemize}
 \item Zwei Switches
 \item Vier Raspberry Pis der ersten Generation
 \item Ein Raspberry Pi der zweiten Generation
 \item Mehrere Ethernet Kabel
 \end{itemize}
+
 Diese Ger"ate wurden in einem eigenst"andigen Netzwerk zusammengeschaltet. So sind an jedem Switch zwei Pis %
 der ersten Generation angeschlossen w"ahrend an einem der Switches der Pi der zweiten Generation angeschlossen, %
 ist (siehe \cref{fig:AufbauVomNetzwerk}). Welche Software auf den Pis verwendet wurde, wird in \cref{sec:aufbauSoftware} erkl"art. 
 
-Als erstes soll  ein Einblick in die Hardware Spezifikation der Raspberry Pis gegeben werden eingegeben werden. 
 \begin{table}
 \centering
 \begin{tabular}{l%
@@ -33,14 +33,15 @@ Raspberry Pi 2 	& 700 	& 1024			& 32		& 100		\\
 \caption{Spezifikation der Raspberry Pis}
 \label{tab:hardwarespezifiktion}
 \end{table}
-Diese Ger"ate wurden in einem eigenst"andigen Netzwerk zusammengeschaltet. So sind an jedem Switch zwei Pis %
-der ersten Generation angeschlossen w"ahrend an einem der Switches der Pi der zweiten Generation angeschlossen, %
-ist (siehe \cref{fig:AufbauVomNetzwerk}). Welche Software auf den Pis verwendet wurde, wird in \cref{sec:aufbauSoftware} erkl"art. 
 
 
-Die beiden verwendeten Switches k"onnen in einem 100 oder 1000 Mbit Netz Arbeiten, jedoch sind die Raspberry Pis der Flaschenhals in diesem %
-Aufbau und somit wird einem reinem 100 Mbit Netzwerk gearbeitet. 
+Die beiden verwendeten Switches Arbeiten mit 100 oder 1000 Mbit/s, doch aufgrund %
+der verwendeten Ethernet Ports auf den Raspberry Pis, welche eine Ubertrangsungrate von 100 Mbit/s haben %
+ist der Austausch der Pakete zwischen den Pis, auf 100 Mbit/s beschr"ankt und kann so das ganze Potential der %
+Switches nicht ausnutzen. %
 
+
+ 
 \section{Aufbau der Software} \label{sec:aufbauSoftware}
 Das Testframework besteht aus drei verschiedenen Teilen. %
 \begin{itemize}
@@ -48,30 +49,31 @@ Das Testframework besteht aus drei verschiedenen Teilen. %
 \item Eigenentwicklung auf dem Server %
 \item Eigenentwicklung auf dem Agent %
 \end{itemize}
-Die Eigentwicklungen sind alle in Bash programmiert, w"ahrend Zabbix eine bereits fertige Open Source L"osung %
-ist. In den folgenden Abschnitten werde ich einen Einblick in diese Teile geben. %
+Die Eigenentwicklungen sind alle mit Bash Skript programmiert, Zabbix ist eine bereits fertige Open Source L"osung %
+Im folgenden Abschnitt wird ein Einblick in diese beiden Komponenten gegeben. %
 
 \subsection{Zabbix}
 Zabbix ist ein Open Source Netzwerk Monitoring System. Die erste Version wurde von \mbox{Alexei} Vladishev entwickelt \autocite{zabbix:Web}. % 
-Ein weiterer bekannter Vertreter der Netzwerk Monitor Systeme ist Nagios, welches wie Zabbix unter der GPL Lizenz vertrieben wird \autocite{wiki:Nagios}. % 
+Ein weiterer bekannter Vertreter der Netzwerk Monitor Systeme ist Nagios \autocite{wiki:Nagios}, welches wie Zabbix unter der GPL vertrieben %
+wird. Womit jedem frei steht Zabbix zu ver"andern und zu erweitern.  % 
 Beide Systeme basieren auf einer Client-Server Architektur. Im weiteren wird jedoch nur Zabbix betrachtet. %
-Zabbix besteht aus zwei Komponenten. %
+Welche aus zwei Komponenten besteht. %
 
 \begin{description}
 \item[Zabbix Server]Der Server hat eine auf PHP basierende Weboberfl"ache, "uber die es f"ur den Benutzer m"oglich ist, die Agents zu %
 konfigurieren. So k"onnen manuell die Templates erstellt werden, die den Zabbix Agents mitteilen, welche Informationen dem %
-Server zu "ubermitteln sind. Eine genaueren Einblick in den Zabbix Server gibt es im \cref{cha:zabbix}. %
-\item[Zabbix Agent]Die Clients, die im Netzwerk "uberwacht werden sollen, sind die sogenannten Agents, die an den Server %
-die Informationen weiterleiten, die vom Server gefordert werden. In den sp"ateren Kapiteln wird der Hauptfokus auf der %
-I/O--Last der Festplatte und wie beim Server dem ein/- und ausgehenden Traffic auf dem Ethernet Port Eth0 liegen. %
-Eine genaueren Einblick in den Zabbix Server gibt es im \cref{cha:zabbix}. % 
+Server zu "ubermitteln sind. Einen genaueren Einblick in den Zabbix Server gibt es in \cref{sec:server}. %
+\item[Zabbix Agent]Die Clients, die im Netzwerk "uberwacht werden sollen, sind die sogenannten Agents, die  %
+Informationen an den Server weiterleiten, die vom Server gefordert werden. In den sp"ateren Kapiteln wird der Hauptfokus auf der %
+Auslastung der Festplatte, CPU und des Ethernet Ports liegen. %
+Einen genaueren Einblick in den Zabbix Agent gibt es in \cref{sec:agent}. % 
 \end{description} 
 
 \subsection{Eigenentwicklung}
-Die selbstentwickelte Software wird in zwei Kategorien unterteilt, ein Teil der Software l"auft %
-auf den Agents, diese haben den Zweck Netzwerk Traffic zu erzeugen. Dadurch entsteht auf dem Netzwerk und %
+Die selbstentwickelte Software wird in zwei Kategorien unterteilt. Ein Teil der Software l"auft %
+auf den Agents. Diese haben den Zweck Netzwerk Traffic zu erzeugen. Dadurch entsteht auf dem Netzwerk und %
 auf den Zabbix Agents eine Nutzlast, die vom Zabbix Server gesammelt werden kann. Der zweite Teil der Software %
-die auf dem Server l"auft, die Software auf dem Server unterst"utzt den Entwicklungsprozess auf den Agents. %
+l"auft auf dem Server, die Software auf dem Server unterst"utzt den Entwicklungsprozess auf den Agents. %
 \begin{enumerate}
 \item Zabbix Server 
 \begin{description}
@@ -80,35 +82,35 @@ die die Programme Hintergrundrauschen, Pinger, Synchronize und Startrauschen akt
 der Quellcode auf das Endger"at gespielt.
 
 \item[Get logs:]Die Skripte Pinger und Hintergrundrauschen erstellen jeweils auf den Endger"aten Logfiles. %
-Da es jedoch ein sehr hoher Verwaltungsaufwand, w"are auf den Endger"aten die Logfiles weiterzuverwerten, %
-werden mit dem Skript Get Logs die auf den Agents gelagerten Logfiles auf dem Rechner, der dieses Skript %
-startet, gesammelt. Somit hat man die von den Endger"aten gesammelten Daten auf einem Rechner und kann %
-mit der Weiterverarbeitung der Daten beginnen.      
+Da es jedoch ein sehr hoher Verwaltungsaufwand w"are, auf den Endger"aten die Logfiles weiterzuverwerten, %
+werden die auf den Agents gelagerten Logfiles mit dem Skript Get Logs auf dem Rechner gesammelt, der dieses startet. %
+Somit hat man die von den Endger"aten gesammelten Logfiles auf einem Rechner und kann %
+mit der Weiterverarbeitung der Logfiles beginnen.      
 
 \end{description}
 
 \item Zabbix Agent
 
 \begin{description}
-\item[Hintergrundrauschen:]Diese Eigentwicklung stellt mit Zabbix die Kernkomponente des Frameworks dar. Wie %
-der Rest der selbstentwickelten Software wurde sie komplett in Bash programmiert, da das Framework ausschlie"slich %
+\item[Hintergrundrauschen:]Diese Eigenentwicklung stellt mit Zabbix die Kernkomponente des Frameworks dar. Wie %
+der Rest der selbstentwickelten Software, wurde sie komplett in Bash programmiert, da das Framework ausschlie"slich %
 in einer Linux Umgebung entwickelt, getestet und verwendet wird. Hintergrundrauschen schickt "uber Secure Copy, %
-Pakete von einem Agent zum anderen. Secure Copy baut auf dem SSH Protokoll \autocite{artcl:thorbo}auf %
-und baut auf der Secure Shell auf, so wird eine TCP Verbindung zum angesprochenen Host aufgebaut wird. % 
-So wird eine Last auf dem Netzwerk erzeugt, die mit Hilfe des Zabbix Servers  %
-gemessen werden kann. Au"serdem speichert Hintergrundrauschen die Dauer, bis ein Paket erfolgreich %
-bei seinem zuf"allig ausgew"ahlten Empf"anger angekommen ist. Es werden drei verschieden %
-gro"se Pakete verschickt 20 Megabyte, 200 Megabyte und 2 Gigabyte. Die Ergebnisse der Logfiles %
+Pakete von einem Agent zum anderen. Secure Copy baut auf dem SSH Protokoll \autocite{artcl:thorbo} auf %
+und baut auf der Secure Shell auf. So wird eine TCP Verbindung zum angesprochenen Host aufgebaut wird und % 
+eine Last auf dem Netzwerk und den Endeger"aten erzeugt, die mit Hilfe des Zabbix Servers  %
+gemessen werden kann. Au"serdem speichert Hintergrundrauschen die Dauer, die ein Paket ben"otigt, um erfolgreich %
+bei seinem zuf"allig ausgew"ahlten Empf"anger anzukommen. Es werden drei verschieden %
+gro"se Pakete verschickt: 20 Megabyte, 200 Megabyte und 2 Gigabyte. Die Ergebnisse der Logfiles %
 werden in \cref{cha:versuche} betrachetet.
 
-\item[Startrauschen:]wird automatisch auf den Agents auf den Endger"aten ausgef"uhrt. Es dient als eine Zeitschaltuhr %
+\item[Startrauschen:]Es wird automatisch auf den Endger"aten ausgef"uhrt. Es dient als eine Zeitschaltuhr %
 und erm"oglicht ein zeitversetztes Starten des Scripts Hintergrundrauschen. %
-Jedoch wird in den in dieser Ausarbeitung betrachtet Tests immer ein Zeitgleicher Start %
-durchgef"uhrt. Trotzdem dieses Skript weiterhin verwendet, da es eine einfache %
-m"oglichkeit darstellt die Tests zu erweitern. %
+Jedoch wird in den in dieser Ausarbeitung betrachteten Tests immer ein zeitgleicher Start %
+durchgef"uhrt. Trotzdem wird dieses Skript weiterhin verwendet, da es eine einfache %
+M"oglichkeit darstellt, die Tests zu erweitern. %
 
-\item[Synchronize:]Raspberry Pis besitzen keine eigene Batterie wie es handels"ubliche Rechner haben, %
-deshalb ist nach jedem Neustart die Uhrzeit der Pis unzuverl"assig. Dieses Programm synchronisiert %
+\item[Synchronize:]Raspberry Pis besitzen keine eigene Batterie wie es handels"ubliche Rechner haben. %
+Deshalb ist nach jedem Neustart die Uhrzeit der Pis unzuverl"assig. Dieses Programm synchronisiert %
 die Uhrzeiten der Agents mit der Zeit des Zabbix Servers, welcher zwischen den Tests nicht neu gestartet wird. %
 Sychnronize baut eine Verbindung mit dem Pi DotA auf und fragt von diesem die Uhrzeit ab. %
 Dies geschieht "uber eine Secure Shell Verbindung zum Zabbix Server % 
@@ -118,16 +120,16 @@ DATE=`sshpass -p 'raspberry' ssh 192.168.2.116 "date +%s"`
 sudo date  -s @$DATE 
 \end{verbatim}
 
-\item[Pinger:]wird zusammen mit dem Hintergrundrauschen ausgef"uhrt und ist um den Linux eigenen Ping Befehl %
+\item[Pinger:]Pinger wird zusammen mit dem Hintergrundrauschen ausgef"uhrt und ist um den Linux eigenen Ping Befehl %
 herum aufgebaut. Mittels Pinger wird die Latenz unter den einzelnen Endger"aten gemessen. %
 \begin{verbatim}
 Ping 192.168.2.250 | while read pong; 
 do echo "[$(date)] $pong"; 
 done >> ~/logfiles/ping/TinkerPing20MB &
 \end{verbatim}
-Wie man sieht, wird als erstes der Ping befehl ausgef"uhrt "uber die Pipe wird dies jedoch weitergeleitet und in %
-einer Schleife weiterverarbeitet so, das neben die Meldung die vom Befehl Ping Befehl kommt noch ein Datum vorgestellt %
-kriegt. Diese ganze Meldung wird dann in einer Logfile Datei abgespeichert.
+Wie man sieht, wird als Erstes der Ping befehl ausgef"uhrt. "Uber die Pipe wird dieser jedoch weitergeleitet und in %
+einer Schleife weiterverarbeitet. Neben der Meldung, die vom Befehl Ping Befehl kommt, wird noch ein Datum vorgestellt. %
+Diese ganze Meldung wird dann in einer Logfile Datei abgespeichert. %
 \end{description}
 \end{enumerate}
 \section{Einsatz des Frameworks} 
@@ -135,38 +137,38 @@ kriegt. Diese ganze Meldung wird dann in einer Logfile Datei abgespeichert.
 Mit dem Einsatz der im vorherigen Abschnitt vorgestellten Software ist das Testframework aufgebaut. In \cref{fig:AufbauVomNetzwerk} %
 wird dargestellt, wie die einzelnen Komponenten zusammenspielen. Hier sieht man, dass an einem Switch zwei Raspberry Pis %
 und an einem anderen Switch drei Raspberry Pis angeschlossen sind. Einer von diesen Pis ist der Zabbix Server, der %
-die aktiven Hosts im Netzwerk "uberwacht. Um das Framework zu starten, muss man als erstes den Zabbix Server DotA starten. %
+die aktiven Hosts im Netzwerk "uberwacht. Um das Framework zu starten, muss man als Erstes den Zabbix Server DotA starten. %
 Wenn dieser mit dem Boot Vorgang abgeschlossen hat, kann man die restlichen Raspberry Pis einschalten. %
-In den Agents wird nun als erstes das Programm Synchronize ausgef"uhrt. Da Raspberry Pis, keine eigene Uhr haben, aber die %
+In den Agents wird nun als Erstes das Programm Synchronize ausgef"uhrt. Da Raspberry Pis keine eigene Uhr haben, aber %
 die Logfiles und der Zabbix Agent von der Zeit abh"angig sind um korrekt arbeiten zu k"onnen, m"ussen die Uhren synchronisiert werden. %
-\label{sec:einsatzImNetzwerk}
-\begin{figure}[htbp]
-\centering
-\includegraphics*[width=0.9\linewidth]{Abb/Netzschaltung3}
-
-\caption{Aufbau des Netzwerks}
-\label{fig:AufbauVomNetzwerk}
-\end{figure}
+\label{sec:einsatzImNetzwerk}%
+\begin{figure}[htbp]%
+\centering%
+\includegraphics*[width=0.9\linewidth]{Abb/Netzschaltung3}%
+%
+\caption{Aufbau des Netzwerks}%
+\label{fig:AufbauVomNetzwerk}%
+\end{figure}%
 Das Skript Synchronize wird aus der Autostart Konfigurationsdatei von den Raspberry Pis ausgef"uhrt. Deshalb gibt es auch keine %
 Probleme die Uhrzeit zu setzen, da dieses Programm als Super User ausgef"uhrt wird. %
-Nach dem dieses Programm erfolgreich ausgef"uhrt wurde, startet das Startrauschen Skript %
-In dieses Programm erm"oglicht einen Zeitversetzten von Hintergrundrauschen und Pinger %
-In Hintergrundrauschen m"ussen jedoch immer kleine ver"anderungen vorgenommen werden. %
+Nach dem dieses Programm erfolgreich ausgef"uhrt wurde, startet das Startrauschen Skript. %
+Dieses Programm erm"oglicht einen zeitversetzten von Hintergrundrauschen und Pinger. %
+In Hintergrundrauschen m"ussen jedoch immer kleine Ver"anderungen vorgenommen werden. %
 So muss je nach durchzuf"uhrendem Test eine Zeile umgeschrieben werden. %
 \begin{verbatim}
 SIZE=500
 \end{verbatim}
-Diese Veriablendeklaration muss immer dem auszuf"uhrenden Test angepasst werden. %
-Da die die Datei die verschickt wird "uber den Linux internen Befehl \emph{duplicate data} geschrieben %
-wird, muss man diesem einen Blockgr"o"se und eine Anzahl an zu schreiben Bl"ocken mitgeben. %
+Diese Variablendeklaration muss immer dem auszuf"uhrenden Test angepasst werden. %
+Da die Datei die verschickt wird, "uber den Linux internen Befehl \emph{duplicate data} geschrieben %
+wird, muss man diesem einen Blockgr"o"se und eine Anzahl an zu schreibenden Bl"ocken mitgeben. %
 \begin{verbatim}
 dd if=/dev/urandom of=$MYRANDOMFILE bs=4M count=$FILESIZE 
 \end{verbatim}
 Die Blockgr"o"se betr"agt immer 4 MB, "uber die Variable SIZE kann man die Anzahl der Bl"ocke %
 bestimmen. W"urde man zum Beispiel SIZE=10 setzen, w"urde der \emph{duplicate data} Befehl einen 40 Megabyte gro"sen Block erzeugen. %
-Im Fall der in dieser Ausarbeitung betrachteten Testf"alle wurde die SIZE 5, 50 und 500 gew"ahlt welche %
+Im Fall der in dieser Ausarbeitung betrachteten Testf"alle wurde die SIZE 5, 50 und 500 gew"ahlt, welche %
 dann eine 20 Megabyte, 200 Megabyte und 2000 Megabyte gro"se Datei erzeugen. %
-Ist dieser Prozess abgeschlossen beginnt das Framework zu Arbeiten. Die Daten %
-werden zwischen den Agents verschickt und man dann mit der Auswertung beginnen. % 
+Ist dieser Prozess abgeschlossen, beginnt das Framework zu arbeiten. Die Daten %
+werden zwischen den Agents verschickt und man kann mit der Auswertung beginnen. % 
 
 

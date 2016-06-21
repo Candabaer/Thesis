@@ -6,6 +6,7 @@ auch das Monitoring als ein Verteiltes Monitoring aufzuziehen mit mehreren Serve
 sind jedoch kein Bestandteil dieser Thesis und werden deshalb nicht weiter betrachtet.
 
 \section{Zabbix Server}
+\label{sec:server}
 Der Zabbix Server ist die Zentrale Komponente des vorgestellten Frameworks. Dem Server werden von den Agents und Proxies %
 Informationen zugeschickt. Die Aufgabe des Server ist es die Daten zu speichern und zu verarbeiten. %
 Der Server speichert auch die Konfiguration der einzelnen Agents die sich im Netzwerk befinden. %
@@ -66,7 +67,7 @@ Frameworks "uberschaubar ist. Der Traffic auf dem Ethernet Port Eth0 wird betrac
 "uber diesen an den Server gelangen. Dabei wird der eingehende sowie auch der ausgehende Traffic betrachtet.
 
 \section{Zabbix Agent}
-
+\label{sec:agent}
 Der Zabbix Agent wird auf dem zu "uberwachenden System installiert. Der Agent sammelt die Daten "uber im Betriebssystem %
 integrierte Monitoring Funktionen oder "uber die Zabbix eigene API und sendet diese je nach Art des Checks diese Informationen an den Agent. %
 Da der Agent schon im Betriebssystem integrierte Funktionen benutzt ist dieser sehr effizient und verbraucht kaum sp"urbar %

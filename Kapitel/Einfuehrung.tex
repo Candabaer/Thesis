@@ -2,44 +2,69 @@
 \chapter{Einf"uhrung}
 \label{cha:einfuehrung}
 
-Netzwerke sind inzwischen fester Bestandteil der Informatik und finden "uberall Verwendung. %
-Wenn fr"uher Netzwerke nur im Milit"ar, Universit"ten und Firmen benutzt wurden, haben auch %
-normale Endverbraucher Zugriff auf Netzwerke, vorallem auf das Internet welches ein Netzwerk ist %
-das "uber den ganzen Globus verteilt ist. Jedoch ist auch das Internet nur ein Netzwerk aus Netzwerken %
-bricht man dies runter kommt man irgendwann in einem sogenannten Local Area Networks an. Inzwischen sind diese in fast jedem %
-Haushalt zu finden, da diese es erm"oglichen mehrere Computer "uber einen Router mit dem Internet %
-zu verbinden. Dies ist jedoch nicht der einzige Zweck f"ur die ein LAN verwendet wird. %
-LANs erm"oglichen einen Datenaustausch zwischen den im Netzwerk verbundenen Computern. %
-Dadurch ist es m"oglich Lokale verteilte Systeme aufzubauen, die gemeinsam eine Aufgabe %
+\section{Einf"uhrung in das Thema} 
+Computernetzwerke sind inzwischen fester Bestandteil der Gesellschaft und finden "uberall Verwendung. %
+Wenn fr"uher Netzwerke nur im Milit"ar, in Universit"aten und Firmen benutzt wurden, haben nun auch %
+normale Endverbraucher Zugriff auf Netzwerke. Inzwischen haben alle die M"oglichkeit auf das Internet, welches "uber den %
+gesamten Globus verteilt ist, zuzugreifen. Jedoch ist auch das Internet nur ein Netzwerk aus Netzwerken. %
+Geht man in die unterste Ebene kommt man irgendwann in einem sogenannten Local Area Network (LAN) an. Inzwischen sind diese in fast jedem %
+Haushalt zu finden, da sie es erm"oglichen mehrere Computer "uber einen Router mit dem Internet %
+zu verbinden. LANs erm"oglichen einen Datenaustausch zwischen den im Netzwerk verbundenen Computern. % 
+Ein sehr beliebter Verwendungszweck sind die sogenannten LAN-Partys, bei denen "uber %
+ein LAN Videospiele miteinander gespielt werden k"onnen. %
+Dadurch ist es m"oglich lokale verteilte Systeme aufzubauen, die gemeinsam eine Aufgabe %
 bearbeiten. Das Berkeley Open Infrastructure for Network Computing stellt eine Anwendung %
-f"ur Verteilte Systeme dar \autocite{uni:boinc}. Mit dieser ist es m"oglich "uber das %
-Internet an verschiedenen Forschungsprojekten teilzunehmen, indem man eigene eigene %
-Rechenzeit zu verf"ugung stellt. Eine weitere Anwendung f"ur Verteilte Systeme stellt %
-das Zabbix Framework dar, welches auch in dieser Bachelor Arbeit weiter betrachtet wird. %
-Zabbix welches von der Zabbix SIA vertrieben wird ist wie Nagios eine Open Source %
-Netzwerkmonitoring Software die es erm"oglicht Ger"ate in einem Netzwerk zu "uberwachen. %
-Mit der Hilfe von Zabbix und einigen selbstprogrammierten Bash Skripten m"ochte ich ein %
-Beweisen das es in einem Netzwerk mit einer definierten Anzahl an homogenen Endger"aten %
-m"oglich ist eine dem Optimale gr"o"se von Dateien die verschickt werden zu bestimmen. %
-Daf"ur wurde ein Local Area Network bestehend aus vier Raspberry Pis aufgebaut. Diese wurden %
-in einer Sterntopologie aufgebaut. Dieser wird standardm"a"ig in %
-Netzwerken verwendet. Da bei dieser Topologie der Ausfall von einem Computer keine Auswirkung %
-auf den Rest des Netzwerks hat, leicht erweiterbar ist und leicht verst"andlich ist \autocite{book:CN2003}. % 
-Daf"ur wurde das auf dem TCP/IP-Protokollstapel basierende Secure Copy Programm verwendet. %
+f"ur verteilte Systeme dar \autocite{uni:boinc}. Mit dieser ist es m"oglich "uber das %
+Internet an verschiedenen Forschungsprojekten teilzunehmen, indem man eigene %
+Rechenzeit zur Verf"ugung stellt. Eine weitere Anwendung f"ur verteilte Systeme stellt %
+das Zabbix Framework dar, welches auch in dieser Bachelor Arbeit n"aher betrachtet wird. %
+Zabbix ist ein Netzwerk Monitoring Tool, mit dem es m"oglich ist St"orungen in einem  Netzwerk %
+zu erkennen und die Leistung von den im Netzwerk angeschlossenen Computern zu betrachten. % 
+
+%Motiviation und Zielsetzung zusammenfügen. 
+\section{Motivation der Bestimmung einer optimalen Paketgr"o"se}
+In einem Netzwerk, in dem konstant Daten ausgetauscht werden, wirkt sich die Gr"o"se der %
+versandten Pakete auf die Leistung der Endger"ate aus. Um eine gleichm"a"sige Auslastung des Netzwerkes %
+und die Leistungsf"ahigkeit der im Netzwerk angeschlossenen Computer zu gew"ahrleisten, %
+kann man dies mittels der Gr"o"se der Pakete steuern. Deshalb ist das bestimmen einer Paketgr"o"se %
+f"ur ein gegebenes System wichtig, um eine gleichm"a"sige Lastenverteilung im Netzwerk zu haben %
+und die Endger"ate nicht zum abst"urzen zu bringen. % 
+
+\section{Zielsetzung dieser Arbeit}
+Das Ziel dieser Bachelorarbeit ist es herauszufinden, ob "uber die Paketgr"o"se eine %
+Optimierung der Performanz der Endger"ate und der Daten"ubertragung im Netzwerk m"oglich %
+ist.  
+
+
+\section{Methoden zum Erreichen des Ziels}
+
+Zabbix, welches von der Zabbix SIA vertrieben wird, ist wie Nagios eine Open Source % Nagios drinalssen?
+Netzwerkmonitoring Software, die es erm"oglicht Ger"ate in einem Netzwerk zu "uberwachen. %
+Daf"ur wurde ein Local Area Network bestehend aus vier Raspberry Pis aufgebaut. Das Netzwerk wurde %
+in einer Sterntopologie aufgebaut, welche standardm"a"sig verwendet wird. Der Vorteil bei dieser Topologie ist, dass %
+der Ausfall von einem Computer keine Auswirkung auf den Rest des Netzwerks hat, sie leicht erweiterbar ist und %
+hohe "Ubertragungsraten bietet, wenn der Netzknoten ein Switch ist \autocite{book:CN2003}. % 
+Daf"ur wird das auf dem TCP/IP-Protokollstapel basierende Secure Copy Programm verwendet. %
 Es stellt eine Erweiterung der Unix Secure Shell dar und erm"oglicht einen fehlerfreien %
 Austausch von Dateien. Beide Programme, Secure Copy und Secure Shell sind inzwischen fester Bestandteil %
-fast aller Linux Distributionen, so auch dem Debian Port Raspbian welcher auf den %
-Raspberry Pis installiert ist. Mit diesen Tools habe ich mir ein eigenes Testframework aufgebaut, %
-welches es automatisiert Dateien von den Computern verschickt und Informationen "uber die Dateien, %
-Empf"anger und ben"otigten "Ubermittlungszeiten speichert. Diese Logfiles werden %
-mittels Textverarbeitung analysiert und in Tabellen dargestellt. Zabbix kann einige %
-Informationen zu den Computern in Netz ausgeben. So ist es m"oglich mittels Zabbix die %
-Prozessor Last, die Festplatten Last und die Last auf den Ethernet Ports der Raspberry Pis %
-zu beobachten. Mit diesem Framework, welches in \cref{cha:dasframework} nochmal genauer vorgestellt wird. %
-M"ochte ich beweisen das es m"oglich ist die optimale Paketgr"o"se f"ur ein Netzwerk zu bestimmen. %
-Dazu werden mittels Textverarbeitung die Logfiles ausgewertet und die Daten die %
-Werte Zabbix zur verf"ugung stellt in Tabellen aufbereitet. Dazu werden in dieser Arbeit %
-drei verschiedene Testf"alle betrachtet, kleine Dateien: Diese sind 20 Megabyte gro"s, %
-mittlere Dateien: diese sind 200 Megabyte gro"s und gro"se Dateien diese sind 2000 Megabyte %
-gro"s. Am Ende dessen m"ochte ich die so gesammelten Ergebnisse vergleichen und "uberpr"ufen %
-ob die Annahme, das es m"oglich ist eine optimale Paketgr"o"se in einem Netzwerk zu bestimmen. %
+fast aller Linux Distributionen, so auch dem Debian Port Raspbian, welcher auf den %
+Raspberry Pis installiert ist. Mit diesen Tools wurde im Rahmen dieser Bachelorarbeit ein eigenes Testframework aufgebaut, %
+welches automatisiert Dateien von den Computern verschickt und Informationen "uber die Dateien, %
+Empf"anger und "Ubermittlungszeiten speichert. Diese Logfiles werden %
+mittels Textverarbeitung analysiert und in Tabellen dargestellt. Zabbix kann %
+Statistiken zu den Computern im Netz erstellen. So ist es m"oglich mittels Zabbix die %
+CPU-Last, die Festplattenauslastung und die Last auf den Ethernet Ports der Raspberry Pis %
+zu beobachten. Dieses Framework wird in \cref{cha:framework} nochmal genauer vorgestellt. %
+Au"serdem werden in dieser Arbeit % Marie oder vllt. weglassen?!
+drei verschiedene Testf"alle betrachtet, kleine Dateien 20 Megabyte, %
+mittlere Dateien 200 Megabyte und gro"se Dateien mit 2000 Megabyte. %
+Zum Schluss werden die zuvor gesammelten Ergebnisse in \cref{cha:ergebnisse} verglichen und die %
+Annahme "uberpr"uft, ob es m"oglich ist eine optimale gr"o"se f"ur Pakete in einem Netzwerk %
+zu bestimmen. %
+
+
+
+
+
+
+
