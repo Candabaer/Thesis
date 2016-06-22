@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.1)  21 JUN 2016 01:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.1)  21 JUN 2016 21:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1191,6 +1191,13 @@ LaTeX Warning: Label `tab:VerschickteDaten20Mb' multiply defined.
 
 LaTeX Warning: Label `tab:VerschickteDaten20Mb@cref' multiply defined.
 
+) (./Kapitel/anhang.aux
+
+LaTeX Warning: Label `fig:Eth0TuskStandard' multiply defined.
+
+
+LaTeX Warning: Label `fig:Eth0TuskStandard@cref' multiply defined.
+
 ))
 \openout1 = `Hauptdokument.aux'.
 
@@ -1365,7 +1372,7 @@ File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 \openout2 = `Deckblatt/h_da_arbeit.aux'.
 
  (./Deckblatt/h_da_arbeit.tex
-<Abb/logo_fbi.jpg, id=100, 230.45096pt x 108.405pt>
+<Abb/logo_fbi.jpg, id=108, 230.45096pt x 108.405pt>
 File: Abb/logo_fbi.jpg Graphic file (type jpg)
  <use Abb/logo_fbi.jpg>
 Package pdftex.def Info: Abb/logo_fbi.jpg used on input line 7.
@@ -1647,7 +1654,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 135.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 135.
- <Abb/Netzschaltung3.png, id=245, 1277.77374pt x 596.2275pt>
+ <Abb/Netzschaltung3.png, id=281, 1277.77374pt x 596.2275pt>
 File: Abb/Netzschaltung3.png Graphic file (type png)
 
 <use Abb/Netzschaltung3.png>
@@ -1714,38 +1721,38 @@ Package babel Info: Redefining ngerman shorthand "~
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 69.
+(babel)             in language  on input line 67.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 69.
-Package cleveref Info: loaded `ngerman' language definitions on input line 81.
+(babel)             in language  on input line 67.
+Package cleveref Info: loaded `ngerman' language definitions on input line 79.
 
 Overfull \vbox (1.89998pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 81.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 81.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 81.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 81.
+(babel)             in language  on input line 79.
 
-[9]
-Package cleveref Info: loaded `ngerman' language definitions on input line 109.
+[9])
+Package cleveref Info: loaded `ngerman' language definitions on input line 108.
 
 
 Overfull \vbox (1.89998pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 109.
+(babel)             in language  on input line 108.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 109.
+(babel)             in language  on input line 108.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 109.
+(babel)             in language  on input line 108.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 109.
+(babel)             in language  on input line 108.
 
-[10])
+[10]
 Package cleveref Info: loaded `ngerman' language definitions on input line 108.
 
 
@@ -1769,16 +1776,15 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
+
+LaTeX Warning: Reference `subsec:200MBTest' on page 1 undefined on input line 1
+6.
+
 (./Kapitel/20MBTest.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
-
-
-LaTeX Warning: Reference `fig:Eth0DazzleStandard' on page 1 undefined on input 
-line 7.
-
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 64.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1787,15 +1793,11 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 64.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 64.
-[12
+ [12
 
 
 
 ]
-
-LaTeX Warning: Reference `fig:IoStatDazzleStandard' on page 1 undefined on inpu
-t line 86.
-
 Package cleveref Info: loaded `ngerman' language definitions on input line 127.
 
 
@@ -1820,60 +1822,70 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
-
-
-LaTeX Warning: Reference `fig:Eth0DazzleStandard' on page 1 undefined on input 
-line 6.
-
-Package cleveref Info: loaded `ngerman' language definitions on input line 14.
+Package cleveref Info: loaded `ngerman' language definitions on input line 6.
 
 Overfull \vbox (1.89998pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 6.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 6.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 6.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 14.
+(babel)             in language  on input line 6.
 
 [14]
 
-LaTeX Warning: Reference `fig:IoStatDazzleStandard' on page 1 undefined on inpu
-t line 84.
+LaTeX Warning: Reference `sec:20MBTest' on page 1 undefined on input line 60.
 
-Package cleveref Info: loaded `ngerman' language definitions on input line 124.
+
+LaTeX Warning: Reference `sec:20MBTest' on page 1 undefined on input line 62.
+
+
+LaTeX Warning: Reference `sec:20MBTest' on page 1 undefined on input line 120.
+
+
+LaTeX Warning: Reference `sec:20MBTest' on page 1 undefined on input line 123.
+
+
+LaTeX Warning: Reference `sec:20MBTest' on page 1 undefined on input line 124.
+
+Package cleveref Info: loaded `ngerman' language definitions on input line 128.
 
 
 Overfull \vbox (1.89998pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 128.
 
 [15]
-Package cleveref Info: loaded `ngerman' language definitions on input line 124.
+Package cleveref Info: loaded `ngerman' language definitions on input line 128.
 
 
 Overfull \vbox (1.89998pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 128.
 
 [16]
-Overfull \hbox (1.7115pt too wide) in paragraph at lines 132--148
+
+LaTeX Warning: Reference `sec:20MBTest' on page 1 undefined on input line 131.
+
+
+Overfull \hbox (1.7115pt too wide) in paragraph at lines 136--152
  [][] 
  []
 
@@ -1882,11 +1894,20 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
+Package cleveref Info: loaded `ngerman' language definitions on input line 32.
 
+Overfull \vbox (1.89998pt too high) has occurred while \output is active []
 
-LaTeX Warning: Reference `fig:Eth0DazzleStandard' on page 1 undefined on input 
-line 6.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 32.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 32.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 32.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 32.
 
+[17]
 
 LaTeX Warning: Reference `tab:standardTraffic' on page 1 undefined on input lin
 e 56.
@@ -1895,59 +1916,41 @@ e 56.
 LaTeX Warning: Reference `tab:standardTrafficAbweichung' on page 1 undefined on
  input line 59.
 
-Package cleveref Info: loaded `ngerman' language definitions on input line 75.
-
-Overfull \vbox (1.89998pt too high) has occurred while \output is active []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 75.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 75.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 75.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 75.
-
-[17]
-Package cleveref Info: loaded `ngerman' language definitions on input line 75.
-
-Overfull \vbox (1.89998pt too high) has occurred while \output is active []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 75.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 75.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 75.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 75.
-
-[18]
-
-LaTeX Warning: Reference `fig:IoStatDazzleStandard' on page 1 undefined on inpu
-t line 115.
-
 
 Overfull \hbox (1.7115pt too wide) in paragraph at lines 151--167
  [][] 
  []
 
-))
-Package cleveref Info: loaded `ngerman' language definitions on input line 110.
+Package cleveref Info: loaded `ngerman' language definitions on input line 170.
 
 
 Overfull \vbox (1.89998pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 110.
+(babel)             in language  on input line 170.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 110.
+(babel)             in language  on input line 170.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 110.
+(babel)             in language  on input line 170.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 110.
+(babel)             in language  on input line 170.
 
-[19]
+[18]
+Package cleveref Info: loaded `ngerman' language definitions on input line 170.
+
+
+Overfull \vbox (1.89998pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 170.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 170.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 170.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 170.
+
+[19]))
 Package cleveref Info: loaded `ngerman' language definitions on input line 110.
 
 
@@ -1994,16 +1997,299 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 119.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 120.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 120.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 120.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 120.
 [22
 
 ]
+\openout2 = `Kapitel/anhang.aux'.
+
+ (./Kapitel/anhang.tex
+Kapitel 7.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 4.
+<Abb/Zabbix/Auswahl005.png, id=402, 1521.685pt x 305.14pt>
+File: Abb/Zabbix/Auswahl005.png Graphic file (type png)
+
+<use Abb/Zabbix/Auswahl005.png>
+Package pdftex.def Info: Abb/Zabbix/Auswahl005.png used on input line 8.
+(pdftex.def)             Requested size: 483.69687pt x 96.99493pt.
+
+<Abb/ZabbixDazzle/Standard/IoStatStandard20.png, id=404, 1578.89874pt x 457.71p
+t>
+File: Abb/ZabbixDazzle/Standard/IoStatStandard20.png Graphic file (type png)
+ <use Abb/ZabbixDazzle/Standard/IoStatStandard20.png>
+Package pdftex.def Info: Abb/ZabbixDazzle/Standard/IoStatStandard20.png used on
+ input line 17.
+(pdftex.def)             Requested size: 435.32422pt x 126.19539pt.
+
+<Abb/ZabbixDazzle/Standard/CPUStandard20.png, id=406, 1579.9025pt x 452.69125pt
+>
+File: Abb/ZabbixDazzle/Standard/CPUStandard20.png Graphic file (type png)
+ <use Abb/ZabbixDazzle/Standard/CPUStandard20.png>
+Package pdftex.def Info: Abb/ZabbixDazzle/Standard/CPUStandard20.png used on in
+put line 25.
+(pdftex.def)             Requested size: 435.32422pt x 124.73569pt.
+
+<Abb/ZabbixTusk/Standard/Standard20.png, id=408, 1577.895pt x 373.395pt>
+File: Abb/ZabbixTusk/Standard/Standard20.png Graphic file (type png)
+
+<use Abb/ZabbixTusk/Standard/Standard20.png>
+Package pdftex.def Info: Abb/ZabbixTusk/Standard/Standard20.png used on input l
+ine 33.
+(pdftex.def)             Requested size: 435.32422pt x 103.01155pt.
+
+<Abb/ZabbixTusk/Standard/IoStatStandard20.png, id=410, 1575.8875pt x 458.71375p
+t>
+File: Abb/ZabbixTusk/Standard/IoStatStandard20.png Graphic file (type png)
+ <use Abb/ZabbixTusk/Standard/IoStatStandard20.png>
+Package pdftex.def Info: Abb/ZabbixTusk/Standard/IoStatStandard20.png used on i
+nput line 42.
+(pdftex.def)             Requested size: 435.32422pt x 126.71011pt.
+
+<Abb/ZabbixTusk/Standard/CPUStandard20.png, id=412, 1578.89874pt x 462.72874pt>
+File: Abb/ZabbixTusk/Standard/CPUStandard20.png Graphic file (type png)
+<use Abb/ZabbixTusk/Standard/CPUStandard20.png>
+Package pdftex.def Info: Abb/ZabbixTusk/Standard/CPUStandard20.png used on inpu
+t line 50.
+(pdftex.def)             Requested size: 435.32422pt x 127.57912pt.
+
+<Abb/ZabbixTinker/Standard/Standard20.png, id=414, 1584.92125pt x 376.40625pt>
+File: Abb/ZabbixTinker/Standard/Standard20.png Graphic file (type png)
+
+<use Abb/ZabbixTinker/Standard/Standard20.png>
+Package pdftex.def Info: Abb/ZabbixTinker/Standard/Standard20.png used on input
+ line 58.
+(pdftex.def)             Requested size: 435.32422pt x 103.3828pt.
+
+<Abb/ZabbixTinker/Standard/IoStatStandard20.png, id=416, 1579.9025pt x 457.71pt
+>
+File: Abb/ZabbixTinker/Standard/IoStatStandard20.png Graphic file (type png)
+ <use Abb/ZabbixTinker/Standard/IoStatStandard20.png>
+Package pdftex.def Info: Abb/ZabbixTinker/Standard/IoStatStandard20.png used on
+ input line 67.
+(pdftex.def)             Requested size: 435.32422pt x 126.11858pt.
+
+<Abb/ZabbixTinker/Standard/CPUStandard20.png, id=418, 1576.89125pt x 464.73625p
+t>
+File: Abb/ZabbixTinker/Standard/CPUStandard20.png Graphic file (type png)
+ <use Abb/ZabbixTinker/Standard/CPUStandard20.png>
+Package pdftex.def Info: Abb/ZabbixTinker/Standard/CPUStandard20.png used on in
+put line 75.
+(pdftex.def)             Requested size: 435.32422pt x 128.2957pt.
+
+<Abb/ZabbixLion/Standard/Standard20.png, id=420, 1576.89125pt x 374.39874pt>
+File: Abb/ZabbixLion/Standard/Standard20.png Graphic file (type png)
+
+<use Abb/ZabbixLion/Standard/Standard20.png>
+Package pdftex.def Info: Abb/ZabbixLion/Standard/Standard20.png used on input l
+ine 85.
+(pdftex.def)             Requested size: 435.32422pt x 103.35701pt.
+
+<Abb/ZabbixLion/Standard/IoStatStandard20.png, id=422, 1577.895pt x 462.72874pt
+>
+File: Abb/ZabbixLion/Standard/IoStatStandard20.png Graphic file (type png)
+ <use Abb/ZabbixLion/Standard/IoStatStandard20.png>
+Package pdftex.def Info: Abb/ZabbixLion/Standard/IoStatStandard20.png used on i
+nput line 94.
+(pdftex.def)             Requested size: 435.32422pt x 127.65678pt.
+
+<Abb/ZabbixLion/Standard/CPUStandard20.png, id=424, 1577.895pt x 455.7025pt>
+File: Abb/ZabbixLion/Standard/CPUStandard20.png Graphic file (type png)
+
+<use Abb/ZabbixLion/Standard/CPUStandard20.png>
+Package pdftex.def Info: Abb/ZabbixLion/Standard/CPUStandard20.png used on inpu
+t line 102.
+(pdftex.def)             Requested size: 435.32422pt x 125.71838pt.
+)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+ [23
+
+
+ <./Abb/Zabbix/Auswahl005.png>]
+Package cleveref Info: loaded `ngerman' language definitions on input line 120.
+
+
+Overfull \vbox (1.89998pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+
+[24 <./Abb/ZabbixDazzle/Standard/IoStatStandard20.png>]
+Package cleveref Info: loaded `ngerman' language definitions on input line 120.
+
+
+Overfull \vbox (1.89998pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+
+[25 <./Abb/ZabbixDazzle/Standard/CPUStandard20.png>]
+Package cleveref Info: loaded `ngerman' language definitions on input line 120.
+
+
+Overfull \vbox (1.89998pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+
+[26 <./Abb/ZabbixTusk/Standard/Standard20.png>]
+Package cleveref Info: loaded `ngerman' language definitions on input line 120.
+
+
+Overfull \vbox (1.89998pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+
+[27 <./Abb/ZabbixTusk/Standard/IoStatStandard20.png>]
+Package cleveref Info: loaded `ngerman' language definitions on input line 120.
+
+
+Overfull \vbox (1.89998pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+
+[28 <./Abb/ZabbixTusk/Standard/CPUStandard20.png>]
+Package cleveref Info: loaded `ngerman' language definitions on input line 120.
+
+
+Overfull \vbox (1.89998pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+
+[29 <./Abb/ZabbixTinker/Standard/Standard20.png>]
+Package cleveref Info: loaded `ngerman' language definitions on input line 120.
+
+
+Overfull \vbox (1.89998pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+
+[30 <./Abb/ZabbixTinker/Standard/IoStatStandard20.png>]
+Package cleveref Info: loaded `ngerman' language definitions on input line 120.
+
+
+Overfull \vbox (1.89998pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+
+[31 <./Abb/ZabbixTinker/Standard/CPUStandard20.png>]
+Package cleveref Info: loaded `ngerman' language definitions on input line 120.
+
+
+Overfull \vbox (1.89998pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+
+[32 <./Abb/ZabbixLion/Standard/Standard20.png>]
+Package cleveref Info: loaded `ngerman' language definitions on input line 120.
+
+
+Overfull \vbox (1.89998pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+
+[33 <./Abb/ZabbixLion/Standard/IoStatStandard20.png>]
+Package cleveref Info: loaded `ngerman' language definitions on input line 120.
+
+
+Overfull \vbox (1.89998pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 120.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 120.
+
+[34 <./Abb/ZabbixLion/Standard/CPUStandard20.png>]
 
 Package biblatex Warning: No driver for entry type 'other'.
 (biblatex)                Using fallback driver on input line 122.
@@ -2055,7 +2341,8 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 126.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 126.
-[23
+[35
+
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 126.
@@ -2063,11 +2350,12 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 126.
 Package cleveref Info: loaded `ngerman' language definitions on input line 25.
 
 (./Abstract/Abstract.aux) (./Kapitel/Einfuehrung.aux)
-(./Kapitel/dasframework.aux) (./Kapitel/zabbix.aux) (./Kapitel/versuche.aux))
+(./Kapitel/dasframework.aux) (./Kapitel/zabbix.aux) (./Kapitel/versuche.aux)
+(./Kapitel/anhang.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 126.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 126.
 Package rerunfilecheck Info: File `Hauptdokument.out' has not changed.
-(rerunfilecheck)             Checksum: 8278A232CD38CDF3DEDD36A4A25656AE;1507.
+(rerunfilecheck)             Checksum: EE22531BE9040D28E9020BF029A934A1;1605.
 
 
 LaTeX Warning: There were undefined references.
@@ -2081,10 +2369,10 @@ Package logreq Info: Writing requests to 'Hauptdokument.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 126.
  ) 
 Here is how much of TeX's memory you used:
- 26188 strings out of 494976
- 493009 string characters out of 6179138
- 944623 words of memory out of 5000000
- 28895 multiletter control sequences out of 15000+600000
+ 26311 strings out of 494976
+ 496472 string characters out of 6179138
+ 947209 words of memory out of 5000000
+ 28975 multiletter control sequences out of 15000+600000
  64264 words of font info for 54 fonts, out of 8000000 for 9000
  18 hyphenation exceptions out of 8191
  45i,10n,51p,10458b,1918s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2098,10 +2386,10 @@ fonts/type1/public/lm/lmro12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx
 10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /mathabx-type1/matha12.pfb>
-Output written on Hauptdokument.pdf (29 pages, 423917 bytes).
+Output written on Hauptdokument.pdf (41 pages, 1508665 bytes).
 PDF statistics:
- 451 PDF objects out of 1000 (max. 8388607)
- 401 compressed objects within 5 object streams
- 95 named destinations out of 1000 (max. 500000)
- 209 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 584 PDF objects out of 1000 (max. 8388607)
+ 498 compressed objects within 5 object streams
+ 122 named destinations out of 1000 (max. 500000)
+ 357 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -19,9 +19,11 @@
 \contentsline {section}{\numberline {3.2}Zabbix Agent}{10}{section.3.2}
 \contentsline {chapter}{\numberline {4}Versuche}{12}{chapter.4}
 \contentsline {section}{\numberline {4.1}20 Megabyte Testlauf}{12}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}200 Megabyte Testlauf}{14}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}2 Gigabyte Testlauf}{17}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}200 Megabyte Testlauf}{15}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}2 Gigabyte Testlauf}{17}{subsection.4.2.1}
 \contentsline {chapter}{\numberline {5}Vergleich VM/HW}{21}{chapter.5}
 \contentsline {section}{\numberline {5.1}Versuchsergebnisse}{21}{section.5.1}
 \contentsline {section}{\numberline {5.2}Kosten nutzen Faktor}{21}{section.5.2}
 \contentsline {chapter}{\numberline {6}Fazit}{22}{chapter.6}
+\contentsline {chapter}{\numberline {7}Anhang}{23}{chapter.7}
+\contentsline {section}{\numberline {7.1}20 Megabyte Test}{23}{section.7.1}
