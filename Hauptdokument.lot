@@ -11,19 +11,18 @@
 \contentsline {table}{\numberline {4.3}{\ignorespaces I/O Zeiten bei Normalbetrieb auf den Pis}}{13}{table.4.3}
 \contentsline {table}{\numberline {4.4}{\ignorespaces CPU Last Verteilung}}{14}{table.4.4}
 \contentsline {table}{\numberline {4.5}{\ignorespaces Anzahl der gesendeten Pakete "uber einen Zeitraum von 12 Stunden.}}{14}{table.4.5}
-\contentsline {table}{\numberline {4.6}{\ignorespaces Die Pings der Hosts im System im bezug zueinander.}}{15}{table.4.6}
-\contentsline {table}{\numberline {4.7}{\ignorespaces Eingehender Traffic auf den Ethernet Ports bei 200 Megabyte Paketen auf allen Pis.}}{16}{table.4.7}
-\contentsline {table}{\numberline {4.8}{\ignorespaces Ausgehender Traffic auf den Ethernet Ports bei 200 Megabyte Paketen auf allen Pis.}}{16}{table.4.8}
+\contentsline {table}{\numberline {4.6}{\ignorespaces Die Anzahl der verschickten und der empfangen Pakete pro Host.}}{15}{table.4.6}
+\contentsline {table}{\numberline {4.7}{\ignorespaces Eingehender Traffic auf den Ethernet Ports bei 200 Megabyte Paketen auf allen Pis.}}{15}{table.4.7}
+\contentsline {table}{\numberline {4.8}{\ignorespaces Ausgehender Traffic auf den Ethernet Ports bei 200 Megabyte Paketen auf allen Pis.}}{15}{table.4.8}
 \contentsline {table}{\numberline {4.9}{\ignorespaces I/O Zeiten bei 200 Megabyte auf den Pis}}{16}{table.4.9}
 \contentsline {table}{\numberline {4.10}{\ignorespaces CPU Last Verteilung bei 200 Megabyte Paketen im Netzwerk}}{16}{table.4.10}
 \contentsline {table}{\numberline {4.11}{\ignorespaces Anzahl der gesendeten 200 Megabyte Pakete "uber einen Zeitraum von 12 Stunden}}{17}{table.4.11}
-\contentsline {table}{\numberline {4.12}{\ignorespaces Eingehender Traffic auf den Ethernet Ports bei 20 MB Paketen auf allen Pis}}{18}{table.4.12}
-\contentsline {table}{\numberline {4.13}{\ignorespaces Ausgehender Traffic auf den Ethernet Ports bei 20 MB Paketen auf allen Pis}}{18}{table.4.13}
-\contentsline {table}{\numberline {4.14}{\ignorespaces Standardabweichung der Eingehende der Last auf dem Ethernet Port bei 20 MB gro"sen Paketen }}{18}{table.4.14}
-\contentsline {table}{\numberline {4.15}{\ignorespaces Standardabweichung der Ausgehenden der Last auf dem Ethernet Port bei 20 MB gro"sen Paketen }}{19}{table.4.15}
-\contentsline {table}{\numberline {4.16}{\ignorespaces I/O Zeiten bei Normalbetrieb auf den Pis}}{19}{table.4.16}
-\contentsline {table}{\numberline {4.17}{\ignorespaces CPU Last Verteilung}}{19}{table.4.17}
-\contentsline {table}{\numberline {4.18}{\ignorespaces Anzahl der gesendeten Pakete "uber einen Zeitraum von 12 Stunden}}{20}{table.4.18}
+\contentsline {table}{\numberline {4.12}{\ignorespaces Eingehender Traffic auf den Ethernet Ports bei 2000 Megabyte Paketen auf allen Pis.}}{18}{table.4.12}
+\contentsline {table}{\numberline {4.13}{\ignorespaces Ausgehender Traffic auf den Ethernet Ports bei 2000 Megabyte Paketen auf allen Pis.}}{18}{table.4.13}
+\contentsline {table}{\numberline {4.14}{\ignorespaces I/O Zeiten bei 2000 Megabyte auf den Pis}}{18}{table.4.14}
+\contentsline {table}{\numberline {4.15}{\ignorespaces CPU Last Verteilung bei 2000 Megabyte Paketen im Netzwerk}}{19}{table.4.15}
+\contentsline {table}{\numberline {4.16}{\ignorespaces Anzahl der gesendeten 2000 Megabyte Pakete "uber einen Zeitraum von 12 Stunden}}{19}{table.4.16}
+\contentsline {table}{\numberline {4.17}{\ignorespaces Die Anzahl der verschickten und der empfangen Pakete pro Host.}}{19}{table.4.17}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -1,8 +1,8 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
 \select@language {ngerman}
-\contentsline {chapter}{Abbildungsverzeichnis}{iv}{chapter*.3}
-\contentsline {chapter}{Tabellenverzeichnis}{v}{chapter*.4}
+\contentsline {chapter}{Abbildungsverzeichnis}{v}{chapter*.3}
+\contentsline {chapter}{Tabellenverzeichnis}{vi}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Einf"uhrung}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Einf"uhrung in das Thema}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Motivation der Bestimmung einer optimalen Paketgr"o"se}{1}{section.1.2}
@@ -19,11 +19,12 @@
 \contentsline {section}{\numberline {3.2}Zabbix Agent}{10}{section.3.2}
 \contentsline {chapter}{\numberline {4}Versuche}{12}{chapter.4}
 \contentsline {section}{\numberline {4.1}20 Megabyte Testlauf}{12}{section.4.1}
-\contentsline {section}{\numberline {4.2}200 Megabyte Testlauf}{15}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}2 Gigabyte Testlauf}{17}{subsection.4.2.1}
-\contentsline {chapter}{\numberline {5}Vergleich VM/HW}{21}{chapter.5}
-\contentsline {section}{\numberline {5.1}Versuchsergebnisse}{21}{section.5.1}
-\contentsline {section}{\numberline {5.2}Kosten nutzen Faktor}{21}{section.5.2}
-\contentsline {chapter}{\numberline {6}Fazit}{22}{chapter.6}
-\contentsline {chapter}{\numberline {7}Anhang}{23}{chapter.7}
-\contentsline {section}{\numberline {7.1}20 Megabyte Test}{23}{section.7.1}
+\contentsline {section}{\numberline {4.2}200 Megabyte Testlauf}{14}{section.4.2}
+\contentsline {section}{\numberline {4.3}2000 Megabyte Testlauf}{17}{section.4.3}
+\contentsline {chapter}{\numberline {5}Ergebnisse}{20}{chapter.5}
+\contentsline {section}{\numberline {5.1}Versandte Daten}{20}{section.5.1}
+\contentsline {section}{\numberline {5.2}Aufgetretene Fehler}{20}{section.5.2}
+\contentsline {section}{\numberline {5.3}Schlussfolgerung}{20}{section.5.3}
+\contentsline {chapter}{\numberline {6}Fazit}{21}{chapter.6}
+\contentsline {chapter}{\numberline {7}Anhang}{22}{chapter.7}
+\contentsline {section}{\numberline {7.1}20 Megabyte Test}{22}{section.7.1}

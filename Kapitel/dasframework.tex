@@ -27,7 +27,7 @@ ist (siehe \cref{fig:AufbauVomNetzwerk}). Welche Software auf den Pis verwendet 
 Ger"at 		& CPU	& Arbeitspeicher	& Speicher	& Netzwerk Port	\\
 \hline
 Raspberry Pi 1	& 700	& 512			& 8		& 100		\\
-Raspberry Pi 2 	& 700 	& 1024			& 32		& 100		\\
+Raspberry Pi 2 	& 900 	& 1024			& 32		& 100		\\
 
 \end{tabular}
 \caption{Spezifikation der Raspberry Pis}
@@ -40,8 +40,50 @@ der verwendeten Ethernet Ports auf den Raspberry Pis, welche eine Ubertrangsungr
 ist der Austausch der Pakete zwischen den Pis, auf 100 Mbit/s beschr"ankt und kann so das ganze Potential der %
 Switches nicht ausnutzen. %
 
+\section{Raspberry Pi}
 
- 
+Bevor es in den Aufbau des Frameworks geht, wird noch ein Einblick in die Raspberry Pis gegeben. %
+Der Raspberry Pi ist eine Entwicklung aus England. Eben Upton der 2006 Dozent an der Cambridge University %
+war, stellte zu der Zeit fest das der Wissenstand von neuen Studenten in Cambridge im Bereich der Informatik %
+sehr gering ist. In einem Interview mit dem Online Magazin \emph{readwrite} sagte Upton \begin{quotation}We'd kind of pulled the ladder %
+up after us. We built these very sophisticated and user-friendly computers for children to use now. Or not %
+even computers--game consoles and phones and tablets, kind of appliances. But people were being denied that %
+opportunity to tinker. So really Raspberry Pi is an attempt to get back--without kind of being too retro--some %
+of what we kind of feel was lost from the evolution of computers over the last 25 years.\end{quotation}\autocite{web:readWrite}. %
+Upton der nach eigener Aussage w"ahrend seiner Schulzeit mit einem BBC-Micro Computer erste Erfahrungen im programmieren %
+machte, betont auch das der Raspberry Pi daf"ur gedacht ist Sch"ulern einen Computer zu geben der erschwinglich und leicht modifizierbar ist. %
+Deshalb ist es Upton auch wichtig das die Pis keine hohe kosten haben. Mit einem Preis von 40 Euro f"ur den Raspberry Pi 1 %
+\autocite{amazon:pi1}, 36,65 Euro f"ur den Raspberry Pi Modell 2 \autocite{amazon:pi2} und 42,70 Euro f"ur den %
+am Anfang des Jahres 2016 ver"offentlichten Raspberry Pi 3 Model B \autocite{amazon:pi3}, ist dies auch gelungen. %
+Aufgrund des geringen Preises eignen sich Raspberry Pis ausgezeichnet Client Server Anwendungen mit realen Ger"aten %
+aufzubauen. Deshalb werden Raspberry Pis zum "uberpr"ufen der These die in dieser Arbeit behandelt wird verwendet. %
+
+\subsection{Entwicklung Pis}
+Der erste Raspberry Pi wurde im Jahr 2012 ver"offentlicht, jedoch gab es schon 2006 Einen ersten Prototypen daf"ur %
+dieser verwendete einen Atmel-ATmega644-Mikrocontroller. Dieser war jedoch nicht Leistungsf"ahig genug. %
+Da zu dieser Zeit der Boom der Smartphones anfing, kamen aber auch immer mehr ARM-Prozessoren auf den Markt %
+so entschied man sich daf"ur den Broadcom BCM2835 Prozessor zu verwenden mit einer ARMv6 Architektur. Dieser Leistungsf"ahig genug %
+Spiele wie Quake 3 Arena und H.264 Videos abzuspielen. Seit Herbst 2012 wird ist der Raspberry Pi Model B im Handel %
+bei diesem wurde der Arbeitsspeicher auf 512 Megabyte erh"oht. Es ist auch das Model welches f"ur die Hosts in %
+diesem Framework verwendet wurde. Am 14. Juli 2014 wurde das Model B+ vorgestellt, mit welchem auch eine %
+offizielle Spezifikation f"ur Erweiterungsplatinen ver"offentlicht wurde, das erm"oglicht es den Raspberry Pi %
+nach belieben zu erweitern. Vier Monate sp"ater dem 14. November 2014 wurde das Modell A+ vorgestellt, dies %
+zeichnet sich dadurch aus, das die Platine kleiner ist als die der Vorg"angermodelle und auch preislich weniger %
+kostet. Der Raspberry Pi 2 Modell B wurde am 2. Februar 2015 vorgestellt, welcher in diesem Framework als Zabbix %
+Server verwendet wird. Der Raspberry Pi 2 verwendet einen Vierkern Broadcom BCM2836 Prozessor und ist der erste Raspberry Pi %
+der eine ARMv7 Architektur verwendet. Mit 900 MHz hat dieser einen 200 MHz schnelleren Prozessor als die Vorg"anger%
+modelle. Auch der Arbeitsspeicher wurde aufger"ustet, so wurde dieser wieder verdoppelt und hat nun einen 1024 Megabyte %
+gro"sen Arbeitsspeicher. Auf der Entwicklerkonferenz Build 2015 wurde von Microsoft Windows 10 IoT angek"undigt, welches %
+ein Windows 10 Port ist welcher f"ur \emph{Internet of Things}-Ger"ate entwickelt wurde, welches vom Raspberry Pi 2 %
+unterst"utzt wird \autocite{web:winIoT}. Am 26. November 2015 wurde der Raspberry Pi Zero angek"undigt, dieser hat %
+eine "ahnliche Ausstattung wie der Raspberry Pi 1 Modell B, hat jedoch einen auf 1 GHz getakteten Prozessor. %
+Das neueste Modell der Raspberry Pi Familie \emph{(stand Juni 2016)} ist der Raspberry Pi 3 Modell B, dieser ist %
+der erste Raspberry der eine 64bit-ARMv8 Architektur verwendet und mit dem Broadcom BCM2837 Prozessor ausgestattet ist. %
+Dieser Prozessor ist auf 1,2 GHz getaktet und ist. Dies ist auch der erste Pi, welcher einen Intergriertes W-Lan hat und %
+Bluetooth LE hat. Am Arbeitsspeicher dieses Pis wurde nichts ver"andert, so hat auch dieser wieder 1024 Megabyte Arbeitsspeicher. % 
+   
+
+
 \section{Aufbau der Software} \label{sec:aufbauSoftware}
 Das Testframework besteht aus drei verschiedenen Teilen. %
 \begin{itemize}
@@ -95,8 +137,8 @@ mit der Weiterverarbeitung der Logfiles beginnen.
 \item[Hintergrundrauschen:]Diese Eigenentwicklung stellt mit Zabbix die Kernkomponente des Frameworks dar. Wie %
 der Rest der selbstentwickelten Software, wurde sie komplett in Bash programmiert, da das Framework ausschlie"slich %
 in einer Linux Umgebung entwickelt, getestet und verwendet wird. Hintergrundrauschen schickt "uber Secure Copy, %
-Pakete von einem Agent zum anderen. Secure Copy baut auf dem SSH Protokoll \autocite{artcl:thorbo} auf %
-und baut auf der Secure Shell auf. So wird eine TCP Verbindung zum angesprochenen Host aufgebaut wird und % 
+Pakete von einem Agent zum anderen. Secure Copy baut auf dem SSH Protokoll \autocite{artcl:thorbo} auf. %
+So wird eine TCP Verbindung zum angesprochenen Host aufgebaut wird und % 
 eine Last auf dem Netzwerk und den Endeger"aten erzeugt, die mit Hilfe des Zabbix Servers  %
 gemessen werden kann. Au"serdem speichert Hintergrundrauschen die Dauer, die ein Paket ben"otigt, um erfolgreich %
 bei seinem zuf"allig ausgew"ahlten Empf"anger anzukommen. Es werden drei verschieden %

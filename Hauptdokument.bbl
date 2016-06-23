@@ -19,6 +19,66 @@
 
 \refsection{0}
   \sortlist{entry}{anyt}
+    \entry{amazon:pi1}{other}{}
+      \name{labelname}{1}{}{%
+        {{hash=b3b3a6ac74ecbd56bcdbefa4799fb9df}{Amazon}{A\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=b3b3a6ac74ecbd56bcdbefa4799fb9df}{Amazon}{A\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{fullhash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \field{labelalpha}{Ama16}
+      \field{sortinit}{A}
+      \field{labeltitle}{Amazon Raspberry Pi 1}
+      \field{extraalpha}{1}
+      \field{note}{[Online; Stand 23. Juni 2015]}
+      \field{title}{Amazon Raspberry Pi 1}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://www.amazon.de/Raspberry-Pi-RBCA000-Mainboard-1176JZF-S/dp/B008PT4GGC/ref=sr_1_1?ie=UTF8&qid=1466680050&sr=8-1&keywords=raspberry+pi+1
+      \endverb
+    \endentry
+    \entry{amazon:pi2}{other}{}
+      \name{labelname}{1}{}{%
+        {{hash=b3b3a6ac74ecbd56bcdbefa4799fb9df}{Amazon}{A\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=b3b3a6ac74ecbd56bcdbefa4799fb9df}{Amazon}{A\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{fullhash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \field{labelalpha}{Ama16}
+      \field{sortinit}{A}
+      \field{labeltitle}{Amazon Raspberry Pi 2}
+      \field{extraalpha}{2}
+      \field{note}{[Online; Stand 23. Juni 2015]}
+      \field{title}{Amazon Raspberry Pi 2}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://www.amazon.de/Raspberry-Pi-quad-core-Cortex-A7-compatibility/dp/B00T2U7R7I/ref=sr_1_2?ie=UTF8&qid=1466680926&sr=8-2&keywords=raspberry+pi+1
+      \endverb
+    \endentry
+    \entry{amazon:pi3}{other}{}
+      \name{labelname}{1}{}{%
+        {{hash=b3b3a6ac74ecbd56bcdbefa4799fb9df}{Amazon}{A\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=b3b3a6ac74ecbd56bcdbefa4799fb9df}{Amazon}{A\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{fullhash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \field{labelalpha}{Ama16}
+      \field{sortinit}{A}
+      \field{labeltitle}{Amazon Raspberry Pi 3}
+      \field{extraalpha}{3}
+      \field{note}{[Online; Stand 23. Juni 2015]}
+      \field{title}{Amazon Raspberry Pi 3}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://www.amazon.de/Raspberry-Pi-3-Model-B/dp/B01CEFWQFA/ref=sr_1_3?ie=UTF8&qid=1466680050&sr=8-3&keywords=raspberry+pi+1
+      \endverb
+    \endentry
     \entry{artcl:thorbo}{article}{}
       \name{labelname}{1}{}{%
         {{hash=65be095181efc2f3877fbb6e4d9c2719}{Bormer}{B\bibinitperiod}{Thorsten}{T\bibinitperiod}{}{}{}{}}%
@@ -71,6 +131,25 @@
       \verb http://kb.sandisk.com/app/answers/detail/a_id/2520/~/sd/sdhc/sdxc-specifications-and-compatibility
       \endverb
     \endentry
+    \entry{web:winIoT}{other}{}
+      \name{labelname}{1}{}{%
+        {{hash=c1d08b84d3874fdf1bb4c8d9ae45176b}{derstandard.at}{d\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=c1d08b84d3874fdf1bb4c8d9ae45176b}{derstandard.at}{d\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{c1d08b84d3874fdf1bb4c8d9ae45176b}
+      \strng{fullhash}{c1d08b84d3874fdf1bb4c8d9ae45176b}
+      \field{labelalpha}{der15}
+      \field{sortinit}{d}
+      \field{labeltitle}{Windows 10 für Raspberry Pi 2: Erste Testversion kostenlos zum Download - derstandard.at/2000015097563/Windows-10-fuer-Raspberry-Pi-2-Erste-Testversion-kostenlos-zum}
+      \field{note}{[Online; Stand 23. Juni 2016]}
+      \field{title}{Windows 10 für Raspberry Pi 2: Erste Testversion kostenlos zum Download - derstandard.at/2000015097563/Windows-10-fuer-Raspberry-Pi-2-Erste-Testversion-kostenlos-zum}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://derstandard.at/2000015097563/Windows-10-fuer-Raspberry-Pi-2-Erste-Testversion-kostenlos-zum
+      \endverb
+    \endentry
     \entry{zabbix:activepassive2}{other}{}
       \name{labelname}{1}{}{%
         {{hash=db589a5a83bb83cbac8266fe7050780e}{Kramm}{K\bibinitperiod}{Thorsten}{T\bibinitperiod}{}{}{}{}}%
@@ -107,6 +186,25 @@
       \field{year}{2016}
       \verb{url}
       \verb https://www.nagios.org/
+      \endverb
+    \endentry
+    \entry{web:readWrite}{other}{}
+      \name{labelname}{1}{}{%
+        {{hash=480c70825020dcc09bf3c9f1930277b9}{Orsini}{O\bibinitperiod}{Lauren}{L\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=480c70825020dcc09bf3c9f1930277b9}{Orsini}{O\bibinitperiod}{Lauren}{L\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{480c70825020dcc09bf3c9f1930277b9}
+      \strng{fullhash}{480c70825020dcc09bf3c9f1930277b9}
+      \field{labelalpha}{Ors14}
+      \field{sortinit}{O}
+      \field{labeltitle}{Raspberry Pi's Eben Upton: How We're Turning Everyone Into DIY Hackers}
+      \field{note}{[Online; Stand 22. Juni 2016]}
+      \field{title}{Raspberry Pi's Eben Upton: How We're Turning Everyone Into DIY Hackers}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://readwrite.com/2014/04/08/raspberry-pi-eben-upton-builders/
       \endverb
     \endentry
     \entry{zabbix:agent}{other}{}

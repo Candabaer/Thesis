@@ -23,6 +23,7 @@
 \usepackage{longtable}% Tabellen können sich nicht über mehrere Seiten 
 \usepackage{graphicx} % kann LaTeX Grafiken einbinden
 
+\usepackage{setspace}
 \usepackage{mathabx} 
 \usepackage[applemac]{inputenc} % Umlaute unter Mac werden automatisch gesetzt
 \usepackage[T1]{fontenc} % Zeichenencoding
@@ -56,9 +57,8 @@
 \definecolor{gray}{gray}{0.95} % Listingsbackground
 
 %----------------- LAYOUT SETZEN ----------------- %
-\geometry{left=2cm, right=2cm, top=2.5cm, bottom=2cm}
+\geometry{left=2.5cm, right=2cm, top=2.5cm, bottom=2cm}
 \linespread {1.25}\selectfont %1.25 da er von Haus aus 1.2 ist und 1,25 * 1,2 = 1,5 isch
-
 
 
 
@@ -109,11 +109,7 @@
 %----------------- KAPITEL : VERSUCHE  ----------------- %
 \include{Kapitel/versuche}
 %----------------- KAPITEL : VERGLEICH------------ %	
-\chapter{Vergleich VM/HW}
-\label{cha:vergleich}
-\section{Versuchsergebnisse}
-\section{Kosten nutzen Faktor}
-
+\include{Kapitel/ergebnisse}
 
 %----------------- KAPITEL : FAZIT  ----------------- %	
 \chapter{Fazit}

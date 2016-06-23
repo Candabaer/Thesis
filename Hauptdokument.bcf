@@ -1979,7 +1979,6 @@
     <bcf:citekey order="10">zabbix:agent</bcf:citekey>
     <bcf:citekey order="11">san:sd</bcf:citekey>
     <bcf:citekey order="12">san:sd</bcf:citekey>
-    <bcf:citekey order="13">san:sd</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" type="entry" label="anyt">
   <bcf:sorting>

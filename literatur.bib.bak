@@ -2,11 +2,59 @@
 % Encoding: UTF-8
 
 
+@Other{amazon:pi1,
+  Title                    = {Amazon Raspberry Pi 1},
+  Author                   = {Amazon},
+  Bdsk-url-1               = {https://www.amazon.de/Raspberry-Pi-RBCA000-Mainboard-1176JZF-S/dp/B008PT4GGC/ref=sr_1_1?ie=UTF8&qid=1466680050&sr=8-1&keywords=raspberry+pi+1},
+  Date-modified            = {2016-06-23 09:36:25 +0000},
+  Note                     = {[Online; Stand 23. Juni 2015]},
+  Owner                    = {cptigu},
+  Timestamp                = {2016.06.23},
+  Url                      = {https://www.amazon.de/Raspberry-Pi-RBCA000-Mainboard-1176JZF-S/dp/B008PT4GGC/ref=sr_1_1?ie=UTF8&qid=1466680050&sr=8-1&keywords=raspberry+pi+1},
+  Year                     = {2016}
+}
+
+@Other{amazon:pi2,
+  Title                    = {Amazon Raspberry Pi 2},
+  Author                   = {Amazon},
+  Bdsk-url-1               = {https://www.amazon.de/Raspberry-Pi-quad-core-Cortex-A7-compatibility/dp/B00T2U7R7I/ref=sr_1_2?ie=UTF8&qid=1466680926&sr=8-2&keywords=raspberry+pi+1},
+  Date-modified            = {2016-06-23 09:36:25 +0000},
+  Note                     = {[Online; Stand 23. Juni 2015]},
+  Owner                    = {cptigu},
+  Timestamp                = {2016.06.23},
+  Url                      = {https://www.amazon.de/Raspberry-Pi-quad-core-Cortex-A7-compatibility/dp/B00T2U7R7I/ref=sr_1_2?ie=UTF8&qid=1466680926&sr=8-2&keywords=raspberry+pi+1},
+  Year                     = {2016}
+}
+
+@Other{amazon:pi3,
+  Title                    = {Amazon Raspberry Pi 3},
+  Author                   = {Amazon},
+  Bdsk-url-1               = {https://www.amazon.de/Raspberry-Pi-3-Model-B/dp/B01CEFWQFA/ref=sr_1_3?ie=UTF8&qid=1466680050&sr=8-3&keywords=raspberry+pi+1},
+  Date-modified            = {2016-06-23 09:36:25 +0000},
+  Note                     = {[Online; Stand 23. Juni 2015]},
+  Owner                    = {cptigu},
+  Timestamp                = {2016.06.23},
+  Url                      = {https://www.amazon.de/Raspberry-Pi-3-Model-B/dp/B01CEFWQFA/ref=sr_1_3?ie=UTF8&qid=1466680050&sr=8-3&keywords=raspberry+pi+1},
+  Year                     = {2016}
+}
+
 @Article{artcl:thorbo,
   Title                    = {Secure Shell (ssh) Seminar: Simulationen mit User Mode Linux WS 2005/06},
   Author                   = {Bormer, Thorsten},
 
   Timestamp                = {2016.06.17}
+}
+
+@Other{uni:boinc,
+  Title                    = {BOINC},
+  Author                   = {Berkeley University of California},
+  Bdsk-url-1               = {http://boinc.berkeley.edu/},
+  Date-modified            = {2016-04-5 07:14:00 +0000},
+  Note                     = {[Online; Stand 18. Juni 2016]},
+  Owner                    = {cptigu},
+  Timestamp                = {2016.06.18},
+  Url                      = {http://boinc.berkeley.edu/},
+  Year                     = {2016}
 }
 
 @Other{san:sd,
@@ -19,6 +67,18 @@
   Timestamp                = {2016.05.29},
   Url                      = {http://kb.sandisk.com/app/answers/detail/a_id/2520/~/sd%2Fsdhc%2Fsdxc-specifications-and-compatibility},
   Year                     = {2016}
+}
+
+@Other{web:winIoT,
+  Title                    = {Windows 10 für Raspberry Pi 2: Erste Testversion kostenlos zum Download - derstandard.at/2000015097563/Windows-10-fuer-Raspberry-Pi-2-Erste-Testversion-kostenlos-zum},
+  Author                   = {derstandard.at},
+  Bdsk-url-1               = {http://derstandard.at/2000015097563/Windows-10-fuer-Raspberry-Pi-2-Erste-Testversion-kostenlos-zum},
+  Date-modified            = {2014-04-30 10:26:00 +0000},
+  Note                     = {[Online; Stand 23. Juni 2016]},
+  Owner                    = {cptigu},
+  Timestamp                = {2016.06.23},
+  Url                      = {http://derstandard.at/2000015097563/Windows-10-fuer-Raspberry-Pi-2-Erste-Testversion-kostenlos-zum},
+  Year                     = {2015}
 }
 
 @Other{ietf:DHCP,
@@ -63,6 +123,18 @@
   Timestamp                = {2016.05.29},
   Url                      = {https://www.nagios.org/},
   Year                     = {2016}
+}
+
+@Other{web:readWrite,
+  Title                    = {Raspberry Pi's Eben Upton: How We're Turning Everyone Into DIY Hackers},
+  Author                   = {Lauren Orsini},
+  Bdsk-url-1               = {http://readwrite.com/2014/04/08/raspberry-pi-eben-upton-builders/},
+  Date-modified            = {2014-04-08 09:36:25 +0000},
+  Note                     = {[Online; Stand 22. Juni 2016]},
+  Owner                    = {cptigu},
+  Timestamp                = {2014.04.08},
+  Url                      = {http://readwrite.com/2014/04/08/raspberry-pi-eben-upton-builders/},
+  Year                     = {2014}
 }
 
 @Book{book:schreiner,

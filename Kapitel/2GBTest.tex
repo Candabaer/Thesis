@@ -1,13 +1,19 @@
-\section{2 Gigabyte Testlauf}
-\label{subsec:2GBTest}
-Der erste durchgef"uhrte Test basiert auf 20 Megabyte Paketen, dazu wurde das Hintergrundrauschen %
-so eingestellt das die gr"o"se der verschickten Pakete 20 Megabyte betr"agt. 
+\section{2000 Megabyte Testlauf}
+\label{sec:2000MBTest}
+Der dritte durchgef"uhrte Test basiert auf 2000 Megabyte Paketen, dazu wurde das Hintergrundrauschen %
+so eingestellt das die gr"o"se der verschickten Pakete 2000 Megabyte betr"agt. 
 
-Wie man in \cref{fig:Eth0DazzleStandard} sehen kann ist der durchschnittlich eingehende Durchsatz auf dem Pi Dazzle 8,04 Megabit %
-pro Sekunde. Der ausgehende Traffic betr"agt durchschnittlich 8,62 Megabit pro Sekunde. Rechnet man diese Werte in Bytes pro Sekunde um %
-betr"agt der ausgehende Datenstrom 1,0775 Megabyte/s und der durchschnittlich eingehende Datenstrom 1,005 Megabyte/s %
-Daraus k"onnen wir schlie"sen das der Ethernet Port von Dazzle unter einer durschnittlichen I/O-Last von 2,0825 Megabyte/s stand. % 
-Woraus folgt das der Ethernet Port zu 0,20825\% belastet ist.
+Wie man in \cref{fig:Eth0DazzleStandard} sehen kann ist der durchschnittlich eingehende Traffic auf dem Pi Dazzle 6,39 Mbit/s. %
+Der eingehende Traffic betr"agt durchschnittlich 7,98 Mbit/s. In der \cref{tab:EingehenderTraffic2000Mb} %
+Wie man sehen kann ist jedoch der Traffic von Tusk sehr Abweichend vom Durchschnitt des restlichen Traffic. %
+Der Host Tusk, hat den h"ochsten durchschnittlichen eingehenden Traffic und den h"ochsten Maximal wert %
+Im Verlauf dieses Abschnittes wird noch weiter auf diesen Host eingegangen. Der minimal eingehende Traffic, liegt bei %
+durchschnittlich 28,45 Kbit/s. Die Standardabweichung der durchschnittlichen Last liegt bei 2,58 Megabit/s. %
+Dies ist ein vielfaches mehr als bei dem 20 Megabyte Testlauf und dem 200 Megabyte Testlauf. %
+Die Maximallast hat sich zwischen den beiden verhorgehenden Tests eingependelt, diese liegt bei 23,16 Megabit/s, anders als in %
+den vorhergangen Tests mit 19,20 Megabit/s und 24,83 Megabit/s. Der Durchschnitt der Minimalwerte liegt mit 6,15 leicht "uber dem  %
+der Minimalwerte aus \cref{tab:EingehenderTraffic200Mb}.     
+
 \begin{table}
 \centering
 \begin{tabular}{l%
@@ -17,21 +23,16 @@ Woraus folgt das der Ethernet Port zu 0,20825\% belastet ist.
 }
 Agent  				& Minimal		& Durchschnitt		& Maximal	\\
 \hline
-DotA				& 7,46			& 0,00792		& 0,01195	\\		
-Dazzle 				& 6,14			& 6,39			& 23,54		\\
+Dazzle 				& 6,14			& 6,39 			& 23,54		\\
 Tusk 				& 6,17			& 11,86			& 26,03		\\
 Tinker				& 6,13			& 5,02			& 21,24		\\
-Lion				& 7,64			& 8,63			& 24,98		\\ 
-Agent $\diameter $	 	& 6,145			& 7,975			& 23,9475	\\   
-Agent \& Server $\diameter$   	& 6,408			& 6,381584		& 19,708016411	\\ 
+Lion				& 6,14			& 8,63			& 24,98		\\ 
+Agent $\diameter $	 	& 6,15			& 7,98			& 23,16		\\   
+Agents $\sigma $		& 0,53			& 2,58			& 1,80		\\
 
 \end{tabular}
-\caption{Eingehender Traffic auf den Ethernet Ports bei 20 MB Paketen auf allen Pis}
-\label{tab:EingehenderTraffic2GB}
-\end{table}
-
-\begin{table}
-\centering
+\caption{Eingehender Traffic auf den Ethernet Ports bei 2000 Megabyte Paketen auf allen Pis.}
+\label{tab:EingehenderTraffic2000Mb}
 \begin{tabular}{l%
  r<{\,Kb/s}%
  r<{\,Mb/s}%
@@ -39,83 +40,57 @@ Agent \& Server $\diameter$   	& 6,408			& 6,381584		& 19,708016411	\\
 }
 Agent  				& Minimal		& Durchschnitt		& Maximal	\\	
 \hline
-DotA				& 11,58			& 0,01514		& 0,08772	\\
 Dazzle 				& 7,71			& 8,48	 		& 22,33		\\
 Tusk 				& 7,66			& 5,41			& 19,84		\\
 Tinker				& 7,65			& 9,57			& 25,22		\\
-Lion				& 7,63			& 9,2			& 24,97		\\ 
-Agent $\diameter $	 	& 1035,35		& 8,165			& 23,09		\\   
-Agent \& Server $\diameter$   	& 830,582		& 6,535028		& 18,489544	\\ 
+Lion				& 7,63			& 9,20			& 24,97		\\ 
+Agent $\diameter $	 	& 7,66			& 8,17			& 23,09		\\   
+Agents $\sigma $		& 0,03			& 1,64			& 2,19		\\
 
 \end{tabular}
-\caption{Ausgehender Traffic auf den Ethernet Ports bei 20 MB Paketen auf allen Pis}
-\label{tab:AusgehenderTraffic2GB}
+\caption{Ausgehender Traffic auf den Ethernet Ports bei 2000 Megabyte Paketen auf allen Pis.}
+\label{tab:AusgehenderTraffic2000Mb}
+
 \end{table}
 
-
-In der \cref{tab:standardTraffic} sind die Durchnittswerte f"ur den Traffic der jeweiligen Agents eingespeichert. Auch der %
-des Servers, da dieser im selben Netzwerk aufgestellt ist wie die anderen Agents. Die Tabelle zeigt uns auch %
-das sich die Agents alle in einem "ahnlichen Umfeld was deren Last angeht. Die Standardabweichung $\sigma$ der Agents %
-best"atigt diese Annahme diese liegt nach \cref{tab:standardTrafficAbweichung} bei 0,15411 Megabit.     
-
-\begin{table}
-\centering
-\begin{tabular}{l%
- r<{\,Kb/s}%
- r<{\,Mb/s}%
- r<{\,Mb/s}%
-}
-Agent				& Minimal		& Durchschnitt          & Max		\\
-\hline
-Agents $\sigma $		& 0,015			& 2,5868175429		& 1,7957919562	\\
-Agents \& Server $\sigma $	& 0,5261710748		& 3,9381719358        	& 9,7080164611 	\\
-\end{tabular}
-\caption{Standardabweichung der Eingehende der Last auf dem Ethernet Port bei 20 MB gro"sen Paketen }
-\label{tab:standardTrafficAbweichungEingehend2GB}
-\end{table}
-
-
-\begin{table}
-\centering
-\begin{tabular}{l%
- r<{\,Kb/s}%
- r<{\,Mb/s}%
- r<{\,Mb/s}%
-}
-Agent				& Minimal		& Durchschnitt          & Max		\\
-\hline
-Agents $\sigma $		& 0,0294745653		& 1,6381773408		& 2,191540554	\\
-Agents \& Server $\sigma $	& 1,5672217456		& 3,5740921761        	& 9,4073939873 	\\
-\end{tabular}
-\caption{Standardabweichung der Ausgehenden der Last auf dem Ethernet Port bei 20 MB gro"sen Paketen }
-\label{tab:standardTrafficAbweichungAusgehend2GB}
-\end{table}
+Betrachtet man nun den ausgehenden Traffic der Hosts, kann man beobachten das der Host Tusk %
+diesmal mit Abstand den geringsten Ausgehenden Trafic hat. Der Maximal ausgehende mit 19,84 Megabit/s, %
+sowie der durchschnittlich ausgehende Traffic mit 5,41 Megabit/s, liegen unter dem Durchschnitt, von 23,09 % 
+Megabit/s und 8,17 Megabit/s. Auch die Standardabweichungen welche, in den vorherigen Versuchen sehr gering %
+waren, sind bei diesem Test auf "uber 1 Megabit/s gestiegen. Obwohl die Standardabweichung der Minimal %
+Werte in keinem anderen Test so niedrig waren, sind bei diesem Testlauf. Dies ist jedoch zu vernachl"assigen %
+da hier ein Netzwerk betrachtet wird in dem viele Daten verschickt werden sollen und nicht eines welches sich. %
+in einem Leerlaufzustand befindet. Deshalb kann man Schlussfolgern das die Hosts nicht gleichm"a"sig %
+belastet worden sind. Wie \cref{tab:EingehenderTraffic2000Mb} und \cref{AusgehenderTraffic2000Mb} klar zeigen.  % 
 
 
 \begin{table}
 \centering
 \begin{tabular}{l%
  r<{\,KB/s}%
+ r<{\,KB/s}%
  r<{\,Ops/s}%
 }
-Agent	  			& Schreiben	 	& Input/Output 	\\	
+Agent	  			& Schreiben	 	& Lesen			& Input/Output 		\\	
 \hline
-Dazzle 				& 1,04			& 154,09	        \\
-Tusk 				& 1,11			& 42,4			\\
-Tinker				& 1,07 			& 142,5		 	\\
-Lion				& 1,04			& 144,31	 	\\
-Agent $\diameter $  		& 1,065			& 120,825		\\   
-Agent $\sigma $ 		& 0,028722813  		& 45,4928		\\
+Dazzle 				& 2,21			& 2,64			& 257,88	        \\
+Tusk 				& 1,60			& 2,86			& 132,75			\\
+Tinker				& 1,89 			& 2,92			& 257,25		 	\\
+Lion				& 2,76			& 0,77			& 248,08	 	\\
+Agent $\diameter $  		& 2,12			& 2,30			& 223,99		\\   
+Agent $\sigma $ 		& 0,43  		& 0,89			& 52,82		\\
 \end{tabular}
-\caption{I/O Zeiten bei Normalbetrieb auf den Pis}
-\label{tab:NormalbetriebIoStat2GB}
+\caption{I/O Zeiten bei 2000 Megabyte auf den Pis}
+\label{tab:NormalbetriebIoStat2000Mb}
 \end{table}
 
 
-In der \cref{fig:IoStatDazzleStandard} sieht man das die Festplatte des Raspberry Pis konstant beschrieben wird, lese Operationen finden "uberhaupt nicht statt. %
-Im durchschnitt werden 1.04 Kilobytes die Sekunde geschrieben. Mit einem einer Maximallast von 1.86 Kilobytes die Sekunde. %
-Was nicht ann"ahrend die Maximale Schreibgeschwindigkeit der verwendeten %
-SanDisk SD Karten ist welche bei 30 Megabyte pro Sekunde \autocite{san:sd}  liegen. 
+In der \cref{fig:IoStatDazzleStandard} sieht man das die Festplatte des Hosts Dazzle nun nicht %
+mehr konstant beschrieben wird stattdessen sieht man das inzwischen "uber l"anger Perioden %
+ein aussetzen des Schreibens auftritt, auch die Perioden in denen der Host liest sind gestiegen. %
+Im Durchschnitt werden 1.07 Kilobyte/s geschrieben. Wieder bildet der Host Tusk das %
+Schlusslicht mit 1,60 Kilobyte/s. Auch dieser Wert liegt unter dem Durchschnitt. % 
+
 
 \begin{table}
 \centering
@@ -128,24 +103,34 @@ SanDisk SD Karten ist welche bei 30 Megabyte pro Sekunde \autocite{san:sd}  lieg
 }
 Agent  				& Idle			& User Time		& System Time		& I/O wait Time	& Software IRQ	\\
 \hline
-Dazzle 				& 25,45			& 37,71			& 22,32 		& 1,42		& 16,10	\\
-Tusk 				& 23,26			& 37,41			& 23,57			& 0,22		& 15,54	\\
-Tinker				& 23,78			& 35,99			& 22,80			& 1,65		& 15,77	\\
-Lion				& 22,82			& 35,99			& 23,15			& 1,73		& 15,84	\\ 
-Agent $\diameter $  		& 23,83			& 36,14			& 22,96			& 1,73	 	& 15,81	\\   
-Agent $\sigma $			&  0,10			&  0,97			&  0,46			& 0,61		& 0,20      \\
-\end{tabular}
-\caption{CPU Last Verteilung}
-\label{tab:CPUlastverteilung2GB}
+Dazzle 				& 29,48			& 29,07			& 21,12 		& 7,33		& 12,88	\\
+Tusk 				& 12,05			& 42,43			& 26,74			& 1,27		& 15,63	\\
+Tinker				& 29,16			& 28,97			& 21,29			& 8,11		& 12,41	\\
+Lion				& 29,16			& 30,68			& 22,08			& 6,68		& 16,55	\\ 
+Agent $\diameter $  		& 23,67			& 32,79			& 22,81			& 5,85	 	& 14,37	\\   
+Agent $\sigma $			&  7,05			&  5,61			&  2,30			& 2,69		& 1,76  \\ 
+
+&\end{tabular}
+\caption{CPU Last Verteilung bei 2000 Megabyte Paketen im Netzwerk}
+\label{tab:CPUlastverteilung2000Mb}
 \end{table}
 
+In der \cref{tab:CPUlastverteilung2000Mb} sieht man das der Host Tusk einen sehr geringen Idle Anteil der CPU hat. %
+Mit 12,05 \% liegt dieser weit unter dem Durchschnitt, dies liegt unter anderem an der User Time, diese liegt bei 42,43 \%. %
+und der System Time die bei 26,74 \% liegt. Beide Werte liegen deutlich "uber dem Durchschnitt der anderen Hosts. %
+W"ahren die I/O Wait Time deutlich unter dem Durchschnitt der anderen Hosts, liegt. Woran das liegt sieht man %
+in der \cref{tab:VerschickteDaten2000Mb}. 
 
 
-Es wurden "uber eine dauer von 12 Stunden 10937 Pakete im Netzwerk verschickt. Die Menge der Daten die verschickt wurden sind 213,61 Gigabyte in diesem Netzwerk . %
-Rechnet man dies auf eine Stunde runter kommt man auf 17,8 Gigabyte pro Stunde oder 911,41 Pakete pro Stunde. Wieder l"asst sich eine gute gleichverteilung erkennen. %
-Die Standardabweichung der Erfolgreich verschickten Pakete liegt 15 Paketen und auch die Fehlerrate ist sehr gering, ein Host %
-hat sogar innerhalb von 12 Stunden kein einziges Paket nicht erfolgreich absenden k"onnen. Generell ist eine sehr geringe Menge an Daten verloren %
-gegangen, insgesamt haben 80 Megabyte ihr Ziel nicht Ordnungsgem"a"s erreicht. %  
+"Uber eine dauer von 12 Stunden wurden 79 Pakete im Netzwerk verschickt. Die Menge der Daten die insgesamt verschickt wurden sind 154,30 Gigabyte in diesem Versuchsaufbau. %
+Rechnet man dies auf eine Stunde runter kommt man auf 12,85 Gigabyte pro Stunde oder 6,59 Pakete pro Stunde. Wie man sieht sind das %
+knapp 80 Gigabyte weniger als in den vorhergehenden Tests. Dies liegt vorallem daran. Das an den Host Tusk keine Pakete erfolgreich versendet % 
+werden konnten. Jeder Versuch dem Host Tusk ein Paket zuzuschicken schlug fehl. W"ahrend alle anderen Hosts keine Pakete verloren haben. %
+Der Grund f"ur das versagen des verschicken der Pakete an den Host Tusk ist darauf zur"uckzu"fuhren, das der Host Tusk, laut Zabbix %
+nichtmehr genug freien Speicher zu verf"ugung hatte da bei der Paket"ubertragung das erst festgestellt wurde wenn der Vorgang fast %
+abgeschlossen worden ist. Konnte der sendete Host, den Vorgang nicht fr"uh genug abbrechen und sich einen neuen Host aussuchen, %
+dadurch sind dann rund 80 Gigabyte verloren gegangen. % 
+
 \begin{table}
 \centering
 \begin{tabular}{l%
@@ -156,18 +141,38 @@ gegangen, insgesamt haben 80 Megabyte ihr Ziel nicht Ordnungsgem"a"s erreicht. %
 }
 Agent  				& Erfolgreich gesendet			& Erfolglos gesendet			& Erfolglos gesendet	& Verschickte	\\
 \hline
-Dazzle 				& 2731			 		& 1					& 0,04			& 53,34			\\
-Tusk 				& 2710					& 0					& 0,00			& 52,93			\\
-Tinker				& 2751					& 2					& 0,07			& 53,73			\\
-Lion				& 2745					& 1					& 0,04			& 53,61			\\ 
-Summe				& 1093					& 4					& 0,03 			& 213,61		\\
-Agent $\diameter $  		& 2734,25				& 1				 	& 0,0375		& 53,40 		\\   
-Agent $\sigma $			& 15,76983	 			& 0,70711				& 0,01427      		& 0,308004		\\
+Dazzle 				& 22  			 		& 3  					& 12			& 42,97			\\
+Tusk 				& 14  					& 4  					& 22,22			& 27,34			\\
+Tinker				& 22  					& 3  					& 12			& 42,97			\\
+Lion				& 21  					& 8  					& 27,59			& 41,02			\\ 
+Summe				& 79  					& 18  					& 22,78			& 154,30		\\
+Agent $\diameter $  		& 19,75					& 4,50				 	& 18,45			& 38,57 		\\   
+Agent $\sigma $			& 3,34		 			& 4,50					& 6,73    		& 6,53		\\
 \end{tabular}
-gesendet\caption{Anzahl der gesendeten Pakete "uber einen Zeitraum von 12 Stunden}
-\label{tab:VerschickteDaten20Mb}
+gesendet\caption{Anzahl der gesendeten 2000 Megabyte Pakete "uber einen Zeitraum von 12 Stunden}
+\label{tab:VerschickteDaten2000Mb}
 \end{table}
 
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,}%
+ r<{\,}%
+ r<{\,\%}%
+ r<{\,}%
+ r<{\,}%
+}
+Agent  				& Dazzle	& Tusk		& Tinker	& Lion		& Summe		\\
+\hline
+Dazzle 				& 8		& 0		& 9		& 5		& 22		\\
+Tusk 				& 10		& 0		& 5		& 7		& 22		\\
+Tinker				& 10		& 0		& 5		& 7		& 22		\\
+Lion				& 7		& 0		& 6		& 8		& 21		\\ 
+Summe				& 35		& 0		& 25 		& 27		& 87		\\
+\end{tabular}
+\caption{Die Anzahl der verschickten und der empfangen Pakete pro Host.}
+\label{tab:VerschickteDaten2000Mb}
+\end{table}
 
 
 
