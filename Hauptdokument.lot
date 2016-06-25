@@ -32,5 +32,10 @@
 \contentsline {table}{\numberline {5.1}{\ignorespaces Durchschnittlicher eingehender und ausgehender Traffic der einzelnen Testf"alle.}}{25}{table.5.1}
 \contentsline {table}{\numberline {5.2}{\ignorespaces Zusammenfassung der Verschickten Pakete und Daten der einzelnen Testf"alle.}}{26}{table.5.2}
 \contentsline {table}{\numberline {5.3}{\ignorespaces Zeiterintervalle bis ein Paket erfolgreich sein Ziel erreicht hat.}}{26}{table.5.3}
-\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.4}{\ignorespaces Die RTT der Pis zueiander beim 20 Megabyte Testfall.}}{27}{table.5.4}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Die RTT der Pis zueiander beim 200 Megabyte Testfall.}}{27}{table.5.5}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Die RTT der Pis zueiander beim 2000 Megabyte Testfall.}}{27}{table.5.6}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Leerlauf der CPUs im vergleich. Werte aus den \cref {tab:CPUlastverteilung20Mb,tab:CPUlastverteilung200Mb,tab:CPUlastverteilung2000Mb}}}{28}{table.5.7}
+\contentsline {table}{\numberline {5.8}{\ignorespaces CPU Wartezeit auf den Abschluss einer Lese oder Schreib Operation, Werte aus den \cref {tab:CPUlastverteilung20Mb,tab:CPUlastverteilung200Mb,tab:CPUlastverteilung2000Mb}.}}{29}{table.5.8}
+\contentsline {table}{\numberline {5.9}{\ignorespaces Lese und Schreibzugriffe auf die Festplatten w"ahrend der Testl"aufe, Werte aus den \cref {tab:NormalbetriebIoStat20Mb,tab:NormalbetriebIoStat200Mb,tab:NormalbetriebIoStat2000Mb}.}}{29}{table.5.9}
 \addvspace {10\p@ }

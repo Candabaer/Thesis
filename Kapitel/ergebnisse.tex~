@@ -18,9 +18,38 @@ den Hosts simple Arbeiten vollbringen k"onnen. Darunter wird gez"ahlt das der Nu
 Lage ist den Rechner zu bedienen kann und nicht das es auf dem Rechner m"oglich ist aufw"andige Software %
 zu verwenden, wie z.B: Photoshop oder "ahnliches.  
 
-\input{Kapitel/versandtedaten}
+%\include{Kapitel/versandtedaten}
 \input{Kapitel/cpulast}
-\input{Kapitel/festplattenlast}
-\input{Kapitel/fehler}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Festplatten Auslastung}
+
+\section{Aufgetretene Fehler}
 
 \section{Schlussfolgerung}
