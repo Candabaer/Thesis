@@ -1969,16 +1969,21 @@
   <bcf:section number="0">
     <bcf:citekey order="1">uni:boinc</bcf:citekey>
     <bcf:citekey order="2">book:CN2003</bcf:citekey>
-    <bcf:citekey order="3">zabbix:Web</bcf:citekey>
-    <bcf:citekey order="4">wiki:Nagios</bcf:citekey>
-    <bcf:citekey order="5">artcl:thorbo</bcf:citekey>
-    <bcf:citekey order="6">zabbix:share</bcf:citekey>
-    <bcf:citekey order="7">zabbix:activepassive</bcf:citekey>
-    <bcf:citekey order="8">zabbix:activepassive2</bcf:citekey>
-    <bcf:citekey order="9">zabbix:req</bcf:citekey>
-    <bcf:citekey order="10">zabbix:agent</bcf:citekey>
-    <bcf:citekey order="11">san:sd</bcf:citekey>
-    <bcf:citekey order="12">san:sd</bcf:citekey>
+    <bcf:citekey order="3">web:readWrite</bcf:citekey>
+    <bcf:citekey order="4">amazon:pi1</bcf:citekey>
+    <bcf:citekey order="5">amazon:pi2</bcf:citekey>
+    <bcf:citekey order="6">amazon:pi3</bcf:citekey>
+    <bcf:citekey order="7">web:winIoT</bcf:citekey>
+    <bcf:citekey order="8">zabbix:Web</bcf:citekey>
+    <bcf:citekey order="9">wiki:Nagios</bcf:citekey>
+    <bcf:citekey order="10">artcl:thorbo</bcf:citekey>
+    <bcf:citekey order="11">zabbix:share</bcf:citekey>
+    <bcf:citekey order="12">zabbix:activepassive</bcf:citekey>
+    <bcf:citekey order="13">zabbix:activepassive2</bcf:citekey>
+    <bcf:citekey order="14">zabbix:req</bcf:citekey>
+    <bcf:citekey order="15">zabbix:agent</bcf:citekey>
+    <bcf:citekey order="16">san:sd</bcf:citekey>
+    <bcf:citekey order="17">san:sd</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" type="entry" label="anyt">
   <bcf:sorting>
