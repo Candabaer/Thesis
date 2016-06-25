@@ -1,0 +1,193 @@
+\section{Versandte Daten}
+\label{sec:verschickteDaten}
+Da dieses Framework darauf ausgelegt ist den h"ochsten Datenverkehr zu bestimmen ist %
+Auslastung der Ethernet Ports auf den jeweiligen Hosts der erste Indikator um zu bestimmen %
+in welcher Paketgr"o"se der h"ochste Austausch an Daten besteht. Dazu werden die durchschnittlichen %
+Werte aus der \cref{tab:compTraffic} miteinander verglichen. Diese Durchschnittswerte beziehen sich %
+auf die Tabellen aus \cref{cha:versuche} die den Traffic der Ports aufgelistet hatten. Man sieht %
+auf den ersten Blick das sich der Traffic sich bei allen drei Tests nur um Kilobyte unterscheidet. %
+Bei einer Paketgr"o"se von 200 Megabyte ist jedoch ersichtlich das diese den h"ochsten eingehenden %
+Traffic auf den Hosts erzeugt. Bei einer Paketgr"o"se von 2000 Megabyte liegt dieser knapp unter %
+8 Megabit/s und ist damit die Paketgr"o"se die den geringsten eingehenden Traffic erzeugt. Bei %
+den 20 Megabyte Tests kommen 8,34 Megabit/s durchschnittlich an, dieser liegt im Mittelfeld %
+im Vergleich zum eingehenden Traffic. Betrachtet man nun den ausgehenden Traffic ist wieder %
+der Test bei dem 200 Megabyte gro"se Pakete verschickt worden sind an der Spitze mit 8,67 %
+Megabit/s. Der 2000 Megabyte Test ist diesmal mit 8,17 Megabit/s "uber einen ausgehenden %
+Traffic von 8 Megabit/s gekommen bildet aber auch hier wieder das Schlusslicht der "Ubertragung. %
+Bei einer Paketgr"o"se von 20 Megabyte ist betr"agt der ausgehende Traffic 8,55 Megabit/s und %
+somit auch wieder zwischen den 200 Megabyte und den 2000 Megabyte Paketen. %
+
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,Mb/s}%
+ r<{\,Mb/s}%
+}
+Tests  					& Eingehender Traffic	& Ausgehender Traffic	\\
+\hline
+$\diameter$ \hspace{8pt} 20 Megabyte  	& 8,34			& 8,55 			\\
+$\diameter$ \hspace{6pt}200 Megabyte  	& 8,42			& 8,67			\\
+$\diameter$ 2000 Megabyte	  	& 7,98			& 8,17			\\
+\end{tabular}
+\caption{Durchschnittlicher eingehender und ausgehender Traffic der einzelnen Testf"alle.}
+\label{tab:compTraffic}
+
+\end{table}
+
+Als zweiten vergleichswert wird die Menge an insgesamt verschickten Daten genommen. %
+Da es nicht nur das Ziel ist, die Ethernet Ports der Hosts unter der gr"o"stm"oglichen %
+Last zu haben sondern das auch effektiv mehr Daten versendet werden sollen, mit denen dann ein anderes %
+Hostsystem weiter arbeiten kann ist auch die Menge der verschickten Daten ein entscheidendes Kriterium. Dazu wird die Menge an %
+verschickten Daten im Netzwerk miteinander verglichen. Dazu wird in der \cref{tab:compPackages} %
+die Anzahl der erfolgreich verschickten Pakete, die verloren gegangen Pakete, die Menge der verschickten %
+Byte und der verloren gegangen Byte betrachtet. In der \cref{tab:compPackages} die Ergebnisse aus der %
+\cref{tab:VerschickteDaten20Mb}, \cref{tab:VerschickteDaten200Mb} und \cref{tab:VerschickteDaten2000Mb}. %
+Bei diesem vergleich ist es offensichtlich welche der Paketgr"o"sen die meisten Pakete verschicken kann, %
+hier sieht man das die gr"o"se der Pakete und Anzahl der verschickten Pakete Hand in Hand einhergehen. %
+Auch sind vier verlorene Pakete eine sehr geringe Ausfallquote, mit nur 0,04 \% an verloren Paketen, %
+ist sind 20 Megabyte Pakete die zweitzuverl"ssigste Paketgr"o"se, was versenden von Daten angeht. %
+Am zuverl"assigsten ist in dem Fall der 200 Megabyte Test, in diesem Test ist kein einziges Paket %
+verloren gegangen. Anders als im 2000 Megabyte Testfall, bei diesem sind 18 Pakete verloren gegangen, %
+was mit 15,56 \% ein im Verh"altnis mit den anderen beiden Tests ein sehr hoher Satz an verlorenen Paketen %
+ist. Insgesamt sind bei diesem Test 36 Gigabyte an Daten verloren gegangen. Das ist das 450-fache von dem %
+was im 20 Megabyte Test verloren gegangen ist. Damit ist der 2000 Megabyte Testfall nicht der unzuverl"asigste %
+von den drei Testf"allen. Auch dieser Testfall schneidet im Vergleich der Menge an verschickten Daten am %
+schlechtesten ab, so ist dieser mit 154,30 Gigabyte der Testfall der die wenigsten Informationen %
+zwischen den Hosts austauschen konnte. Der Testfall mit den 20 Megabyte Paketen schneidet auch hier %
+wieder zwischen dem 2000 Megabyte Test und den 200 Megabyte Test. Dieser hatte insgesamt 213,60 %
+Gigabyte "ubertragen. Die meisten "ubertragenen Daten kamen vom 200 Megabyte Testfall mit 224,80 Gigabyte. %
+
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,}%
+   r<{\,}%
+r<{\,GB}%
+r<{\,}%
+}
+Tests				& Erfolgreich gesendet			& Erfolglos gesendet 	& Verschickte 	& Verlorene Byte 	\\
+\hline
+\hspace{8pt} 20 Megabyte  	& 10937					& 4 			& 213,60	& 80 MB		\\
+\hspace{6pt}200 Megabyte  	& 1151					& 0			& 224,80	& --		\\
+2000 Megabyte	  		& 87					& 18			& 154,30	& 36 GB	\\
+\end{tabular}
+\caption{Zusammenfassung der Verschickten Pakete und Daten der einzelnen Testf"alle.}
+\label{tab:compPackages}
+\end{table}
+
+Wie man aus der \cref{tab:compPackages} schlie"sen kann wird im Testfall mit 20 Megabyte Paketen %
+die h"ochste Frequenz an verschickten Paketen erreicht mit. Im Testfall mit 200 Megabyte Paketen %
+ist Zeitspanne in der ein Paket verschickt wird am zweith"ochsten, gefolgt vom 2000 Megabyte %
+Testfall. In der \cref{tab:compZeiten} kann wird genau das aufgezeigt. Dabei wurden die Zeiten %
+genommen die in den Logfiles zwischen dem versenden von zwei Paketen gespeichert wurde. Wie man man aus %
+dieser Tabelle ablesen kann, wurden durchschnittlich alle 15,80 Sekunden ein 20 Megabyte %
+Paket verschickt. Die Standardabweichung f"ur 20 Megabyte Pakete liegt bei 0,11 Sekunden %
+woraus man schlie"sen kann das die Pakete zuverl"assig in einem 15,80 $\pm$ 0,11 Sekunden Intervall versendet %
+werden. Beim 200 Megabyte Testfall dauerte dies im Schnitt 151,82 Sekunden. Also schon zwei Minuten und 31,82 Sekunden %
+was dem 9,61-fachem der Ubertragungsrate des 20 Megabyte Testfalls entspricht. Auch die Standardabweichung ist h"oher %
+diese liegt nun bei 3,88 Sekunden, was dem 35,27-fachen der Standardabweichung des 20 Megabyte Testfalls %
+entspricht. Betrachtet man nun den 2000 Megabyte Testfall, bemerkt man das die "Ubertragungsdauer eines Paketes %
+beim 10,02-fachen des 200 Megabyte Tests liegt oder verglichen mit dem 20 Megabyte Test das 97.10-fache der %
+"Ubertragungszeit ben"otigt. Dies spiegelt, sich auch so ungef"ahr in den verschickten Paketen wieder. %
+Wie man in der \cref{tab:compPackages} sehen kann entspricht ungef"ahr das 10-Fache der verschickten Pakete im %
+2000 Megabyte Test der Anzahl an verschickten Pakete im 200 Megabyte Test. Um das jedoch so zu erreichen m"ussen %
+auch die gescheiterten Paket"ubertragungen von dem 2000 Megabyte Test hinzugenommen werden [Wieso dies der Fall ist wird im Abschnitt %
+\cref{sec:fehler} erl"autert, Amnk. d. Verf.]. Dasselbe verh"altnis herrscht auch zwischen dem 200 Megabyte Test und %
+dem 20 Megabyte Test.  
+
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,s}%
+ r<{\,s}%
+ r<{\,s}%
+ r<{\,s}%
+}
+Agent  				& $\diameter $20 Megabyte		& $\diameter $200 Megabyte		& $\diameter $2000 Megabyte		\\
+\hline
+Dazzle 				& 15,84			 		& 157,65				& 1649,74					\\
+Tusk 				& 15,95					& 147,40				& 1445,23				\\
+Tinker				& 15,65					& 155,40				& 1574,00				\\
+Lion				& 15,75					& 151,82				& 1467,96				\\ 
+Agent $\diameter $  		& 15,80					& 153,06			 	& 1534,23				\\   
+Agent $\sigma $			& 0,11		 			& 3,88					& 82,52      				\\
+\end{tabular}
+\caption{Zeiterintervalle bis ein Paket erfolgreich sein Ziel erreicht hat.}
+\label{tab:compZeiten}
+\end{table}
+
+Als letztes wird der Ping der einzelnen Ger"ate in den verschiedenen Testf"alle betrachtet. %
+Obwohl der ICMP Ping auf dem das Programm Pinger aufbaut nicht zuverl"assig ob ein Service %
+auf einem Host richtig funktioniert, jedoch gibt es Aufschluss dar"uber ob die Antwort vom eingehende %
+ICMP ECHO\_REQUEST stark verz"ogert ist. Sollte die RTT ungew"ohnlich hoch sein, kann es daran liegen %
+das der gepingte Host eine sehr hohe CPU-Auslastung hat und den ICMP ECHO\_REQUEST nicht beantworten kann. %
+Wie man jedoch aus den \cref{tab:ping20,tab:ping200,tab:ping2000} entnehmen kann ist die Round Trip Time %
+sehr gering. Beim 20 Megabyte Testfall Durchschnitt betr"agt die RTT 0,73 ms, w"ahrend beim 200 Megabyte %
+Testfall die RTT 0,75 ms betr"agt, womit auch dieser Testfall die hochste RTT hat. Beim 2000 Megabyte Testfall %
+liegt die RTT bei 0,73 ms und ist genauso niedrig wie beim 20 Megabyte Testfall. Auff"allig ist jedoch %
+das beim Host Lion die h"ochste RTT zu vermessen ist. Sieht man sich die \cref{tab: ,tab: , tab:} %
+sieht man das Lion ausser, im 2000 Megabyte Test immer den geringsten Wert im CPU Leerlauf hat. %
+Was die hohe RTT von Lion erkl"art. 
+  
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,ms}%
+ r<{\,ms}%
+ r<{\,ms}%
+ r<{\,ms}%
+ r<{\,ms}%
+}
+Agent  				& \multicolumn{1}{r}{Dazzle}	& \multicolumn{1}{r}{Tusk}	& \multicolumn{1}{r}{Tinker}	& \multicolumn{1}{r}{Lion}	& \multicolumn{1}{r}{Durchschnitt}		\\
+\hline
+Dazzle 				& 0,23				& 0,81				& 0,82				& 0,99				& 0,71		\\
+Tusk 				& 0,82				& 0,23				& 0,82				& 0,96				& 0,70		\\
+Tinker				& 0,83				& 0,81				& 0,23				& 0,99				& 0,71		\\
+Lion				& 0,97				& 0,96				& 0,97				& 0,23				& 0,78		\\ 
+Durchschnitt			& 0,71				& 0,70				& 0,71 				& 0,79				& 0,73		\\
+\end{tabular}
+\caption{Die RTT der Pis zueiander beim 20 Megabyte Testfall.}
+\label{tab:ping20}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,ms}%
+ r<{\,ms}%
+ r<{\,ms}%
+ r<{\,ms}%
+ r<{\,ms}%
+}
+Agent  				& \multicolumn{1}{r}{Dazzle}	& \multicolumn{1}{r}{Tusk}	& \multicolumn{1}{r}{Tinker}	& \multicolumn{1}{r}{Lion}	& \multicolumn{1}{r}{Durchschnitt}		\\
+\hline
+Dazzle 				& 0,23				& 0,85				& 0,84				& 1,00				& 0,73		\\
+Tusk 				& 0,85				& 0,24				& 0,85				& 1,02				& 0,74		\\
+Tinker				& 0,85				& 0,83				& 0,23				& 1,00				& 0,73		\\
+Lion				& 0,99				& 0,98				& 0,99				& 0,23				& 0,80		\\ 
+Durchschnitt			& 0,73				& 0,73				& 0,73 				& 0,81				& 0,75		\\
+\end{tabular}
+\caption{Die RTT der Pis zueiander beim 200 Megabyte Testfall.}
+\label{tab:ping200}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,ms}%
+ r<{\,ms}%
+ r<{\,ms}%
+ r<{\,ms}%
+ r<{\,ms}%
+}
+Agent  				& \multicolumn{1}{r}{Dazzle}	& \multicolumn{1}{r}{Tusk}	& \multicolumn{1}{r}{Tinker}	& \multicolumn{1}{r}{Lion}	& \multicolumn{1}{r}{Durchschnitt}		\\
+\hline
+Dazzle 				& 0,23				& 0,81				& 0,82				& 0,99				& 0,71		\\
+Tusk 				& 0,82				& 0,23				& 0,82				& 0,99				& 0,77		\\
+Tinker				& 0,83				& 0,80				& 0,23				& 0,99				& 0,74		\\
+Lion				& 0,97				& 0,96				& 0,97				& 0,23				& 0,78		\\ 
+Durchschnitt			& 0,71				& 0,70				& 0,71 				& 0,80				& 0,73		\\
+\end{tabular}
+\caption{Die RTT der Pis zueiander beim 2000 Megabyte Testfall.}
+\label{tab:ping2000}
+\end{table}

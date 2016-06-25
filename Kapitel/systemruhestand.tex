@@ -1,0 +1,151 @@
+\section{System im Ruhezustand}
+\label{sec:ruhestand}
+
+Bevor mit der Auswertung der Testergebnisse in \cref{sec:20MBTest} - \cref{sec:2GBtest} %
+begonnen wird. Soll das gesamt Framework erstmal in einen Ruhestand gezeigt werden %
+das soll erm"oglichen eine bessere Absch"atzung der einzelnen Werte in den folgenden Testf"allen %
+zu erhalten. In diesem Test wird keins der in \cref{cha:dasframework} selbstentwickelten Programme %
+ausgef"uhrt. Die einzige Software die auf den Systemen l"auft ist sind die Zabbix Agents und der Zabbix %
+Server, welcher n"otig ist um die Daten zu sammeln. % 
+
+Dazu wird als erstes der eingehende und der ausgehende Traffic auf den Ethernet Ports betrachtet. %
+Wie man sehen kann sind die Ethernet Ports kaum ausgelastet mit einem durchschnittlich eingehenden %
+Datenstrom von 2,20 Kilobit/s. Auch der maximal ausgehende Datenstrom ist sehr gering mit einem %
+Durchschnitt von 2,98 Kilobit/s. Da der durchschnittliche Traffic n"aher am minimalen Traffic %
+liegt sieht man das die Hosts fast keinen eingehenden Traffic zu bearbeiten haben. Der Traffic %
+wird von Zabbix selber erzeugt. Welcher in regelm"a"sigen Abst"anden nach dem Zustand der Agents %
+abfragt. Dies ist auch der Grund f"ur den ausgehenden Traffic. Dieser ist in diesem Test %
+generell h"oher als der eingehende Traffic da die Agents, neben den ausgehenden Informationen %
+der Passive Checks, auch nach den in den Active Checks vereinbarten Informationen fragt. %  
+So kommt, wie die \cref{tab:noTrafficOut} nahelegt, es das die durchschnittlichen Werte f"ur den %
+minimalen Traffic mit 2,55 Kilobit/s, durchschnittlichen mit 2,71 Kilobit/s und maximalen Traffic %
+3,41 Kilobit/s h"oher sind als f"ur den eingehenden. Die Standardabweichung in den Tabellen zeigen %
+die m"ogliche Abweichungen vom Durchschnitt an und sind ein Indikator daf"ur ob einer der Hosts %
+ein ungew"ohnliches Arbeitsverhalten aufweist. In diesem Test sind diese jedoch sehr gering %
+und es liegt somit nahe alle Hosts einwandfrei funktionieren.  
+
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,Kb/s}%
+ r<{\,Kb/s}%
+ r<{\,Kb/s}%
+}
+Agent  				& Minimal		& Durchschnitt		& Maximal	\\
+\hline
+Dazzle 				& 2,08			& 2,19 			& 2,99		\\
+Tusk 				& 2,06			& 2,23			& 3,12		\\
+Tinker				& 2,07			& 2,19			& 2,90		\\
+Lion				& 2,04			& 2,19			& 2,91		\\ 
+Agent $\diameter $	 	& 2,06			& 2,20			& 2,98		\\   
+Agents $\sigma $		& 0,01			& 0,02			& 0,09		\\
+
+\end{tabular}
+\caption{Eingehender Traffic auf den Ethernet Ports im Ruhezustand auf allen Pis.}
+\label{tab:noTrafficIn}
+\begin{tabular}{l%
+ r<{\,Kb/s}%
+ r<{\,Kb/s}%
+ r<{\,Kb/s}%
+}
+Agent  				& Minimal		& Durchschnitt		& Maximal	\\	
+\hline
+Dazzle 				& 2,57			& 2,72	 		& 3,31		\\
+Tusk 				& 2,54			& 2,67			& 3,62		\\
+Tinker				& 2,58			& 2,72			& 3,46		\\
+Lion				& 2,49			& 2,72			& 3,26		\\ 
+Agent $\diameter $	 	& 2,55			& 2,71			& 3,41		\\   
+Agents $\sigma $		& 0,04			& 0,02			& 0,14		\\
+
+\end{tabular}
+\caption{Ausgehender Traffic auf den Ethernet Ports im Ruhezustand auf allen Pis.}
+\label{tab:noTrafficOut} 
+\end{table}
+
+
+In der \cref{tab:NoTrafficIoStat} ist die Auslastung der Festplatte w"ahrend kein Traffic %
+auf den Hosts l"auft. In der \cref{fig:NoIoStatDazzle} kann mana auch klar erkennen %
+das fast nichts passiert. Die Festplatte befindet sich prim"ar in einem Idle Zustand.
+
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,KB/s}%
+ r<{\,KB/s}%
+ r<{\,ms}%
+}
+Agent	  			& Schreiben	 	& Lesen			& I/O Wait time 		\\	
+\hline
+Dazzle 				& 0,71			& 0			& 1,04	        \\
+Tusk 				& 0,18			& 0			& 0,02			\\
+Tinker				& 0,69 			& 0			& 0,29		 	\\
+Lion				& 0,74			& 0			& 1,02	 	\\
+Agent $\diameter $  		& 0,58			& 0			& 0,59		\\   
+Agent $\sigma $ 		& 0,23  		& 0			& 0,45		\\
+\end{tabular}
+\caption{I/O Zeiten im Ruhezustand auf den Pis.}
+\label{tab:NoTrafficIoStat}
+\end{table}
+
+
+In der \cref{NoTrafficCPUlastverteilung} ist die Prozentuale Auslastung der CPU-Last %
+wie man sehen kann ist die CPU haupts"achlich im Idle Zustand. Dies liegt haupts"achlich %
+daran das es ausser den Grundfunktionen des Betriebssystems und der Zabbix Agents, keine %
+Tasks zu bearbeiten gibt. Die aufgebrachte User Time entsteht durch den Zabbix Agent, %
+welcher vom User Zabbix durchgef"uhrt werden. Das die Werte der System und User Time so gering %
+sind ist ein gutes Zeichen. Daraus kann man n"amlich schlie"sen das nur die notwendigen %
+Anwendungen am Laufen sind und die CPU f"ur weitere Tests frei verf"ugbar ist. % 
+
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,\%}%
+ r<{\,\%}%
+ r<{\,\%}%
+ r<{\,\%}%
+ r<{\,\%}%
+}
+Agent  				& Idle			& User Time		& System Time		& I/O wait Time	& Software IRQ	\\
+\hline
+Dazzle 				& 96,70			& 1,07			& 1,84	 		& 0,03		& 0,10	\\
+Tusk 				& 95,88			& 1,55			& 2,45			& 0,01		& 0,11	\\
+Tinker				& 96,96			& 1,07			& 1,86			& 0,02		& 0,10	\\
+Lion				& 96,99			& 1,07			& 1,84			& 0,03		& 0,07	\\ 
+Agent $\diameter $  		& 96,63			& 1,19			& 2,00			& 0,02	 	& 0,10	\\   
+Agent $\sigma $			&  0,45			& 0,21			& 0,26			& 0,01		& 0,02  \\ 
+
+&\end{tabular}
+\caption{CPU Last Verteilung im Ruhezustand auf auf den Hosts.}
+\label{tab:NoTrafficCPUlastverteilung}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

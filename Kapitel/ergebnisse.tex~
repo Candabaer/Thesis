@@ -1,0 +1,55 @@
+\chapter{Ergebnisse}
+In diesem Kapitel werden die Ergebnisse aus dem \cref{cha:versuche} miteinander Verglichen %
+und dabei wird als erstes die Anzahl der verschickten Pakete und die Menge der Byte die %
+verschickt wurden miteinander verglichen, die Zeiten die ein Paket zum erreichen des %
+Zielsystems betr"agt und es wird ein Blick auf den Ping im Netzwerk gelegt, auch die Auslastung %
+auf den Ethernet Ports wird betrachtet, dabei wird viel Wert auf einen m"oglichst ausgeglichen %
+Traffic an den Ports gelegt. Der zweite Blick wird auf die Auslastung des Prozessors gelegt. %
+Vorallem wird versucht die Paketegr"o"se zu finden die die CPU am wenigsten in Anspruch nimmt %
+so das der Endnutzer einen m"oglichst Leistungsf"ahigen Host verwenden zu k"onnen. Als drittes %
+und letztes der im \cref{cha:versuche} betrachteten Metriken kommt die Auslastung der Festplatte. %
+Bevor es zur Schlussfolgerung kommt wird jedoch noch ein aufgetretener Fehler betrachet welcher den %
+Host Tusk in \cref{sec:2000MBTest} betroffen hatte. Zum Schluss dieses Kapitels wird eine Schlussfolgerung %
+aus diesen Kapiteln gezogen. % 
+
+Das Ziel in diesem Kapitel ist es die Paketgr"o"se zu ermitteln mit der man den h"ochsten Datenaustausch zwischen den %
+Hosts erreichen kann ohne das die Hosts Handlungsunf"ahig werden und Endnutzer noch auf %
+den Hosts simple Arbeiten vollbringen k"onnen. Darunter wird gez"ahlt das der Nutzer in der %
+Lage ist den Rechner zu bedienen kann und nicht das es auf dem Rechner m"oglich ist aufw"andige Software %
+zu verwenden, wie z.B: Photoshop oder "ahnliches.  
+
+%\include{Kapitel/versandtedaten}
+\input{Kapitel/cpulast}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Festplatten Auslastung}
+
+\section{Aufgetretene Fehler}
+
+\section{Schlussfolgerung}

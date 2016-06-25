@@ -6,24 +6,36 @@
 \contentsline {table}{\numberline {2.1}{\ignorespaces Spezifikation der Raspberry Pis}}{3}{table.2.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Eingehender Traffic auf den Ethernet Ports bei 20 Megabyte Paketen auf allen Pis.}}{13}{table.4.1}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Ausgehender Traffic auf den Ethernet Ports bei 20 MB Paketen auf allen Pis.}}{13}{table.4.2}
-\contentsline {table}{\numberline {4.3}{\ignorespaces I/O Zeiten bei Normalbetrieb auf den Pis}}{13}{table.4.3}
-\contentsline {table}{\numberline {4.4}{\ignorespaces CPU Last Verteilung}}{14}{table.4.4}
-\contentsline {table}{\numberline {4.5}{\ignorespaces Anzahl der gesendeten Pakete "uber einen Zeitraum von 12 Stunden.}}{14}{table.4.5}
-\contentsline {table}{\numberline {4.6}{\ignorespaces Die Pings der Hosts im System im bezug zueinander.}}{15}{table.4.6}
-\contentsline {table}{\numberline {4.7}{\ignorespaces Eingehender Traffic auf den Ethernet Ports bei 200 Megabyte Paketen auf allen Pis.}}{16}{table.4.7}
-\contentsline {table}{\numberline {4.8}{\ignorespaces Ausgehender Traffic auf den Ethernet Ports bei 200 Megabyte Paketen auf allen Pis.}}{16}{table.4.8}
-\contentsline {table}{\numberline {4.9}{\ignorespaces I/O Zeiten bei 200 Megabyte auf den Pis}}{16}{table.4.9}
-\contentsline {table}{\numberline {4.10}{\ignorespaces CPU Last Verteilung bei 200 Megabyte Paketen im Netzwerk}}{16}{table.4.10}
-\contentsline {table}{\numberline {4.11}{\ignorespaces Anzahl der gesendeten 200 Megabyte Pakete "uber einen Zeitraum von 12 Stunden}}{17}{table.4.11}
-\contentsline {table}{\numberline {4.12}{\ignorespaces Eingehender Traffic auf den Ethernet Ports bei 20 MB Paketen auf allen Pis}}{18}{table.4.12}
-\contentsline {table}{\numberline {4.13}{\ignorespaces Ausgehender Traffic auf den Ethernet Ports bei 20 MB Paketen auf allen Pis}}{18}{table.4.13}
-\contentsline {table}{\numberline {4.14}{\ignorespaces Standardabweichung der Eingehende der Last auf dem Ethernet Port bei 20 MB gro"sen Paketen }}{18}{table.4.14}
-\contentsline {table}{\numberline {4.15}{\ignorespaces Standardabweichung der Ausgehenden der Last auf dem Ethernet Port bei 20 MB gro"sen Paketen }}{19}{table.4.15}
-\contentsline {table}{\numberline {4.16}{\ignorespaces I/O Zeiten bei Normalbetrieb auf den Pis}}{19}{table.4.16}
-\contentsline {table}{\numberline {4.17}{\ignorespaces CPU Last Verteilung}}{19}{table.4.17}
-\contentsline {table}{\numberline {4.18}{\ignorespaces Anzahl der gesendeten Pakete "uber einen Zeitraum von 12 Stunden}}{20}{table.4.18}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Eingehender Traffic auf den Ethernet Ports im Ruhezustand auf allen Pis.}}{14}{table.4.1}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Ausgehender Traffic auf den Ethernet Ports im Ruhezustand auf allen Pis.}}{14}{table.4.2}
+\contentsline {table}{\numberline {4.3}{\ignorespaces I/O Zeiten im Ruhezustand auf den Pis.}}{14}{table.4.3}
+\contentsline {table}{\numberline {4.4}{\ignorespaces CPU Last Verteilung im Ruhezustand auf auf den Hosts.}}{15}{table.4.4}
+\contentsline {table}{\numberline {4.5}{\ignorespaces Eingehender Traffic auf den Ethernet Ports bei 20 Megabyte Paketen auf allen Pis.}}{16}{table.4.5}
+\contentsline {table}{\numberline {4.6}{\ignorespaces Ausgehender Traffic auf den Ethernet Ports bei 20 MB Paketen auf allen Pis.}}{16}{table.4.6}
+\contentsline {table}{\numberline {4.7}{\ignorespaces I/O Zeiten bei Normalbetrieb auf den Pis}}{16}{table.4.7}
+\contentsline {table}{\numberline {4.8}{\ignorespaces CPU Last Verteilung}}{17}{table.4.8}
+\contentsline {table}{\numberline {4.9}{\ignorespaces Anzahl der gesendeten Pakete "uber einen Zeitraum von 12 Stunden.}}{17}{table.4.9}
+\contentsline {table}{\numberline {4.10}{\ignorespaces Die Anzahl der verschickten und der empfangen 20 Megabyte Pakete pro Host.}}{18}{table.4.10}
+\contentsline {table}{\numberline {4.11}{\ignorespaces Eingehender Traffic auf den Ethernet Ports bei 200 Megabyte Paketen auf allen Pis.}}{19}{table.4.11}
+\contentsline {table}{\numberline {4.12}{\ignorespaces Ausgehender Traffic auf den Ethernet Ports bei 200 Megabyte Paketen auf allen Pis.}}{19}{table.4.12}
+\contentsline {table}{\numberline {4.13}{\ignorespaces I/O Zeiten bei 200 Megabyte auf den Pis}}{19}{table.4.13}
+\contentsline {table}{\numberline {4.14}{\ignorespaces CPU Last Verteilung bei 200 Megabyte Paketen im Netzwerk}}{19}{table.4.14}
+\contentsline {table}{\numberline {4.15}{\ignorespaces Anzahl der gesendeten 200 Megabyte Pakete "uber einen Zeitraum von 12 Stunden}}{20}{table.4.15}
+\contentsline {table}{\numberline {4.16}{\ignorespaces Die Anzahl der verschickten und der empfangeni 200 Megabyte Pakete pro Host.}}{20}{table.4.16}
+\contentsline {table}{\numberline {4.17}{\ignorespaces Eingehender Traffic auf den Ethernet Ports bei 2000 Megabyte Paketen auf allen Pis.}}{21}{table.4.17}
+\contentsline {table}{\numberline {4.18}{\ignorespaces Ausgehender Traffic auf den Ethernet Ports bei 2000 Megabyte Paketen auf allen Pis.}}{21}{table.4.18}
+\contentsline {table}{\numberline {4.19}{\ignorespaces I/O Zeiten bei 2000 Megabyte auf den Pis}}{22}{table.4.19}
+\contentsline {table}{\numberline {4.20}{\ignorespaces CPU Last Verteilung bei 2000 Megabyte Paketen im Netzwerk}}{22}{table.4.20}
+\contentsline {table}{\numberline {4.21}{\ignorespaces Anzahl der gesendeten 2000 Megabyte Pakete "uber einen Zeitraum von 12 Stunden}}{23}{table.4.21}
+\contentsline {table}{\numberline {4.22}{\ignorespaces Die Anzahl der verschickten und der empfangen Pakete pro Host.}}{23}{table.4.22}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Durchschnittlicher eingehender und ausgehender Traffic der einzelnen Testf"alle.}}{25}{table.5.1}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Zusammenfassung der Verschickten Pakete und Daten der einzelnen Testf"alle.}}{26}{table.5.2}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Zeiterintervalle bis ein Paket erfolgreich sein Ziel erreicht hat.}}{26}{table.5.3}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Die RTT der Pis zueiander beim 20 Megabyte Testfall.}}{27}{table.5.4}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Die RTT der Pis zueiander beim 200 Megabyte Testfall.}}{27}{table.5.5}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Die RTT der Pis zueiander beim 2000 Megabyte Testfall.}}{27}{table.5.6}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Leerlauf der CPUs im vergleich. Werte aus den \cref {tab:CPUlastverteilung20Mb,tab:CPUlastverteilung200Mb,tab:CPUlastverteilung2000Mb}}}{28}{table.5.7}
+\contentsline {table}{\numberline {5.8}{\ignorespaces CPU Wartezeit auf den Abschluss einer Lese oder Schreib Operation, Werte aus den \cref {tab:CPUlastverteilung20Mb,tab:CPUlastverteilung200Mb,tab:CPUlastverteilung2000Mb}.}}{29}{table.5.8}
+\contentsline {table}{\numberline {5.9}{\ignorespaces Lese und Schreibzugriffe auf die Festplatten w"ahrend der Testl"aufe, Werte aus den \cref {tab:NormalbetriebIoStat20Mb,tab:NormalbetriebIoStat200Mb,tab:NormalbetriebIoStat2000Mb}.}}{29}{table.5.9}
 \addvspace {10\p@ }

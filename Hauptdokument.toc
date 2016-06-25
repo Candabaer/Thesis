@@ -1,8 +1,8 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
 \select@language {ngerman}
-\contentsline {chapter}{Abbildungsverzeichnis}{iv}{chapter*.3}
-\contentsline {chapter}{Tabellenverzeichnis}{v}{chapter*.4}
+\contentsline {chapter}{Abbildungsverzeichnis}{v}{chapter*.3}
+\contentsline {chapter}{Tabellenverzeichnis}{vi}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Einf"uhrung}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Einf"uhrung in das Thema}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Motivation der Bestimmung einer optimalen Paketgr"o"se}{1}{section.1.2}
@@ -10,20 +10,25 @@
 \contentsline {section}{\numberline {1.4}Methoden zum Erreichen des Ziels}{2}{section.1.4}
 \contentsline {chapter}{\numberline {2}Das Framework}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Verwendete Hardware}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}Aufbau der Software}{3}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Zabbix}{4}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Eigenentwicklung}{4}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}Einsatz des Frameworks}{6}{section.2.3}
-\contentsline {chapter}{\numberline {3}Zabbix}{8}{chapter.3}
-\contentsline {section}{\numberline {3.1}Zabbix Server}{8}{section.3.1}
-\contentsline {section}{\numberline {3.2}Zabbix Agent}{10}{section.3.2}
-\contentsline {chapter}{\numberline {4}Versuche}{12}{chapter.4}
-\contentsline {section}{\numberline {4.1}20 Megabyte Testlauf}{12}{section.4.1}
-\contentsline {section}{\numberline {4.2}200 Megabyte Testlauf}{15}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}2 Gigabyte Testlauf}{17}{subsection.4.2.1}
-\contentsline {chapter}{\numberline {5}Vergleich VM/HW}{21}{chapter.5}
-\contentsline {section}{\numberline {5.1}Versuchsergebnisse}{21}{section.5.1}
-\contentsline {section}{\numberline {5.2}Kosten nutzen Faktor}{21}{section.5.2}
-\contentsline {chapter}{\numberline {6}Fazit}{22}{chapter.6}
-\contentsline {chapter}{\numberline {7}Anhang}{23}{chapter.7}
-\contentsline {section}{\numberline {7.1}20 Megabyte Test}{23}{section.7.1}
+\contentsline {section}{\numberline {2.2}Raspberry Pi}{3}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Entwicklung Pis}{4}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.3}Aufbau der Software}{5}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Zabbix}{5}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Eigenentwicklung}{6}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Einsatz des Frameworks}{7}{section.2.4}
+\contentsline {chapter}{\numberline {3}Zabbix}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Zabbix Server}{9}{section.3.1}
+\contentsline {section}{\numberline {3.2}Zabbix Agent}{11}{section.3.2}
+\contentsline {chapter}{\numberline {4}Versuche}{13}{chapter.4}
+\contentsline {section}{\numberline {4.1}System im Ruhezustand}{13}{section.4.1}
+\contentsline {section}{\numberline {4.2}20 Megabyte Testlauf}{15}{section.4.2}
+\contentsline {section}{\numberline {4.3}200 Megabyte Testlauf}{18}{section.4.3}
+\contentsline {section}{\numberline {4.4}2000 Megabyte Testlauf}{21}{section.4.4}
+\contentsline {chapter}{\numberline {5}Ergebnisse}{24}{chapter.5}
+\contentsline {section}{\numberline {5.1}Versandte Daten}{24}{section.5.1}
+\contentsline {section}{\numberline {5.2}Prozessor Auslastung}{27}{section.5.2}
+\contentsline {section}{\numberline {5.3}Festplatten Auslastung}{28}{section.5.3}
+\contentsline {section}{\numberline {5.4}Aufgetretene Fehler}{29}{section.5.4}
+\contentsline {section}{\numberline {5.5}Schlussfolgerung}{29}{section.5.5}
+\contentsline {chapter}{\numberline {6}Anhang}{30}{chapter.6}
+\contentsline {section}{\numberline {6.1}20 Megabyte Test}{30}{section.6.1}

@@ -1,0 +1,26 @@
+\section{Prozessor Auslastung}
+
+Um die Annahme, die am Ende von \cref{sec:versandteDaten} gemacht wurde zu "uberpr"ufen, dass %
+ein hohe RTT einer hohen Auslastung der CPU des Zielsystems entpricht wird nun der Leerlauf den %
+die CPUs haben betrachtet. Denn  
+
+\begin{table}
+\centering
+\begin{tabular}{l%
+ r<{\,\%}%
+ r<{\,\%}%
+ r<{\,\%}%
+}
+Agent  				& \multicolumn{1}{r}{$\diameter $20 Megabyte}		& \multicolumn{1}{r}{$\diameter $200 Megabyte}		& \multicolumn{1}{r}{$\diameter $2000 Megabyte}		\\
+\hline
+Dazzle 				& 25,45			 				& 21,83							& 29,48					\\
+Tusk 				& 23,26							& 25,57							& 12,05					\\
+Tinker				& 23,78							& 24,55							& 29,16					\\
+Lion				& 22,82							& 21,48							& 29,16					\\ 
+Agent $\diameter $  		& 23,83							& 23,35					 		& 23,67					\\   
+Agent $\sigma $			& 0,10		 					& 0,98							& 7,05      				\\
+\end{tabular}
+\caption{Leerlauf der CPUs im vergleich. Werte aus den \cref{tab:CPUlastverteilung20Mb,tab:CPUlastverteilung200Mb,tab:CPUlastverteilung2000Mb}
+\label{tab:compZeiten}
+\end{table}
+
