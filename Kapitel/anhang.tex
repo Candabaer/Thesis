@@ -1,14 +1,40 @@
 \chapter{Anhang}
 \label{cha:anhang}
 
-\section{20 Megabyte Test}
+\section{Test Ruhezustand}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics*[width=1\linewidth,angle=90 ]{Abb/Zabbix/Auswahl005}
+\includegraphics*[width=1\linewidth]{Abb/ZabbixDazzle/NoTraffic/DazzleNoTrafficEth0}
 
-\caption{Traffic auf Eth0 bei 20 Megabyte auf Dazzle}
-\label{fig:Eth0DazzleStandard}
+\caption{Traffic auf Eth0 ohne Hintergrundrauschen auf Dazzle.}
+\label{fig:Eth0DazzleNotraffic}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth]{Abb/ZabbixDazzle/NoTraffic/DazzleNoTrafficIoStat}
+
+\caption{I/O Statistik von Dazzle ohne Hintergrundrauschen.}
+\label{fig:IoStatDazzleNotraffic}
+\end{figure} %
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth]{Abb/ZabbixDazzle/NoTraffic/DazzleNoTrafficCPU}
+
+\caption{Prozentuale Lastverteilung auf der CPU von Dazzle, ohne Hintergrundrauschen.}
+\label{fig:CPUDazzleNotraffic}
+\end{figure}
+\FloatBarrier
+\section{Test 20 Megabyte Tests}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=0.9\linewidth]{Abb/ZabbixDazzle/Standard/Standard20}
+\caption{Traffic auf Eth0 bei 20 Megabyte Dateien auf Dazzle.}
+\label{fig:Standard20}
 \end{figure}
 
 
@@ -16,95 +42,96 @@
 \centering
 \includegraphics*[width=0.9\linewidth]{Abb/ZabbixDazzle/Standard/IoStatStandard20}
 
-\caption{I/O Statistik von Dazzle beim 20 Megabyte Betrieb}
-\label{fig:IoStatDazzleStandard}
+\caption{I/O Statistik von Dazzle beim 20 Megabyte Betrieb.}
+\label{fig:IoStatStandard20}
 \end{figure} %
 
 \begin{figure}[htbp]
 \centering
-\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixDazzle/Standard/CPUStandard20}
+\includegraphics*[width=0.9\linewidth]{Abb/ZabbixDazzle/Standard/CPUStandard20}
 
-\caption{Prozentuale Lastverteilung auf der CPU von Dazzle}
+\caption{Prozentuale Lastverteilung auf der CPU bei 20 Megabyte Paketen von Dazzle.}
 \label{fig:CPUDazzleStandard}
 \end{figure}
+\FloatBarrier
+\newpage
+\section{200 Megabyte Tests}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTusk/Standard/Standard20}
-
-\caption{Traffic auf Eth0 bei 20 Megabyte auf Tusk}
-\label{fig:Eth0TuskStandard}
-\end{figure}
+\includegraphics*[width=0.9\linewidth]{Abb/ZabbixDazzle/Standard/Standard200}
+\caption{Traffic auf Eth0 bei 200 Megabyte Dateien auf Dazzle.}
+\label{fig:Standard200}
+\end{figure} %
 
 
 \begin{figure}[htbp]
 \centering
-\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTusk/Standard/IoStatStandard20}
+\includegraphics*[width=0.9\linewidth]{Abb/ZabbixDazzle/Standard/IoStatStandard200}
 
-\caption{I/O Stats von Tusk beim 20 Megabyte Netzwerk betrieb}
-\label{fig:IoStatTuskStandard}
+\caption{I/O Statistik von Dazzle beim 200 Megabyte Betrieb.}
+\label{fig:IoStatDazzleStandard200}
 \end{figure} %
 
 \begin{figure}[htbp]
 \centering
-\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTusk/Standard/CPUStandard20}
+\includegraphics*[width=0.9\linewidth]{Abb/ZabbixDazzle/Standard/CPUStandard200}
 
-\caption{Prozentuale Lastverteilung auf der CPU von Tusk}
-\label{fig:CPUTuskStandard}
+\caption{Prozentuale Lastverteilung auf der CPU bei 200 Megabyte Paketen von Dazzle.}
+\label{fig:CPUDazzleStandard200}
 \end{figure}
+\FloatBarrier
+\newpage
+\section{2000 Megabyte Pakete}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTinker/Standard/Standard20}
-
-\caption{Traffic auf Eth0 bei 20 Megabyte auf Tinker}
-\label{fig:Eth0TuskStandard}
-\end{figure}
+\includegraphics*[width=0.9\linewidth]{Abb/ZabbixTusk/Standard/Standard2000}
+\caption{Traffic auf Eth0 bei 2000 Megabyte Dateien auf Dazzle.}
+\label{fig:Standard2000}
+\end{figure} %
 
 
 \begin{figure}[htbp]
 \centering
-\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTinker/Standard/IoStatStandard20}
+\includegraphics*[width=0.9\linewidth]{Abb/ZabbixDazzle/Standard/IoStatStandard2000}
 
-\caption{I/O Stats von Tinker beim 20 Megabyte Netzwerk betrieb}
-\label{fig:IoStatTinkerStandard}
+\caption{I/O Statistik von Dazzle beim 2000 Megabyte Betrieb.}
+\label{fig:IoStatDazzleStandard2000}
 \end{figure} %
 
 \begin{figure}[htbp]
 \centering
-\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixTinker/Standard/CPUStandard20}
+\includegraphics*[width=0.9\linewidth]{Abb/ZabbixDazzle/Standard/CPUStandard2000}
 
-\caption{Prozentuale Lastverteilung auf der CPU von Tinker}
-\label{fig:CPUTinkerStandard}
+\caption{Prozentuale Lastverteilung auf der CPU bei 2000 Megabyte Paketen von Dazzle.}
+\label{fig:CPUDazzleStandard2000}
 \end{figure}
 
+\section{Inhalt der CD}
+Auf der CD sind folgende Inhalte:
+\begin{itemize}
+\item Die Logfiles zu den Tests, 
+\item die selbsterstellten Programme,
+\item die Graphen der restlichen Hosts,
+\item eine Libre Office Calc Tabelle.
+\end{itemize}
 
 
-\begin{figure}[htbp]
-\centering
-\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixLion/Standard/Standard20}
-
-\caption{Traffic auf Eth0 bei 20 Megabyte auf Lion}
-\label{fig:Eth0LionStandard}
-\end{figure}
 
 
-\begin{figure}[htbp]
-\centering
-\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixLion/Standard/IoStatStandard20}
 
-\caption{I/O Stats von Lion beim 20 Megabyte Netzwerk betrieb}
-\label{fig:IoStatLionStandard}
-\end{figure} %
 
-\begin{figure}[htbp]
-\centering
-\includegraphics*[width=0.9\linewidth, angle=90]{Abb/ZabbixLion/Standard/CPUStandard20}
 
-\caption{Prozentuale Lastverteilung auf der CPU von Lion}
-\label{fig:CPULionStandard}
-\end{figure}
 
-%\include{Kapitel/anhang2}
-%\include{Kapitel/anhang3}
+
+
+
+
+
+
+
+
+
+
 

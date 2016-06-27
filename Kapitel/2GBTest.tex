@@ -1,18 +1,18 @@
 \section{2000 Megabyte Testlauf}
 \label{sec:2000MBTest}
 Der dritte durchgef"uhrte Test basiert auf 2000 Megabyte Paketen, dazu wurde das Hintergrundrauschen %
-so eingestellt das die gr"o"se der verschickten Pakete 2000 Megabyte betr"agt. 
+so eingestellt das die Gr"o"se der verschickten Pakete 2000 Megabyte betr"agt. 
 
-Wie man in \cref{fig:Eth0DazzleStandard} sehen kann ist der durchschnittlich eingehende Traffic auf dem Pi Dazzle 6,39 Mbit/s. %
-Der eingehende Traffic betr"agt durchschnittlich 7,98 Mbit/s. In der \cref{tab:EingehenderTraffic2000Mb} %
-Wie man sehen kann ist jedoch der Traffic von Tusk sehr Abweichend vom Durchschnitt des restlichen Traffic. %
-Der Host Tusk, hat den h"ochsten durchschnittlichen eingehenden Traffic und den h"ochsten Maximal wert %
-Im Verlauf dieses Abschnittes wird noch weiter auf diesen Host eingegangen. Der minimal eingehende Traffic, liegt bei %
+Wie man in \cref{fig:Standard2000} sehen kann ist der durchschnittlich eingehende Traffic auf dem Pi Dazzle 6,39 Mbit/s. %
+Der eingehende Traffic betr"agt durchschnittlich 7,98 Mbit/s. %
+Wie man sehen in den \cref{tab:EingehenderTraffic2000Mb,tab:AusgehenderTraffic2000Mb} sehen kann ist jedoch der Traffic von Tusk sehr Abweichend vom Durchschnitt des restlichen Traffic. %
+Der Host Tusk hat den h"ochsten durchschnittlich eingehenden Traffic und den h"ochsten Maximalwert %
+Im Verlauf dieses Abschnittes wird noch weiter auf diesen Host eingegangen. Der minimal eingehende Traffic liegt bei %
 durchschnittlich 28,45 Kbit/s. Die Standardabweichung der durchschnittlichen Last liegt bei 2,58 Megabit/s. %
-Dies ist ein vielfaches mehr als bei dem 20 Megabyte Testlauf und dem 200 Megabyte Testlauf. %
-Die Maximallast hat sich zwischen den beiden verhorgehenden Tests eingependelt, diese liegt bei 23,16 Megabit/s, anders als in %
+Dies ist ein Vielfaches mehr als bei dem 20 Megabyte Testlauf und dem 200 Megabyte Testlauf. %
+Die Maximallast hat sich zwischen den beiden vorhergehenden Tests eingependelt. Diese liegt bei 23,16 Megabit/s, im Gegensatz zu %
 den vorhergangen Tests mit 19,20 Megabit/s und 24,83 Megabit/s. Der Durchschnitt der Minimalwerte liegt mit 6,15 leicht "uber dem  %
-der Minimalwerte aus \cref{tab:EingehenderTraffic200Mb}.     
+der Minimalwerte aus der \cref{tab:EingehenderTraffic200Mb}.     
 
 \begin{table}
 \centering
@@ -53,15 +53,16 @@ Agents $\sigma $		& 0,03			& 1,64			& 2,19		\\
 
 \end{table}
 
-Betrachtet man nun den ausgehenden Traffic der Hosts, kann man beobachten das der Host Tusk %
-diesmal mit Abstand den geringsten Ausgehenden Trafic hat. Der Maximal ausgehende mit 19,84 Megabit/s, %
-sowie der durchschnittlich ausgehende Traffic mit 5,41 Megabit/s, liegen unter dem Durchschnitt, von 23,09 % 
-Megabit/s und 8,17 Megabit/s. Auch die Standardabweichungen welche, in den vorherigen Versuchen sehr gering %
-waren, sind bei diesem Test auf "uber 1 Megabit/s gestiegen. Obwohl die Standardabweichung der Minimal %
-Werte in keinem anderen Test so niedrig waren, sind bei diesem Testlauf. Dies ist jedoch zu vernachl"assigen %
-da hier ein Netzwerk betrachtet wird in dem viele Daten verschickt werden sollen und nicht eines welches sich. %
-in einem Leerlaufzustand befindet. Deshalb kann man Schlussfolgern das die Hosts nicht gleichm"a"sig %
-belastet worden sind. Wie \cref{tab:EingehenderTraffic2000Mb} und \cref{AusgehenderTraffic2000Mb} klar zeigen.  % 
+Betrachtet man nun den ausgehenden Traffic der Hosts, kann man beobachten, dass der Host Tusk %
+diesmal mit Abstand den geringsten ausgehenden Traffic hat. Der maximal ausgehende Traffic mit 19,84 Megabit/s %
+sowie der durchschnittlich ausgehende Traffic mit 5,41 Megabit/s, liegen unter dem Durchschnitt von 23,09 % 
+Megabit/s und 8,17 Megabit/s. Auch die Standardabweichungen, welche in den vorherigen Versuchen sehr gering %
+waren, sind bei diesem Test auf "uber 1 Megabit/s gestiegen. Obwohl die Standardabweichung der Minimalwerte %
+in keinem anderen Test so niedrig war, sind bei diesem Testlauf die restlichen Standardabweichung die h"ochsten. Deshalb wird das vernachl"assigt, %
+da hier ein Netzwerk betrachtet wird, in dem viele Daten verschickt werden sollen. Ein Netzwerk im Ruhezustand, %
+entspricht den Anforderungen. %
+Deshalb kann man schlussfolgern, dass die Hosts nicht gleichm"a"sig %
+belastet worden sind, wie die \cref{tab:EingehenderTraffic2000Mb,tab:AusgehenderTraffic2000Mb} klar zeigen.  % 
 
 
 \begin{table}
@@ -80,14 +81,14 @@ Lion				& 2,76			& 0,77			& 248,08	 	\\
 Agent $\diameter $  		& 2,12			& 2,30			& 223,99		\\   
 Agent $\sigma $ 		& 0,43  		& 0,89			& 52,82		\\
 \end{tabular}
-\caption{I/O Zeiten bei 2000 Megabyte auf den Pis}
+\caption{I/O Zeiten bei 2000 Megabyte auf den Pis.}
 \label{tab:NormalbetriebIoStat2000Mb}
 \end{table}
 
 
-In der \cref{fig:IoStatDazzleStandard} sieht man das die Festplatte des Hosts Dazzle nun nicht %
-mehr konstant beschrieben wird stattdessen sieht man das inzwischen "uber l"anger Perioden %
-ein aussetzen des Schreibens auftritt, auch die Perioden in denen der Host liest sind gestiegen. %
+In der \cref{fig:IoStatDazzleStandard2000} sieht man, dass die Festplatte des Hosts Dazzle nun nicht %
+mehr konstant beschrieben wird. Stattdessen ist ersichtlich, dass inzwischen "uber l"angere Perioden %
+ein Aussetzen des Schreibens auftritt. Auch die Perioden in denen der Host liest sind gestiegen. %
 Im Durchschnitt werden 1.07 Kilobyte/s geschrieben. Wieder bildet der Host Tusk das %
 Schlusslicht mit 1,60 Kilobyte/s. Auch dieser Wert liegt unter dem Durchschnitt. % 
 
@@ -110,26 +111,25 @@ Lion				& 29,16			& 30,68			& 22,08			& 6,68		& 16,55	\\
 Agent $\diameter $  		& 23,67			& 32,79			& 22,81			& 5,85	 	& 14,37	\\   
 Agent $\sigma $			&  7,05			&  5,61			&  2,30			& 2,69		& 1,76  \\ 
 
-&\end{tabular}
-\caption{CPU Last Verteilung bei 2000 Megabyte Paketen im Netzwerk}
+\end{tabular}
+\caption{CPU Lastverteilung bei 2000 Megabyte Paketen im Netzwerk.}
 \label{tab:CPUlastverteilung2000Mb}
 \end{table}
 
-In der \cref{tab:CPUlastverteilung2000Mb} sieht man das der Host Tusk einen sehr geringen Idle Anteil der CPU hat. %
-Mit 12,05 \% liegt dieser weit unter dem Durchschnitt, dies liegt unter anderem an der User Time, diese liegt bei 42,43 \%. %
-und der System Time die bei 26,74 \% liegt. Beide Werte liegen deutlich "uber dem Durchschnitt der anderen Hosts. %
-W"ahren die I/O Wait Time deutlich unter dem Durchschnitt der anderen Hosts, liegt. Woran das liegt sieht man %
-in der \cref{tab:VerschickteDaten2000Mb}. 
+Die Tabelle \cref{tab:CPUlastverteilung2000Mb} zeigt, dass der Host Tusk einen sehr geringen Anteil der CPU, dem Leerlaufprozess gewidmet hat. %
+Mit 12,05 \% liegt dieser weit unter dem Durchschnitt. Das liegt unter anderem an der User Time, welche bei 42,43 \% liegt %
+und der System Time, die bei 26,74 \% liegt. Beide Werte liegen deutlich "uber dem Durchschnitt der anderen Hosts, %
+w"ahrend die I/O wait Time deutlich unter dem Durchschnitt der anderen Hosts liegt.  Die Gr"unde hierf"ur gehen eindeutig aus der \cref{tab:VerschickteDaten2000Mb} hervor. %
 
-
-"Uber eine dauer von 12 Stunden wurden 79 Pakete im Netzwerk verschickt. Die Menge der Daten die insgesamt verschickt wurden sind 154,30 Gigabyte in diesem Versuchsaufbau. %
-Rechnet man dies auf eine Stunde runter kommt man auf 12,85 Gigabyte pro Stunde oder 6,59 Pakete pro Stunde. Wie man sieht sind das %
-knapp 80 Gigabyte weniger als in den vorhergehenden Tests. Dies liegt vorallem daran. Das an den Host Tusk keine Pakete erfolgreich versendet % 
+"Uber eine Dauer von 12 Stunden wurden 79 Pakete im Netzwerk verschickt. Die Menge der Daten, die insgesamt verschickt wurden, sind in diesem Versuchsaufbau 154,30 Gigabyte. %
+Rechnet man dies auf eine Stunde herunter, kommt man auf 12,85 Gigabyte pro Stunde oder 6,59 Pakete pro Stunde. Wie man sieht, sind das %
+knapp 80 Gigabyte weniger als in den vorhergehenden Tests. Dies liegt vorallem daran, dass an den Host Tusk keine Pakete erfolgreich versendet % 
 werden konnten. Jeder Versuch dem Host Tusk ein Paket zuzuschicken schlug fehl. W"ahrend alle anderen Hosts keine Pakete verloren haben. %
-Der Grund f"ur das versagen des verschicken der Pakete an den Host Tusk ist darauf zur"uckzu"fuhren, das der Host Tusk, laut Zabbix %
-nichtmehr genug freien Speicher zu verf"ugung hatte da bei der Paket"ubertragung das erst festgestellt wurde wenn der Vorgang fast %
-abgeschlossen worden ist. Konnte der sendete Host, den Vorgang nicht fr"uh genug abbrechen und sich einen neuen Host aussuchen, %
-dadurch sind dann rund 80 Gigabyte verloren gegangen. % 
+Der Grund f"ur das Versagen des Verschickens der Pakete an den Host Tusk ist darauf zur"uckzuf"uhren, dass der Host Tusk, laut Zabbix, %
+nichtmehr genug freien Speicher zu Verf"ugung hatte. Da dies jedoch bei der Paket"ubertragung erst festgestellt wurde wenn der Vorgang fast %
+abgeschlossen worden ist. Lief der Prozess weiter, bis der Host Tusk keine eingehenden Pakete mehr aktzeptierte und die %
+bereits empfangenen Pakete wieder verwarf. Da der Prozess trotzdem eine Zeit lang durchgef"uhrt worden ist und da der Sender erwartet hatte %
+das die Datei aktzeptiert wird und den Sendeprozess erst sp"at beendete sind dann durch 80 Gigabyte verloren gegangen. % 
 
 \begin{table}
 \centering
@@ -149,7 +149,7 @@ Summe				& 79  					& 18  					& 22,78			& 154,30		\\
 Agent $\diameter $  		& 19,75					& 4,50				 	& 18,45			& 38,57 		\\   
 Agent $\sigma $			& 3,34		 			& 4,50					& 6,73    		& 6,53		\\
 \end{tabular}
-gesendet\caption{Anzahl der gesendeten 2000 Megabyte Pakete "uber einen Zeitraum von 12 Stunden}
+\caption{Anzahl der gesendeten 2000 Megabyte Pakete "uber einen Zeitraum von 12 Stunden.}
 \label{tab:VerschickteDaten2000Mb}
 \end{table}
 
@@ -170,9 +170,7 @@ Tinker				& 10		& 0		& 5		& 7		& 22		\\
 Lion				& 7		& 0		& 6		& 8		& 21		\\ 
 Summe				& 35		& 0		& 25 		& 27		& 87		\\
 \end{tabular}
-\caption{Die Anzahl der verschickten und der empfangen Pakete pro Host.}
+\caption{Die Anzahl der verschickten und der empfangenen Pakete pro Host.}
 \label{tab:VerschickteDaten2000Mb}
 \end{table}
-
-
 

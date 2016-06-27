@@ -18,6 +18,7 @@
 
 \usepackage{geometry} % Packet für Seitenrandabständex und Einstellung für Seitenränder
 \usepackage[ngerman]{babel} % deutsche Silbentrennung
+\usepackage[verbose]{placeins}
 
 \usepackage{booktabs} %entzerrt die Tabellenzeilen und bietet verschieden dicke Unterteilungslinien
 \usepackage{longtable}% Tabellen können sich nicht über mehrere Seiten 
@@ -92,8 +93,8 @@
 % Listingverzeichnis soll im Inhaltsverzeichnis auftauchen
 % \addcontentsline{toc}{section}{Listingverzeichnis}
 % \fancyhead[L]{Abbildungs- / Tabellen- / Listingverzeichnis} %Kopfzeile links
-\renewcommand{\lstlistlistingname}{Listingverzeichnis}
-\lstlistoflistings
+%\renewcommand{\lstlistlistingname}{Listingverzeichnis}
+%\lstlistoflistings
 
 \pagestyle{headings} % zurueck setzen von roemische seitenanzahl
 
@@ -110,12 +111,13 @@
 \include{Kapitel/versuche}
 %----------------- KAPITEL : VERGLEICH------------ %	
 \include{Kapitel/ergebnisse}
+\include{Kapitel/ausblick}
 
 %----------------- KAPITEL : FAZIT  ----------------- %	
 %\chapter{Fazit}
 \include{Kapitel/anhang}
 %----------------- KAPITEL : LITERATUR  ----------------- %	
-%\printbibliography
+\printbibliography
 %----------------- KAPITEL : ANHANG  ----------------- %	
 
 

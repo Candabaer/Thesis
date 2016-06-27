@@ -2,8 +2,38 @@
 \label{sec:fehler}
 
 Wie schon in \cref{sec:2000MBTest} erw"ahnt kam es bei diesem Test zu einem Fehler %
-bei einem der Hostsysteme. Alle Pakete die zum Host verschickt werden sollten %
+bei einem der Hostsysteme. Alle Pakete, die zum Host verschickt werden sollten, %
 haben ihr Ziel nicht erreicht. Dadurch sind sehr viele Pakete verloren gegangen. %
-Insgesamt konnte vom Host Tusk kein einziges Paket angenommen werden so sind alle %
-fehlerhaften, Pakete auf ihn zur"uckzuf"uhren. Das Monitoring Tool Zabbix hat dazu selber %
-eine Warnung ausgegeben.  
+Insgesamt konnte vom Host Tusk kein einziges Paket angenommen werden. So sind alle %
+fehlerhaften Pakete auf ihn zur"uckzuf"uhren. Das Monitoring Tool Zabbix hat dazu selber %
+eine Warnung ausgegeben. Diese besagt, dass der freie Festplattenspeicher zu mehr als 80 \% %
+belegt ist. Dies gibt einen ersten Hinweis darauf, dass die 2000 Megabyte Dateien an %
+diesen Host nicht richtig gesendet werden k"onnen.  
+
+\begin{figure}[htbp]
+\centering
+\includegraphics*[width=1\linewidth]{Abb/Tusk20prozent}
+
+\caption{Fehlermeldung bez"uglich der Festplatte von Tusk}
+\label{fig:Eth0DazzleStandard}
+\end{figure}
+
+Schaut man in die Logfiles und betrachtet die Zeit die zwischen dem Versenden von zwei Paketen vergeht sieht %
+man, dass die Zeit die bis zum versenden des n"achsten Packetes %
+sehr hoch ist in diesem Fall 17 Minuten. 
+
+\begin{verbatim}
+[Thu 16 Jun 19:36:11 CEST 2016]TRANSPORT FAILED 
+[Thu 16 Jun 19:53:53 CEST 2016]TRANSPORT SUCCESSFUL
+\end{verbatim} 
+
+Das "Ubertragen von erfolgreichen Paketen dauert nach der \cref{tab:compZeiten} durchschnittlich 1534,23 Sekunden %
+also ungef"ahr 25 Minuten. Mit diesem Wissen kann man die Schlussfolgerung ziehen, dass der Abbruch des verschickten %
+Paketes an den Host Tusk erst sehr sp"at in der "Ubertragung passiert. SCP "uberpr"uft vor dem Versenden einer Datei nicht %
+nach, ob genug Speicherplatz f"ur diese Datei vorhanden ist. So kommt es auch, dass der Host Tusk auch im %
+Test auf dem Ethernet Port eine eingehende Last aufweisen kann. Da SCP auf der SSH aufbaut welches das %
+TCP Protokoll verwendet, werden die verschickten Dateien segmentiert. F"ur gew"ohnlich sind solche Segmente %
+1500 Byte gro"s. Dies bedeutet, dass der Host Tusk solange 1500 Byte TCP-Segmente empf"angt, bis bei diesem %
+die Festplatte voll ist und keine weiteren Segmente mehr annehmen kann. Daraus folgt dann, dass die Daten"ubertragung %
+abgebrochen wird, Zabbix hat f"ur die verschickten Segmente Statistiken sammeln k"onnen, wie z.B: Den eingehenden %
+Traffic und Belastung der CPU, obwohl der Host nie die komplette Datei empfangen hat. % 

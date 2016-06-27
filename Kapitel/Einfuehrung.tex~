@@ -5,7 +5,7 @@
 \section{Einf"uhrung in das Thema} 
 Computernetzwerke sind inzwischen fester Bestandteil der Gesellschaft und finden "uberall Verwendung. %
 Wenn fr"uher Netzwerke nur im Milit"ar, in Universit"aten und Firmen benutzt wurden, haben nun auch %
-normale Endverbraucher Zugriff auf Netzwerke. Jedoch ist auch das Internet nur ein Netzwerk aus Netzwerken, das "uber den gesamten Globus verteilt ist. %
+normale Endverbraucher Zugriff auf Netzwerke. Jedoch ist auch das Internet nur ein Netzwerk aus Netzwerken, das über den gesamten Globus verteilt ist. %
 Geht man in die unterste Ebene, kommt man irgendwann in einem sogenannten Local Area Network (LAN) an. Inzwischen sind diese in fast jedem %
 Haushalt zu finden, da sie es erm"oglichen mehrere Computer "uber einen Router mit dem Internet %
 zu verbinden. LANs erm"oglichen einen Datenaustausch zwischen den im Netzwerk verbundenen Computern. % 
@@ -17,7 +17,7 @@ f"ur verteilte Systeme dar \autocite{uni:boinc}. Mit dieser ist es m"oglich "ube
 Internet an verschiedenen Forschungsprojekten teilzunehmen, indem man eigene %
 Rechenzeit zur Verf"ugung stellt. Eine weitere Anwendung f"ur verteilte Systeme stellt %
 das Zabbix Framework dar, welches auch in dieser Bachelor Arbeit n"aher betrachtet wird. %
-Zabbix ist ein Netzwerk-Monitoring Tool, mit dem es m"oglich ist St"orungen in einem  Netzwerk %
+Zabbix ist ein Netzwerk Monitoring Tool, mit dem es m"oglich ist St"orungen in einem  Netzwerk %
 zu erkennen und die Leistung von den im Netzwerk angeschlossenen Computern zu betrachten. % 
 
 %Motiviation und Zielsetzung zusammenfügen. 
@@ -66,6 +66,8 @@ zu beobachten. Dieses Framework wird in \cref{cha:framework} nochmal genauer vor
 Au"serdem werden in dieser Arbeit % Marie oder vllt. weglassen?!
 drei verschiedene Testf"alle betrachtet, kleine Dateien 20 Megabyte, %
 mittlere Dateien 200 Megabyte und Gro"se Dateien mit 2000 Megabyte. %
+
+
 Zum Schluss werden die zuvor gesammelten Ergebnisse in \cref{cha:ergebnisse} verglichen und die %
 Annahme "uberpr"uft, ob es m"oglich ist eine optimale gr"o"se f"ur Pakete in einem Netzwerk %
 zu bestimmen. %

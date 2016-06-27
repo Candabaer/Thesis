@@ -2,30 +2,34 @@
 \BOOKMARK [0][-]{chapter*.4}{Tabellenverzeichnis}{}% 2
 \BOOKMARK [0][-]{chapter.1}{Einf\374hrung}{}% 3
 \BOOKMARK [1][-]{section.1.1}{Einf\374hrung in das Thema}{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.2}{Motivation der Bestimmung einer optimalen Paketgr\366\337e}{chapter.1}% 5
-\BOOKMARK [1][-]{section.1.3}{Zielsetzung dieser Arbeit}{chapter.1}% 6
-\BOOKMARK [1][-]{section.1.4}{Methoden zum Erreichen des Ziels}{chapter.1}% 7
-\BOOKMARK [0][-]{chapter.2}{Das Framework}{}% 8
-\BOOKMARK [1][-]{section.2.1}{Verwendete Hardware}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.2}{Raspberry Pi}{chapter.2}% 10
-\BOOKMARK [2][-]{subsection.2.2.1}{Entwicklung Pis}{section.2.2}% 11
-\BOOKMARK [1][-]{section.2.3}{Aufbau der Software}{chapter.2}% 12
-\BOOKMARK [2][-]{subsection.2.3.1}{Zabbix}{section.2.3}% 13
-\BOOKMARK [2][-]{subsection.2.3.2}{Eigenentwicklung}{section.2.3}% 14
-\BOOKMARK [1][-]{section.2.4}{Einsatz des Frameworks}{chapter.2}% 15
-\BOOKMARK [0][-]{chapter.3}{Zabbix}{}% 16
-\BOOKMARK [1][-]{section.3.1}{Zabbix Server}{chapter.3}% 17
-\BOOKMARK [1][-]{section.3.2}{Zabbix Agent}{chapter.3}% 18
-\BOOKMARK [0][-]{chapter.4}{Versuche}{}% 19
-\BOOKMARK [1][-]{section.4.1}{System im Ruhezustand}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.2}{20 Megabyte Testlauf}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.3}{200 Megabyte Testlauf}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.4}{2000 Megabyte Testlauf}{chapter.4}% 23
-\BOOKMARK [0][-]{chapter.5}{Ergebnisse}{}% 24
-\BOOKMARK [1][-]{section.5.1}{Versandte Daten}{chapter.5}% 25
-\BOOKMARK [1][-]{section.5.2}{Prozessor Auslastung}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.3}{Festplatten Auslastung}{chapter.5}% 27
-\BOOKMARK [1][-]{section.5.4}{Aufgetretene Fehler}{chapter.5}% 28
-\BOOKMARK [1][-]{section.5.5}{Schlussfolgerung}{chapter.5}% 29
-\BOOKMARK [0][-]{chapter.6}{Anhang}{}% 30
-\BOOKMARK [1][-]{section.6.1}{20 Megabyte Test}{chapter.6}% 31
+\BOOKMARK [1][-]{section.1.2}{Motivation und Zielsetzung}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.3}{Methoden zum Erreichen des Ziels}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{Das Framework}{}% 7
+\BOOKMARK [1][-]{section.2.1}{Verwendete Hardware}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.2}{Raspberry Pi}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.1}{Entwicklung der Pis}{section.2.2}% 10
+\BOOKMARK [1][-]{section.2.3}{Aufbau der Software}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.3.1}{Zabbix}{section.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.3.2}{Eigenentwicklung}{section.2.3}% 13
+\BOOKMARK [1][-]{section.2.4}{Einsatz des Frameworks}{chapter.2}% 14
+\BOOKMARK [0][-]{chapter.3}{Zabbix}{}% 15
+\BOOKMARK [1][-]{section.3.1}{Zabbix Server}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.2}{Zabbix Agent}{chapter.3}% 17
+\BOOKMARK [0][-]{chapter.4}{Versuche}{}% 18
+\BOOKMARK [1][-]{section.4.1}{System im Ruhezustand}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.2}{20 Megabyte Testlauf}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.3}{200 Megabyte Testlauf}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.4}{2000 Megabyte Testlauf}{chapter.4}% 22
+\BOOKMARK [0][-]{chapter.5}{Ergebnisse}{}% 23
+\BOOKMARK [1][-]{section.5.1}{Versandte Daten}{chapter.5}% 24
+\BOOKMARK [1][-]{section.5.2}{Prozessor Auslastung}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.3}{Festplatten Auslastung}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.4}{Aufgetretene Fehler}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.5}{Schlussfolgerung}{chapter.5}% 28
+\BOOKMARK [0][-]{chapter.6}{Fazit}{}% 29
+\BOOKMARK [0][-]{chapter.7}{Anhang}{}% 30
+\BOOKMARK [1][-]{section.7.1}{Test Ruhezustand}{chapter.7}% 31
+\BOOKMARK [1][-]{section.7.2}{Test 20 Megabyte Tests}{chapter.7}% 32
+\BOOKMARK [1][-]{section.7.3}{200 Megabyte Tests}{chapter.7}% 33
+\BOOKMARK [1][-]{section.7.4}{2000 Megabyte Pakete}{chapter.7}% 34
+\BOOKMARK [1][-]{section.7.5}{Inhalt der CD}{chapter.7}% 35

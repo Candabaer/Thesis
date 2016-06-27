@@ -1,55 +1,26 @@
 \chapter{Ergebnisse}
-In diesem Kapitel werden die Ergebnisse aus dem \cref{cha:versuche} miteinander Verglichen %
-und dabei wird als erstes die Anzahl der verschickten Pakete und die Menge der Byte die %
-verschickt wurden miteinander verglichen, die Zeiten die ein Paket zum erreichen des %
-Zielsystems betr"agt und es wird ein Blick auf den Ping im Netzwerk gelegt, auch die Auslastung %
-auf den Ethernet Ports wird betrachtet, dabei wird viel Wert auf einen m"oglichst ausgeglichen %
-Traffic an den Ports gelegt. Der zweite Blick wird auf die Auslastung des Prozessors gelegt. %
-Vorallem wird versucht die Paketegr"o"se zu finden die die CPU am wenigsten in Anspruch nimmt %
-so das der Endnutzer einen m"oglichst Leistungsf"ahigen Host verwenden zu k"onnen. Als drittes %
+In diesem Kapitel werden die Ergebnisse aus dem \cref{cha:versuche} miteinander verglichen. %
+Dabei wird als erstes die Anzahl der verschickten Pakete und die Menge der verschickten %
+Bytes miteinander verglichen und die Zeiten die, ein Paket Paket zum erreichen des %
+Zielsystems Ben"otigt. Es wird ein Blick auf den Ping im Netzwerk und die Auslastung auf den %
+Ethernet Ports geworfen. Es wird viel Wert auf einen m"oglichst ausgeglichen %
+Traffic an den Ports gelegt. Als zweites wird ein Blick auf die Auslastung des Prozessors gelegt. %
+Vor allem wird versucht die Paketegr"o"se zu finden, die die CPU am wenigsten in Anspruch nimmt, %
+so das der Endnutzer einen m"oglichst Leistungsf"ahigen Host verwenden kann. Als drittes %
 und letztes der im \cref{cha:versuche} betrachteten Metriken kommt die Auslastung der Festplatte. %
-Bevor es zur Schlussfolgerung kommt wird jedoch noch ein aufgetretener Fehler betrachet welcher den %
+Bevor es zur Schlussfolgerung kommt wird jedoch noch ein aufgetretener Fehler betrachtet der den %
 Host Tusk in \cref{sec:2000MBTest} betroffen hatte. Zum Schluss dieses Kapitels wird eine Schlussfolgerung %
-aus diesen Kapiteln gezogen. % 
+aus den Ergebnissen gezogen. % 
 
-Das Ziel in diesem Kapitel ist es die Paketgr"o"se zu ermitteln mit der man den h"ochsten Datenaustausch zwischen den %
-Hosts erreichen kann ohne das die Hosts Handlungsunf"ahig werden und Endnutzer noch auf %
+Das Ziel in diesem Kapitel ist es, die Paketgr"o"se zu ermitteln mit der man den h"ochsten Datenaustausch zwischen den %
+Hosts erreichen kann, ohne das die Hosts Handlungsunf"ahig werden und Endnutzer noch auf %
 den Hosts simple Arbeiten vollbringen k"onnen. Darunter wird gez"ahlt das der Nutzer in der %
-Lage ist den Rechner zu bedienen kann und nicht das es auf dem Rechner m"oglich ist aufw"andige Software %
+Lage ist den Rechner bedienen zu k"onnen und nicht das es auf dem Rechner m"oglich ist aufw"andige Software %
 zu verwenden, wie z.B: Photoshop oder "ahnliches.  
 
-%\include{Kapitel/versandtedaten}
+\input{Kapitel/versandtedaten}
 \input{Kapitel/cpulast}
+\input{Kapitel/festplattenlast}
+\input{Kapitel/fehler}
+\input{Kapitel/schlussfolgerung}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\section{Festplatten Auslastung}
-
-\section{Aufgetretene Fehler}
-
-\section{Schlussfolgerung}

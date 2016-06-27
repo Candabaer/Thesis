@@ -2,19 +2,14 @@
 \label{cha:framework}
 \section{Verwendete Hardware} \label{sec:verwendeteHardware}
 
-In diesem Framework wird folgende Hardware verwendet.
+In diesem Framework wird folgende Hardware verwendet:
 
 \begin{itemize}
-\item Zwei Switches
-\item Vier Raspberry Pis der ersten Generation
-\item Ein Raspberry Pi der zweiten Generation
-\item Mehrere Ethernet Kabel
+\item Zwei Switches,
+\item Vier Raspberry Pis der ersten Generation,
+\item Ein Raspberry Pi der zweiten Generation,
+\item Mehrere Ethernet Kabel.
 \end{itemize}
-
-Diese Ger"ate wurden in einem eigenst"andigen Netzwerk zusammengeschaltet. So sind an jedem Switch zwei Pis %
-der ersten Generation angeschlossen w"ahrend an einem der Switches der Pi der zweiten Generation angeschlossen, %
-ist (siehe \cref{fig:AufbauVomNetzwerk}). Welche Software auf den Pis verwendet wurde, wird in \cref{sec:aufbauSoftware} erkl"art. 
-
 \begin{table}
 \centering
 \begin{tabular}{l%
@@ -34,53 +29,60 @@ Raspberry Pi 2 	& 900 	& 1024			& 32		& 100		\\
 \label{tab:hardwarespezifiktion}
 \end{table}
 
-
-Die beiden verwendeten Switches Arbeiten mit 100 oder 1000 Mbit/s, doch aufgrund %
-der verwendeten Ethernet Ports auf den Raspberry Pis, welche eine Ubertrangsungrate von 100 Mbit/s haben %
-ist der Austausch der Pakete zwischen den Pis, auf 100 Mbit/s beschr"ankt und kann so das ganze Potential der %
+Diese Ger"ate wurden in einem eigenst"andigen Netzwerk zusammengeschaltet. So sind an jedem Switch zwei Pis %
+der ersten Generation angeschlossen w"ahrend an einem der Switches der Pi der zweiten Generation angeschlossen, %
+ist (siehe \cref{fig:AufbauVomNetzwerk}). Welche Software auf den Pis verwendet wurde, wird in \cref{sec:aufbauSoftware} erkl"art. % 
+In der \cref{tab:hardwarespezifiktion} kann sind die Spezifikationen der Raspberry Pis angegeben. %
+Die beiden verwendeten Switches arbeiten mit 100 oder 1000 Mbit/s, doch aufgrund %
+der verwendeten Ethernet Ports auf den Raspberry Pis, welche eine "Ubertragungsrate von \mbox{100 Mbit/s} haben, %
+ist der Austausch der Pakete zwischen den Pis auf 100 Mbit/s beschr"ankt und kann so das ganze Potential der %
 Switches nicht ausnutzen. %
+
 
 \section{Raspberry Pi}
 
 Bevor es in den Aufbau des Frameworks geht, wird noch ein Einblick in die Raspberry Pis gegeben. %
-Der Raspberry Pi ist eine Entwicklung aus England. Eben Upton der 2006 Dozent an der Cambridge University %
-war, stellte zu der Zeit fest das der Wissenstand von neuen Studenten in Cambridge im Bereich der Informatik %
-sehr gering ist. In einem Interview mit dem Online Magazin \emph{readwrite} sagte Upton \begin{quotation}We'd kind of pulled the ladder %
+Der Raspberry Pi ist eine Entwicklung aus England. Eben Upton, der 2006 Dozent an der Cambridge University %
+war, stellte zu der Zeit fest, dass der Informatik Wissenstand von neuen Studenten in Cambridge im Bereich der Informatik %
+sehr gering ist. 
+\newpage In einem Interview mit dem Online Magazin \emph{readwrite} sagte Upton\autocite{web:readWrite} \begin{quotation}"We'd kind of pulled the ladder %
 up after us. We built these very sophisticated and user-friendly computers for children to use now. Or not %
-even computers--game consoles and phones and tablets, kind of appliances. But people were being denied that %
-opportunity to tinker. So really Raspberry Pi is an attempt to get back--without kind of being too retro--some %
-of what we kind of feel was lost from the evolution of computers over the last 25 years.\end{quotation}\autocite{web:readWrite}. %
-Upton der nach eigener Aussage w"ahrend seiner Schulzeit mit einem BBC-Micro Computer erste Erfahrungen im programmieren %
-machte, betont auch das der Raspberry Pi daf"ur gedacht ist Sch"ulern einen Computer zu geben der erschwinglich und leicht modifizierbar ist. %
-Deshalb ist es Upton auch wichtig das die Pis keine hohe kosten haben. Mit einem Preis von 40 Euro f"ur den Raspberry Pi 1 %
-\autocite{amazon:pi1}, 36,65 Euro f"ur den Raspberry Pi Modell 2 \autocite{amazon:pi2} und 42,70 Euro f"ur den %
-am Anfang des Jahres 2016 ver"offentlichten Raspberry Pi 3 Model B \autocite{amazon:pi3}, ist dies auch gelungen. %
-Aufgrund des geringen Preises eignen sich Raspberry Pis ausgezeichnet Client Server Anwendungen mit realen Ger"aten %
-aufzubauen. Deshalb werden Raspberry Pis zum "uberpr"ufen der These die in dieser Arbeit behandelt wird verwendet. %
+even \mbox{computers -- game} consoles and phones and tablets, kind of appliances. But people were being denied that %
+opportunity to tinker. So really Raspberry Pi is an attempt to get back -- without kind of being too retro -- some %
+of what we kind of feel was lost from the evolution of computers over the last 25 years."\end{quotation} %
+Upton, der nach eigener Aussage w"ahrend seiner Schulzeit mit einem BBC-Micro Computer erste Erfahrungen im Programmieren %
+machte, betont auch, dass der Raspberry Pi daf"ur gedacht ist, Sch"ulern einen Computer zu geben, der erschwinglich und leicht modifizierbar ist. %
+Deshalb ist es Upton auch wichtig, dass die Pis keine hohen Kosten haben. Mit einem Preis von 40 Euro f"ur den Raspberry Pi 1 %
+\autocite{amazon:pi1}, 36,65 Euro f"ur den Raspberry Pi 2 Modell B \autocite{amazon:pi2} und 42,70 Euro f"ur den %
+am Anfang des Jahres 2016 ver"offentlichten Raspberry Pi 3 Modell B \autocite{amazon:pi3} ist dies auch gelungen. %
+Aufgrund des geringen Preises eignen sich Raspberry Pis ausgezeichnet daf"ur Client Server Anwendungen mit realen Ger"aten %
+aufzubauen. Deshalb werden Raspberry Pis zum "Uberpr"ufen der These die, in dieser Arbeit behandelt wird, verwendet. %
 
-\subsection{Entwicklung Pis}
-Der erste Raspberry Pi wurde im Jahr 2012 ver"offentlicht, jedoch gab es schon 2006 Einen ersten Prototypen daf"ur %
-dieser verwendete einen Atmel-ATmega644-Mikrocontroller. Dieser war jedoch nicht Leistungsf"ahig genug. %
-Da zu dieser Zeit der Boom der Smartphones anfing, kamen aber auch immer mehr ARM-Prozessoren auf den Markt %
-so entschied man sich daf"ur den Broadcom BCM2835 Prozessor zu verwenden mit einer ARMv6 Architektur. Dieser Leistungsf"ahig genug %
-Spiele wie Quake 3 Arena und H.264 Videos abzuspielen. Seit Herbst 2012 wird ist der Raspberry Pi Model B im Handel %
-bei diesem wurde der Arbeitsspeicher auf 512 Megabyte erh"oht. Es ist auch das Model welches f"ur die Hosts in %
-diesem Framework verwendet wurde. Am 14. Juli 2014 wurde das Model B+ vorgestellt, mit welchem auch eine %
-offizielle Spezifikation f"ur Erweiterungsplatinen ver"offentlicht wurde, das erm"oglicht es den Raspberry Pi %
-nach belieben zu erweitern. Vier Monate sp"ater dem 14. November 2014 wurde das Modell A+ vorgestellt, dies %
-zeichnet sich dadurch aus, das die Platine kleiner ist als die der Vorg"angermodelle und auch preislich weniger %
-kostet. Der Raspberry Pi 2 Modell B wurde am 2. Februar 2015 vorgestellt, welcher in diesem Framework als Zabbix %
-Server verwendet wird. Der Raspberry Pi 2 verwendet einen Vierkern Broadcom BCM2836 Prozessor und ist der erste Raspberry Pi %
+\subsection{Entwicklung der Pis}
+Der erste Raspberry Pi wurde im Jahr 2012 ver"offentlicht. Jedoch gab es schon 2006 einen ersten Prototypen. %
+Dieser verwendete einen Atmel-ATmega644-Mikrocontroller, welcher allerding nicht leistungsf"ahig genug war. %
+Da zu dieser Zeit der Boom der Smartphones anfing, kamen aber auch immer mehr ARM-Prozessoren auf den Markt. %
+So entschied man sich daf"ur den Broadcom BCM2835 Prozessor mit einer ARMv6 Architektur zu verwenden. Dieser ist leistungsf"ahig genug %
+um Spiele wie Quake 3 Arena und H.264 komprimierte Videos abzuspielen. Seit Herbst 2012 ist der Raspberry Pi Model B im Handel. %
+Bei diesem wurde der Arbeitsspeicher auf 512 Megabyte erh"oht. Es ist auch das Modell welches f"ur die Hosts in %
+diesem Framework verwendet wurde. Am 14. Juli 2014 wurde das Modell B+ vorgestellt, mit welchem auch eine %
+offizielle Spezifikation f"ur Erweiterungsplatinen ver"offentlicht wurde. Das erm"oglicht es, den Raspberry Pi %
+nach Belieben zu erweitern. Vier Monate sp"ater am 14. November 2014, wurde das Modell A+ vorgestellt. Dieses %
+zeichnet sich dadurch aus, dass die Platine kleiner ist als die der Vorg"angermodelle und auch weniger %
+kostet. Der Raspberry Pi 2 Modell B wurde am 2. Februar 2015 vorgestellt. Dieser wird in diesem Framework als Zabbix %
+Server verwendet wird. Der Raspberry Pi 2 verwendet einen Vierkern Broadcom BCM2836 Prozessor und ist der erste Raspberry Pi, %
 der eine ARMv7 Architektur verwendet. Mit 900 MHz hat dieser einen 200 MHz schnelleren Prozessor als die Vorg"anger%
-modelle. Auch der Arbeitsspeicher wurde aufger"ustet, so wurde dieser wieder verdoppelt und hat nun einen 1024 Megabyte %
-gro"sen Arbeitsspeicher. Auf der Entwicklerkonferenz Build 2015 wurde von Microsoft Windows 10 IoT angek"undigt, welches %
-ein Windows 10 Port ist welcher f"ur \emph{Internet of Things}-Ger"ate entwickelt wurde, welches vom Raspberry Pi 2 %
-unterst"utzt wird \autocite{web:winIoT}. Am 26. November 2015 wurde der Raspberry Pi Zero angek"undigt, dieser hat %
+modelle. Auch der Arbeitsspeicher wurde aufger"ustet. Er wurde verdoppelt und hat nun einen 1024 Megabyte %
+gro"sen Arbeitsspeicher. Auf der Entwicklerkonferenz Build 2015 wurde von Microsoft Windows 10 IoT angek"undigt, was %
+ein Windows 10 Port ist, welcher f"ur \emph{Internet of Things}-Ger"ate entwickelt wurde, der vom Raspberry Pi 2 %
+unterst"utzt wird \autocite{web:winIoT}. Am 26. November 2015 wurde der Raspberry Pi Zero pr"asentiert, dieser hat %
 eine "ahnliche Ausstattung wie der Raspberry Pi 1 Modell B, hat jedoch einen auf 1 GHz getakteten Prozessor. %
-Das neueste Modell der Raspberry Pi Familie \emph{(stand Juni 2016)} ist der Raspberry Pi 3 Modell B, dieser ist %
-der erste Raspberry der eine 64bit-ARMv8 Architektur verwendet und mit dem Broadcom BCM2837 Prozessor ausgestattet ist. %
-Dieser Prozessor ist auf 1,2 GHz getaktet und ist. Dies ist auch der erste Pi, welcher einen Intergriertes W-Lan hat und %
-Bluetooth LE hat. Am Arbeitsspeicher dieses Pis wurde nichts ver"andert, so hat auch dieser wieder 1024 Megabyte Arbeitsspeicher. % 
+Das neueste Modell der Raspberry Pi Familie (Stand Juni 2016) ist der Raspberry Pi 3 Modell B. Dieser ist %
+der erste Raspberry Pi, der eine 64bit-ARMv8 Architektur verwendet und mit dem Broadcom BCM2837 Prozessor ausgestattet ist. %
+Dieser Prozessor ist auf 1,2 GHz getaktet. Dies ist auch der erste Pi, welcher einen Intergriertes W-Lan und %
+Bluetooth Low Energy hat. Am Arbeitsspeicher dieses Pis wurde nichts ver"andert, so besitzt auch dieser wieder 1024 Megabyte Arbeitsspeicher %
+LPDDR2-SDRAM.
+ 
    
 
 
@@ -91,31 +93,32 @@ Das Testframework besteht aus drei verschiedenen Teilen. %
 \item Eigenentwicklung auf dem Server %
 \item Eigenentwicklung auf dem Agent %
 \end{itemize}
-Die Eigenentwicklungen sind alle mit Bash Skript programmiert, Zabbix ist eine bereits fertige Open Source L"osung %
+Die Eigenentwicklungen sind alle mit Bash Skript programmiert, Zabbix hingegen ist eine bereits fertige Open Source L"osung %
 Im folgenden Abschnitt wird ein Einblick in diese beiden Komponenten gegeben. %
 
 \subsection{Zabbix}
-Zabbix ist ein Open Source Netzwerk Monitoring System. Die erste Version wurde von \mbox{Alexei} Vladishev entwickelt \autocite{zabbix:Web}. % 
-Ein weiterer bekannter Vertreter der Netzwerk Monitor Systeme ist Nagios \autocite{wiki:Nagios}, welches wie Zabbix unter der GPL vertrieben %
-wird. Womit jedem frei steht Zabbix zu ver"andern und zu erweitern.  % 
-Beide Systeme basieren auf einer Client-Server Architektur. Im weiteren wird jedoch nur Zabbix betrachtet. %
-Welche aus zwei Komponenten besteht. %
+Zabbix ist ein Open Source Netzwerk-Monitoringsystem. Die erste Version wurde von \mbox{Alexei} Vladishev entwickelt \autocite{zabbix:Web}. % 
+Ein weiterer bekannter Vertreter der Netzwerk-Monitoringsysteme ist Nagios \autocite{wiki:Nagios}, welches wie Zabbix unter der GPL vertrieben %
+wird, womit jedem frei steht Zabbix zu ver"andern und zu erweitern.  % 
+Beide Systeme basieren auf einer Client-Server Architektur. Im Weiteren wird jedoch nur Zabbix betrachtet, %
+welches aus zwei Komponenten besteht. %
 
 \begin{description}
-\item[Zabbix Server]Der Server hat eine auf PHP basierende Weboberfl"ache, "uber die es f"ur den Benutzer m"oglich ist, die Agents zu %
-konfigurieren. So k"onnen manuell die Templates erstellt werden, die den Zabbix Agents mitteilen, welche Informationen dem %
+\item[Zabbix Server]Der Server hat eine auf PHP basierende Weboberfl"ache "uber die es f"ur den Benutzer m"oglich ist die Agents zu %
+konfigurieren. So k"onnen die Templates manuell erstellt werden, die den Zabbix Agents mitteilen, welche Informationen dem %
 Server zu "ubermitteln sind. Einen genaueren Einblick in den Zabbix Server gibt es in \cref{sec:server}. %
-\item[Zabbix Agent]Die Clients, die im Netzwerk "uberwacht werden sollen, sind die sogenannten Agents, die  %
-Informationen an den Server weiterleiten, die vom Server gefordert werden. In den sp"ateren Kapiteln wird der Hauptfokus auf der %
-Auslastung der Festplatte, CPU und des Ethernet Ports liegen. %
+\item[Zabbix Agent]Die Clients, die im Netzwerk "uberwacht werden sollen, sind die sogenannten Agents. Sie  %
+leiten Informationen an den Server weiter, die von diesem gefordert werden. In den sp"ateren Kapiteln wird der Hauptfokus auf der %
+Auslastung der Festplatte, der CPU und des Ethernet Ports liegen. %
 Einen genaueren Einblick in den Zabbix Agent gibt es in \cref{sec:agent}. % 
 \end{description} 
 
 \subsection{Eigenentwicklung}
+\label{subsec:eigenentwicklung}
 Die selbstentwickelte Software wird in zwei Kategorien unterteilt. Ein Teil der Software l"auft %
 auf den Agents. Diese haben den Zweck Netzwerk Traffic zu erzeugen. Dadurch entsteht auf dem Netzwerk und %
 auf den Zabbix Agents eine Nutzlast, die vom Zabbix Server gesammelt werden kann. Der zweite Teil der Software %
-l"auft auf dem Server, die Software auf dem Server unterst"utzt den Entwicklungsprozess auf den Agents. %
+l"auft auf dem Server. Die Software auf dem Server unterst"utzt den Entwicklungsprozess auf den Agents. %
 \begin{enumerate}
 \item Zabbix Server 
 \begin{description}
@@ -124,7 +127,7 @@ die die Programme Hintergrundrauschen, Pinger, Synchronize und Startrauschen akt
 der Quellcode auf das Endger"at gespielt.
 
 \item[Get logs:]Die Skripte Pinger und Hintergrundrauschen erstellen jeweils auf den Endger"aten Logfiles. %
-Da es jedoch ein sehr hoher Verwaltungsaufwand w"are, auf den Endger"aten die Logfiles weiterzuverwerten, %
+Da es jedoch ein sehr hoher Verwaltungsaufwand w"are auf den Endger"aten die Logfiles weiterzuverwerten, %
 werden die auf den Agents gelagerten Logfiles mit dem Skript Get Logs auf dem Rechner gesammelt, der dieses startet. %
 Somit hat man die von den Endger"aten gesammelten Logfiles auf einem Rechner und kann %
 mit der Weiterverarbeitung der Logfiles beginnen.      
@@ -136,22 +139,22 @@ mit der Weiterverarbeitung der Logfiles beginnen.
 \begin{description}
 \item[Hintergrundrauschen:]Diese Eigenentwicklung stellt mit Zabbix die Kernkomponente des Frameworks dar. Wie %
 der Rest der selbstentwickelten Software, wurde sie komplett in Bash programmiert, da das Framework ausschlie"slich %
-in einer Linux Umgebung entwickelt, getestet und verwendet wird. Hintergrundrauschen schickt "uber Secure Copy, %
-Pakete von einem Agent zum anderen. Secure Copy baut auf dem SSH Protokoll \autocite{artcl:thorbo} auf. %
-So wird eine TCP Verbindung zum angesprochenen Host aufgebaut wird und % 
+in einer Linux Umgebung entwickelt, getestet und verwendet wird. Hintergrundrauschen schickt "uber Secure Copy %
+Pakete von einem Agent zum anderen. Secure Copy baut auf dem SSH Protokoll auf \autocite{artcl:thorbo}. %
+So wird eine TCP Verbindung zum angesprochenen Host aufgebaut und % 
 eine Last auf dem Netzwerk und den Endeger"aten erzeugt, die mit Hilfe des Zabbix Servers  %
 gemessen werden kann. Au"serdem speichert Hintergrundrauschen die Dauer, die ein Paket ben"otigt, um erfolgreich %
 bei seinem zuf"allig ausgew"ahlten Empf"anger anzukommen. Es werden drei verschieden %
 gro"se Pakete verschickt: 20 Megabyte, 200 Megabyte und 2 Gigabyte. Die Ergebnisse der Logfiles %
 werden in \cref{cha:versuche} betrachetet.
 
-\item[Startrauschen:]Es wird automatisch auf den Endger"aten ausgef"uhrt. Es dient als eine Zeitschaltuhr %
+\item[Startrauschen:]Startrauschen wird automatisch auf den Endger"aten ausgef"uhrt. Es dient als eine Zeitschaltuhr %
 und erm"oglicht ein zeitversetztes Starten des Scripts Hintergrundrauschen. %
 Jedoch wird in den in dieser Ausarbeitung betrachteten Tests immer ein zeitgleicher Start %
 durchgef"uhrt. Trotzdem wird dieses Skript weiterhin verwendet, da es eine einfache %
 M"oglichkeit darstellt, die Tests zu erweitern. %
 
-\item[Synchronize:]Raspberry Pis besitzen keine eigene Batterie wie es handels"ubliche Rechner haben. %
+\item[Synchronize:]Raspberry Pis besitzen keine eigene Batterie wie sie in handels"ublichen Rechnern verbaut werden. %
 Deshalb ist nach jedem Neustart die Uhrzeit der Pis unzuverl"assig. Dieses Programm synchronisiert %
 die Uhrzeiten der Agents mit der Zeit des Zabbix Servers, welcher zwischen den Tests nicht neu gestartet wird. %
 Sychnronize baut eine Verbindung mit dem Pi DotA auf und fragt von diesem die Uhrzeit ab. %
@@ -162,25 +165,25 @@ DATE=`sshpass -p 'raspberry' ssh 192.168.2.116 "date +%s"`
 sudo date  -s @$DATE 
 \end{verbatim}
 
-\item[Pinger:]Pinger wird zusammen mit dem Hintergrundrauschen ausgef"uhrt und ist um den Linux eigenen Ping Befehl %
+\item[Pinger:]Pinger wird zusammen mit dem Hintergrundrauschen ausgef"uhrt und ist um den Linux eigenen Pingbefehl %
 herum aufgebaut. Mittels Pinger wird die Latenz unter den einzelnen Endger"aten gemessen. %
 \begin{verbatim}
 Ping 192.168.2.250 | while read pong; 
 do echo "[$(date)] $pong"; 
 done >> ~/logfiles/ping/TinkerPing20MB &
 \end{verbatim}
-Wie man sieht, wird als Erstes der Ping befehl ausgef"uhrt. "Uber die Pipe wird dieser jedoch weitergeleitet und in %
-einer Schleife weiterverarbeitet. Neben der Meldung, die vom Befehl Ping Befehl kommt, wird noch ein Datum vorgestellt. %
+Wie man sieht, wird als Erstes der Pingbefehl ausgef"uhrt. "Uber die Pipe wird dieser jedoch weitergeleitet und in %
+einer Schleife weiterverarbeitet. Neben der Meldung, die vom Befehl Ping kommt, wird noch ein Datum vorgestellt. %
 Diese ganze Meldung wird dann in einer Logfile Datei abgespeichert. %
 \end{description}
 \end{enumerate}
 \section{Einsatz des Frameworks} 
 
-Mit dem Einsatz der im vorherigen Abschnitt vorgestellten Software ist das Testframework aufgebaut. In \cref{fig:AufbauVomNetzwerk} %
+Mit dem Einsatz, der im vorherigen Abschnitt vorgestellten Software, ist das Testframework aufgebaut. In \cref{fig:AufbauVomNetzwerk} %
 wird dargestellt, wie die einzelnen Komponenten zusammenspielen. Hier sieht man, dass an einem Switch zwei Raspberry Pis %
 und an einem anderen Switch drei Raspberry Pis angeschlossen sind. Einer von diesen Pis ist der Zabbix Server, der %
 die aktiven Hosts im Netzwerk "uberwacht. Um das Framework zu starten, muss man als Erstes den Zabbix Server DotA starten. %
-Wenn dieser mit dem Boot Vorgang abgeschlossen hat, kann man die restlichen Raspberry Pis einschalten. %
+Wenn dieser mit dem Bootivorgang abgeschlossen hat, kann man die restlichen Raspberry Pis einschalten. %
 In den Agents wird nun als Erstes das Programm Synchronize ausgef"uhrt. Da Raspberry Pis keine eigene Uhr haben, aber %
 die Logfiles und der Zabbix Agent von der Zeit abh"angig sind um korrekt arbeiten zu k"onnen, m"ussen die Uhren synchronisiert werden. %
 \label{sec:einsatzImNetzwerk}%
@@ -188,21 +191,21 @@ die Logfiles und der Zabbix Agent von der Zeit abh"angig sind um korrekt arbeite
 \centering%
 \includegraphics*[width=0.9\linewidth]{Abb/Netzschaltung3}%
 %
-\caption{Aufbau des Netzwerks}%
+\caption{Aufbau des Netzwerks.}%
 \label{fig:AufbauVomNetzwerk}%
 \end{figure}%
 Das Skript Synchronize wird aus der Autostart Konfigurationsdatei von den Raspberry Pis ausgef"uhrt. Deshalb gibt es auch keine %
 Probleme die Uhrzeit zu setzen, da dieses Programm als Super User ausgef"uhrt wird. %
-Nach dem dieses Programm erfolgreich ausgef"uhrt wurde, startet das Startrauschen Skript. %
-Dieses Programm erm"oglicht einen zeitversetzten von Hintergrundrauschen und Pinger. %
+Nachdem dieses Programm erfolgreich ausgef"uhrt wurde, startet das Startrauschen Skript. %
+Dieses Programm erm"oglicht einen zeitversetzten Start von Hintergrundrauschen und Pinger. %
 In Hintergrundrauschen m"ussen jedoch immer kleine Ver"anderungen vorgenommen werden. %
-So muss je nach durchzuf"uhrendem Test eine Zeile umgeschrieben werden. %
+So muss je nach durchzuf"uhrendem Test folgende Zeile umgeschrieben werden. %
 \begin{verbatim}
-SIZE=500
+FILESIZE=500
 \end{verbatim}
 Diese Variablendeklaration muss immer dem auszuf"uhrenden Test angepasst werden. %
-Da die Datei die verschickt wird, "uber den Linux internen Befehl \emph{duplicate data} geschrieben %
-wird, muss man diesem einen Blockgr"o"se und eine Anzahl an zu schreibenden Bl"ocken mitgeben. %
+Da die Datei, die verschickt wird, "uber den Linux internen Befehl \emph{duplicate data} geschrieben %
+wird, muss man diesem eine Blockgr"o"se (bs=) und eine Anzahl an zu schreibenden Bl"ocken (count=) mitgeben. %
 \begin{verbatim}
 dd if=/dev/urandom of=$MYRANDOMFILE bs=4M count=$FILESIZE 
 \end{verbatim}

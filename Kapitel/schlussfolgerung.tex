@@ -1,0 +1,46 @@
+\section{Schlussfolgerung}
+\label{sec:schluss}
+
+Wie bei vielem in der Informatik ist es nicht m"oglich \emph{das Beste} zu definieren %
+und danach eine Auswahl zu treffen. Es muss st"andig abgewogen werden was in einem %
+Use Case am wichtigsten ist. Jeder der gezeigten Tests, hat den anderen %
+Tests gegen"uber Vor- und Nachteile. Deshalb betone ich an dieser Stelle nochmal die %
+Zielsetzung die in \cref{cha:einfuehrung} definiert wurde. 
+
+\begin{quotation}
+Das Ziel dieser Bachelorarbeit ist es herauszufinden, ob "uber die Paketgr"o"se eine %
+Optimierung der Performanz der Endger"ate und der Daten"ubertragung im Netzwerk m"oglich ist. %
+Dabei wird versucht die gr"o"stm"ogliche Menge an Daten im Netzwerk auszutauschen ohne die %
+Funktionalit"at eines der Hosts zu gef"ahrden. %
+\end{quotation}
+
+Wie man in \cref{cha:versuche} sehen konnte, gibt es signifikante Unterschiede bei den in dieser %
+Ausarbeitung durchgef"uhrten Testf"alle. Deshalb wird der Fokus erstmal darauf liegen, die %
+Anforderung der Zielsetzung zu erf"ullen. Mit dem Abschnitt der Zielsetzungi, das die %
+Funktionalit"at der Hosts nicht gef"ahrdet wird, f"allt der 2000 Megabyte Testversuch %
+schonmal als eine geeignete Paketgr"o"se raus. Aufgrund der in \cref{sec:fehler} % 
+hohen Paketgr"o"se kann der Host Tusk nicht fehlerfrei arbeiten. Seine CPU %
+ist zu 88 \% ausgelastet und Tusk kann keine empfangen. Dies alleine ist schon %
+ein Kriterium, dass 2000 Megabyte Pakete ausschlie"st. Dass auch noch 35,16 Gigabyte %
+an Daten im Netz verloren gegangen und insgesamt nur 154,30 Gigabyte verschickt wurden, %
+erf"ullt auch die zweite Anforderung nicht, n"amlich m"oglichst viele Daten zu verschicken. %
+Damit f"allt die m"ogliche Auswahl auf die 20 Megabyte Dateien oder die 200 Megabyte %
+Dateien. Dazu wird als erstes die Menge der verschickten Gigabyte miteianander verglichen. %
+Aus der \cref{tab:compPackages} l"asst sich ablesen, dass bei 200 Megabyte 224,80 %
+Gigabyte an Daten verschickt worden sind und keine einziges Packet verloren gegangen ist. %
+Beim 20 Megabyte Test wurden hingegen nur 213,60 Gigabyte verschickt. Dabei sind 80 Megabyte %
+an Daten verloren gegangeni, was viel weniger als 0,01 \% ist. Deshalb sind 200 Megabyte Testdateien %
+f"urs erste am geeigneitsten. Jedoch muss noch der zweite Punkt beachtet werden, n"amlich % 
+dass die Hosts im System nicht komplett "uberlastet werden und noch simple Aufgaben %
+erf"ullen k"onnen. Dazu werden die Werte aus der \cref{tab:compCPU} miteinanander verglichen. %
+Der Leerlaufprozess beim 20 Megabyte Test betr"agt 23,83 \% und beim 200 Megabyte Test \% 23,35 \%. %
+Obwohl das hei"st das, dass die Hosts im Test mit 20 Megabyte Dateien weniger belastet waren als im %
+Test mit 200 Megabyte Dateien, ist der Unterschied sehr geringf"ugig. Deshalb h"alt man sich %
+bei der Entscheidung, welche der Dateigr"o"sen am besten geeignet ist daran, welche der beiden %
+Testf"alle die meisten Daten verschickt hat, welche der 200 Megabyte Test war. %
+
+Da aber, wie am Anfang dieses Abschnittes erw"ahnt, die optimale Dateigr"o"se %
+vom jeweiligen Use Case abh"angig ist muss man von Use Case zu Use Case unterscheiden. %
+Als Beispiel in dem die 20 Megabyte Datei von Vorteil w"are, ist in eine Netzwerkanwendung %
+wo die Zeit ein wichtige Rolle spielt und es nicht auf Menge der Daten ankommt sondern %
+das schnell Daten ankommen die 20 Megabyte Datei gr"o"se die bessere Wahl. %

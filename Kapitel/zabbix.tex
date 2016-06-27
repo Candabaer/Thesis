@@ -1,6 +1,6 @@
 \chapter{Zabbix}
 \label{cha:zabbix}
-In \cref{cha:framework} wurde schon die verwendete Netzwerk Monitoring Software angeschnitten. In diesem Abschnitt wird nun %
+In \cref{cha:framework} wurde schon die verwendete Netzwerk-Monitoring Software angeschnitten. In diesem Abschnitt wird nun %
 ein tieferer Einblick in den Aufbau und die Verwendung von Zabbix gew"ahrt. Zabbix erm"oglicht es %
 auch das Monitoring als ein verteiltes System mit mehreren Servern aufzubauen. Diese sogenannten Proxys %
 sind jedoch kein Bestandteil dieser Thesis und werden deshalb nicht weiter betrachtet.
@@ -13,26 +13,26 @@ Der Server speichert auch die Konfiguration der einzelnen Agents, die sich im Ne
 Um die Konfiguration der Agents einstellen zu k"onnen, m"ussen jedoch erst einmal die Agents im Zabbix %
 Server registriert werden. Die dazu ben"otigten Daten sind die Agent IP und ein eindeutiger Name. %
 Wenn nun der Agent im Server registriert worden ist, kann man ihn im Zabbix Server verschiedene Templates auflegen. %
-Das in dem in \cref{cha:framework} gezeigte Framework verwendet prim"ar das Template \emph{Template OS %
+Das in \cref{cha:framework} gezeigte Framework verwendet prim"ar das Template \emph{Template OS %
 Linux}. Dieses Template ist eines von vielen vordefinierten Templates. Es ist auch m"oglich selber Templates %
-zu erstellen. Templates sind in einem XML-Format abgespeichert und k"onnen dadurch einfach unter Nutzern von Zabbix % 
+zu erstellen. Diese Templates sind in einem XML-Format abgespeichert und k"onnen dadurch einfach unter Nutzern von Zabbix % 
 ausgetauscht werden. Die Firma, die den Vertrieb von Zabbix regelt, hat extra daf"ur die Zabbix Share eingef"uhrt %
 auf dem Zabbix Templates und vieles mehr ausgetauscht werden kann \autocite{zabbix:share}. \ \\ %
 Templates enthalten sogenannte Items, die "uber Active Checks oder Passive Checks Informationen von %
 einem vorher im Zabbix Server registrierten Agent anfordern. Ein Passive Check geschieht "uber einen %
 Request. Diese sind in JSON verfasst und werden geb"undelt verschickt um Bandbreite zu sparen. %
-Der Prozess beeinhaltet f"unf Schritte: %
+Der Prozess beeinhaltet f"unf Schritte \autocite{zabbix:activepassive}: %
 \begin{enumerate}
 \item Der Server "offnet eine TCP Verbindung. %
 \item Der Server sendet einen Request. Als Beispiel agent.version. %
 \item Der Agent empf"angt den Request und antwortet mit der Versionsnummer. %
-\item Der Server verarbeitet die Antwort und erh"alt als Ergebniss Zabbix3.0.0rc. %
+\item Der Server verarbeitet die Antwort und erh"alt als Ergebnis Zabbix3.0.0rc. %
 \item Die TCP Verbindung wird geschlossen. %
 \end{enumerate}
-\autocite{zabbix:activepassive}. Passive Checks und Active Checks unterscheiden sich darin, wer den Request %
-ausl"ost. Bei einem Passiv Check sind die Hosts selber inaktiv bis vom Server ein Request eintrifft. Bei Active %
+Passive Checks und Active Checks unterscheiden sich darin, wer den Request %
+ausl"ost. Bei einem Passiv Check sind die Hosts inaktiv bis vom Server ein Request eintrifft. Bei Active %
 Checks wird der Agent selber aktiv. Der Agent sendet dann einen Request an den Server, in dem der Agent nach den %
-Daten, fragt die der Server erwartet \autocite{zabbix:activepassive2}. %
+Daten fragt, die der Server erwartet \autocite{zabbix:activepassive2}. %
 Dies ist der Fall, wenn vom Agent Daten abgefragt werden sollen, die nicht vom %
 Betriebssystem des Agents gesammelt werden. Das bedeutet, dass der Agent selber nun die Daten, die der Server erwartet, %
 sammeln muss. Dies geschieht meistens "uber externe Programme. Sollte ein Agent zu viele Active Checks haben, kann es %
@@ -44,7 +44,7 @@ eine eigene Benutzeroberfl"ache erstellen kann um die Konfigurationen auf dem Se
 Datenbank herzustellen. %
 Der Zabbix Server basiert auf einem Apache Web Server. Um das Zabbix Frontend nutzen zu k"onnen, wird %
 PHP 5.4.0 oder aufw"arts ben"otigt. PHP 7 wird jedoch noch nicht unterst"utzt. Die Daten und Statistiken, die Zabbix sammelt, %
-werden in einer Datenbank gespeichert. Es werden f"unf verschiedene Datenbanken unterst"utzt. %
+werden in einer Datenbank gespeichert. Es werden f"unf verschiedene Datenbanken unterst"utzt die im folgenden genannt werden \autocite{zabbix:req}: %
 \begin{itemize}
 \item MySql Version 5.0.3 aufw"arts.
 \item Oracle Version 10g aufw"arts.
@@ -52,30 +52,29 @@ werden in einer Datenbank gespeichert. Es werden f"unf verschiedene Datenbanken 
 \item SQLite Version 3.3.5 aufw"arts.
 \item IBM DB2 Version 9.7 aufw"arts (Noch nicht fehlerfrei).
 \end{itemize}
-\autocite{zabbix:req}.
 Der Zabbix Server selber ist auch als ein Agent konfiguriert, der sich selber "uberwacht. Der Server %
 ist jedoch nicht im allgemeinen Prozess des in \cref{cha:framework} vorgestellten Frameworks t"atig. %
-Der Server gibt aufschluss "uber die sogenannte \emph{Zabbix Server Perfomance} diese betrachtet zwei Dinge, einmal die sogenannte Queue, welche %
-angibt wie viele von den Agents "ubermittelten Werten darauf warten vom Zabbix Server verarbeitet zu werden und %
-die verarbeiteten Werte pro Sekunde. Diese Werte lassen einen Schluss auf die Leistungsanforderungen des Servers zu. %
+Der Server gibt Aufschluss "uber die sogenannte \emph{Zabbix Server Performance}. Diese betrachtet zwei Dinge, einmal die sogenannte Queue, welche %
+angibt wieviele von den von den Agents "ubermittelten Werten darauf warten vom Zabbix Server verarbeitet zu werden, und %
+die verarbeiteten Werte pro Sekunde. Diese Kennzahlen lassen einen Schluss auf die Leistungsanforderungen des Servers zu. %
 Sollte die Queue einen bestimmten Schwellenwert erreichen, wird auf dem Zabbix Frontend eine Warnung ausgegeben, dass der %
 Server mit der Verarbeitung nicht hinterherkommt. Dies kann so weit gehen, dass die gesammelten Daten auf dem Server fehlerhaft %
 sind. Jedoch ist dieses Szenario in diesem Framework unwahrscheinlich, da die Gr"o"se des %
 Frameworks "uberschaubar ist. Der Traffic auf dem Ethernet Port Eth0 wird "uberwacht, da alle von den Agents gesammelten Informationen %
-"uber diesen an den Server gelangen. Dabei wird der eingehende sowie auch der ausgehende Traffic betrachtet.
+"uber diesen an den Server gelangen. Dabei wird der eingehende sowie der ausgehende Traffic betrachtet.
 
 \section{Zabbix Agent}
 \label{sec:agent}
 Der Zabbix Agent wird auf dem zu "uberwachenden System installiert. Der Agent sammelt die Daten "uber die im Betriebssystem %
 integrierte Monitoring Funktion oder "uber die Zabbix eigene API und sendet diese Informationen je nach Art des Checks an den Agent. %
-Da der Agent schon im Betriebssystem integrierte Funktionen, benutzt ist dieser sehr effizient und verbraucht kaum %
-Ressourcen des Host Systems. Anders als der Server besitzt der Agent kein eigenes Frontend und speichert die Werte nicht %
+Da der Agent schon im Betriebssystem integrierte Funktionen benutzt ist, dieser sehr effizient und verbraucht kaum %
+Ressourcen des Host Systems. Anders als der Server, besitzt der Agent kein eigenes Frontend und speichert die Werte nicht %
 in einer Datenbank. Der Agent ist so konstruiert, dass dieser weitestgehend ohne Administratorrechte funktionieren kann. % 
 Da es auch m"oglich ist Agent Hostsysteme "uber einen Fernzugriff auszuschalten oder neuzustarten, m"ussen dem Agent f"ur diese Funktionen %
-die Rechte zugeteilt werden. Dadurch wird das Sicherheits %
-risiko f"ur den Host erheblich reduziert. F"ur gew"ohnlich wird f"ur den Agent ein eigener User angelegt. Die Anwendung des Agents %
+die Rechte zugeteilt werden. Dadurch wird das Sicherheitsrisiko %
+f"ur den Host erheblich reduziert. F"ur gew"ohnlich wird f"ur den Agent ein eigener User angelegt. Die Anwendung des Agents %
 l"auft unter Unix Systemen als ein Daemon und unter Windows als ein Systemdienst. Zabbix unterst"utzt jedoch noch mehr %
-Betriebssysteme. Eine Auswahl davon sind: 
+Betriebssysteme. Eine Auswahl davon sind \autocite{zabbix:agent}: 
 \begin{itemize}
 \item Linux.
 \item Windows: alle Desktop und Server Versionen seit 2000.
@@ -83,14 +82,14 @@ Betriebssysteme. Eine Auswahl davon sind:
 \item Mac OS X.
 \item Solaris 9,10,11.
 \end{itemize}
-\autocite{zabbix:agent}. %
+
 Im Aufbau des Frameworks, das in dieser Arbeit weiter betrachtet wird, laufen die Zabbix Agents unter dem g"angigen Raspberry Pi %
 Betriebssystem Raspbian, welches ein Debian Port ist. Um den Host jedoch verwenden zu k"onnen, muss man in %
-den Konfigurationsdateien die Ports, die der Server f"ur das Versenden von Requests benutzt, eingestellt werden. Auch die IP des Servers %
+den Konfigurationsdateien die Ports, die der Server f"ur das Versenden von Requests benutzt, muss man einstellen. Auch die IP des Servers %
 muss eingetragen werden, da der Agent sonst eingehende Requests verwirft um so die Sicherheit f"ur den Host zu gew"ahrleisten. %
 In den Konfigurationsdateien der Agents ist es auch m"oglich %
-die Active Checks zu notieren, was in diesem Versuchsaufbau auch gemacht wurde. Das Template OS Linux hatte keine Items hatte die das %
-"uberwachen von der Festplattenauslastung gew"ahrleistet. Dies kann man "uber die Konfigurationsdateien einstellen: %
+die Active Checks zu notieren, was in diesem Versuchsaufbau auch gemacht wurde. Das Template OS Linux hatte keine Items, die das %
+"Uberwachen von der Festplattenauslastung gew"ahrleisten. Dies kann man "uber die Konfigurationsdateien einstellen: %
 \begin{quote}
 
 UserParameter=custom.vfs.dev.read.ops[*],customParaScript.sh \$1 4 
@@ -100,7 +99,7 @@ UserParameter=custom.vfs.dev.read.ops[*],customParaScript.sh \$1 4
 Wenn dann in der Antwort zu einem Active Check nach dem \emph{custom.vfs.dev.read.ops[*]} gefragt wird, wird das Bash Script customParaScript.sh %
 ausgef"uhrt. Die Auszeichnung \emph{UserParameter=} gibt an, dass es sich hierbei um ein selbstdefiniertes Item handelt, welches mithilfe von Zabbix %
 "uberwacht werden soll. Das Script customParaScript.sh dient dazu die Last auf der Festplatte zu "uberpr"ufen. %
-Dazu liest es aus der Datei die in Unix Systemen unter /proc/diskstats liegt. Die den zugeh"origen Werten \$1 und 4 sind Variablen, die f"ur die %
-Verarbeitung notwendig sind. Der in diesem Beispiel genannte User Parameter liest die Lese-Operationen pro Sekunde aus der Datei und leitet diese %
+Dazu liest es aus der Datei die in Unix Systemen unter /proc/diskstats liegt. Die zugeh"origen Werten \$1 und 4 sind Variablen, die f"ur die %
+Verarbeitung notwendig sind. Der in diesem Beispiel genannte User Parameter liest die Leseoperationen pro Sekunde aus der Datei und leitet diese %
 an den Server weiter.
 

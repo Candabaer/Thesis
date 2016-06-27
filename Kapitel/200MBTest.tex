@@ -1,18 +1,16 @@
 \section{200 Megabyte Testlauf}
 \label{sec:200MBTest}
-Der zweite durchgef"uhrte Test basiert auf 200 Megabyte Paketen, dazu wurde das Hintergrundrauschen %
-so eingestellt das die gr"o"se der verschickten Pakete 200 Megabyte betr"agt. 
+Der zweite durchgef"uhrte Test basiert auf 200 Megabyte Paketen. Dazu wurde das Hintergrundrauschen %
+so eingestellt, dass die Gr"o"se der verschickten Pakete 200 Megabyte betr"agt. 
 
-Wie man in \cref{fig:Eth0DazzleStandard} sehen kann ist der durchschnittlich ausgehende Traffic auf dem Pi Dazzle 8,49 Mbit/s. %
+Wie man in \cref{fig:Standard200} sehen kann, ist der durchschnittlich ausgehende Traffic auf dem Pi Dazzle 8,49 Mbit/s. %
 Der eingehende Traffic betr"agt durchschnittlich 8,31 Mbit/s. In der \cref{tab:EingehenderTraffic200Mb} %
-ist der Datenverkehr der einzelnen Hosts aufgelistet, betrachtet wird der minimale, maximale und der durchschnittlich eingehende Traffic. %
-Der Maximal eingehende Datenstrom ist durchschnittlich 19,205 Mbit/s. Der minimal eingehende Traffic, liegt bei %
-durchschnittlich 28,45 Kbit/s. Die Standardabweichung der durchschnittlichen Last ist geringer als 1 Megabit/s. %
-W"ahrend die der Maximallast gestiegen ist, diese liegt nun bei 1,07 Megabit/s. Daraus kann man schlie"sen das %
-einige Pis, mehr belastet werden als andere. Was aber noch keine drastischen Werte sind darauf hinweisen %
-das bei der Verteilung der Netzwerk Last ein Pi, einen zu h"oheren Aufwand hat die eingehenden Daten zu %
-verarbeiten. 
-
+ist der Datenverkehr der einzelnen Hosts aufgelistet. Betrachtet wird der minimale, maximale und der durchschnittlich eingehende Traffic. %
+Der Maximal eingehende Datenstrom betr"agt durchschnittlich 19,205 Mbit/s. Der minimal eingehende Traffic liegt bei %
+durchschnittlich 28,45 Kbit/s. Die Standardabweichung der durchschnittlichen Last ist geringer als 1 Megabit/s, %
+w"ahrend die der Maximallast gestiegen ist. Diese liegt nun bei 1,07 Megabit/s. Daraus kann man schlie"sen, dass %
+einige Pis mehr belastet werden als andere. Denoch sind die Pis noch recht gleichm"a"sig ausgelastet %
+wie die Auslastung der CPU in der \cref{tab:CPUlastverteilung200Mb} nahelegt. 
 
 \begin{table}
 \centering
@@ -53,13 +51,13 @@ Agents $\sigma $		& 0,12			& 0,34			& 0,92		\\
 
 \end{table}
 
-Aus der \cref{tab:AusgehenderTraffic200Mb} kann man ablesen das durchschnittlich %
-8,67 Mbit/s von jedem einzelnen Host verschickt werden. Wie man sieht betr"agt die Standardabweichung %
+Aus der \cref{tab:AusgehenderTraffic200Mb} kann man ablesen, dass durchschnittlich %
+8,67 Mbit/s von jedem einzelnen Host verschickt werden. Wie man sieht, betr"agt die Standardabweichung %
 $\sigma$ vom ausgehenden Datenstrom 0,34 Mbit/s. Auch die Maximallast hat nur eine geringe Standardabweichung. %
-Die Werte der Maximallast und des Durchschnitts "ahneln der vom eingehenden Traffic. %
-Diesmal ist die jedoch die minimale Last vom Host Lion geringer als in \cref{sec:20MBTest}. %
-Wodurch kein drastiche Standardabweichung Eintritt und auch der Durchschnittlich ausgehende %
-minimal Traffic sich sehr gering h"alt, diesmal im Kilobit/s Bereich, statt wie in \cref{sec:20MBTest} %
+Die Werte der Maximallast und des Durchschnitts "ahneln denen vom eingehenden Traffic. %
+Diesmal ist jedoch die minimale Last vom Host Lion geringer als in \cref{subsec:20MBTest}, %
+wodurch keine drastiche Standardabweichung auftritt. Auch der durchschnittlich ausgehende %
+minimal Traffic h"alt sich sehr gering. Diesmal diesmal liegt er im Kilobit/s Bereich, statt wie in \cref{subsec:20MBTest} %
 im Megabyte Bereich. %  
 
 
@@ -84,12 +82,12 @@ Agent $\sigma $ 		& 0,09  		& 150,27		& 56,576		\\
 \end{table}
 
 
-In der \cref{fig:IoStatDazzleStandard} sieht man das die Festplatte des Hosts Dazzle nun nicht %
-mehr konstant beschrieben wird stattdessen sieht man das inzwischen "uber l"anger Perioden %
-ein aussetzen des Schreibens auftritt. durchschnitt werden 1.07 Kilobytes die Sekunde geschrieben.  %
-Was nicht ann"ahrend die Maximale Schreibgeschwindigkeit der verwendeten %
-SanDisk SD Karten ist, welche bei 30 Megabyte pro Sekunde \autocite{san:sd} liegt. %
-Aus der \cref{tab:NormalbetriebIoStat200Mb} l"asst sich also schlie"sen das die Festplatten der Agents kaum belastet werden. % 
+In der \cref{fig:IoStatDazzleStandard200} sieht man, dass die Festplatte des Hosts Dazzle nun nicht %
+mehr konstant beschrieben wird. Stattdessen sieht man, dass inzwischen "uber l"angere Perioden %
+ein Aussetzen des Schreibens auftritt. Im Durchschnitt werden 1.07 Kilobyte die Sekunde geschrieben, %
+was nicht ann"ahernd die maximale Schreibgeschwindigkeit der verwendeten %
+SanDisk SD Karten ist. Diese liegt bei 30 Megabyte pro Sekunde \autocite{san:sd}. %
+Aus der \cref{tab:NormalbetriebIoStat200Mb} l"asst sich also schlie"sen, dass die Festplatten der Agents kaum belastet werden. % 
 
 \begin{table}
 \centering
@@ -110,25 +108,25 @@ Agent $\diameter $  		& 23,35			& 33,66			& 22,74			& 5,14	 	& 15,75	\\
 Agent $\sigma $			&  1,75			&  0,98			&  0,52			& 2,33		& 0,17  \\ 
 
 \end{tabular}
-\caption{CPU Last Verteilung bei 200 Megabyte Paketen im Netzwerk}
+\caption{CPU Lastverteilung bei 200 Megabyte Paketen im Netzwerk.}
 \label{tab:CPUlastverteilung200Mb}
 \end{table}
 
-Betrachtet man nun die \cref{tab:CPUlastverteilung200Mb} spiegeln sich die Ergebnisse aus der \cref{tab:NormalbetriebIoStat200Mb} wieder. %
+Betrachtet man nun die \cref{tab:CPUlastverteilung200Mb}, spiegeln sich die Ergebnisse aus der \cref{tab:NormalbetriebIoStat200Mb} wider. %
 Bei diesem Test kam es auch zu Leseoperationen und die Anzahl der Schreiboperationen haben sich verdoppelt. %
-Das spiegelt sich auch in der I/O wait Time wieder. Die CPU braucht nun ungef"ahr das f"unffache der, CPU-Zeit um %
-um eine Lese, oder Schreib Operation abzuschliessen, als in \cref{sec:20MBTest}. %
-So wird durchschnittlich 5,14 \% der CPU Leistung f"ur Lese und Schreib Operationen verwendet. Der Gro"steil der CPU Leistung wird %
-bei allen Hosts, daf"ur verwendet die User Anwendungen laufen zu lassen, im Schnitt 33,66 \%, welches %
-ungef"ahr 3 \% weniger Leistung f"ur die User Anwendungen ist als in \cref{sec:20MBTest}. Die Zeit die die CPU in einem Idle Zustand verbracht %
-hat ist ungef"ahr gleich zu den dem Test in \cref{sec:20MBTest} genauso wie die System Time, beide Werte haben sich im Durchschnitt kaum ver"andert. 
-Wirft man jetzt einen Blick auf die Standardabweichungen der Hosts, sieht sticht vorallem die I/O Wait time %
-heraus. Der Host Tusk, hat einen sehr geringen Wert in der I/O Wait time. W"ahren die anderen Hosts im Schnitt 5,14 \% der CPU Leistung %
-liegt die von Tusk bei 1,20 \%. Wie man auch sehen kann hat Tusk auch den h"ochste Leerlauf auf der CPU, System Time und User Time. %  
+Das spiegelt sich auch in der Lese-oder Schreib Wartezeit wider. Die CPU braucht nun ungef"ahr das F"unffache der CPU Zeit %
+um eine Lese, oder Schreib Operation abzuschliessen wie in \cref{subsec:20MBTest} aufgezeigt. %
+So wird durchschnittlich 5,14 \% der CPU Leistung f"ur Lese- und Schreiboperationen verwendet. Der Gro"steil der CPU Leistung wird %
+bei allen Hosts daf"ur verwendet, die Useranwendungen laufen zu lassen. Im Schnitt nimmt das \mbox{33,66 \%} daraus folgt ungef"ahr %
+3 \% weniger Leistung f"ur die User Anwendungen als in \cref{subsec:20MBTest}. Die Zeit, die die CPU in einem Idle Zustand verbracht %
+hat, ist ungef"ahr die selbe wie im Test in \cref{subsec:20MBTest}. Auch bei der System Time haben sich beide Werte im Schnitt kaum ver"andert. 
+Wirft man jetzt einen Blick auf die Standardabweichungen der Hosts, sticht vor allem die I/O wait Time %
+heraus. Der Host Tusk hat einen sehr geringen Wert in der I/O wait Time, w"ahrend die anderen Hosts im Schnitt 5,14 \% der CPU Leistung verbrauchen, %
+liegt die von Tusk bei 1,20 \%. Wie man weiter sehen kann, hat Tusk auch den h"ochsten Leerlaufprozess, System Time und User Time, auf der CPU. %  
 
-"Uber eine dauer von 12 Stunden wurden 1151 Pakete im Netzwerk verschickt. Die Menge der Daten die insgesamt verschickt wurden sind 224,80 Gigabyte in diesem Versuchsaufbau. %
-Rechnet man dies auf eine Stunde runter kommt man auf 18,73 Gigabyte pro Stunde oder 95,91 Pakete pro Stunde. Wie man sieht ist die Menge an versendeten Daten %
-Daten beinahe gleich geblieben. Es wurde knapp 1 Gigabyte an Daten mehr verschickt, und dabei nur 10 \% der Pakete verschickt wie in \cref{sec:20MBTest}. 
+"Uber eine Dauer von 12 Stunden wurden 1151 Pakete im Netzwerk verschickt. Die Menge der Daten, die insgesamt verschickt wurden, sind 224,80 Gigabyte in diesem Versuchsaufbau. %
+Rechnet man dies auf eine Stunde herunter, kommt man auf 18,73 Gigabyte pro Stunde oder 95,91 Pakete pro Stunde. Wie man sieht ist die Menge an versendeten %
+Daten beinahe gleich geblieben. Es wurde knapp 1 Gigabyte an Daten mehr verschickt, und dabei nur 10 \% der Pakete verschickt wie in \cref{subsec:20MBTest}. % 
 Dazu kommt das "uberhaupt kein Paket verloren gegangen ist und alle Daten erfolgreich ihr Ziel erreicht haben. 
 
 \begin{table}
@@ -149,7 +147,7 @@ Summe				& 1151					& 0					& 0 			& 224,80		\\
 Agent $\diameter $  		& 287,75				& 0				 	& 0			& 56,20 		\\   
 Agent $\sigma $			& 6,61		 			& 0					& 0      		& 1,29		\\
 \end{tabular}
-gesendet\caption{Anzahl der gesendeten 200 Megabyte Pakete "uber einen Zeitraum von 12 Stunden}
+\caption{Anzahl der gesendeten 200 Megabyte Pakete "uber einen Zeitraum von 12 Stunden.}
 \label{tab:VerschickteDaten200Mb}
 \end{table}
 
@@ -171,7 +169,7 @@ Tinker				& 70		& 73		& 56		& 77		& 276		\\
 Lion				& 68		& 75		& 70		& 83		& 296		\\ 
 Summe				& 280		& 304		& 279 		& 288		& 1151		\\
 \end{tabular}
-\caption{Die Anzahl der verschickten und der empfangeni 200 Megabyte Pakete pro Host.}
+\caption{Die Anzahl der verschickten und der empfangenen 200 Megabyte Pakete pro Host.}
 \label{tab:VerschicktePakete200Mb}
 \end{table}
 

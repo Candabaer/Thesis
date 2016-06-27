@@ -3,15 +3,15 @@
 
 In diesem Abschnitt wird die Auslastung der Festplatten betrachtet. %
 Dabei wird die Metrik der Input Output Operations per Second hinzugezogen. %
-Diese gibt an wieviele Lese oder Schreib Operationen in der Sekunde auf der Festplatte %
-stattfinden. Je h"oher der Wert ist desto mehr wird auf der Festplatte gelesen oder geschrieben. %
-Daraus folgt, jedoch auch das die CPU eine h"ohere I/O Wait Time hat und somit l"anger darauf %
-wartet das die Festplatte mit einer Schreib oder Lese Operation abgeschlossen hat. %
+Diese gibt an, wieviele Lese- oder Schreiboperationen in der Sekunde auf der Festplatte %
+stattfinden. Je h"oher der Wert ist, desto mehr wird auf der Festplatte gelesen oder geschrieben. %
+Daraus folgt jedoch auch, dass die CPU eine h"ohere I/O Wait Time hat und somit l"anger darauf %
+warteti, dass die Festplatte mit einer Schreib- oder Leseoperation abgeschlossen hat. %
 Deshalb wird als erstes die CPU I/O Wait Time betrachtet. Wie man aus der \cref{tab:compIoWaitCpu} %
 sehen kann ist beim 20 Megabyte Test die geringste Wartezeit mit 1,26 \% f"ur die CPU. Danach gefolgt von dem 200 Megabyte %
 Testfall, dieser hat mit 5,03 \% die zweith"ochste I/O Wait Time. Beim 2000 Megabyte Test ist mit 5,85 \% die %
-CPU am l"angsten damit besch"aftigt auf den Abschluss einer Lese oder Schreib Operation zu warten. Jedoch ist %
-die Differenz zwischen dem 200 und 2000 Megabyte Test nicht so signifikant wie zwischen dem 20 Megabyte Test. %
+CPU am l"angsten damit besch"aftigt auf den Abschluss einer Lese- oder Schreiboperation zu warten. Jedoch ist %
+die Differenz zwischen dem 200 und 2000 Megabyte Test nicht so signifikant, wie zwischen dem 20 Megabyte Test. %
 
 \begin{table}
 \centering
@@ -29,19 +29,19 @@ Lion				& 1,73						& 6,68						& 6,68	 	\\
 Agent $\diameter $  		& 1,26						& 5,14						& 5,85		\\   
 Agent $\sigma $ 		& 0,20 						& 2,33						& 2,69			\\
 \end{tabular}
-\caption{CPU Wartezeit auf den Abschluss einer Lese oder Schreib Operation, Werte aus den \cref{tab:CPUlastverteilung20Mb,tab:CPUlastverteilung200Mb,tab:CPUlastverteilung2000Mb}.}
+\caption{CPU Wartezeit auf den Abschluss einer Lese- oder Schreiboperation, Werte aus den \cref{tab:CPUlastverteilung20Mb,tab:CPUlastverteilung200Mb,tab:CPUlastverteilung2000Mb}.}
 \label{tab:compIoWaitCpu}
 \end{table}
 
-In der \cref{tab:compOps} sind die jeweiligen Lese und Schreib Operationen pro Sekunde der einzelen %
-Testf"alle aufgelistet. Wie man sieht geschehen die geringsten I/O Operationen w"ahren dem 20 Megabyte %
-Test. Das spiegelt sich auch in der I/O Wait Time der CPU wieder, mit durchschnittlich 120,73 Ops/s %
-wird bei diesem Test am wenigstens geschrieben. Wie die \cref{tab:NormalbetriebIoStat20Mb} auch zeigt %
-wird in diesem Testfall gar keine Daten gelesen. Das erkl"art auch wieso die Werte so f"ur die Lese %
-und Schreib Operationen so gering sind. W"ahrend erst beim 200 Megabyte Test die ersten Lese Operationen %
-stattfinden mit durchschnittlich 907,56 Byte/s wie man aus \cref{tab:NormalbetriebIoStat200Mb} lesen kann. Dies erkl"art auch den Anstieg der Lese und Schreib Operationen %
-Die der Durchschnitt der I/O Operationen/s zwischen den Tests mit 200 Megabyte Paketen und 2000 Megabyte Paketen %
-liegt nahe beinander. Dasselbe ist auch beim Durchschnitt der CPU I/O Wait Time zu beobachten, jedoch %
+In der \cref{tab:compOps} sind die jeweiligen Lese- und Schreiboperationen pro Sekunde der einzelnen %
+Testf"alle aufgelistet. Wie man sieht, passieren die geringsten I/O Operationen w"ahrend dem 20 Megabyte %
+Test. Das spiegelt sich auch in der I/O Wait Time der CPU wider. Mit durchschnittlich 120,73 Ops/s %
+wird bei diesem Test am wenigstens gelesen oder geschrieben. Wie die \cref{tab:NormalbetriebIoStat20Mb} auch zeigt, %
+werden in diesem Testfall gar keine Daten gelesen. Das erkl"art auch, wieso die Werte f"ur die Lese- %
+und Schreiboperationen so gering sind. W"ahrend beim 200 Megabyte Test die ersten Lese Operationen %
+mit durchschnittlich 907,56 Byte/s stattfinden, wie man aus \cref{tab:NormalbetriebIoStat200Mb} lesen kann. Dies erkl"art auch den Anstieg der Lese- und Schreiboperationen %
+der Durchschnitt der I/O Operationen/s zwischen den Tests mit 200 Megabyte Paketen und 2000 Megabyte Paketen %
+liegen nahe beinander. Dasselbe ist auch beim Durchschnitt der CPU I/O Wait Time zu beobachten, jedoch %
 haben sich die Verh"altnisse ver"andert. W"ahrend beim 200 Megabyte Test mehr geschrieben als gelesen wurde %
 ist dies beim Testfall mit 2000 Megabyte andersrum, in 2000 Megabyte Testfall wird mit durchschnittlich 2,30 KB/s
 gelesen nach \cref{tab:NormalbetriebIoStat2000Mb}. Daf"ur ist die durchschnittliche Menge die geschrieben wird %
@@ -64,6 +64,6 @@ Lion				& 144,31					& 248,08					& 248,08	 	\\
 Agent $\diameter $  		& 120,73					& 218,39					& 223,99		\\   
 Agent $\sigma $ 		& 45,31 					& 56,58						& 52,82			\\
 \end{tabular}
-\caption{Lese und Schreibzugriffe auf die Festplatten w"ahrend der Testl"aufe, Werte aus den \cref{tab:NormalbetriebIoStat20Mb,tab:NormalbetriebIoStat200Mb,tab:NormalbetriebIoStat2000Mb}.}
+\caption{Lese- und Schreibzugriffe auf die Festplatten w"ahrend der Testl"aufe, Werte aus den \cref{tab:NormalbetriebIoStat20Mb,tab:NormalbetriebIoStat200Mb,tab:NormalbetriebIoStat2000Mb}.}
 \label{tab:compOps}
 \end{table}

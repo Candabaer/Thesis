@@ -1,29 +1,29 @@
 \section{Prozessor Auslastung}
 \label{sec:cpulast}
-Um die Annahme, die am Ende von \cref{sec:verschickteDaten} gemacht wurde zu "uberpr"ufen, dass %
-ein hohe RTT einer hohen Auslastung der CPU des Zielsystems entpricht wird nun der Leerlauf den %
-die CPUs haben betrachtet. Da man "uber den Leerlauf r"uckschl"usse "uber die Auslastung der CPU machen kann %
-Die Theorie die durch die RTT von Host Lion aufgestellt wurde, dass dieser aufgrund der hohen RTT %
-unter der h"ochsten Last stand best"atigt sich wenn man sich die \cref{tab:compCPU} ansieht. %
+Um die Annahme, die am Ende von \cref{sec:verschickteDaten} gemacht wurde, zu "uberpr"ufen, dass %
+ein hohe RTT einer hohen Auslastung der CPU des Zielsystems entpricht, wird nun der Leerlauf den %
+die CPUs haben, betrachtet. Da man "uber den Leerlauf R"uckschl"usse "uber die Auslastung der CPU machen kann %
+die Theorie die mit der RTT "uber den Host Lion aufgestellt wurde, dass dieser aufgrund der hohen RTT %
+unter der h"ochsten Last stand. Wird mit den Werten aus der Tabelle \cref{tab:compCPU} best"agigt. %
 Vergleicht man den Leerlauf von Lion mit denen der anderen Hosts, ist der Host Lion derjenige mit %
 dem geringsten Leerlauf. Im 2000 Megabyte Testfall jedoch ist die CPU vom Host Tusk am meisten %
-ausgelastet. Der Leerlauf beim Host Tusk liegt mit 12,05 \% unter der h"alfte der anderen Hosts, im Test. %
+ausgelastet. Der Leerlauf beim Host Tusk liegt mit 12,05 \% unter der H"alfte der anderen Hosts im Test. %
 Dies ist auch der einzige Test in dem der Host Lion nicht die h"ochste Auslastung hat. Die hohe Auslastung %
-des Hosts Tusk h"angt, aber auch mit dem Fehler zusammen der w"ahrend des Tests aufgetreten ist und in dem %
-\cref{sec:2000MBTest,sec:fehler} schon aufgef"uhrt ist. %
+des Hosts Tusk h"angt aber auch mit dem Fehler zusammen, der w"ahrend des Tests aufgetreten ist und in dem %
+\cref{sec:2000MBTest} und \cref{sec:fehler} schon aufgef"uhrt ist. %
 
-Wie man auch direkt sehen kann sind die drei von den vier Hosts im 2000 Megabyte Test mit einem gro"sen Abstand %
-unausgelastet. Mit jeweils 29 \% haben diese Hosts, die geringste CPU-Last im vergleich zu dem 20 Megabyte und %
-200 Megabyte Test. Jedoch ist Tusk mit 12,05 \% der ausgelasteteste Host in diesem. Dies wirkt sich auch auf die %
-durchschnittliche Last im Test wieder, mit 23,67 \% liegt diesmal der 2000 Megabyte Test im Mittelfeld zwischen %
+Wie man auch direkt sehen kann sind die drei verbliebenen von den vier Hosts im 2000 Megabyte Test mit einem gro"sen Abstand %
+unausgelastet. Mit jeweils 29 \% haben diese Hosts die geringste CPU-Last im Vergleich zu dem 20 Megabyte und %
+200 Megabyte Test. Jedoch ist Tusk mit 12,05 \% der ausgelasteste Host in diesem Test. Dies wirkt sich auch auf die %
+durchschnittliche Last im Test wieder. Mit 23,67 \% liegt diesmal der 2000 Megabyte Test im Mittelfeld zwischen %
 dem 20 Megabyte und 200 Megabyte Test. Bei 20 Megabyte Paketen sind Hosts im Test mit 23,83 \% die mit dem %
 h"ochsten Leerlaufprozess. W"ahrend beim 200 Megabyte Test mit \mbox{23,35 \%} der geringste Leerlaufprozess erreicht %
-ist. Aus der Standarbweichung der einzelnen Tests kann man auch Schlussfolgern, welcher der Tests eine m"oglichst %
-gleichm"a"sige Belastung der Hosts hat. So ist werden beim 20 Megabyte Test, alle Hosts mit einer Standardabweichung %
-von $\pm$ 0,10 \% am gleichm"a"sigsten belastet. Gefolgt vom 200 Megabyte Test, bei diesem Test ist auch noch eine %
-geringe Standardabweichung gegeben mit $\pm$ 0,98 \% sind auch dort die Hosts, gleichm"a"sig belastet. %
-Anders als beim 2000 Megabyte Test, die CPU Lastenverteilung ist sehr ungleich, mit $\pm$ 7,05 \% ist die Lastverteilung %
-am ungleichm"a"sigsten der Host Tusk hat in diesem Test die h"ochste Last von allen Host. % 
+ist. Aus der Standardabweichung der einzelnen Tests kann man auch schlussfolgern, welcher der Tests eine m"oglichst %
+gleichm"a"sige Belastung der Hosts hat. So werden beim 20 Megabyte Test, alle Hosts mit einer Standardabweichung %
+von $\pm$ 0,10 \% am gleichm"a"sigsten belastet. Gefolgt vom 200 Megabyte Test. Bei diesem Test ist auch noch eine %
+geringe Standardabweichung gegeben mit $\pm$ 0,98 \% sind. Auch in diesem Test sind die Hosts gleichm"a"sig belastet. %
+Anders als beim 2000 Megabyte Test ist die CPU Lastenverteilung ist sehr ungleich. Mit $\pm$ 7,05 \% ist die Lastverteilung %
+am ungleichm"a"sigsten. Der Host Tusk hat in diesem Test die h"ochste Last von allen Host. % 
 
 
 \begin{table}
@@ -42,7 +42,7 @@ Lion				& 22,82							& 21,48							& 29,16					\\
 Agent $\diameter $  		& 23,83							& 23,35					 		& 23,67					\\   
 Agent $\sigma $			& 0,10		 					& 0,98							& 7,05      				\\
 \end{tabular}
-\caption{Leerlauf der CPUs im vergleich. Werte aus den \cref{tab:CPUlastverteilung20Mb,tab:CPUlastverteilung200Mb,tab:CPUlastverteilung2000Mb}}
+\caption{Leerlauf der CPUs im vergleich. Werte aus den \cref{tab:CPUlastverteilung20Mb,tab:CPUlastverteilung200Mb,tab:CPUlastverteilung2000Mb}.}
 \label{tab:compCPU}
 \end{table}
 

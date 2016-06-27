@@ -1,17 +1,16 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
 \select@language {ngerman}
-\contentsline {chapter}{Abbildungsverzeichnis}{v}{chapter*.3}
-\contentsline {chapter}{Tabellenverzeichnis}{vi}{chapter*.4}
+\contentsline {chapter}{Abbildungsverzeichnis}{vi}{chapter*.3}
+\contentsline {chapter}{Tabellenverzeichnis}{vii}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Einf"uhrung}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Einf"uhrung in das Thema}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Motivation der Bestimmung einer optimalen Paketgr"o"se}{1}{section.1.2}
-\contentsline {section}{\numberline {1.3}Zielsetzung dieser Arbeit}{2}{section.1.3}
-\contentsline {section}{\numberline {1.4}Methoden zum Erreichen des Ziels}{2}{section.1.4}
+\contentsline {section}{\numberline {1.2}Motivation und Zielsetzung}{1}{section.1.2}
+\contentsline {section}{\numberline {1.3}Methoden zum Erreichen des Ziels}{2}{section.1.3}
 \contentsline {chapter}{\numberline {2}Das Framework}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Verwendete Hardware}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}Raspberry Pi}{3}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Entwicklung Pis}{4}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.1}Entwicklung der Pis}{4}{subsection.2.2.1}
 \contentsline {section}{\numberline {2.3}Aufbau der Software}{5}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Zabbix}{5}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Eigenentwicklung}{6}{subsection.2.3.2}
@@ -28,7 +27,12 @@
 \contentsline {section}{\numberline {5.1}Versandte Daten}{24}{section.5.1}
 \contentsline {section}{\numberline {5.2}Prozessor Auslastung}{27}{section.5.2}
 \contentsline {section}{\numberline {5.3}Festplatten Auslastung}{28}{section.5.3}
-\contentsline {section}{\numberline {5.4}Aufgetretene Fehler}{29}{section.5.4}
-\contentsline {section}{\numberline {5.5}Schlussfolgerung}{29}{section.5.5}
-\contentsline {chapter}{\numberline {6}Anhang}{30}{chapter.6}
-\contentsline {section}{\numberline {6.1}20 Megabyte Test}{30}{section.6.1}
+\contentsline {section}{\numberline {5.4}Aufgetretene Fehler}{30}{section.5.4}
+\contentsline {section}{\numberline {5.5}Schlussfolgerung}{30}{section.5.5}
+\contentsline {chapter}{\numberline {6}Fazit}{32}{chapter.6}
+\contentsline {chapter}{\numberline {7}Anhang}{33}{chapter.7}
+\contentsline {section}{\numberline {7.1}Test Ruhezustand}{33}{section.7.1}
+\contentsline {section}{\numberline {7.2}Test 20 Megabyte Tests}{34}{section.7.2}
+\contentsline {section}{\numberline {7.3}200 Megabyte Tests}{35}{section.7.3}
+\contentsline {section}{\numberline {7.4}2000 Megabyte Pakete}{36}{section.7.4}
+\contentsline {section}{\numberline {7.5}Inhalt der CD}{36}{section.7.5}
